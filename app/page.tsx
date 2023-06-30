@@ -13,7 +13,7 @@ const Divider = ({ className = '' }: { className?: string }) =>
 
 const Page = () => <>
   <header className='grid grid-cols-[max-content_max-content] bg-zinc-800 place-content-center text-center fixed w-full h-24 md:h-28 lg:h-32 shadow-lg'>
-    <img src='/avatar.jpeg' className='row-span-2 h-20 md:h-24 lg:h-28 rounded-full border-solid border-4 border-sky-800 mr-6' />
+    <img src='/avatar.jpeg' alt={`Photo of ${resume.contact?.fullName}`} className='row-span-2 h-20 md:h-24 lg:h-28 rounded-full border-solid border-4 border-sky-800 mr-6' />
     <h1 className={`text-5xl lg:text-6xl self-end ${headerFont.className}`}>
       {resume.contact?.fullName}
     </h1>
