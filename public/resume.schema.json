@@ -1,0 +1,245 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bluefeet.dev/resume.schema.json",
+  "version": "0.0.0",
+  "title": "Resume",
+  "description": "The professional experiences and skills of an individual",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "$ref": "#/$defs/nonEmptyString"
+    },
+    "contact": {
+      "$ref": "#/$defs/contact"
+    },
+    "profile": {
+      "$ref": "#/$defs/profile"
+    },
+    "objective": {
+      "$ref": "#/$defs/objective"
+    },
+    "experiences": {
+      "$ref": "#/$defs/experiences"
+    },
+    "recommendations": {
+      "$ref": "#/$defs/recommendations"
+    }
+  },
+  "required": [
+    "$schema"
+  ],
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "pattern": "\\S"
+    },
+    "uniqueStrings": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/nonEmptyString"
+      }
+    },
+    "approximateDate": {
+      "type": "string",
+      "pattern": "^[0-9]{4}(-(0[1-9]|1[0-2])(-(0[1-9]|[12][0-9]|3[01]))?)?$"
+    },
+    "workMode": {
+      "type": "string",
+      "enum": [
+        "on-site",
+        "hybrid",
+        "remote"
+      ]
+    },
+    "employmentType": {
+      "type": "string",
+      "enum": [
+        "full-time",
+        "part-time",
+        "self-employed",
+        "freelance",
+        "contract",
+        "internship",
+        "apprenticeship",
+        "seasonal"
+      ]
+    },
+    "skill": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "competencies": {
+          "$ref": "#/$defs/uniqueStrings"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "resource": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "uri": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "uri"
+      ]
+    },
+    "contact": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "fullName": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "casualName": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "pronouns": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "location": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "emailAddress": {
+          "type": "string",
+          "format": "email"
+        },
+        "phoneNumber": {
+          "type": "string",
+          "pattern": "^[+]?[0-9()\\-\\.\\s]+$"
+        }
+      }
+    },
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "headline": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "about": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "skills": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/skill"
+          }
+        },
+        "languages": {
+          "$ref": "#/$defs/uniqueStrings"
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/resource"
+          }
+        }
+      }
+    },
+    "objective": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "startDate": {
+          "$ref": "#/$defs/approximateDate",
+          "description": "The date when first available for hire. A date in the past or no date is considered to mean immediately."
+        },
+        "isCasual": {
+          "description": "Taking extended time to find the best fit.",
+          "type": "boolean"
+        },
+        "roles": {
+          "$ref": "#/$defs/uniqueStrings"
+        },
+        "workModes": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/workMode"
+          }
+        },
+        "employmentTypes": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/employmentType"
+          }
+        }
+      }
+    },
+    "experience": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "companyName": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "employmentType": {
+          "$ref": "#/$defs/employmentType"
+        },
+        "location": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "workMode": {
+          "$ref": "#/$defs/workMode"
+        },
+        "startDate": {
+          "$ref": "#/$defs/approximateDate"
+        },
+        "endDate": {
+          "$ref": "#/$defs/approximateDate"
+        },
+        "summary": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "highlights": {
+          "$ref": "#/$defs/uniqueStrings"
+        }
+      }
+    },
+    "experiences": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/experience"
+      }
+    },
+    "recommendation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "author": {
+          "$ref": "#/$defs/contact"
+        },
+        "relationship": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "message": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/recommendation"
+      }
+    }
+  }
+}

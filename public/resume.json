@@ -1,0 +1,215 @@
+{
+  "$schema": "resume.schema.json",
+  "contact": {
+    "fullName": "Aran Clary",
+    "casualName": "Aran",
+    "pronouns": "He/Him",
+    "location": "Portland, OR, US",
+    "emailAddress": "bluefeet@gmail.com"
+  },
+  "profile": {
+    "headline": "Technology Builder",
+    "about": "An exceptionally driven and independent professional with a flair for effective communication. I have honed my skills in software development and leadership over an impressive span of three decades. My expertise encompasses guiding dynamic teams, catalyzing innovation, and designing resilient systems that serve as a bedrock for organizational advancement.",
+    "skills": [
+      {
+        "name": "Frontend Development",
+        "competencies": [
+          "Typescript",
+          "React",
+          "Responsive Design",
+          "Jest",
+          "REST",
+          "CSS",
+          "HTML",
+          "JavaScript"
+        ]
+      },
+      {
+        "name": "Backend Development",
+        "competencies": [
+          "Node.js",
+          "gRPC",
+          "Git",
+          "Linux",
+          "Docker",
+          "nginx",
+          "Perl",
+          "Bash"
+        ]
+      },
+      {
+        "name": "Data Engineering",
+        "competencies": [
+          "Apache Kafka",
+          "Memcached",
+          "DynamoDB",
+          "MySQL",
+          "Redis",
+          "PostgreSQL"
+        ]
+      },
+      {
+        "name": "Cloud Operations",
+        "competencies": [
+          "Infrastructure as Code",
+          "Kubernetes",
+          "AWS",
+          "Terraform",
+          "CI/CD",
+          "Grafana",
+          "Prometheus",
+          "OpenSearch"
+        ]
+      },
+      {
+        "name": "Interpersonal",
+        "competencies": [
+          "Collaboration",
+          "Agile Processes",
+          "Mentoring",
+          "Release Management",
+          "Stakeholder Management",
+          "Requirements Gathering",
+          "Technical Writing",
+          "Emotional Intelligence",
+          "Active Listening"
+        ]
+      },
+      {
+        "name": "Developing Passions",
+        "competencies": [
+          "Rust",
+          "Serverless",
+          "Lean Processes",
+          "2D Design"
+        ]
+      }
+    ],
+    "languages": [
+      "English"
+    ],
+    "resources": [
+      {
+        "title": "LinkedIn",
+        "uri": "https://www.linkedin.com/in/bluefeet/"
+      },
+      {
+        "title": "GitHub",
+        "uri": "https://github.com/bluefeet"
+      },
+      {
+        "title": "CPAN",
+        "uri": "https://metacpan.org/author/BLUEFEET"
+      }
+    ]
+  },
+  "objective": {
+    "startDate": "2023-07-03T00:00:00Z",
+    "roles": [
+      "Frontend Developer",
+      "Principal Software Engineer",
+      "Engineering Manager"
+    ],
+    "employmentTypes": [
+      "full-time"
+    ],
+    "workModes": [
+      "on-site",
+      "hybrid",
+      "remote"
+    ]
+  },
+  "experiences": [
+    {
+      "title": "Principal Software Engineer",
+      "employmentType": "full-time",
+      "companyName": "ZipRecruiter",
+      "location": "Santa Monica, CA, US",
+      "workMode": "remote",
+      "startDate": "2014-02-24T00:00:00Z",
+      "endDate": "2023-05-31T00:00:00Z",
+      "summary": "I had a long and broad ranging career at ZipRecruiter, from DevOps and cloud infrastructure engineering to product development. Over the years I mentored junior engineers, was a release manager, wrote documentation and functional specifications, gathered requirements and communicated changes. I introduced automated builds, tooling to increase visibility into our systems, and helped the company migrate away from a monolithic code base to microservices.\n\nWhen I first joined ZipRecruiter, which was then a small startup, I promptly optimized the codebase and revamped processes to improve release reliability and production environment stability. In the first half of my tenure, my focus was on boosting developer productivity by introducing essential processes and tools that facilitated company growth.\n\nIn the latter half of my tenure, my role evolved to encompass active collaboration with product teams, engaging in an agile workflow that included sprints, retrospectives, and daily stand-up meetings. I worked closely with product managers and stakeholders to complete high-impact projects on strict deadlines.",
+      "highlights": [
+        "Improved the codebase by replacing complicated sections of code with simpler, more straightforward solutions which were easier to maintain, more flexible, well documented, and had increased test coverage.",
+        "Created a development database replication system using filesystem snapshots and cross-region replication, enabling instant access to destructible production datasets.",
+        "Introduced Grafana, continuous integration, Slack, reusable test data fixtures, enumerable other tools.",
+        "Actively advocated for test coverage, documentation, and high-quality code."
+      ]
+    },
+    {
+      "title": "Principal Architect",
+      "employmentType": "full-time",
+      "companyName": "Rent.com",
+      "location": "Santa Monica, CA, US",
+      "workMode": "on-site",
+      "startDate": "2011-04-18T00:00:00Z",
+      "endDate": "2014-03-27T00:00:00Z",
+      "summary": "At Rent.com I embraced a multitude of roles including Backend Developer, Architect, Manager, Scrum Master, DevOps Product Owner, Hiring Manager, Release Manager, and Frontend Developer.\n\nMy responsibilities at Rent.com were both diverse and dynamic. I actively engaged in the research and integration of new technologies, the construction of software infrastructure to facilitate efficient coding practices, and mentoring colleagues. I was adept at multitasking and dedicated to documentation, writing unit tests, crafting essential tools, and meticulously profiling and optimizing the site. Additionally, my contributions extended to writing a substantial amount of code.",
+      "highlights": [
+        "Instrumental in the overhaul of the renter-facing website, ensuring a modern aesthetic and seamless performance on both desktop and mobile platforms through responsive design.",
+        "Spearheaded the migration from Subversion to Git.",
+        "Created an in-depth deployment dashboard which aggregated data from JIRA and Git, providing realtime visibility into issues holding up a deployment and all changes going into a deployment.",
+        "Established a dedicated DevOps team.",
+        "Lead the effort to migrate our entire infrastructure to a new data and authorization platform when the company was acquired by a competitor."
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "employmentType": "full-time",
+      "companyName": "ValueClick",
+      "location": "Thousand Oaks, CA, US",
+      "workMode": "on-site",
+      "startDate": "2005-01",
+      "endDate": "2011-04-08T00:00:00Z",
+      "summary": "Embarking on my journey as a developer in an unfamiliar corporate environment, I was fortunate to have the guidance of a visionary engineering director who recognized my untapped potential. This invaluable mentorship paved the way for rapid growth as I seamlessly adapted my extensive coding expertise and freelancing background to this new setting. As time progressed, I emerged as one of the most impactful developers and effective managers within the organization.",
+      "highlights": [
+        "Successfully spearheaded a year-long initiative, leading a compact team of two, including myself, focused on the comprehensive overhaul of our publisher administration portal.",
+        "Developed a library for the retrieval of data for reporting, which decoupled the retrieval process from the data requirements, allowing for seamless modification of data sources without altering the code.",
+        "Managed a team of developers, conducted interviews, streamlined onboarding, and trained new hires.",
+        "Instrumental in seamlessly integrating the software, systems, and developers of a newly-acquired company into our ecosystem.",
+        "Collaborated closely with the database team to scale our infrastructure, enabling seamless management of billions of daily impressions and facilitating efficient generation of aggregate data views.",
+        "Rewrote the monthly publisher payout process, ensuring resilience to failures and significantly reducing its runtime."
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "employmentType": "full-time",
+      "companyName": "Thinkstock",
+      "location": "Charlotte, NC, US",
+      "workMode": "on-site",
+      "startDate": "2003-04",
+      "endDate": "2004-12",
+      "summary": "At this stock photography company, I served as one of two developers responsible for managing custom built servers containing terabytes of videos and images. My responsibilities included handling OS and software updates, improving the website by adding features and enhancing efficiency, and assisting the marketing and sales teams in meeting their goals."
+    },
+    {
+      "title": "Engineering Lead",
+      "employmentType": "full-time",
+      "companyName": "IDForce",
+      "location": "Charlotte, NC, US",
+      "workMode": "hybrid",
+      "startDate": "2001-05",
+      "endDate": "2002-03",
+      "summary": "I independently developed an online collaboration tool equipped with live whiteboards, chat, and file sharing features for a London-based startup. The development process involved multiple trips to London to collaborate and ideate with the design team. Notably, during the tool's development, I pioneered an AJAX-like technique, years before AJAX became a widely recognized term in the industry."
+    },
+    {
+      "title": "Software Engineer and Sysadmin",
+      "employmentType": "freelance",
+      "companyName": "Silent Forest",
+      "location": "CA & NC, US",
+      "workMode": "hybrid",
+      "startDate": "1996-01",
+      "endDate": "2003-04",
+      "summary": "Excelled in delivering end-to-end web solutions for a wide array of businesses both domestically and internationally. As a one-stop solution provider, I successfully navigated all stages of project life cycle, from conceptualization and architecture design to implementation and final delivery. I distinguished myself through the creation of high-quality software and an ability to uncover and fulfill unanticipated needs of my clients, thereby providing them a strong online presence. My comprehensive suite of services, backed by my adeptness in multiple technologies, positioned numerous small and medium sized businesses for success in the digital age."
+    },
+    {
+      "title": "Co-Founder",
+      "employmentType": "full-time",
+      "companyName": "MapCruzin",
+      "location": "Santa Cruz, CA, US",
+      "workMode": "on-site",
+      "startDate": "1994",
+      "endDate": "1996",
+      "summary": "Built software solutions primarily aimed at providing crucial mapping services for government entities and non-profit organizations. I spearheaded both backend and frontend development, delivering websites that facilitated greater transparency and engagement within the environmental activism sphere. Additionally, I played a key role in contract negotiation and drafting. While the company was heavily involved in data collection and processing, my primary focus was on creating effective software tools and ensuring a seamless user experience, thus empowering communities with accessible information."
+    }
+  ]
+}
