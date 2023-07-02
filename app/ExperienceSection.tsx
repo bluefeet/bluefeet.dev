@@ -27,7 +27,7 @@ const SingleExperience = ({ experience }: { experience: Experience }) => {
   const metaLine = metaParts.join(' | ')
 
   return <>
-    <h3 className={`text-sky-400 text-3xl mt-5 mb-0 ${headerFont.className}`}>
+    <h3 className={`text-zinc-600 dark:text-sky-400 text-3xl mt-5 mb-0 ${headerFont.className}`}>
       {experience.companyName}
     </h3>
     <div className='typography'>

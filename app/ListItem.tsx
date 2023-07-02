@@ -5,7 +5,9 @@ const ListItem = ({ Icon, children }: {
   Icon: typeof AtSymbolIcon,
   children: ReactNode,
 }) => <>
-    <div className='p-1 pl-8 pr-8 flex place-items-center'><Icon className='w-6 text-green-400' /></div>
+    <div className='p-1 pl-8 pr-8 flex place-items-center'>
+      <Icon className='w-6 text-sky-600 dark:text-green-400' />
+    </div>
     <div className='pt-2 pb-2'>{children}</div>
   </>
 
