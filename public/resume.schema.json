@@ -42,8 +42,16 @@
       }
     },
     "approximateDate": {
-      "type": "string",
-      "pattern": "^[0-9]{4}(-(0[1-9]|1[0-2])(-(0[1-9]|[12][0-9]|3[01]))?)?$"
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9]{4}(-(0[1-9]|1[0-2])|)$"
+        },
+        {
+          "type": "string",
+          "format": "date"
+        }
+      ]
     },
     "workMode": {
       "type": "string",
@@ -155,7 +163,8 @@
       "additionalProperties": false,
       "properties": {
         "startDate": {
-          "$ref": "#/$defs/approximateDate",
+          "type": "string",
+          "format": "date",
           "description": "The date when first available for hire. A date in the past or no date is considered to mean immediately."
         },
         "isCasual": {
