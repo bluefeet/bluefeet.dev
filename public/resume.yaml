@@ -76,7 +76,7 @@ profile:
     - title: CPAN
       uri: https://metacpan.org/author/BLUEFEET
 objective:
-  startDate: 2023-07-03
+  startDate: "2023-07-10"
   roles:
     - Frontend Developer
     - Principal Software Engineer
@@ -93,8 +93,8 @@ experiences:
     companyName: ZipRecruiter
     location: Santa Monica, CA, US
     workMode: remote
-    startDate: 2014-02-24
-    endDate: 2023-05-31
+    startDate: "2014-02-24"
+    endDate: "2023-05-31"
     summary: |-
       I had a long and broad ranging career at ZipRecruiter, from DevOps and cloud infrastructure engineering to product development. Over the years I mentored junior engineers, was a release manager, wrote documentation and functional specifications, gathered requirements and communicated changes. I introduced automated builds, tooling to increase visibility into our systems, and helped the company migrate away from a monolithic code base to microservices.
 
@@ -102,7 +102,7 @@ experiences:
 
       In the latter half of my tenure, my role evolved to encompass active collaboration with product teams, engaging in an agile workflow that included sprints, retrospectives, and daily stand-up meetings. I worked closely with product managers and stakeholders to complete high-impact projects on strict deadlines.
     highlights:
-      -  Improved the codebase by replacing complicated sections of code with simpler, more straightforward solutions which were easier to maintain, more flexible, well documented, and had increased test coverage.
+      - Improved the codebase by replacing complicated sections of code with simpler, more straightforward solutions which were easier to maintain, more flexible, well documented, and had increased test coverage.
       - Created a development database replication system using filesystem snapshots and cross-region replication, enabling instant access to destructible production datasets.
       - Introduced Grafana, continuous integration, Slack, reusable test data fixtures, enumerable other tools.
       - Actively advocated for test coverage, documentation, and high-quality code.
@@ -111,8 +111,8 @@ experiences:
     companyName: Rent.com
     location: Santa Monica, CA, US
     workMode: on-site
-    startDate: 2011-04-18
-    endDate: 2014-03-27
+    startDate: "2011-04-18"
+    endDate: "2014-03-27"
     summary: |-
       At Rent.com I embraced a multitude of roles including Backend Developer, Architect, Manager, Scrum Master, DevOps Product Owner, Hiring Manager, Release Manager, and Frontend Developer.
 
@@ -128,9 +128,9 @@ experiences:
     companyName: ValueClick
     location: Thousand Oaks, CA, US
     workMode: on-site
-    startDate: 2005-01
-    endDate: 2011-04-08
-    summary: Embarking on my journey as a developer in an unfamiliar corporate environment, I was fortunate to have the guidance of a visionary engineering director who recognized my untapped potential. This invaluable mentorship paved the way for rapid growth as I seamlessly adapted my extensive coding expertise and freelancing background to this new setting. As time progressed, I emerged as one of the most impactful developers and effective managers within the organization.
+    startDate: "2005-01"
+    endDate: "2011-04-08"
+    summary: At this ad network I embarked on a journey in an unfamiliar corporate environment. Fortunately, I had the guidance of a visionary engineering director who recognized my untapped potential. This invaluable mentorship paved the way for rapid growth as I seamlessly adapted my extensive coding expertise and freelancing background to this new setting. As time progressed, I emerged as one of the most impactful developers and effective managers within the organization.
     highlights:
       - Successfully spearheaded a year-long initiative, leading a compact team of two, including myself, focused on the comprehensive overhaul of our publisher administration portal.
       - Developed a library for the retrieval of data for reporting, which decoupled the retrieval process from the data requirements, allowing for seamless modification of data sources without altering the code.
@@ -143,24 +143,24 @@ experiences:
     companyName: Thinkstock
     location: Charlotte, NC, US
     workMode: on-site
-    startDate: 2003-04
-    endDate: 2004-12
+    startDate: "2003-04"
+    endDate: "2004-12"
     summary: At this stock photography company, I served as one of two developers responsible for managing custom built servers containing terabytes of videos and images. My responsibilities included handling OS and software updates, improving the website by adding features and enhancing efficiency, and assisting the marketing and sales teams in meeting their goals.
   - title: Engineering Lead
     employmentType: full-time
     companyName: IDForce
     location: Charlotte, NC, US
     workMode: hybrid
-    startDate: 2001-05
-    endDate: 2002-03
+    startDate: "2001-05"
+    endDate: "2002-03"
     summary: I independently developed an online collaboration tool equipped with live whiteboards, chat, and file sharing features for a London-based startup. The development process involved multiple trips to London to collaborate and ideate with the design team. Notably, during the tool's development, I pioneered an AJAX-like technique, years before AJAX became a widely recognized term in the industry.
   - title: Software Engineer and Sysadmin
     employmentType: freelance
     companyName: Silent Forest
     location: CA & NC, US
     workMode: hybrid
-    startDate: 1996-01
-    endDate: 2003-04
+    startDate: "1996-01"
+    endDate: "2003-04"
     summary: Excelled in delivering end-to-end web solutions for a wide array of businesses both domestically and internationally. As a one-stop solution provider, I successfully navigated all stages of project life cycle, from conceptualization and architecture design to implementation and final delivery. I distinguished myself through the creation of high-quality software and an ability to uncover and fulfill unanticipated needs of my clients, thereby providing them a strong online presence. My comprehensive suite of services, backed by my adeptness in multiple technologies, positioned numerous small and medium sized businesses for success in the digital age.
   - title: Co-Founder
     employmentType: full-time

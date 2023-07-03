@@ -17,7 +17,7 @@ export type EmploymentType =
   | "internship"
   | "apprenticeship"
   | "seasonal";
-export type ApproximateDate = string;
+export type ApproximateDate = string | string;
 export type Experiences = Experience[];
 export type Recommendations = Recommendation[];
 
