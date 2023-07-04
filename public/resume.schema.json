@@ -8,7 +8,7 @@
   "additionalProperties": false,
   "properties": {
     "$schema": {
-      "$ref": "#/$defs/nonEmptyString"
+      "type": "string"
     },
     "contact": {
       "$ref": "#/$defs/contact"
@@ -30,15 +30,11 @@
     "$schema"
   ],
   "$defs": {
-    "nonEmptyString": {
-      "type": "string",
-      "pattern": "\\S"
-    },
     "uniqueStrings": {
       "type": "array",
       "uniqueItems": true,
       "items": {
-        "$ref": "#/$defs/nonEmptyString"
+        "type": "string"
       }
     },
     "approximateDate": {
@@ -79,7 +75,7 @@
       "additionalProperties": false,
       "properties": {
         "name": {
-          "$ref": "#/$defs/nonEmptyString"
+          "type": "string"
         },
         "competencies": {
           "$ref": "#/$defs/uniqueStrings"
@@ -110,16 +106,16 @@
       "additionalProperties": false,
       "properties": {
         "fullName": {
-          "$ref": "#/$defs/nonEmptyString"
+          "type": "string"
         },
         "casualName": {
-          "$ref": "#/$defs/nonEmptyString"
+          "type": "string"
         },
         "pronouns": {
-          "$ref": "#/$defs/nonEmptyString"
+          "type": "string"
         },
         "location": {
-          "$ref": "#/$defs/nonEmptyString"
+          "type": "string"
         },
         "emailAddress": {
           "type": "string",
@@ -136,10 +132,10 @@
       "additionalProperties": false,
       "properties": {
         "headline": {
-          "$ref": "#/$defs/nonEmptyString"
+          "type": "string"
         },
         "about": {
-          "$ref": "#/$defs/nonEmptyString"
+          "type": "string"
         },
         "skills": {
           "type": "array",
@@ -195,16 +191,16 @@
       "additionalProperties": false,
       "properties": {
         "companyName": {
-          "$ref": "#/$defs/nonEmptyString"
+          "type": "string"
         },
         "title": {
-          "$ref": "#/$defs/nonEmptyString"
+          "type": "string"
         },
         "employmentType": {
           "$ref": "#/$defs/employmentType"
         },
         "location": {
-          "$ref": "#/$defs/nonEmptyString"
+          "type": "string"
         },
         "workMode": {
           "$ref": "#/$defs/workMode"
@@ -216,7 +212,7 @@
           "$ref": "#/$defs/approximateDate"
         },
         "summary": {
-          "$ref": "#/$defs/nonEmptyString"
+          "type": "string"
         },
         "highlights": {
           "$ref": "#/$defs/uniqueStrings"
@@ -237,10 +233,10 @@
           "$ref": "#/$defs/contact"
         },
         "relationship": {
-          "$ref": "#/$defs/nonEmptyString"
+          "type": "string"
         },
         "message": {
-          "$ref": "#/$defs/nonEmptyString"
+          "type": "string"
         }
       }
     },
