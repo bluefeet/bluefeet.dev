@@ -211,5 +211,57 @@
       "endDate": "1996",
       "summary": "Built software solutions primarily aimed at providing crucial mapping services for government entities and non-profit organizations. I spearheaded both backend and frontend development, delivering websites that facilitated greater transparency and engagement within the environmental activism sphere. Additionally, I played a key role in contract negotiation and drafting. While the company was heavily involved in data collection and processing, my primary focus was on creating effective software tools and ensuring a seamless user experience, thus empowering communities with accessible information."
     }
+  ],
+  "recommendations": [
+    {
+      "author": "Maxwell Cabral",
+      "relationship": "Max and Aran both worked at ZipRecruiter in various roles",
+      "message": "He was a big asset to me in my career development and to the many companies he has worked for. If you’re looking for a strong Principle Engineer/Architect then you should see what Aran has to offer."
+    },
+    {
+      "author": "Mike Rozek",
+      "relationship": "Mike and Aran both worked at Rent.com and ZipRecruiter in various roles",
+      "message": "It is difficult to overstate the impact that Aran Deltac has made at the two companies where I’ve been grateful to be his colleague. As a mentor, he has had the largest impact on my career journey of any engineer I’ve ever worked with."
+    },
+    {
+      "author": "Alain Avakian",
+      "relationship": "Alain was the CTO of Rent.com and directly managed Aran",
+      "message": "I have worked with countless engineers, usually of very high caliber, but engineers of Aran's talents are far and few in between. I have had the privilege of working with Aran for almost three years now, and grew to rely on his instincts, and technical depth.\n\nAran is the kind of engineer who can build a startup from the ground up, efficiently, fast, with a good solid architecture and a keen sense of the big picture, and yet he is also able to deep dive and solve very elusive technical issues, or find good opportunities for optimization, often while reviewing others' code.\n\nAran has a very positive attitude, one that is calming and infectious, and a strong sense that he can accomplish anything. That, in turn, builds confidence in the team he is leading, motivating them while getting them excited about whatever project he is leading.\n\nIt has been a true pleasure watching Aran mentor other engineers, and come up with tools / ideas, completely of his own initiative to drive efficiency and better collaboration.\n\nAran will always be on my short-list of top engineers I would not hesitate to work with again."
+    },
+    {
+      "author": "Eduardo Ariño de la Rubia",
+      "relationship": "Ed was a senior software engineer at Rent.com and directly reported to Aran",
+      "message": "Aran succeeded in making me feel welcome and productive as a new developer in his organization nearly instantly. He provided the perfect amount of guidance, support, and mentoring I needed to come up to speed quickly on a large codebase. He's a spectacular programmer, a thoughtful manager, a kind person, and an unbeatable addition to any team."
+    },
+    {
+      "author": "Eric Feay",
+      "relationship": "Eric was the product manager for Aran's team at ValueClick",
+      "message": "Working with Aran was a complete joy. He maintained a high level of focus on both the quality of his code and the overall quality of the product he was delivering to our customers. I served as the product manager for Aran’s teams over numerous projects spanning almost four years. I was always amazed by his empathy and kindness on a personal level and the dedication to awesome work on a professional level. His heart and mind are always in the right place.\n\nIf there was a Perl Coders Hall of Fame, this man would get in on the first ballot. I would love the opportunity to work with Aran again. Any team that can count Aran Deltac as one of its members is truly made better for it."
+    },
+    {
+      "author": "Demian L'Ecuyer",
+      "relationship": "Demian was a senior software engineer at ValueClick and worked directly with Aran",
+      "message": "In the five years that Aran and I worked together, he has consistently proven himself as an awesome resource for complex issues. His ability to get to the heart of an issue quickly and offer valuable insight and opinions has helped reduce development time on many projects. This combined with his willingness and patience to educate and grow with his peers makes him a valuable addition on any project he joins."
+    },
+    {
+      "author": "Eric Schultz",
+      "relationship": "Eric was a senior software engineer at ValueClick and reported directly to Aran",
+      "message": "Aran is a rare breed in the world of technical managers. He is extremely technically competent, and could easily do the work of any of his reports. His highly commendable development/architecture skills are nicely complemented by his patient, affable, and approachable demeanor. This combination of technical adeptness and people-oriented personality is what is difficult to find in this profession, and what makes working for Aran a true pleasure.\n\nI consider myself fortunate to have worked for Aran. He taught me much about Perl specifically and Software Development in general. More importantly, though, the example of his leadership helped me to better do my job as an applicaton developer, and later as a project lead. I would not hesitate to recommend Aran for any position having to do with Perl - manager, architect or otherwise; and I would gladly welcome the opportunity to work with him in the future."
+    },
+    {
+      "author": "Paul Vining",
+      "relationship": "Paul was a software engineer at ValueClick and reported directly to Aran",
+      "message": "Aran is a very knowledgeable technical manager. He keeps track of where everyone on the team is at and offers help when needed. He has a varied background which comes in handy when developing solutions."
+    },
+    {
+      "author": "Diona Kidd",
+      "relationship": "Diona was a lead developer at Thinkstock and was Aran's manager",
+      "message": "Aran is smart, considerate, productive and a quick study. He was a pleasure to work with. He was very supportive of both his department members, marketing, distributions and other departments while employed at Thinkstock. Highly recommended."
+    },
+    {
+      "author": "Shawn Faison",
+      "relationship": "Shawn worked for a client of Aran's",
+      "message": "I have never met an individual as talented as Aran Deltac. Working with him professionally over the years I have to say I admire his natural ability combined with his work ethic. Aran knows what he is talking about and knows how to communicate it. He possesses over ten years of experience as a web developer and is one of the best in the world."
+    }
   ]
 }

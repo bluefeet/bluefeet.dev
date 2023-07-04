@@ -79,7 +79,7 @@ export interface Experience {
   highlights?: UniqueStrings;
 }
 export interface Recommendation {
-  author?: Contact;
-  relationship?: string;
-  message?: string;
+  author: string;
+  relationship: string;
+  message: string;
 }
