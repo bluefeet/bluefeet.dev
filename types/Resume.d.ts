@@ -5,8 +5,7 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export type NonEmptyString = string;
-export type UniqueStrings = NonEmptyString[];
+export type UniqueStrings = string[];
 export type WorkMode = "on-site" | "hybrid" | "remote";
 export type EmploymentType =
   | "full-time"
@@ -25,7 +24,7 @@ export type Recommendations = Recommendation[];
  * The professional experiences and skills of an individual
  */
 export interface Resume {
-  $schema: NonEmptyString;
+  $schema: string;
   contact?: Contact;
   profile?: Profile;
   objective?: Objective;
@@ -33,22 +32,22 @@ export interface Resume {
   recommendations?: Recommendations;
 }
 export interface Contact {
-  fullName?: NonEmptyString;
-  casualName?: NonEmptyString;
-  pronouns?: NonEmptyString;
-  location?: NonEmptyString;
+  fullName?: string;
+  casualName?: string;
+  pronouns?: string;
+  location?: string;
   emailAddress?: string;
   phoneNumber?: string;
 }
 export interface Profile {
-  headline?: NonEmptyString;
-  about?: NonEmptyString;
+  headline?: string;
+  about?: string;
   skills?: Skill[];
   languages?: UniqueStrings;
   resources?: Resource[];
 }
 export interface Skill {
-  name: NonEmptyString;
+  name: string;
   competencies?: UniqueStrings;
 }
 export interface Resource {
@@ -69,18 +68,18 @@ export interface Objective {
   employmentTypes?: EmploymentType[];
 }
 export interface Experience {
-  companyName?: NonEmptyString;
-  title?: NonEmptyString;
+  companyName?: string;
+  title?: string;
   employmentType?: EmploymentType;
-  location?: NonEmptyString;
+  location?: string;
   workMode?: WorkMode;
   startDate?: ApproximateDate;
   endDate?: ApproximateDate;
-  summary?: NonEmptyString;
+  summary?: string;
   highlights?: UniqueStrings;
 }
 export interface Recommendation {
   author?: Contact;
-  relationship?: NonEmptyString;
-  message?: NonEmptyString;
+  relationship?: string;
+  message?: string;
 }

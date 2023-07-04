@@ -1,4 +1,4 @@
-# bluefee.dev
+# bluefeet.dev
 
 This app generates a static web site which is hosted on [bluefeet.dev](https://bluefeet.dev).
 
