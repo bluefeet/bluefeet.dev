@@ -7,6 +7,7 @@ import ReactMarkdown from 'react-markdown'
 import resume from './resume'
 import SectionTitle from './SectionTitle'
 import upperFirst from 'lodash/upperFirst'
+import SubSectionTitle from './SubSectionTitle'
 
 const SingleExperience = ({ experience }: { experience: Experience }) => {
   const metaParts: string[] = []
@@ -27,11 +28,12 @@ const SingleExperience = ({ experience }: { experience: Experience }) => {
   const metaLine = metaParts.join(' | ')
 
   return <>
-    <h3 className={`text-zinc-600 dark:text-sky-400 text-3xl mt-5 mb-0 ${headerFont.className}`}>
+    <SubSectionTitle>
       {experience.companyName}
-    </h3>
+    </SubSectionTitle>
+
     <div className='typography'>
-      <Details className='font-semibold mb-1'>{metaLine}</Details>
+      <Details>{metaLine}</Details>
 
       {experience.summary &&
         <ReactMarkdown>{experience.summary}</ReactMarkdown>

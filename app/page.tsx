@@ -5,6 +5,7 @@ import headerFont from './headerFont'
 import InfoSection from './InfoSection'
 import Link from 'next/link'
 import ObjectiveSection from './ObjectiveSection'
+import RecommendationsSection from './RecommendationsSection'
 import resume from './resume'
 import SkillsSection from './SkillsSection'
 
@@ -38,6 +39,9 @@ const Page = () => <>
       <Divider className='lg:hidden mb-5' />
 
       <ExperienceSection />
+      <Divider className='lg:hidden mt-5 mb-5' />
+
+      <RecommendationsSection />
     </div>
   </main>
 

@@ -230,7 +230,7 @@
       "additionalProperties": false,
       "properties": {
         "author": {
-          "$ref": "#/$defs/contact"
+          "type": "string"
         },
         "relationship": {
           "type": "string"
@@ -238,7 +238,12 @@
         "message": {
           "type": "string"
         }
-      }
+      },
+      "required": [
+        "author",
+        "relationship",
+        "message"
+      ]
     },
     "recommendations": {
       "type": "array",
