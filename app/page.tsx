@@ -13,7 +13,7 @@ const Divider = ({ className = '' }: { className?: string }) =>
   <hr className={`w-full border-sky-600 border-solid border-1 mt-2 mb-2 ${className}`} />
 
 const Page = () => <>
-  <header className='grid grid-cols-[max-content_max-content] text-white bg-zinc-800 place-content-center text-center fixed w-full h-24 md:h-28 lg:h-32 shadow-lg'>
+  <header className='grid grid-cols-[max-content_max-content] text-white bg-zinc-800 place-content-center text-center sticky top-0 h-24 md:h-28 lg:h-32 shadow-lg'>
     <img src='/avatar.jpg' alt={`Photo of ${resume.contact?.fullName}`} className='row-span-2 h-20 md:h-24 lg:h-28 rounded-full border-solid border-4 border-sky-800 mr-6' />
     <h1 className={`text-5xl lg:text-6xl self-end ${headerFont.className}`}>
       {resume.contact?.fullName}
@@ -23,9 +23,9 @@ const Page = () => <>
     </p>
   </header>
 
-  <main className='grid lg:grid-cols-[60%_40%] p-4 pt-24 md:pt-28 lg:pt-32 ml-auto mr-auto lg:w-[58rem] xl:w-[68rem]'>
-    <div className='flex flex-wrap lg:flex-col lg:order-2 lg:pl-4'>
-      <AboutSection className='md:w-full' />
+  <main className='flex flex-col lg:flex-row p-4 pt-0 ml-auto mr-auto lg:w-[58rem] xl:w-[68rem]'>
+    <div className='lg:w-2/5 flex flex-wrap lg:flex-col lg:order-2 lg:pl-4'>
+      <AboutSection />
       <Divider />
 
       <ObjectiveSection className='md:w-1/2 lg:w-full' />
@@ -34,7 +34,7 @@ const Page = () => <>
       <InfoSection className='md:w-1/2 lg:w-full' />
       <Divider className='lg:hidden' />
     </div>
-    <div className='lg:order-1'>
+    <div className='lg:w-3/5 lg:order-1'>
       <SkillsSection />
       <Divider className='lg:hidden mb-5' />
 
