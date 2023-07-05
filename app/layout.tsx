@@ -12,7 +12,7 @@ export const metadata = {
 
 const Layout = ({ children }: { children: ReactNode }) =>
   <html lang='en'>
-    <body className={`text-white bg-zinc-900 ${mainFont.className}`}>
+    <body className={`text-text bg-background ${mainFont.className}`}>
       {children}
     </body>
   </html>

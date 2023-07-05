@@ -4,11 +4,11 @@
 
 @layer utilities {
   a {
-    @apply text-sky-400 underline decoration-sky-800;
+    @apply text-link underline decoration-decoration;
   }
 
   a:hover {
-    @apply decoration-sky-400;
+    @apply decoration-link;
   }
 
   .typography {
@@ -28,6 +28,6 @@
   }
 
   .typography li::marker {
-    @apply text-green-400;
+    @apply text-bullet;
   }
 }
