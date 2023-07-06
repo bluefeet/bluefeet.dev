@@ -30,4 +30,8 @@
   .typography li::marker {
     @apply text-bullet;
   }
+
+  .page-break-after {
+    page-break-after: always;
+  }
 }
