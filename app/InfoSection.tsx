@@ -1,4 +1,5 @@
 import { Fragment } from 'react'
+import Details from './Details'
 import Link from 'next/link'
 import List from './List'
 import ListItem from './ListItem'
@@ -64,6 +65,7 @@ const Resources = () => {
       {resume.profile.resources.map((resource) =>
         <Fragment key={resource.uri}>
           <Link href={resource.uri}>{resource.title}</Link><br />
+          <Details className='hidden printable:block'>{resource.uri}</Details>
         </Fragment>
       )}
     </ListItem>
