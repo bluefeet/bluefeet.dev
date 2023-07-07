@@ -1,3 +1,4 @@
+import { format as formatDate } from 'date-fns'
 import AboutSection from '../../AboutSection'
 import Details from '../../Details'
 import Divider from '../../Divider'
@@ -35,9 +36,9 @@ const Page = () => <>
     </div>
   </main>
 
-  <footer className='text-center pt-4'>
+  <footer className='text-right pt-4'>
     <Details>
-      &copy; {resume.contact?.fullName}
+      &copy; {resume.contact?.fullName} • Generated {formatDate(new Date,'PPP')}
     </Details>
   </footer>
 </>
