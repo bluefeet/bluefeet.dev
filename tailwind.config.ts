@@ -42,7 +42,7 @@ export default {
               text: '#000',
               background: '#fff',
               paper: '#fff',
-              divider: '#999',
+              divider: '#aaa',
               bullet: '#666',
               section: '#000',
               subsection: '#444',
