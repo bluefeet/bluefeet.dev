@@ -3,14 +3,6 @@
 @tailwind utilities;
 
 @layer utilities {
-  a {
-    @apply text-sky-800 dark:text-sky-400 underline decoration-sky-200 dark:decoration-sky-800;
-  }
-
-  a:hover {
-    @apply decoration-sky-800 dark:decoration-sky-400;
-  }
-
   .typography {
     line-height: 1.55;
   }

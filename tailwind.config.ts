@@ -11,10 +11,11 @@ export default {
       listStyleType: {
         square: 'square',
       },
+      screens: {
+        print: {
+          raw: 'print',
+        },
+      },
     },
   },
 } satisfies Config
-
-// https://blog.logrocket.com/creating-custom-themes-tailwind-css/
-// https://github.com/unjs/jiti
-// https://github.com/adoxography/tailwind-scrollbar
