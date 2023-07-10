@@ -12,9 +12,9 @@ import SkillsSection from './SkillsSection'
 
 const Divider = ({ className = '' }: { className?: string }) =>
   <hr className={`w-full border-zinc-400 dark:border-sky-600 border-solid border-1 mt-2 mb-2 print:hidden ${className}`} />
-//  pb-4 ${headerFont.className} flex justify-between items-end
+
 const Page = () => <>
-  <header className='grid grid-cols-[max-content_max-content] text-white bg-zinc-800 place-content-center text-center sticky top-0 h-24 md:h-28 lg:h-32 shadow-lg print:hidden'>
+  <header className='grid grid-cols-[max-content_max-content] text-white bg-sky-700 dark:bg-zinc-800 place-content-center text-center sticky top-0 h-24 md:h-28 lg:h-32 shadow-lg print:hidden'>
     <img src='/avatar.jpg' alt={`Photo of ${resume.contact?.fullName}`} className='row-span-2 h-20 md:h-24 lg:h-28 rounded-full border-solid border-4 border-sky-800 mr-6' />
     <h1 className={`text-5xl lg:text-6xl self-end ${headerFont.className}`}>
       {resume.contact?.fullName}
