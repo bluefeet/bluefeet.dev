@@ -1,18 +1,20 @@
-import AboutSection from '../AboutSection'
-import Details from '../Details'
-import Divider from '../Divider'
-import ExperienceSection from '../ExperienceSection'
-import headerFont from '../headerFont'
-import InfoSection from '../InfoSection'
+import AboutSection from './AboutSection'
+import Details from './Details'
+import ExperienceSection from './ExperienceSection'
+import headerFont from './headerFont'
+import InfoSection from './InfoSection'
 import Link from 'next/link'
-import ObjectiveSection from '../ObjectiveSection'
-import RecommendationsSection from '../RecommendationsSection'
-import resume from '../resume'
-import SkillsSection from '../SkillsSection'
+import ObjectiveSection from './ObjectiveSection'
+import RecommendationsSection from './RecommendationsSection'
+import resume from './resume'
+import SkillsSection from './SkillsSection'
+
+const Divider = ({ className = '' }: { className?: string }) =>
+  <hr className={`w-full border-zinc-400 dark:border-sky-600 border-solid border-1 mt-2 mb-2 ${className}`} />
 
 const Page = () => <>
-  <header className='grid grid-cols-[max-content_max-content] bg-paper place-content-center text-center sticky top-0 h-24 md:h-28 lg:h-32 shadow-lg'>
-    <img src='/avatar.jpg' alt={`Photo of ${resume.contact?.fullName}`} className='row-span-2 h-20 md:h-24 lg:h-28 rounded-full border-solid border-4 border-avatar mr-6' />
+  <header className='grid grid-cols-[max-content_max-content] text-white bg-zinc-800 dark:bg-zinc-800 place-content-center text-center sticky top-0 h-24 md:h-28 lg:h-32 shadow-lg'>
+    <img src='/avatar.jpg' alt={`Photo of ${resume.contact?.fullName}`} className='row-span-2 h-20 md:h-24 lg:h-28 rounded-full border-solid border-4 border-sky-800 mr-6' />
     <h1 className={`text-5xl lg:text-6xl self-end ${headerFont.className}`}>
       {resume.contact?.fullName}
     </h1>
@@ -43,7 +45,7 @@ const Page = () => <>
     </div>
   </main>
 
-  <footer className='bg-inherit border-paper border-solid border-t-2 text-center p-4'>
+  <footer className='bg-sky-100 dark:bg-inherit dark:border-zinc-800 border-solid border-t-2 text-center p-4'>
     <Details>
       Site built with <Link href='https://nextjs.org/'>Next.js</Link> and <Link href='https://tailwindcss.com/'>Tailwind CSS</Link>, hosted for free by <Link href='https://pages.cloudflare.com/'>Cloudflare</Link>, source on <Link href='https://github.com/bluefeet/bluefeet.dev'>GitHub</Link>, &copy; {resume.contact?.fullName}
     </Details>
