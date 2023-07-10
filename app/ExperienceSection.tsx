@@ -1,6 +1,7 @@
 import { Experience } from '@/types/Resume'
 import Details from './Details'
 import formatDateDistance from 'date-fns/formatDistance'
+import headerFont from './headerFont'
 import parseISODate from 'date-fns/parseISO'
 import ReactMarkdown from 'react-markdown'
 import resume from './resume'

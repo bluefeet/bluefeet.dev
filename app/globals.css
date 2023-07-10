@@ -4,11 +4,11 @@
 
 @layer utilities {
   a {
-    @apply text-link underline decoration-decoration;
+    @apply text-sky-800 dark:text-sky-400 underline decoration-sky-200 dark:decoration-sky-800;
   }
 
   a:hover {
-    @apply decoration-link;
+    @apply decoration-sky-800 dark:decoration-sky-400;
   }
 
   .typography {
@@ -28,14 +28,6 @@
   }
 
   .typography li::marker {
-    @apply text-bullet;
-  }
-
-  .page-break-after {
-    page-break-after: always;
-  }
-
-  .page-break-avoid {
-    page-break-inside: avoid;
+    @apply text-sky-600 dark:text-green-400;
   }
 }

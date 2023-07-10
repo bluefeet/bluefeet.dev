@@ -7,7 +7,7 @@ const AboutSection = ({ className = '' }: { className?: string }) => {
 
   return <>
     <section className={className}>
-      <SectionTitle className='printable:hidden'>About</SectionTitle>
+      <SectionTitle>About</SectionTitle>
 
       <div className='typography'>
         <ReactMarkdown>{resume.profile.about}</ReactMarkdown>
