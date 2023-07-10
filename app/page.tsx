@@ -24,7 +24,7 @@ const Page = () => <>
     </p>
   </header>
 
-  <header className={`pb-4 ${headerFont.className} hidden print:flex justify-between items-end`}>
+  <header className={`pb-8 ${headerFont.className} hidden print:flex justify-between items-end`}>
     <h1 className='text-5xl font-semibold text-sky-800'>
       {resume.contact?.fullName}
     </h1>
@@ -34,8 +34,8 @@ const Page = () => <>
   </header>
 
   <main className='flex flex-col lg:flex-row p-4 pt-0 ml-auto mr-auto lg:w-[58rem] xl:w-[68rem] print:p-0'>
-    <div className='lg:w-2/5 flex flex-wrap lg:flex-col lg:order-2 lg:pl-4 print:flex-row'>
-      <AboutSection />
+    <div className='lg:w-2/5 flex flex-wrap lg:flex-col lg:order-2 lg:pl-4 print:flex-row print:pl-0 print:pb-2'>
+      <AboutSection className='print:pb-2' />
       <Divider />
 
       <ObjectiveSection className='md:w-1/2 lg:w-full print:w-1/2' />
