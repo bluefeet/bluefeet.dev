@@ -11,20 +11,21 @@ import resume from './resume'
 import SkillsSection from './SkillsSection'
 
 const Divider = ({ className = '' }: { className?: string }) =>
-  <hr className={`w-full border-zinc-400 dark:border-sky-600 border-solid border-1 mt-2 mb-2 print:hidden ${className}`} />
+  <hr className={`w-full border-sky-600 border-solid border-1 mt-2 mb-2 print:hidden ${className}`} />
 
 const Page = () => <>
-  <header className={`grid grid-cols-[max-content_max-content] text-white bg-sky-700 dark:bg-zinc-800 place-content-center text-center sticky top-0 h-24 md:h-28 lg:h-32 shadow-lg print:hidden ${headerFont.className}`}>
-    <img src='/avatar.jpg' alt={`Photo of ${resume.contact?.fullName}`} className='row-span-2 h-20 md:h-24 lg:h-28 rounded-full border-solid border-4 border-sky-800 mr-6' />
-    <h1 className='text-5xl lg:text-6xl self-end'>
-      {resume.contact?.fullName}
-    </h1>
-    <p className='self-start pt-1'>
-      {resume.profile?.headline} • {resume.contact?.pronouns}
-    </p>
+  <header className='bg-robot bg-cover bg-fixed h-screen bg-top print:hidden'>
+    <div className='bg-gradient-to-b from-zinc-900 text-center md:text-right p-5 md:pr-24'>
+      <h1 className='text-6xl lg:text-8xl md:pr-8'>
+        {resume.contact?.fullName}
+      </h1>
+      <p className='pt-2 lg:pt-5 lg:pr-16 text-lg'>
+        {resume.profile?.headline} • {resume.contact?.pronouns}
+      </p>
+    </div>
   </header>
 
-  <header className={`pb-8 ${headerFont.className} hidden print:flex justify-between items-end`}>
+  <header className={`pb-4 ${headerFont.className} hidden print:flex justify-between items-end`}>
     <h1 className='text-5xl font-semibold text-sky-800'>
       {resume.contact?.fullName}
     </h1>
@@ -33,7 +34,7 @@ const Page = () => <>
     </p>
   </header>
 
-  <main className='flex flex-col lg:flex-row p-4 pt-0 ml-auto mr-auto lg:w-[58rem] xl:w-[68rem] print:p-0'>
+  <main className='flex flex-col lg:flex-row p-4 md:p-8 pt-0 lg:pt-8 ml-auto mr-auto lg:w-[58rem] xl:w-[68rem] print:p-0'>
     <div className='lg:w-2/5 flex flex-wrap lg:flex-col lg:order-2 lg:pl-4 print:flex-row print:pl-0 print:pb-2'>
       <AboutSection className='print:pb-2' />
       <Divider />
@@ -55,14 +56,14 @@ const Page = () => <>
     </div>
   </main>
 
-  <footer className='bg-sky-100 dark:bg-inherit dark:border-zinc-800 border-solid border-t-2 text-center p-4 print:hidden'>
+  <footer className='border-zinc-800 border-solid border-t-2 text-center p-4 print:hidden'>
     <Details>
       Site built with <Link href='https://nextjs.org/'>Next.js</Link> and <Link href='https://tailwindcss.com/'>Tailwind CSS</Link>, hosted for free by <Link href='https://pages.cloudflare.com/'>Cloudflare</Link>, source on <Link href='https://github.com/bluefeet/bluefeet.dev'>GitHub</Link>, &copy; {resume.contact?.fullName}
     </Details>
   </footer>
 
   <footer className='text-right pt-8 hidden print:flex justify-between'>
-    <Details>Generated {formatDate(new Date,'PPP')}</Details>
+    <Details>Generated {formatDate(new Date, 'PPP')}</Details>
     <Details>&copy; {resume.contact?.fullName}</Details>
   </footer>
 </>
