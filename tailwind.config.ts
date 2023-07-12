@@ -9,8 +9,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'robot': "url('/robot.jpg')",
-        'robot-lg': "url('/robot-lg.jpg')",
+        'robot': "url('../public/robot.jpg')",
       },
       listStyleType: {
         square: 'square',
