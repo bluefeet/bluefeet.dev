@@ -14,7 +14,7 @@ const Divider = ({ className = '' }: { className?: string }) =>
   <hr className={`w-full border-sky-600 border-solid border-1 mt-2 mb-2 print:hidden ${className}`} />
 
 const Page = () => <>
-  <header className='bg-robot bg-cover bg-fixed h-screen bg-top print:hidden'>
+  <header className='bg-robot lg:bg-robot-lg bg-cover bg-fixed h-screen bg-top print:hidden'>
     <div className='bg-gradient-to-b from-zinc-900 text-center md:text-right p-5 md:pr-24'>
       <h1 className='text-6xl lg:text-8xl md:pr-8'>
         {resume.contact?.fullName}
