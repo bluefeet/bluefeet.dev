@@ -214,14 +214,14 @@
   ],
   "recommendations": [
     {
-      "author": "Maxwell Cabral",
-      "relationship": "Max and Aran both worked at ZipRecruiter in various roles",
-      "message": "He was a big asset to me in my career development and to the many companies he has worked for. If you’re looking for a strong Principle Engineer/Architect then you should see what Aran has to offer."
-    },
-    {
       "author": "Mike Rozek",
       "relationship": "Mike and Aran both worked at Rent.com and ZipRecruiter in various roles",
       "message": "It is difficult to overstate the impact that Aran Deltac has made at the two companies where I’ve been grateful to be his colleague. As a mentor, he has had the largest impact on my career journey of any engineer I’ve ever worked with."
+    },
+    {
+      "author": "Maxwell Cabral",
+      "relationship": "Max and Aran both worked at ZipRecruiter in various roles",
+      "message": "He was a big asset to me in my career development and to the many companies he has worked for. If you’re looking for a strong Principle Engineer/Architect then you should see what Aran has to offer."
     },
     {
       "author": "Alain Avakian",
