@@ -20,6 +20,6 @@
   }
 
   .typography li::marker {
-    @apply text-sky-600 dark:text-green-400;
+    @apply text-amber-400 print:text-sky-600;
   }
 }
