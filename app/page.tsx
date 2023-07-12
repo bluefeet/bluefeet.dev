@@ -15,11 +15,11 @@ const Divider = ({ className = '' }: { className?: string }) =>
 
 const Page = () => <>
   <header className='bg-robot bg-cover h-screen bg-top print:hidden lg:bg-fixed border-b-2 border-zinc-950 border-solid'>
-    <div className='bg-gradient-to-b from-zinc-900 text-center md:text-right p-5 md:pr-24'>
-      <h1 className='text-6xl lg:text-8xl md:pr-8'>
+    <div className='bg-gradient-to-b from-zinc-900 text-center md:text-right p-5 md:pr-16 lg:pr-24'>
+      <h1 className='text-6xl md:text-7xl lg:text-8xl md:pr-16 lg:pr-32'>
         {resume.contact?.fullName}
       </h1>
-      <p className='pt-2 lg:pt-5 lg:pr-16 text-lg'>
+      <p className='pt-2 md:pt-3 lg:pt-5 lg:pr-16 text-lg md:text-2xl'>
         {resume.profile?.headline} • {resume.contact?.pronouns}
       </p>
     </div>
@@ -35,7 +35,7 @@ const Page = () => <>
   </header>
 
   <main className='flex flex-col lg:flex-row p-4 md:p-8 pt-0 lg:pt-8 ml-auto mr-auto lg:w-[58rem] xl:w-[68rem] print:p-0'>
-    <div className='lg:w-2/5 flex flex-wrap lg:flex-col lg:order-2 lg:pl-4 print:flex-row print:pl-0 print:pb-2'>
+    <div className='lg:w-2/5 flex flex-wrap lg:flex-col lg:order-2 lg:pl-8 print:flex-row print:pl-0 print:pb-2'>
       <AboutSection className='print:pb-2' />
       <Divider />
 
@@ -49,10 +49,10 @@ const Page = () => <>
       <SkillsSection />
       <Divider className='lg:hidden mb-5' />
 
-      <ExperienceSection />
+      <ExperienceSection className='lg:pt-4 print:pt-0' />
       <Divider className='lg:hidden mt-5 mb-5' />
 
-      <RecommendationsSection className='print:hidden' />
+      <RecommendationsSection className='lg:pt-4 print:hidden' />
     </div>
   </main>
 
