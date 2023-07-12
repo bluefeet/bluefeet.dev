@@ -7,7 +7,7 @@ const AboutSection = ({ className = '' }: { className?: string }) => {
 
   return <>
     <section className={`md:flex lg:block pt-2 md:pt-0 ${className}`}>
-      <SectionTitle className='text-center lg:text-left md:pr-8 lg:pr-0 print:hidden'>About</SectionTitle>
+      <SectionTitle className='md:pr-8 lg:pr-0 print:hidden mt-3 md:mt-0 lg:mt-3'>About</SectionTitle>
 
       <div className='typography'>
         <ReactMarkdown>{resume.profile.about}</ReactMarkdown>
