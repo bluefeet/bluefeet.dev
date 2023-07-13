@@ -13,6 +13,7 @@ import {
   CalendarDaysIcon,
   Cog6ToothIcon,
   RocketLaunchIcon,
+  TruckIcon,
 } from '@heroicons/react/24/solid'
 
 const StartDate = () => {
@@ -91,14 +92,28 @@ const EmploymentTypes = () => {
   </>
 }
 
+const Relocation = () => {
+  if (typeof resume.objective?.willingToRelocate !== 'boolean') return <></>
+
+  return <>
+    <ListItem Icon={TruckIcon}>
+      {resume.objective?.willingToRelocate
+        ? 'Willing to relocate'
+        : 'Not willing to relocate'
+      }
+    </ListItem>
+  </>
+}
+
 const ObjectiveSection = ({ className = '' }: { className?: string }) => {
   return <>
     <section className={className}>
       <List>
         <StartDate />
         <Roles />
-        <WorkModes />
         <EmploymentTypes />
+        <WorkModes />
+        <Relocation />
       </List>
     </section>
   </>
