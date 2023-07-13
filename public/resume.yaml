@@ -75,6 +75,8 @@ profile:
       uri: https://github.com/bluefeet
     - title: CPAN
       uri: https://metacpan.org/author/BLUEFEET
+    - title: Badgers
+      uri: https://bit.ly/3DeRd6g
 objective:
   startDate: "2023-07-10"
   roles:
