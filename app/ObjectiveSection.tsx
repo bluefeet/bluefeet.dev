@@ -69,11 +69,7 @@ const WorkModes = () => {
     <ListItem Icon={BuildingOffice2Icon}>
       In {resume.objective.workModes.length > 1 ? 'any of these capacities' : 'this capacity'}
       <Details>
-        {resume.objective.workModes.map((workMode) =>
-          <Fragment key={workMode}>
-            {upperFirst(workMode)}<br />
-          </Fragment>
-        )}
+        {resume.objective.workModes.map((workMode) => upperFirst(workMode)).join(', ')}
       </Details>
     </ListItem>
   </>
@@ -86,11 +82,7 @@ const EmploymentTypes = () => {
     <ListItem Icon={CalendarDaysIcon}>
       With {resume.objective.employmentTypes.length > 1 ? 'one of these commitments' : 'this commitment'}
       <Details>
-        {resume.objective.employmentTypes.map((employmentType) =>
-          <Fragment key={employmentType}>
-            {upperFirst(employmentType)}<br />
-          </Fragment>
-        )}
+        {resume.objective.employmentTypes.map((employmentType) => upperFirst(employmentType)).join(', ')}
       </Details>
     </ListItem>
   </>
