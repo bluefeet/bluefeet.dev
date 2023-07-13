@@ -14,7 +14,7 @@ const Divider = ({ className = '' }: { className?: string }) =>
   <hr className={`w-full border-sky-600 border-solid border-1 mt-2 mb-2 print:hidden ${className}`} />
 
 const Page = () => <>
-  <header className='bg-robot bg-cover h-screen bg-top print:hidden lg:bg-fixed border-b-2 border-zinc-950 border-solid'>
+  <header className='bg-robot bg-cover h-screen bg-top print:hidden border-b-2 border-zinc-950 border-solid'>
     <div className='bg-gradient-to-b from-zinc-900 text-center md:text-right p-5 md:pr-16 lg:pr-24'>
       <h1 className='text-6xl md:text-7xl lg:text-8xl md:pr-16 lg:pr-32'>
         {resume.contact?.fullName}
@@ -34,7 +34,7 @@ const Page = () => <>
     </p>
   </header>
 
-  <main className='flex flex-col lg:flex-row p-4 md:p-8 pt-0 lg:pt-8 ml-auto mr-auto lg:w-[58rem] xl:w-[68rem] print:p-0'>
+  <main className='flex flex-col lg:flex-row p-4 md:p-8 pt-0 lg:pt-8 ml-auto mr-auto max-w-6xl print:p-0'>
     <div className='lg:w-2/5 flex flex-wrap lg:flex-col lg:order-2 lg:pl-8 print:flex-row print:pl-0 print:pb-2'>
       <AboutSection className='print:pb-2' />
       <Divider />
