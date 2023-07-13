@@ -170,6 +170,9 @@
         "willingToRelocate": {
           "type": "boolean"
         },
+        "willingToTravel": {
+          "type": "boolean"
+        },
         "roles": {
           "$ref": "#/$defs/uniqueStrings"
         },

@@ -16,6 +16,10 @@ import {
   TruckIcon,
 } from '@heroicons/react/24/solid'
 
+import {
+  GlobeAltIcon,
+} from '@heroicons/react/24/outline'
+
 const StartDate = () => {
   if (!resume.objective) return <></>
 
@@ -105,6 +109,19 @@ const Relocation = () => {
   </>
 }
 
+const Travel = () => {
+  if (typeof resume.objective?.willingToTravel !== 'boolean') return <></>
+
+  return <>
+    <ListItem Icon={GlobeAltIcon}>
+      {resume.objective?.willingToTravel
+        ? 'Willing to travel'
+        : 'Not willing to travel'
+      }
+    </ListItem>
+  </>
+}
+
 const ObjectiveSection = ({ className = '' }: { className?: string }) => {
   return <>
     <section className={className}>
@@ -114,6 +131,7 @@ const ObjectiveSection = ({ className = '' }: { className?: string }) => {
         <EmploymentTypes />
         <WorkModes />
         <Relocation />
+        <Travel />
       </List>
     </section>
   </>
