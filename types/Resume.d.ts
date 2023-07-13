@@ -64,6 +64,7 @@ export interface Objective {
    */
   isCasual?: boolean;
   willingToRelocate?: boolean;
+  willingToTravel?: boolean;
   roles?: UniqueStrings;
   workModes?: WorkMode[];
   employmentTypes?: EmploymentType[];
