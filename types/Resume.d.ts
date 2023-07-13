@@ -63,6 +63,7 @@ export interface Objective {
    * Taking extended time to find the best fit.
    */
   isCasual?: boolean;
+  willingToRelocate?: boolean;
   roles?: UniqueStrings;
   workModes?: WorkMode[];
   employmentTypes?: EmploymentType[];

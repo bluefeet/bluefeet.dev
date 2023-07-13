@@ -167,6 +167,9 @@
           "description": "Taking extended time to find the best fit.",
           "type": "boolean"
         },
+        "willingToRelocate": {
+          "type": "boolean"
+        },
         "roles": {
           "$ref": "#/$defs/uniqueStrings"
         },
