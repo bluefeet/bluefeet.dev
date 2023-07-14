@@ -1,4 +1,4 @@
-import { Fragment } from 'react'
+import { Fragment, ReactNode } from 'react'
 import Details from './Details'
 import Link from './Link'
 import List from './List'
@@ -16,9 +16,28 @@ import {
 const Location = () => {
   if (!resume.contact?.location) return <></>
 
+  const details: ReactNode[] = []
+
+  if (typeof resume.objective?.willingToRelocate === 'boolean') {
+    details.push(<Details>{
+      resume.objective?.willingToRelocate
+        ? 'Willing to relocate'
+        : 'Not available to relocate'
+    }</Details>)
+  }
+
+  if (typeof resume.objective?.willingToTravel === 'boolean') {
+    details.push(<Details>{
+      resume.objective?.willingToTravel
+        ? 'Willing to travel'
+        : 'Not willing to travel'
+    }</Details>)
+  }
+
   return <>
     <ListItem Icon={MapPinIcon}>
       {resume.contact.location}
+      {details}
     </ListItem>
   </>
 }

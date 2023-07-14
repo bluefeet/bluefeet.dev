@@ -46,7 +46,7 @@ const Page = () => <>
       <Divider className='lg:hidden' />
     </div>
     <div className='lg:w-3/5 lg:order-1'>
-      <SkillsSection />
+      <SkillsSection className='page-break-after' />
       <Divider className='lg:hidden mb-5' />
 
       <ExperienceSection className='lg:pt-4 print:pt-0' />
