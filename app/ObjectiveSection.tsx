@@ -13,12 +13,7 @@ import {
   CalendarDaysIcon,
   Cog6ToothIcon,
   RocketLaunchIcon,
-  TruckIcon,
 } from '@heroicons/react/24/solid'
-
-import {
-  GlobeAltIcon,
-} from '@heroicons/react/24/outline'
 
 const StartDate = () => {
   if (!resume.objective) return <></>
@@ -88,45 +83,15 @@ const EmploymentTypes = () => {
   </>
 }
 
-const Relocation = () => {
-  if (typeof resume.objective?.willingToRelocate !== 'boolean') return <></>
-
-  return <>
-    <ListItem Icon={TruckIcon}>
-      {resume.objective?.willingToRelocate
-        ? 'Willing to relocate'
-        : 'Not willing to relocate'
-      }
-    </ListItem>
-  </>
-}
-
-const Travel = () => {
-  if (typeof resume.objective?.willingToTravel !== 'boolean') return <></>
-
-  return <>
-    <ListItem Icon={GlobeAltIcon}>
-      {resume.objective?.willingToTravel
-        ? 'Willing to travel'
-        : 'Not willing to travel'
-      }
-    </ListItem>
-  </>
-}
-
-const ObjectiveSection = ({ className = '' }: { className?: string }) => {
-  return <>
-    <section className={className}>
-      <List>
-        <StartDate />
-        <Roles />
-        <EmploymentTypes />
-        <WorkModes />
-        <Relocation />
-        <Travel />
-      </List>
-    </section>
-  </>
-}
+const ObjectiveSection = ({ className = '' }: { className?: string }) => <>
+  <section className={className}>
+    <List>
+      <StartDate />
+      <Roles />
+      <EmploymentTypes />
+      <WorkModes />
+    </List>
+  </section>
+</>
 
 export default ObjectiveSection
