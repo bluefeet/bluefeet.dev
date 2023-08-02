@@ -87,7 +87,7 @@ const Resources = () => {
           <Details className='hidden print:block'>{resource.uri}</Details>
         </Fragment>
       )}
-      <Link className='print:hidden' href='/aran-clary-resume.pdf'>PDF Resume</Link><br />
+      <Link className='print:hidden' href='/resume.pdf'>PDF Resume</Link><br />
     </ListItem>
   </>
 }
