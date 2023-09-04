@@ -158,6 +158,10 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "overview": {
+          "type": "string",
+          "description": "A few sentences describing the kind of job is wanted."
+        },
         "startDate": {
           "type": "string",
           "format": "date",
