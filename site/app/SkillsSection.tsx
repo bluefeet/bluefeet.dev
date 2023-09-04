@@ -10,7 +10,7 @@ const SkillsSection = ({ className = '' }: { className?: string }) => {
       <SectionTitle>Skills</SectionTitle>
 
       <div className='typography'>
-        <ul>{resume.profile.skills.map((skill) => <li key={skill.name}>
+        <ul>{resume.profile.skills.map((skill) => <li key={skill.name} className='break-inside-avoid'>
           {skill.name}
           <Details>{skill.competencies?.join(', ')}</Details>
         </li>)}</ul>

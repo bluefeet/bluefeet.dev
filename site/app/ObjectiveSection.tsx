@@ -12,8 +12,20 @@ import {
   BuildingOffice2Icon,
   CalendarDaysIcon,
   Cog6ToothIcon,
+  PhotoIcon,
   RocketLaunchIcon,
 } from '@heroicons/react/24/solid'
+
+const Overview = () => {
+  if (!resume.objective?.overview) return <></>
+
+  return <>
+    <ListItem Icon={PhotoIcon}>
+      Dream Job Traits
+      <Details>{resume.objective.overview}</Details>
+    </ListItem>
+  </>
+}
 
 const StartDate = () => {
   if (!resume.objective) return <></>
@@ -86,6 +98,7 @@ const EmploymentTypes = () => {
 const ObjectiveSection = ({ className = '' }: { className?: string }) => <>
   <section className={className}>
     <List>
+      <Overview />
       <StartDate />
       <Roles />
       <EmploymentTypes />

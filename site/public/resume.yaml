@@ -9,7 +9,7 @@ contact:
   emailAddress: bluefeet@gmail.com
 profile:
   headline: Technology Builder
-  about: An exceptionally driven and independent professional with a flair for effective communication. I have honed my skills in software development and leadership over an impressive span of three decades. My expertise encompasses guiding dynamic teams, catalyzing innovation, and designing resilient systems that serve as a bedrock for organizational advancement.
+  about: I'm an exceptionally driven and independent professional with a flair for effective communication. I have honed my skills in software development and leadership over an impressive span of three decades. My expertise encompasses guiding dynamic teams, catalyzing innovation, and designing resilient systems that serve as a bedrock for organizational advancement.
   skills:
     - name: Frontend Development
       competencies:
@@ -33,7 +33,6 @@ profile:
         - Bash
     - name: Data Engineering
       competencies:
-        - Apache Kafka
         - Memcached
         - DynamoDB
         - MySQL
@@ -76,6 +75,7 @@ profile:
     - title: CPAN
       uri: https://metacpan.org/author/BLUEFEET
 objective:
+  overview: I'm seeking a purpose-driven role that positively impacts society, fosters collaborative teamwork, values my contributions, and appreciates results over hours clocked in. A place where innovation thrives and work-life balance is respected.
   startDate: "2023-07-10"
   roles:
     - Frontend Developer

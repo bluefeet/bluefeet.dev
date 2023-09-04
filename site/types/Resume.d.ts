@@ -56,6 +56,10 @@ export interface Resource {
 }
 export interface Objective {
   /**
+   * A few sentences describing the kind of job is wanted.
+   */
+  overview?: string;
+  /**
    * The date when first available for hire. A date in the past or no date is considered to mean immediately.
    */
   startDate?: string;

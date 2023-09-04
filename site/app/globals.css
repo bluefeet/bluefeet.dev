@@ -22,8 +22,4 @@
   .typography li::marker {
     @apply text-amber-400 print:text-sky-600;
   }
-
-  .page-break-after {
-    page-break-after: always;
-  }
 }
