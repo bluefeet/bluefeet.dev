@@ -83,11 +83,11 @@ const Resources = () => {
     <ListItem Icon={LinkIcon}>
       {resume.profile.resources.map((resource) =>
         <Fragment key={resource.uri}>
-          <Link href={resource.uri} external>{resource.title}</Link><br />
+          <Link href={resource.uri}>{resource.title}</Link><br />
           <Details className='hidden print:block'>{resource.uri}</Details>
         </Fragment>
       )}
-      <Link className='print:hidden' href='/resume.pdf' external>PDF Resume</Link><br />
+      <Link className='print:hidden' href='/resume.pdf'>PDF Resume</Link><br />
     </ListItem>
   </>
 }
