@@ -2,7 +2,7 @@
 ---
 $schema: resume.schema.json
 contact:
-  fullName: Aran Deltac
+  fullName: Aran Clary
   casualName: Aran
   pronouns: He/Him
   location: Portland, OR, US
@@ -175,7 +175,7 @@ experiences:
 recommendations:
   - author: Mike Rozek
     relationship: Mike and Aran both worked at Rent.com and ZipRecruiter in various roles
-    message: It is difficult to overstate the impact that Aran Deltac has made at the two companies where I’ve been grateful to be his colleague. As a mentor, he has had the largest impact on my career journey of any engineer I’ve ever worked with.
+    message: It is difficult to overstate the impact that [Aran] has made at the two companies where I’ve been grateful to be his colleague. As a mentor, he has had the largest impact on my career journey of any engineer I’ve ever worked with.
   - author: Maxwell Cabral
     relationship: Max and Aran both worked at ZipRecruiter in various roles
     message: He was a big asset to me in my career development and to the many companies he has worked for. If you’re looking for a strong Principle Engineer/Architect then you should see what Aran has to offer.
@@ -199,7 +199,7 @@ recommendations:
     message: |-
       Working with Aran was a complete joy. He maintained a high level of focus on both the quality of his code and the overall quality of the product he was delivering to our customers. I served as the product manager for Aran’s teams over numerous projects spanning almost four years. I was always amazed by his empathy and kindness on a personal level and the dedication to awesome work on a professional level. His heart and mind are always in the right place.
 
-      If there was a Perl Coders Hall of Fame, this man would get in on the first ballot. I would love the opportunity to work with Aran again. Any team that can count Aran Deltac as one of its members is truly made better for it.
+      If there was a Perl Coders Hall of Fame, this man would get in on the first ballot. I would love the opportunity to work with Aran again. Any team that can count [Aran] as one of its members is truly made better for it.
   - author: Demian L'Ecuyer
     relationship: Demian was a senior software engineer at ValueClick and worked directly with Aran
     message: In the five years that Aran and I worked together, he has consistently proven himself as an awesome resource for complex issues. His ability to get to the heart of an issue quickly and offer valuable insight and opinions has helped reduce development time on many projects. This combined with his willingness and patience to educate and grow with his peers makes him a valuable addition on any project he joins.
@@ -218,4 +218,4 @@ recommendations:
   - author: Shawn Faison
     relationship: Shawn worked for a client of Aran's
     message: |-
-      I have never met an individual as talented as Aran Deltac. Working with him professionally over the years I have to say I admire his natural ability combined with his work ethic. Aran knows what he is talking about and knows how to communicate it. He possesses over ten years of experience as a web developer and is one of the best in the world.
+      I have never met an individual as talented as [Aran]. Working with him professionally over the years I have to say I admire his natural ability combined with his work ethic. Aran knows what he is talking about and knows how to communicate it. He possesses over ten years of experience as a web developer and is one of the best in the world.

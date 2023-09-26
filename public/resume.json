@@ -1,7 +1,7 @@
 {
   "$schema": "resume.schema.json",
   "contact": {
-    "fullName": "Aran Deltac",
+    "fullName": "Aran Clary",
     "casualName": "Aran",
     "pronouns": "He/Him",
     "location": "Portland, OR, US",
@@ -218,7 +218,7 @@
     {
       "author": "Mike Rozek",
       "relationship": "Mike and Aran both worked at Rent.com and ZipRecruiter in various roles",
-      "message": "It is difficult to overstate the impact that Aran Deltac has made at the two companies where I’ve been grateful to be his colleague. As a mentor, he has had the largest impact on my career journey of any engineer I’ve ever worked with."
+      "message": "It is difficult to overstate the impact that [Aran] has made at the two companies where I’ve been grateful to be his colleague. As a mentor, he has had the largest impact on my career journey of any engineer I’ve ever worked with."
     },
     {
       "author": "Maxwell Cabral",
@@ -238,7 +238,7 @@
     {
       "author": "Eric Feay",
       "relationship": "Eric was the product manager for Aran's team at ValueClick",
-      "message": "Working with Aran was a complete joy. He maintained a high level of focus on both the quality of his code and the overall quality of the product he was delivering to our customers. I served as the product manager for Aran’s teams over numerous projects spanning almost four years. I was always amazed by his empathy and kindness on a personal level and the dedication to awesome work on a professional level. His heart and mind are always in the right place.\n\nIf there was a Perl Coders Hall of Fame, this man would get in on the first ballot. I would love the opportunity to work with Aran again. Any team that can count Aran Deltac as one of its members is truly made better for it."
+      "message": "Working with Aran was a complete joy. He maintained a high level of focus on both the quality of his code and the overall quality of the product he was delivering to our customers. I served as the product manager for Aran’s teams over numerous projects spanning almost four years. I was always amazed by his empathy and kindness on a personal level and the dedication to awesome work on a professional level. His heart and mind are always in the right place.\n\nIf there was a Perl Coders Hall of Fame, this man would get in on the first ballot. I would love the opportunity to work with Aran again. Any team that can count [Aran] as one of its members is truly made better for it."
     },
     {
       "author": "Demian L'Ecuyer",
@@ -263,7 +263,7 @@
     {
       "author": "Shawn Faison",
       "relationship": "Shawn worked for a client of Aran's",
-      "message": "I have never met an individual as talented as Aran Deltac. Working with him professionally over the years I have to say I admire his natural ability combined with his work ethic. Aran knows what he is talking about and knows how to communicate it. He possesses over ten years of experience as a web developer and is one of the best in the world."
+      "message": "I have never met an individual as talented as [Aran]. Working with him professionally over the years I have to say I admire his natural ability combined with his work ethic. Aran knows what he is talking about and knows how to communicate it. He possesses over ten years of experience as a web developer and is one of the best in the world."
     }
   ]
 }
