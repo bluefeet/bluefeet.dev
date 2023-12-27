@@ -8,8 +8,8 @@ contact:
   location: Portland, OR, US
   emailAddress: bluefeet@gmail.com
 profile:
-  headline: Technology Builder
-  about: I'm an exceptionally driven and independent professional with a flair for effective communication. I have honed my skills in software development and leadership over an impressive span of three decades. My expertise encompasses guiding dynamic teams, catalyzing innovation, and designing resilient systems that serve as a bedrock for organizational advancement.
+  headline: Senior Full-Stack Engineer
+  about: I'm a seasoned full-stack software developer with over 30 years of hands-on experience. My track record includes managing data pipelines, crafting backend services, and delivering stunning UIs. I excel at leading teams and interfacing with product development.
   skills:
     - name: Frontend Development
       competencies:
@@ -17,13 +17,14 @@ profile:
         - React
         - Responsive Design
         - Jest
-        - REST
         - CSS
+        - Tailwind
         - HTML
         - JavaScript
     - name: Backend Development
       competencies:
         - Node.js
+        - REST
         - gRPC
         - Git
         - Linux
@@ -66,6 +67,7 @@ profile:
         - Lean Processes
         - Generative AI
         - Game Design
+        - GCP
         - Sociocracy
   languages:
     - English
@@ -77,8 +79,8 @@ profile:
     - title: CPAN
       uri: https://metacpan.org/author/BLUEFEET
 objective:
-  overview: A role where collaboration, innovation, and results take precedence over hours worked. A place that nurtures teamwork, respects work-life balance, and celebrates contributions.
-  startDate: "2023-07-10"
+  overview: Collaboration, innovation, impactful results, teamwork, work-life balance, recognition.
+  startDate: "2024-02-12"
   roles:
     - Frontend Developer
     - Principal Software Engineer
@@ -92,6 +94,11 @@ objective:
     - hybrid
     - remote
 experiences:
+  - title: Engineering Contractor
+    employmentType: contract
+    companyName: GoGuardian
+    workMode: remote
+    startDate: "2023-12-06"
   - title: Principal Software Engineer
     employmentType: full-time
     companyName: ZipRecruiter

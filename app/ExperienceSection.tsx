@@ -1,12 +1,14 @@
 import { Experience } from '@/types/Resume'
 import Details from './Details'
-import formatDateDistance from 'date-fns/formatDistance'
 import parseISODate from 'date-fns/parseISO'
+import formatDate from 'date-fns/format'
 import ReactMarkdown from 'react-markdown'
 import resume from './resume'
 import SectionTitle from './SectionTitle'
 import upperFirst from 'lodash/upperFirst'
 import SubSectionTitle from './SubSectionTitle'
+
+const dateFormat = 'MMM yyyy'
 
 const SingleExperience = ({ experience }: { experience: Experience }) => {
   const metaParts: string[] = []
@@ -15,9 +17,10 @@ const SingleExperience = ({ experience }: { experience: Experience }) => {
 
   if (experience.startDate) {
     const startDate = parseISODate(experience.startDate)
+    const start = formatDate(startDate, dateFormat)
     const endDate = experience.endDate ? parseISODate(experience.endDate) : new Date()
-    const duration = formatDateDistance(startDate, endDate)
-    metaParts.push(upperFirst(duration))
+    const end = experience.endDate ? formatDate(endDate, dateFormat) : 'Now'
+    metaParts.push(start + (end !== start ? ` - ${end}` : ''))
   }
 
   if (experience.employmentType) metaParts.push(upperFirst(experience.employmentType))
