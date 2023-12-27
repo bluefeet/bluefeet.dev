@@ -19,7 +19,7 @@ const Location = () => {
   const details: ReactNode[] = []
 
   if (typeof resume.objective?.willingToRelocate === 'boolean') {
-    details.push(<Details>{
+    details.push(<Details key='willingToRelocate'>{
       resume.objective?.willingToRelocate
         ? 'Willing to relocate'
         : 'Not available to relocate'
@@ -27,7 +27,7 @@ const Location = () => {
   }
 
   if (typeof resume.objective?.willingToTravel === 'boolean') {
-    details.push(<Details>{
+    details.push(<Details key='willingToTravel'>{
       resume.objective?.willingToTravel
         ? 'Willing to travel'
         : 'Not willing to travel'
