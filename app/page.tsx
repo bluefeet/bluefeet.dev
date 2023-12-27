@@ -11,18 +11,45 @@ import ObjectiveSection from './ObjectiveSection'
 import RecommendationsSection from './RecommendationsSection'
 import resume from './resume'
 import SkillsSection from './SkillsSection'
-import { useRef } from 'react'
-import { ArrowDownIcon } from '@heroicons/react/24/solid'
+import { useEffect, useRef, useState } from 'react'
+import { Howl } from 'howler'
+
+import {
+  ArrowDownIcon,
+  SpeakerWaveIcon,
+  SpeakerXMarkIcon,
+} from '@heroicons/react/24/solid'
 
 const Divider = ({ className = '' }: { className?: string }) =>
   <hr className={`w-full border-sky-600 border-solid border-1 mt-2 mb-2 print:hidden ${className}`} />
 
 const Page = () => {
   const mainRef = useRef<HTMLElement>(null);
+  const [sound, setSound] = useState<Howl | null>(null);
+  const [muted, setMuted] = useState(true);
 
   const scrollToMain = () => {
     mainRef.current?.scrollIntoView({ behavior: 'smooth' })
   }
+
+  useEffect(() => {
+    if (muted || sound) return
+    setSound(new Howl({
+      src: ['/nature.mp3'],
+      loop: true,
+    }))
+  }, [muted])
+
+  useEffect(() => {
+    if (muted) sound?.pause()
+    else sound?.play()
+  }, [muted, sound])
+
+  const toggleMute = () => {
+    setMuted((wasMuted) => !wasMuted)
+  }
+
+  const SoundIcon = muted ? SpeakerXMarkIcon : SpeakerWaveIcon
 
   return <>
     <header className='bg-bear bg-cover h-screen bg-center print:hidden border-b-2 border-zinc-950 border-solid'>
@@ -35,9 +62,14 @@ const Page = () => {
           {resume.profile?.headline} • {resume.contact?.pronouns}
         </p>
       </div>
-      <button onClick={scrollToMain} className='absolute bottom-4 right-4 border-2 border-zinc-400 border-solid p-1'>
-        <ArrowDownIcon className='w-10 h-10' />
-      </button>
+      <div className='absolute bottom-4 right-4 w-max'>
+        <button onClick={toggleMute} className='border-2 border-amber-500 border-solid p-1 mr-4'>
+          <SoundIcon className='w-10 h-10' />
+        </button>
+        <button onClick={scrollToMain} className='border-2 border-amber-500 border-solid p-1'>
+          <ArrowDownIcon className='w-10 h-10' />
+        </button>
+      </div>
     </header>
 
     <header className={`pb-4 ${headerFont.className} hidden print:flex justify-between items-end`}>
