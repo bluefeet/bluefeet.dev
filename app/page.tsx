@@ -14,8 +14,9 @@ const Divider = ({ className = '' }: { className?: string }) =>
   <hr className={`w-full border-sky-600 border-solid border-1 mt-2 mb-2 print:hidden ${className}`} />
 
 const Page = () => <>
-  <header className='bg-robot bg-cover h-screen bg-top print:hidden border-b-2 border-zinc-950 border-solid'>
-    <div className='bg-gradient-to-b from-zinc-900 text-center md:text-right p-5 md:pr-16 lg:pr-24'>
+  <header className='bg-bear bg-cover h-screen bg-center print:hidden border-b-2 border-zinc-950 border-solid'>
+    <div className='absolute h-48 w-full bg-gradient-to-b from-zinc-900 opacity-50' />
+    <div className='absolute w-full text-center md:text-right p-5 md:pr-16 lg:pr-24'>
       <h1 className='text-6xl md:text-7xl lg:text-8xl md:pr-16 lg:pr-32'>
         {resume.contact?.fullName}
       </h1>
