@@ -1,3 +1,5 @@
+"use client"
+
 import { format as formatDate } from 'date-fns'
 import AboutSection from './AboutSection'
 import Details from './Details'
@@ -9,65 +11,78 @@ import ObjectiveSection from './ObjectiveSection'
 import RecommendationsSection from './RecommendationsSection'
 import resume from './resume'
 import SkillsSection from './SkillsSection'
+import { useRef } from 'react'
+import { ArrowDownIcon } from '@heroicons/react/24/solid'
 
 const Divider = ({ className = '' }: { className?: string }) =>
   <hr className={`w-full border-sky-600 border-solid border-1 mt-2 mb-2 print:hidden ${className}`} />
 
-const Page = () => <>
-  <header className='bg-bear bg-cover h-screen bg-center print:hidden border-b-2 border-zinc-950 border-solid'>
-    <div className='absolute h-48 w-full bg-gradient-to-b from-zinc-900 opacity-50' />
-    <div className='absolute w-full text-center md:text-right p-5 md:pr-16 lg:pr-24'>
-      <h1 className='text-6xl md:text-7xl lg:text-8xl md:pr-16 lg:pr-32'>
+const Page = () => {
+  const mainRef = useRef<HTMLElement>(null);
+
+  const scrollToMain = () => {
+    mainRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  return <>
+    <header className='bg-bear bg-cover h-screen bg-center print:hidden border-b-2 border-zinc-950 border-solid'>
+      <div className='absolute h-48 w-full bg-gradient-to-b from-zinc-900 opacity-50' />
+      <div className='absolute w-full text-center md:text-right p-5 md:pr-16 lg:pr-24'>
+        <h1 className='text-6xl md:text-7xl lg:text-8xl md:pr-16 lg:pr-32'>
+          {resume.contact?.fullName}
+        </h1>
+        <p className='pt-2 md:pt-3 lg:pt-5 lg:pr-16 text-lg md:text-2xl'>
+          {resume.profile?.headline} • {resume.contact?.pronouns}
+        </p>
+      </div>
+      <button onClick={scrollToMain} className='absolute bottom-4 right-4 border-2 border-zinc-400 border-solid p-1'>
+        <ArrowDownIcon className='w-10 h-10' />
+      </button>
+    </header>
+
+    <header className={`pb-4 ${headerFont.className} hidden print:flex justify-between items-end`}>
+      <h1 className='text-5xl font-semibold text-sky-800'>
         {resume.contact?.fullName}
       </h1>
-      <p className='pt-2 md:pt-3 lg:pt-5 lg:pr-16 text-lg md:text-2xl'>
-        {resume.profile?.headline} • {resume.contact?.pronouns}
+      <p>
+        {resume.profile?.headline} • {resume.contact?.pronouns} • https://bluefeet.dev
       </p>
-    </div>
-  </header>
+    </header>
 
-  <header className={`pb-4 ${headerFont.className} hidden print:flex justify-between items-end`}>
-    <h1 className='text-5xl font-semibold text-sky-800'>
-      {resume.contact?.fullName}
-    </h1>
-    <p>
-      {resume.profile?.headline} • {resume.contact?.pronouns} • https://bluefeet.dev
-    </p>
-  </header>
+    <main ref={mainRef} className='flex flex-col lg:flex-row p-4 md:p-8 pt-0 lg:pt-8 ml-auto mr-auto max-w-6xl print:p-0'>
+      <div className='lg:w-2/5 flex flex-wrap lg:flex-col lg:order-2 lg:pl-8 print:flex-row print:pl-0 print:pb-2'>
+        <AboutSection className='print:pb-2' />
+        <Divider />
 
-  <main className='flex flex-col lg:flex-row p-4 md:p-8 pt-0 lg:pt-8 ml-auto mr-auto max-w-6xl print:p-0'>
-    <div className='lg:w-2/5 flex flex-wrap lg:flex-col lg:order-2 lg:pl-8 print:flex-row print:pl-0 print:pb-2'>
-      <AboutSection className='print:pb-2' />
-      <Divider />
+        <ObjectiveSection className='md:w-1/2 lg:w-full print:w-1/2' />
+        <Divider className='md:hidden lg:block' />
 
-      <ObjectiveSection className='md:w-1/2 lg:w-full print:w-1/2' />
-      <Divider className='md:hidden lg:block' />
+        <InfoSection className='md:w-1/2 lg:w-full print:w-1/2' />
+        <Divider className='lg:hidden' />
+      </div>
+      <div className='lg:w-3/5 lg:order-1'>
+        <SkillsSection />
+        <Divider className='lg:hidden mb-5' />
 
-      <InfoSection className='md:w-1/2 lg:w-full print:w-1/2' />
-      <Divider className='lg:hidden' />
-    </div>
-    <div className='lg:w-3/5 lg:order-1'>
-      <SkillsSection />
-      <Divider className='lg:hidden mb-5' />
+        <ExperienceSection className='lg:pt-4 print:pt-0' />
+        <Divider className='lg:hidden mt-5 mb-5' />
 
-      <ExperienceSection className='lg:pt-4 print:pt-0' />
-      <Divider className='lg:hidden mt-5 mb-5' />
+        <RecommendationsSection className='lg:pt-4 print:hidden' />
+      </div>
+    </main>
 
-      <RecommendationsSection className='lg:pt-4 print:hidden' />
-    </div>
-  </main>
+    <footer className='border-zinc-800 border-solid border-t-2 text-center p-4 print:hidden'>
+      <Details>
+        Site built with <Link href='https://nextjs.org/'>Next.js</Link> and <Link href='https://tailwindcss.com/'>Tailwind CSS</Link>, hosted for free by <Link href='https://pages.cloudflare.com/'>Cloudflare</Link>, source on <Link href='https://github.com/bluefeet/bluefeet.dev'>GitHub</Link>.<br />
+        &copy; {resume.contact?.fullName}
+      </Details>
+    </footer>
 
-  <footer className='border-zinc-800 border-solid border-t-2 text-center p-4 print:hidden'>
-    <Details>
-      Site built with <Link href='https://nextjs.org/'>Next.js</Link> and <Link href='https://tailwindcss.com/'>Tailwind CSS</Link>, hosted for free by <Link href='https://pages.cloudflare.com/'>Cloudflare</Link>, source on <Link href='https://github.com/bluefeet/bluefeet.dev'>GitHub</Link>.<br />
-      &copy; {resume.contact?.fullName}
-    </Details>
-  </footer>
-
-  <footer className='text-right pt-8 hidden print:flex justify-between'>
-    <Details>Generated {formatDate(new Date, 'PPP')}</Details>
-    <Details>&copy; {resume.contact?.fullName}</Details>
-  </footer>
-</>
+    <footer className='text-right pt-8 hidden print:flex justify-between'>
+      <Details>Generated {formatDate(new Date, 'PPP')}</Details>
+      <Details>&copy; {resume.contact?.fullName}</Details>
+    </footer>
+  </>
+}
 
 export default Page
