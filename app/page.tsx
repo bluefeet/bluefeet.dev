@@ -63,10 +63,10 @@ const Page = () => {
         </p>
       </div>
       <div className='absolute bottom-4 right-4 w-max'>
-        <button onClick={toggleMute} className='border-2 border-amber-500 border-solid p-1 mr-4'>
+        <button onClick={toggleMute} className='border-2 border-amber-500 border-solid p-1 mr-4' aria-label='Toggle Background Sound'>
           <SoundIcon className='w-10 h-10' />
         </button>
-        <button onClick={scrollToMain} className='border-2 border-amber-500 border-solid p-1'>
+        <button onClick={scrollToMain} className='border-2 border-amber-500 border-solid p-1' aria-label='Scroll to Main Content'>
           <ArrowDownIcon className='w-10 h-10' />
         </button>
       </div>
