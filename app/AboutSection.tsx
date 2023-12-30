@@ -1,8 +1,9 @@
 import ReactMarkdown from 'react-markdown'
-import resume from './resume'
 import SectionTitle from './SectionTitle'
+import { useResume } from './resumeContext'
 
 const AboutSection = ({ className = '' }: { className?: string }) => {
+  const resume = useResume()
   if (!resume.profile?.about) return <></>
 
   return <>

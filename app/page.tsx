@@ -7,11 +7,13 @@ import ObjectiveSection from './ObjectiveSection'
 import RecommendationsSection from './RecommendationsSection'
 import SkillsSection from './SkillsSection'
 
-import { format as formatDate } from 'date-fns'
 import Details from './Details'
 import headerFont from './headerFont'
 import Link from './Link'
+import { ResumeProvider, useResume } from './resumeContext'
 import resume from './resume'
+
+import { format as formatDate } from 'date-fns'
 import React, { createContext, useContext, useEffect, useRef, useState } from 'react'
 import { Howl } from 'howler'
 
@@ -98,28 +100,38 @@ const DashButtons = () =>
     <ScrollDashButton />
   </div>
 
-const HeaderForDisplay = () =>
-  <header className='bg-bear bg-cover h-screen bg-center print:hidden'>
-    <div className='absolute h-48 w-full bg-gradient-to-b from-zinc-900 opacity-50' />
-    <div className='absolute w-full text-center md:text-right p-5 md:pr-16 lg:pr-24'>
-      <h1 className='text-6xl md:text-7xl lg:text-8xl md:pr-16 lg:pr-32'>
+const HeaderForDisplay = () => {
+  const resume = useResume();
+
+  return (
+    <header className='bg-bear bg-cover h-screen bg-center print:hidden'>
+      <div className='absolute h-48 w-full bg-gradient-to-b from-zinc-900 opacity-50' />
+      <div className='absolute w-full text-center md:text-right p-5 md:pr-16 lg:pr-24'>
+        <h1 className='text-6xl md:text-7xl lg:text-8xl md:pr-16 lg:pr-32'>
+          {resume.contact?.fullName}
+        </h1>
+        <p className='pt-2 md:pt-3 lg:pt-5 lg:pr-16 text-lg md:text-2xl'>
+          {resume.profile?.headline} • {resume.contact?.pronouns}
+        </p>
+      </div>
+    </header>
+  )
+}
+
+const HeaderForPrint = () => {
+  const resume = useResume();
+
+  return (
+    <header className={`pb-4 ${headerFont.className} hidden print:flex justify-between items-end`}>
+      <h1 className='text-5xl font-semibold text-sky-800'>
         {resume.contact?.fullName}
       </h1>
-      <p className='pt-2 md:pt-3 lg:pt-5 lg:pr-16 text-lg md:text-2xl'>
-        {resume.profile?.headline} • {resume.contact?.pronouns}
+      <p>
+        {resume.profile?.headline} • {resume.contact?.pronouns} • https://bluefeet.dev
       </p>
-    </div>
-  </header>
-
-const HeaderForPrint = () =>
-  <header className={`pb-4 ${headerFont.className} hidden print:flex justify-between items-end`}>
-    <h1 className='text-5xl font-semibold text-sky-800'>
-      {resume.contact?.fullName}
-    </h1>
-    <p>
-      {resume.profile?.headline} • {resume.contact?.pronouns} • https://bluefeet.dev
-    </p>
-  </header>
+    </header>
+  )
+}
 
 const MainContent = () => {
   const mainRef = useContext(mainRefContext)
@@ -149,31 +161,43 @@ const MainContent = () => {
   )
 }
 
-const FooterForDisplay = () =>
-  <footer className='border-zinc-800 border-solid border-t-2 text-center p-4 print:hidden'>
-    <Details>
-      Site built with <Link href='https://nextjs.org/'>Next.js</Link> and <Link href='https://tailwindcss.com/'>Tailwind CSS</Link>, hosted for free by <Link href='https://pages.cloudflare.com/'>Cloudflare</Link>, source on <Link href='https://github.com/bluefeet/bluefeet.dev'>GitHub</Link>.<br />
-      &copy; {resume.contact?.fullName}
-    </Details>
-  </footer>
+const FooterForDisplay = () => {
+  const resume = useResume();
 
-const FooterForPrint = () =>
-  <footer className='text-right pt-8 hidden print:flex justify-between'>
-    <Details>Generated {formatDate(new Date, 'PPP')}</Details>
-    <Details>&copy; {resume.contact?.fullName}</Details>
-  </footer>
+  return (
+    <footer className='border-zinc-800 border-solid border-t-2 text-center p-4 print:hidden'>
+      <Details>
+        Site built with <Link href='https://nextjs.org/'>Next.js</Link> and <Link href='https://tailwindcss.com/'>Tailwind CSS</Link>, hosted for free by <Link href='https://pages.cloudflare.com/'>Cloudflare</Link>, source on <Link href='https://github.com/bluefeet/bluefeet.dev'>GitHub</Link>.<br />
+        &copy; {resume.contact?.fullName}
+      </Details>
+    </footer>
+  )
+}
+
+const FooterForPrint = () => {
+  const resume = useResume();
+
+  return (
+    <footer className='text-right pt-8 hidden print:flex justify-between'>
+      <Details>Generated {formatDate(new Date, 'PPP')}</Details>
+      <Details>&copy; {resume.contact?.fullName}</Details>
+    </footer>
+  )
+}
 
 const Page = () => {
   const mainRef = useRef<HTMLElement>(null)
 
   return (
     <mainRefContext.Provider value={mainRef}>
-      <HeaderForDisplay />
-      <HeaderForPrint />
-      <MainContent />
-      <DashButtons />
-      <FooterForDisplay />
-      <FooterForPrint />
+      <ResumeProvider value={resume}>
+        <HeaderForDisplay />
+        <HeaderForPrint />
+        <MainContent />
+        <DashButtons />
+        <FooterForDisplay />
+        <FooterForPrint />
+      </ResumeProvider>
     </mainRefContext.Provider>
   )
 }

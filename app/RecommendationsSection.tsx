@@ -1,8 +1,8 @@
 import { Recommendation } from '@/types/Resume'
 import Details from './Details'
 import ReactMarkdown from 'react-markdown'
-import resume from './resume'
 import SectionTitle from './SectionTitle'
+import { useResume } from './resumeContext'
 
 const Recommendation = ({ recommendation }: { recommendation: Recommendation }) => <>
   <div className='pt-4 pb-4 last:pb-0'>
@@ -20,6 +20,7 @@ const Recommendation = ({ recommendation }: { recommendation: Recommendation }) 
 </>
 
 const RecommendationsSection = ({ className = '' }: { className?: string }) => {
+  const resume = useResume()
   if (!resume.recommendations?.length) return <></>
 
   return <>
