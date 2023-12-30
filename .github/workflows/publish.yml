@@ -1,0 +1,38 @@
+name: Publish
+
+concurrency:
+  group: production
+  cancel-in-progress: true
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  test:
+    uses: ./.github/workflows/test.yml
+
+  publish:
+    name: Publish to Cloudflare Pages
+    environment: production
+    needs: [test]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 21.x
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run build
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: b7d95cae6499601b672f726cae81dee2
+          projectName: bluefeet-dev
+          directory: out
+          wranglerVersion: "3"
