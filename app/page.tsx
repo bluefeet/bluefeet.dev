@@ -1,16 +1,17 @@
 "use client"
 
-import { format as formatDate } from 'date-fns'
 import AboutSection from './AboutSection'
-import Details from './Details'
 import ExperienceSection from './ExperienceSection'
-import headerFont from './headerFont'
 import InfoSection from './InfoSection'
-import Link from './Link'
 import ObjectiveSection from './ObjectiveSection'
 import RecommendationsSection from './RecommendationsSection'
-import resume from './resume'
 import SkillsSection from './SkillsSection'
+
+import { format as formatDate } from 'date-fns'
+import Details from './Details'
+import headerFont from './headerFont'
+import Link from './Link'
+import resume from './resume'
 import React, { createContext, useContext, useEffect, useRef, useState } from 'react'
 import { Howl } from 'howler'
 
@@ -92,13 +93,13 @@ const ScrollDashButton = () => {
 }
 
 const DashButtons = () =>
-  <div className='sticky flex justify-end gap-x-4 bottom-0 p-4 print:hidden'>
+  <div className='sticky flex justify-end gap-x-4 bottom-0 p-4 print:hidden float-right'>
     <AudioDashButton />
     <ScrollDashButton />
   </div>
 
 const HeaderForDisplay = () =>
-  <header className='bg-bear bg-cover h-screen bg-center print:hidden border-b-2 border-zinc-950 border-solid'>
+  <header className='bg-bear bg-cover h-screen bg-center print:hidden'>
     <div className='absolute h-48 w-full bg-gradient-to-b from-zinc-900 opacity-50' />
     <div className='absolute w-full text-center md:text-right p-5 md:pr-16 lg:pr-24'>
       <h1 className='text-6xl md:text-7xl lg:text-8xl md:pr-16 lg:pr-32'>
@@ -161,7 +162,6 @@ const FooterForPrint = () =>
     <Details>Generated {formatDate(new Date, 'PPP')}</Details>
     <Details>&copy; {resume.contact?.fullName}</Details>
   </footer>
-
 
 const Page = () => {
   const mainRef = useRef<HTMLElement>(null)

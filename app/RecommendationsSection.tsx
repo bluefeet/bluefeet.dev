@@ -5,7 +5,7 @@ import resume from './resume'
 import SectionTitle from './SectionTitle'
 
 const Recommendation = ({ recommendation }: { recommendation: Recommendation }) => <>
-  <div className='pt-8 pb-8'>
+  <div className='pt-4 pb-4 last:pb-0'>
     <div className='flex'>
       <div className={`text-6xl pr-4 text-sky-400`}>“</div>
       <div className='typography'>
