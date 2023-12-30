@@ -1,8 +1,9 @@
 import Details from './Details'
-import resume from './resume'
 import SectionTitle from './SectionTitle'
+import { useResume } from './resumeContext'
 
 const SkillsSection = ({ className = '' }: { className?: string }) => {
+  const resume = useResume()
   if (!resume.profile?.skills?.length) return <></>
 
   return <>

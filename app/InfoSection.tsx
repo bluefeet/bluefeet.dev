@@ -3,7 +3,7 @@ import Details from './Details'
 import Link from './Link'
 import List from './List'
 import ListItem from './ListItem'
-import resume from './resume'
+import { useResume } from './resumeContext'
 
 import {
   AtSymbolIcon,
@@ -14,6 +14,7 @@ import {
 } from '@heroicons/react/24/solid'
 
 const Location = () => {
+  const resume = useResume()
   if (!resume.contact?.location) return <></>
 
   const details: ReactNode[] = []
@@ -43,6 +44,7 @@ const Location = () => {
 }
 
 const EmailAddress = () => {
+  const resume = useResume()
   if (!resume.contact?.emailAddress) return <></>
 
   return <>
@@ -55,6 +57,7 @@ const EmailAddress = () => {
 }
 
 const PhoneNumber = () => {
+  const resume = useResume()
   if (!resume.contact?.phoneNumber) return <></>
 
   return <>
@@ -67,6 +70,7 @@ const PhoneNumber = () => {
 }
 
 const Languages = () => {
+  const resume = useResume()
   if (!resume.profile?.languages?.length) return <></>
 
   return <>
@@ -77,6 +81,7 @@ const Languages = () => {
 }
 
 const Resources = () => {
+  const resume = useResume()
   if (!resume.profile?.resources?.length) return <></>
 
   return <>

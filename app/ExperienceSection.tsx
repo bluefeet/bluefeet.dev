@@ -3,10 +3,10 @@ import Details from './Details'
 import parseISODate from 'date-fns/parseISO'
 import formatDate from 'date-fns/format'
 import ReactMarkdown from 'react-markdown'
-import resume from './resume'
 import SectionTitle from './SectionTitle'
 import upperFirst from 'lodash/upperFirst'
 import SubSectionTitle from './SubSectionTitle'
+import { useResume } from './resumeContext'
 
 const dateFormat = 'MMM yyyy'
 
@@ -53,6 +53,7 @@ const SingleExperience = ({ experience }: { experience: Experience }) => {
 }
 
 const ExperienceSection = ({ className = '' }: { className?: string }) => {
+  const resume = useResume()
   if (!resume.experiences?.length) return <></>
 
   return <>

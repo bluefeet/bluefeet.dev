@@ -5,8 +5,8 @@ import isDateInPast from 'date-fns/isPast'
 import List from './List'
 import ListItem from './ListItem'
 import parseISODate from 'date-fns/parseISO'
-import resume from './resume'
 import upperFirst from 'lodash/upperFirst'
+import { useResume } from './resumeContext'
 
 import {
   BuildingOffice2Icon,
@@ -17,6 +17,7 @@ import {
 } from '@heroicons/react/24/solid'
 
 const Overview = () => {
+  const resume = useResume()
   if (!resume.objective?.overview) return <></>
 
   return <>
@@ -28,6 +29,7 @@ const Overview = () => {
 }
 
 const StartDate = () => {
+  const resume = useResume()
   if (!resume.objective) return <></>
 
   let startDate = resume.objective.startDate ? parseISODate(resume.objective.startDate) : null
@@ -53,6 +55,7 @@ const StartDate = () => {
 }
 
 const Roles = () => {
+  const resume = useResume()
   if (!resume.objective?.roles?.length) return <></>
 
   return <>
@@ -70,6 +73,7 @@ const Roles = () => {
 }
 
 const WorkModes = () => {
+  const resume = useResume()
   if (!resume.objective?.workModes?.length) return <></>
 
   return <>
@@ -83,6 +87,7 @@ const WorkModes = () => {
 }
 
 const EmploymentTypes = () => {
+  const resume = useResume()
   if (!resume.objective?.employmentTypes?.length) return <></>
 
   return <>
