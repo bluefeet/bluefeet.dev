@@ -45,7 +45,7 @@ const AudioDashButton = () => {
       onpause: () => setPlaying(false),
       onstop: () => setPlaying(false),
     }))
-  }, [isPlaying])
+  }, [isPlaying, audio])
 
   useEffect(() => {
     if (!isPlaying) audio?.pause()
