@@ -1,7 +1,7 @@
-import formatDate from 'date-fns/format'
-import isDateInPast from 'date-fns/isPast'
-import parseISODate from 'date-fns/parseISO'
-import upperFirst from 'lodash/upperFirst'
+import formatDate from "date-fns/format";
+import isDateInPast from "date-fns/isPast";
+import parseISODate from "date-fns/parseISO";
+import upperFirst from "lodash/upperFirst";
 
 import {
   BuildingOffice2Icon,
@@ -9,107 +9,136 @@ import {
   Cog6ToothIcon,
   PhotoIcon,
   RocketLaunchIcon,
-} from '@heroicons/react/24/solid'
+} from "@heroicons/react/24/solid";
 
-import { Details } from './Details'
-import { List } from './List'
-import { ListItem } from './ListItem'
-import { useResume } from './resumeContext'
+import { Details } from "./Details";
+import { List } from "./List";
+import { ListItem } from "./ListItem";
+import { useResume } from "./resumeContext";
 
-const startDateFormat = 'PPP'
+const startDateFormat = "PPP";
 
 const Overview = () => {
-  const resume = useResume()
-  if (!resume.objective?.overview) return <></>
+  const resume = useResume();
+  if (!resume.objective?.overview) return <></>;
 
-  return <>
-    <ListItem Icon={PhotoIcon}>
-      Dream Job Traits
-      <Details>{resume.objective.overview}</Details>
-    </ListItem>
-  </>
-}
+  return (
+    <>
+      <ListItem Icon={PhotoIcon}>
+        Dream Job Traits
+        <Details>{resume.objective.overview}</Details>
+      </ListItem>
+    </>
+  );
+};
 
 const StartDate = () => {
-  const resume = useResume()
-  if (!resume.objective) return <></>
+  const resume = useResume();
+  if (!resume.objective) return <></>;
 
-  let startDate = resume.objective.startDate ? parseISODate(resume.objective.startDate) : null
+  let startDate = resume.objective.startDate
+    ? parseISODate(resume.objective.startDate)
+    : null;
 
   // Don't display if in the past.
-  if (startDate && isDateInPast(startDate)) startDate = null
+  if (startDate && isDateInPast(startDate)) startDate = null;
 
-  return <>
-    <ListItem Icon={RocketLaunchIcon}>
-      {
-        resume.objective.isCasual
-          ? 'Open to new opportunities'
-          : 'Actively searching for an opportunity'
-      }
-      {<Details>
-        Available {startDate
-          ? <>starting on {formatDate(startDate, startDateFormat)}</>
-          : <>immediately</>
+  return (
+    <>
+      <ListItem Icon={RocketLaunchIcon}>
+        {resume.objective.isCasual
+          ? "Open to new opportunities"
+          : "Actively searching for an opportunity"}
+        {
+          <Details>
+            Available{" "}
+            {startDate ? (
+              <>starting on {formatDate(startDate, startDateFormat)}</>
+            ) : (
+              <>immediately</>
+            )}
+          </Details>
         }
-      </Details>}
-    </ListItem>
-  </>
-}
+      </ListItem>
+    </>
+  );
+};
 
 const Roles = () => {
-  const resume = useResume()
-  if (!resume.objective?.roles?.length) return <></>
+  const resume = useResume();
+  if (!resume.objective?.roles?.length) return <></>;
 
-  return <>
-    <ListItem Icon={Cog6ToothIcon}>
-      {resume.objective.roles.length > 1 ? 'These roles' : 'This role'} would be a great match
-      <Details>
-        {resume.objective.roles.map((role) =>
-          <div key={role}>
-            {role}
-          </div>
-        )}
-      </Details>
-    </ListItem>
-  </>
-}
+  return (
+    <>
+      <ListItem Icon={Cog6ToothIcon}>
+        {resume.objective.roles.length > 1 ? "These roles" : "This role"} would
+        be a great match
+        <Details>
+          {resume.objective.roles.map((role) => (
+            <div key={role}>{role}</div>
+          ))}
+        </Details>
+      </ListItem>
+    </>
+  );
+};
 
 const WorkModes = () => {
-  const resume = useResume()
-  if (!resume.objective?.workModes?.length) return <></>
+  const resume = useResume();
+  if (!resume.objective?.workModes?.length) return <></>;
 
-  return <>
-    <ListItem Icon={BuildingOffice2Icon}>
-      In {resume.objective.workModes.length > 1 ? 'any of these capacities' : 'this capacity'}
-      <Details>
-        {resume.objective.workModes.map((workMode) => upperFirst(workMode)).join(', ')}
-      </Details>
-    </ListItem>
-  </>
-}
+  return (
+    <>
+      <ListItem Icon={BuildingOffice2Icon}>
+        In{" "}
+        {resume.objective.workModes.length > 1
+          ? "any of these capacities"
+          : "this capacity"}
+        <Details>
+          {resume.objective.workModes
+            .map((workMode) => upperFirst(workMode))
+            .join(", ")}
+        </Details>
+      </ListItem>
+    </>
+  );
+};
 
 const EmploymentTypes = () => {
-  const resume = useResume()
-  if (!resume.objective?.employmentTypes?.length) return <></>
+  const resume = useResume();
+  if (!resume.objective?.employmentTypes?.length) return <></>;
 
-  return <>
-    <ListItem Icon={CalendarDaysIcon}>
-      With {resume.objective.employmentTypes.length > 1 ? 'one of these commitments' : 'this commitment'}
-      <Details>
-        {resume.objective.employmentTypes.map((employmentType) => upperFirst(employmentType)).join(', ')}
-      </Details>
-    </ListItem>
+  return (
+    <>
+      <ListItem Icon={CalendarDaysIcon}>
+        With{" "}
+        {resume.objective.employmentTypes.length > 1
+          ? "one of these commitments"
+          : "this commitment"}
+        <Details>
+          {resume.objective.employmentTypes
+            .map((employmentType) => upperFirst(employmentType))
+            .join(", ")}
+        </Details>
+      </ListItem>
+    </>
+  );
+};
+
+export const ObjectiveSection = ({
+  className = "",
+}: {
+  className?: string;
+}) => (
+  <>
+    <section className={className}>
+      <List>
+        <Overview />
+        <StartDate />
+        <Roles />
+        <EmploymentTypes />
+        <WorkModes />
+      </List>
+    </section>
   </>
-}
-
-export const ObjectiveSection = ({ className = '' }: { className?: string }) => <>
-  <section className={className}>
-    <List>
-      <Overview />
-      <StartDate />
-      <Roles />
-      <EmploymentTypes />
-      <WorkModes />
-    </List>
-  </section>
-</>
+);

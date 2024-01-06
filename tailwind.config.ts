@@ -1,24 +1,24 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 export default {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       backgroundImage: {
-        'bear': "url('./bear.jpg')",
+        bear: "url('./bear.jpg')",
       },
       listStyleType: {
-        square: 'square',
+        square: "square",
       },
       screens: {
         print: {
-          raw: 'print',
+          raw: "print",
         },
       },
     },
   },
-} satisfies Config
+} satisfies Config;

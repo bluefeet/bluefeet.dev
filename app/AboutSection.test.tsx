@@ -1,25 +1,25 @@
-import { render } from '@testing-library/react'
+import { render } from "@testing-library/react";
 
-import { emptyResume, ResumeProvider } from './resumeContext'
-import { Resume } from '@/types/Resume'
+import { emptyResume, ResumeProvider } from "./resumeContext";
+import { Resume } from "@/types/Resume";
 
-import { AboutSection } from './AboutSection'
+import { AboutSection } from "./AboutSection";
 
 const testResume = (resume: Partial<Resume>) => {
   render(
     <ResumeProvider value={{ ...emptyResume, ...resume }}>
       <AboutSection />
-    </ResumeProvider>
-  )
-  expect(document.body).toMatchSnapshot()
-}
+    </ResumeProvider>,
+  );
+  expect(document.body).toMatchSnapshot();
+};
 
-describe('AboutSection', () => {
-  it('empty resume produces no text content', () => {
-    testResume({})
-  })
+describe("AboutSection", () => {
+  it("empty resume produces no text content", () => {
+    testResume({});
+  });
 
-  it('displays markdown', () => {
-    testResume({ profile: { about: 'Foo bar.' } })
-  })
-})
+  it("displays markdown", () => {
+    testResume({ profile: { about: "Foo bar." } });
+  });
+});

@@ -26,9 +26,7 @@
       "$ref": "#/$defs/recommendations"
     }
   },
-  "required": [
-    "$schema"
-  ],
+  "required": ["$schema"],
   "$defs": {
     "uniqueStrings": {
       "type": "array",
@@ -51,11 +49,7 @@
     },
     "workMode": {
       "type": "string",
-      "enum": [
-        "on-site",
-        "hybrid",
-        "remote"
-      ]
+      "enum": ["on-site", "hybrid", "remote"]
     },
     "employmentType": {
       "type": "string",
@@ -81,9 +75,7 @@
           "$ref": "#/$defs/uniqueStrings"
         }
       },
-      "required": [
-        "name"
-      ]
+      "required": ["name"]
     },
     "resource": {
       "type": "object",
@@ -97,10 +89,7 @@
           "format": "uri"
         }
       },
-      "required": [
-        "title",
-        "uri"
-      ]
+      "required": ["title", "uri"]
     },
     "contact": {
       "type": "object",
@@ -229,9 +218,7 @@
           "$ref": "#/$defs/uniqueStrings"
         }
       },
-      "required": [
-        "companyName"
-      ]
+      "required": ["companyName"]
     },
     "experiences": {
       "type": "array",
@@ -253,11 +240,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "author",
-        "relationship",
-        "message"
-      ]
+      "required": ["author", "relationship", "message"]
     },
     "recommendations": {
       "type": "array",

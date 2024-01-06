@@ -126,7 +126,8 @@ exports[`Page 1`] = `
               <div
                 class="text-zinc-300 text-sm "
               >
-                Available 
+                Available
+                 
                 starting on 
                 February 12th, 2024
               </div>
@@ -192,7 +193,8 @@ exports[`Page 1`] = `
             <div
               class="pt-2 pb-2"
             >
-              With 
+              With
+               
               this commitment
               <div
                 class="text-zinc-300 text-sm "
@@ -221,7 +223,8 @@ exports[`Page 1`] = `
             <div
               class="pt-2 pb-2"
             >
-              In 
+              In
+               
               any of these capacities
               <div
                 class="text-zinc-300 text-sm "
@@ -1117,7 +1120,8 @@ I consider myself fortunate to have worked for Aran. He taught me much about Per
         >
           Next.js
         </a>
-         and 
+         and
+         
         <a
           class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline "
           href="https://tailwindcss.com/"
@@ -1131,7 +1135,8 @@ I consider myself fortunate to have worked for Aran. He taught me much about Per
         >
           Cloudflare
         </a>
-        , source on 
+        , source on
+         
         <a
           class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline "
           href="https://github.com/bluefeet/bluefeet.dev"

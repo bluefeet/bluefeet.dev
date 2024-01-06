@@ -10,5 +10,6 @@
       "tailwindcss",
       "Thinkstock",
       "Unjestable"
-    ]
+    ],
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
