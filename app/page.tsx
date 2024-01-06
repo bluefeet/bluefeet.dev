@@ -1,27 +1,27 @@
 "use client"
 
-import AboutSection from './AboutSection'
-import ExperienceSection from './ExperienceSection'
-import InfoSection from './InfoSection'
-import ObjectiveSection from './ObjectiveSection'
-import RecommendationsSection from './RecommendationsSection'
-import SkillsSection from './SkillsSection'
-
-import Details from './Details'
-import headerFont from './headerFont'
-import Link from './Link'
-import { ResumeProvider, useResume } from './resumeContext'
-import resume from './resume'
-
 import { format as formatDate } from 'date-fns'
-import React, { createContext, useContext, useEffect, useRef, useState } from 'react'
 import { Howl } from 'howler'
+import React, { createContext, useContext, useEffect, useRef, useState } from 'react'
 
 import {
   ArrowDownIcon,
   PauseIcon,
   PlayIcon,
 } from '@heroicons/react/24/outline'
+
+import { AboutSection } from './AboutSection'
+import { ExperienceSection } from './ExperienceSection'
+import { InfoSection } from './InfoSection'
+import { ObjectiveSection } from './ObjectiveSection'
+import { RecommendationsSection } from './RecommendationsSection'
+import { SkillsSection } from './SkillsSection'
+
+import { Details } from './Details'
+import { headerFont } from './headerFont'
+import { Link } from './Link'
+import { resume } from './resume'
+import { ResumeProvider, useResume } from './resumeContext'
 
 const Divider = ({ className = '' }: { className?: string }) =>
   <hr className={`w-full border-sky-600 border-solid border-1 mt-2 mb-2 print:hidden ${className}`} />
@@ -38,6 +38,7 @@ const AudioDashButton = () => {
 
   useEffect(() => {
     if (!isPlaying || audio) return
+    /* c8 ignore start */
     setAudio(new Howl({
       html5: true, // Makes iOS Safari happier when phone is locked.
       src: ['/nature.mp3'],
@@ -47,6 +48,7 @@ const AudioDashButton = () => {
       onpause: () => setPlaying(false),
       onstop: () => setPlaying(false),
     }))
+    /* c8 ignore end */
   }, [isPlaying, audio])
 
   useEffect(() => {

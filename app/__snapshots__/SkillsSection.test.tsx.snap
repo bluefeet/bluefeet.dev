@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SkillsSection no skills 1`] = `
+<body>
+  <div />
+</body>
+`;
+
+exports[`SkillsSection some skills 1`] = `
+<body>
+  <div>
+    <section
+      class="mb-4 "
+    >
+      <h2
+        class="text-center print:text-left md:text-left text-sky-300 text-4xl print:text-3xl font-bold print:font-semibold mt-3 mb-4 className "
+      >
+        Skills
+      </h2>
+      <div
+        class="typography"
+      >
+        <ul>
+          <li
+            class="break-inside-avoid"
+          >
+            Skill Name One
+            <div
+              class="text-zinc-300 text-sm "
+            >
+              foo1, bar1
+            </div>
+          </li>
+          <li
+            class="break-inside-avoid"
+          >
+            Skill Name Two
+            <div
+              class="text-zinc-300 text-sm "
+            >
+              foo2
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</body>
+`;

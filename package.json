@@ -11,11 +11,14 @@
     "build-resume-type": "npx json2ts -i public/resume.schema.json -o types/Resume.d.ts",
     "build-resume": "npm run build-resume-json && npm run build-resume-type",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test-watch": "jest --watch",
+    "test-update-snapshots": "jest --updateSnapshot",
+    "coverage": "jest --coverage"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "@types/howler": "^2.2.11",
+    "@types/markdown-it": "^13.0.7",
     "@types/node": "^20.3.1",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
@@ -24,11 +27,11 @@
     "eslint": "^8.43.0",
     "eslint-config-next": "^14.0.4",
     "howler": "^2.2.4",
+    "micromark": "^4.0.0",
     "next": "^14.0.4",
     "postcss": "^8.4.24",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-markdown": "^8.0.7",
     "tailwindcss": "^3.3.2",
     "typescript": "^5.1.3"
   },

@@ -1,7 +1,8 @@
-import { AtSymbolIcon } from '@heroicons/react/24/solid'
 import { ReactNode } from 'react'
 
-const ListItem = ({ Icon, children }: {
+import { AtSymbolIcon } from '@heroicons/react/24/solid'
+
+export const ListItem = ({ Icon, children }: {
   Icon: typeof AtSymbolIcon,
   children: ReactNode,
 }) => <>
@@ -10,5 +11,3 @@ const ListItem = ({ Icon, children }: {
     </div>
     <div className='pt-2 pb-2'>{children}</div>
   </>
-
-export default ListItem

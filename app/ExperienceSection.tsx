@@ -1,58 +1,63 @@
-import { Experience } from '@/types/Resume'
-import Details from './Details'
-import parseISODate from 'date-fns/parseISO'
 import formatDate from 'date-fns/format'
-import ReactMarkdown from 'react-markdown'
-import SectionTitle from './SectionTitle'
+import parseISODate from 'date-fns/parseISO'
 import upperFirst from 'lodash/upperFirst'
-import SubSectionTitle from './SubSectionTitle'
+
+import { Details } from './Details'
+import { Experience } from '@/types/Resume'
+import { SectionTitle } from './SectionTitle'
+import { SubSectionTitle } from './SubSectionTitle'
+import { useRenderMarkdown } from './RenderMarkdownContext'
 import { useResume } from './resumeContext'
 
 const dateFormat = 'MMM yyyy'
 
 const SingleExperience = ({ experience }: { experience: Experience }) => {
-  const metaParts: string[] = []
+  const RenderMarkdown = useRenderMarkdown()
 
-  if (experience.title) metaParts.push(experience.title)
+  const detailsParts: string[] = []
+
+  if (experience.title) detailsParts.push(experience.title)
 
   if (experience.startDate) {
     const startDate = parseISODate(experience.startDate)
     const start = formatDate(startDate, dateFormat)
-    const endDate = experience.endDate ? parseISODate(experience.endDate) : new Date()
-    const end = experience.endDate ? formatDate(endDate, dateFormat) : 'Now'
-    metaParts.push(start + (end !== start ? ` - ${end}` : ''))
+    const endDate = experience.endDate ? parseISODate(experience.endDate) : null
+    const end = endDate ? formatDate(endDate, dateFormat) : 'Now'
+    detailsParts.push(start + (end !== start ? ` - ${end}` : ''))
   }
 
-  if (experience.employmentType) metaParts.push(upperFirst(experience.employmentType))
-  if (experience.workMode) metaParts.push(upperFirst(experience.workMode))
-  if (experience.location) metaParts.push(experience.location)
+  if (experience.employmentType) detailsParts.push(upperFirst(experience.employmentType))
+  if (experience.workMode) detailsParts.push(upperFirst(experience.workMode))
+  if (experience.location) detailsParts.push(experience.location)
 
-  const metaLine = metaParts.join(' | ')
+  const detailsLine = detailsParts.join(' | ')
 
   return <>
     <SubSectionTitle>
       {experience.companyName}
     </SubSectionTitle>
 
-    <div className='typography'>
-      <Details>{metaLine}</Details>
+    {detailsLine &&
+      <Details className='mb-3'>{detailsLine}</Details>
+    }
 
-      {experience.summary &&
-        <ReactMarkdown>{experience.summary}</ReactMarkdown>
-      }
+    {experience.summary &&
+      <RenderMarkdown>{experience.summary}</RenderMarkdown>
+    }
 
-      {experience.highlights?.length && <>
-        <ul className='text-sm'>
+    {experience.highlights?.length && <>
+      <div className='typography text-sm'>
+        <ul>
           {experience.highlights.map((highlight) =>
             <li key={highlight}>{highlight}</li>
           )}
         </ul>
-      </>}
-    </div>
+      </div>
+    </>}
   </>
 }
 
-const ExperienceSection = ({ className = '' }: { className?: string }) => {
+export const ExperienceSection = ({ className = '' }: { className?: string }) => {
   const resume = useResume()
   if (!resume.experiences?.length) return <></>
 
@@ -69,5 +74,3 @@ const ExperienceSection = ({ className = '' }: { className?: string }) => {
     </section>
   </>
 }
-
-export default ExperienceSection

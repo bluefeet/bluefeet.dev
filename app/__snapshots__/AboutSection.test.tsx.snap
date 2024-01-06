@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AboutSection displays markdown 1`] = `
+<body>
+  <div>
+    <section
+      class="md:flex lg:block pt-2 md:pt-0 "
+    >
+      <h2
+        class="text-center print:text-left md:text-left text-sky-300 text-4xl print:text-3xl font-bold print:font-semibold mt-3 mb-4 className md:pr-8 lg:pr-0 print:hidden mt-3 md:mt-0 lg:mt-3"
+      >
+        About
+      </h2>
+      <div
+        class="typography"
+      >
+        Foo bar.
+      </div>
+    </section>
+  </div>
+</body>
+`;
+
+exports[`AboutSection empty resume produces no text content 1`] = `
+<body>
+  <div />
+</body>
+`;

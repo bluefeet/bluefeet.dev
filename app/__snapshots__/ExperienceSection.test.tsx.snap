@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExperienceSection all details 1`] = `
+<body>
+  <div>
+    <section
+      class=""
+    >
+      <h2
+        class="text-center print:text-left md:text-left text-sky-300 text-4xl print:text-3xl font-bold print:font-semibold mt-3 mb-4 className "
+      >
+        Experience
+      </h2>
+      <h3
+        class="text-sky-400 text-3xl mt-5 mb-0 className"
+      >
+        Foo LLC
+      </h3>
+      <div
+        class="text-zinc-300 text-sm mb-3"
+      >
+        Head Muffin Licker | Apr 2004 - Feb 2007 | Seasonal | Hybrid
+      </div>
+    </section>
+  </div>
+</body>
+`;
+
+exports[`ExperienceSection empty resume 1`] = `
+<body>
+  <div />
+</body>
+`;
+
+exports[`ExperienceSection full 1`] = `
+<body>
+  <div>
+    <section
+      class=""
+    >
+      <h2
+        class="text-center print:text-left md:text-left text-sky-300 text-4xl print:text-3xl font-bold print:font-semibold mt-3 mb-4 className "
+      >
+        Experience
+      </h2>
+      <h3
+        class="text-sky-400 text-3xl mt-5 mb-0 className"
+      >
+        Foo LLC
+      </h3>
+      <div
+        class="text-zinc-300 text-sm mb-3"
+      >
+        Head Muffin Licker | Apr 2004 - Feb 2007 | Seasonal | Hybrid
+      </div>
+      <div
+        class="typography"
+      >
+        I did things.
+      </div>
+      <div
+        class="typography text-sm"
+      >
+        <ul>
+          <li>
+            Jumped.
+          </li>
+          <li>
+            Rolled.
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</body>
+`;
+
+exports[`ExperienceSection highlights 1`] = `
+<body>
+  <div>
+    <section
+      class=""
+    >
+      <h2
+        class="text-center print:text-left md:text-left text-sky-300 text-4xl print:text-3xl font-bold print:font-semibold mt-3 mb-4 className "
+      >
+        Experience
+      </h2>
+      <h3
+        class="text-sky-400 text-3xl mt-5 mb-0 className"
+      >
+        Foo LLC
+      </h3>
+      <div
+        class="typography text-sm"
+      >
+        <ul>
+          <li>
+            Jumped.
+          </li>
+          <li>
+            Rolled.
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</body>
+`;
+
+exports[`ExperienceSection multiples with required fields only 1`] = `
+<body>
+  <div>
+    <section
+      class=""
+    >
+      <h2
+        class="text-center print:text-left md:text-left text-sky-300 text-4xl print:text-3xl font-bold print:font-semibold mt-3 mb-4 className "
+      >
+        Experience
+      </h2>
+      <h3
+        class="text-sky-400 text-3xl mt-5 mb-0 className"
+      >
+        Foo LLC
+      </h3>
+      <h3
+        class="text-sky-400 text-3xl mt-5 mb-0 className"
+      >
+        Bar and Daughters
+      </h3>
+    </section>
+  </div>
+</body>
+`;
+
+exports[`ExperienceSection startDate 1`] = `
+<body>
+  <div>
+    <section
+      class=""
+    >
+      <h2
+        class="text-center print:text-left md:text-left text-sky-300 text-4xl print:text-3xl font-bold print:font-semibold mt-3 mb-4 className "
+      >
+        Experience
+      </h2>
+      <h3
+        class="text-sky-400 text-3xl mt-5 mb-0 className"
+      >
+        Foo LLC
+      </h3>
+      <div
+        class="text-zinc-300 text-sm mb-3"
+      >
+        Oct 1978 - Now
+      </div>
+    </section>
+  </div>
+</body>
+`;
+
+exports[`ExperienceSection startDate and endDate 1`] = `
+<body>
+  <div>
+    <section
+      class=""
+    >
+      <h2
+        class="text-center print:text-left md:text-left text-sky-300 text-4xl print:text-3xl font-bold print:font-semibold mt-3 mb-4 className "
+      >
+        Experience
+      </h2>
+      <h3
+        class="text-sky-400 text-3xl mt-5 mb-0 className"
+      >
+        Foo LLC
+      </h3>
+      <div
+        class="text-zinc-300 text-sm mb-3"
+      >
+        Apr 2004 - Feb 2007
+      </div>
+    </section>
+  </div>
+</body>
+`;
+
+exports[`ExperienceSection summary 1`] = `
+<body>
+  <div>
+    <section
+      class=""
+    >
+      <h2
+        class="text-center print:text-left md:text-left text-sky-300 text-4xl print:text-3xl font-bold print:font-semibold mt-3 mb-4 className "
+      >
+        Experience
+      </h2>
+      <h3
+        class="text-sky-400 text-3xl mt-5 mb-0 className"
+      >
+        Foo LLC
+      </h3>
+      <div
+        class="typography"
+      >
+        I did things.
+      </div>
+    </section>
+  </div>
+</body>
+`;

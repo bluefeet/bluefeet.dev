@@ -51,7 +51,7 @@ export interface Skill {
   competencies?: UniqueStrings;
 }
 export interface Resource {
-  title?: string;
+  title: string;
   uri: string;
 }
 export interface Objective {
@@ -74,7 +74,7 @@ export interface Objective {
   employmentTypes?: EmploymentType[];
 }
 export interface Experience {
-  companyName?: string;
+  companyName: string;
   title?: string;
   employmentType?: EmploymentType;
   location?: string;

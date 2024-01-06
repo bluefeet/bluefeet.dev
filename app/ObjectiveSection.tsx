@@ -1,12 +1,7 @@
-import { Fragment } from 'react'
-import Details from './Details'
 import formatDate from 'date-fns/format'
 import isDateInPast from 'date-fns/isPast'
-import List from './List'
-import ListItem from './ListItem'
 import parseISODate from 'date-fns/parseISO'
 import upperFirst from 'lodash/upperFirst'
-import { useResume } from './resumeContext'
 
 import {
   BuildingOffice2Icon,
@@ -15,6 +10,13 @@ import {
   PhotoIcon,
   RocketLaunchIcon,
 } from '@heroicons/react/24/solid'
+
+import { Details } from './Details'
+import { List } from './List'
+import { ListItem } from './ListItem'
+import { useResume } from './resumeContext'
+
+const startDateFormat = 'PPP'
 
 const Overview = () => {
   const resume = useResume()
@@ -41,12 +43,12 @@ const StartDate = () => {
     <ListItem Icon={RocketLaunchIcon}>
       {
         resume.objective.isCasual
-          ? 'Open to a new opportunities'
+          ? 'Open to new opportunities'
           : 'Actively searching for an opportunity'
       }
       {<Details>
         Available {startDate
-          ? <>starting on {formatDate(startDate, 'PPP')}</>
+          ? <>starting on {formatDate(startDate, startDateFormat)}</>
           : <>immediately</>
         }
       </Details>}
@@ -63,9 +65,9 @@ const Roles = () => {
       {resume.objective.roles.length > 1 ? 'These roles' : 'This role'} would be a great match
       <Details>
         {resume.objective.roles.map((role) =>
-          <Fragment key={role}>
-            {role}<br />
-          </Fragment>
+          <div key={role}>
+            {role}
+          </div>
         )}
       </Details>
     </ListItem>
@@ -100,7 +102,7 @@ const EmploymentTypes = () => {
   </>
 }
 
-const ObjectiveSection = ({ className = '' }: { className?: string }) => <>
+export const ObjectiveSection = ({ className = '' }: { className?: string }) => <>
   <section className={className}>
     <List>
       <Overview />
@@ -111,5 +113,3 @@ const ObjectiveSection = ({ className = '' }: { className?: string }) => <>
     </List>
   </section>
 </>
-
-export default ObjectiveSection

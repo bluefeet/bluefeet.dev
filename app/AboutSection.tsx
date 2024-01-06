@@ -1,8 +1,9 @@
-import ReactMarkdown from 'react-markdown'
-import SectionTitle from './SectionTitle'
+import { SectionTitle } from './SectionTitle'
+import { useRenderMarkdown } from './RenderMarkdownContext'
 import { useResume } from './resumeContext'
 
-const AboutSection = ({ className = '' }: { className?: string }) => {
+export const AboutSection = ({ className = '' }: { className?: string }) => {
+  const RenderMarkdown = useRenderMarkdown()
   const resume = useResume()
   if (!resume.profile?.about) return <></>
 
@@ -10,11 +11,9 @@ const AboutSection = ({ className = '' }: { className?: string }) => {
     <section className={`md:flex lg:block pt-2 md:pt-0 ${className}`}>
       <SectionTitle className='md:pr-8 lg:pr-0 print:hidden mt-3 md:mt-0 lg:mt-3'>About</SectionTitle>
 
-      <div className='typography'>
-        <ReactMarkdown>{resume.profile.about}</ReactMarkdown>
-      </div>
+      <RenderMarkdown>
+        {resume.profile.about}
+      </RenderMarkdown>
     </section>
   </>
 }
-
-export default AboutSection
