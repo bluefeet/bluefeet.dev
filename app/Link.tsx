@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-const Link = ({
+export const Link = ({
   href,
   className = '',
   children,
@@ -15,5 +15,3 @@ const Link = ({
   >
     {children}
   </a>
-
-export default Link

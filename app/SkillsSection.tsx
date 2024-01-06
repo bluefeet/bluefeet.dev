@@ -1,8 +1,8 @@
-import Details from './Details'
-import SectionTitle from './SectionTitle'
+import { Details } from './Details'
+import { SectionTitle } from './SectionTitle'
 import { useResume } from './resumeContext'
 
-const SkillsSection = ({ className = '' }: { className?: string }) => {
+export const SkillsSection = ({ className = '' }: { className?: string }) => {
   const resume = useResume()
   if (!resume.profile?.skills?.length) return <></>
 
@@ -19,5 +19,3 @@ const SkillsSection = ({ className = '' }: { className?: string }) => {
     </section>
   </>
 }
-
-export default SkillsSection

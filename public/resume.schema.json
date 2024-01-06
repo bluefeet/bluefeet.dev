@@ -98,6 +98,7 @@
         }
       },
       "required": [
+        "title",
         "uri"
       ]
     },
@@ -227,7 +228,10 @@
         "highlights": {
           "$ref": "#/$defs/uniqueStrings"
         }
-      }
+      },
+      "required": [
+        "companyName"
+      ]
     },
     "experiences": {
       "type": "array",

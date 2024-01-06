@@ -1,9 +1,4 @@
-import { Fragment, ReactNode } from 'react'
-import Details from './Details'
-import Link from './Link'
-import List from './List'
-import ListItem from './ListItem'
-import { useResume } from './resumeContext'
+import { ReactNode } from 'react'
 
 import {
   AtSymbolIcon,
@@ -12,6 +7,12 @@ import {
   LinkIcon,
   MapPinIcon,
 } from '@heroicons/react/24/solid'
+
+import { Details } from './Details'
+import { Link } from './Link'
+import { List } from './List'
+import { ListItem } from './ListItem'
+import { useResume } from './resumeContext'
 
 const Location = () => {
   const resume = useResume()
@@ -87,17 +88,17 @@ const Resources = () => {
   return <>
     <ListItem Icon={LinkIcon}>
       {resume.profile.resources.map((resource) =>
-        <Fragment key={resource.uri}>
-          <Link href={resource.uri}>{resource.title}</Link><br />
+        <div key={resource.uri}>
+          <Link href={resource.uri}>{resource.title}</Link>
           <Details className='hidden print:block'>{resource.uri}</Details>
-        </Fragment>
+        </div>
       )}
       <Link className='print:hidden' href='/resume.pdf'>PDF Resume</Link><br />
     </ListItem>
   </>
 }
 
-const InfoSection = ({ className = '' }: { className?: string }) => {
+export const InfoSection = ({ className = '' }: { className?: string }) => {
   return <>
     <section className={className}>
       <List>
@@ -110,5 +111,3 @@ const InfoSection = ({ className = '' }: { className?: string }) => {
     </section>
   </>
 }
-
-export default InfoSection

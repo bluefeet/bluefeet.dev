@@ -1,12 +1,13 @@
 import { render, screen } from '@testing-library/react'
+import { expectToBeVisible } from './testing'
 
-import Link from './Link'
+import { Link } from './Link'
 
 describe('Link', () => {
   it('renders', () => {
     render(<Link href='foo.html'>Bar</Link>)
     const link = screen.getByRole<HTMLLinkElement>('link')
-    expect(link).toBeInTheDocument()
+    expectToBeVisible(link)
     expect(link.href).toBe('http://localhost/foo.html')
     expect(link.innerHTML).toBe('Bar')
   })
