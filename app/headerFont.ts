@@ -1,3 +1,3 @@
-import { Raleway } from 'next/font/google'
+import { Raleway } from "next/font/google";
 
-export const headerFont = Raleway({ subsets: ['latin'] })
+export const headerFont = Raleway({ subsets: ["latin"] });

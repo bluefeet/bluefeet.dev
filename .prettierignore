@@ -1,0 +1,6 @@
+# These files are managed by tools.
+app/__snapshots__
+package-lock.json
+public/resume.json
+types/Resume.d.ts
+.vscode

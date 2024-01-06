@@ -1,61 +1,61 @@
-import { render } from '@testing-library/react'
+import { render } from "@testing-library/react";
 
-import { emptyResume, ResumeProvider } from './resumeContext'
-import { Resume } from '@/types/Resume'
+import { emptyResume, ResumeProvider } from "./resumeContext";
+import { Resume } from "@/types/Resume";
 
-import { ObjectiveSection } from './ObjectiveSection'
+import { ObjectiveSection } from "./ObjectiveSection";
 
 const testResume = (resume: Partial<Resume>) => {
   render(
     <ResumeProvider value={{ ...emptyResume, ...resume }}>
       <ObjectiveSection />
-    </ResumeProvider>
-  )
-  expect(document.body).toMatchSnapshot()
-}
+    </ResumeProvider>,
+  );
+  expect(document.body).toMatchSnapshot();
+};
 
-describe('ObjectiveSection', () => {
-  it('empty resume', () => {
-    testResume({})
-  })
+describe("ObjectiveSection", () => {
+  it("empty resume", () => {
+    testResume({});
+  });
 
-  it('overview', () => {
-    testResume({ objective: { overview: 'test-overview' } })
-  })
+  it("overview", () => {
+    testResume({ objective: { overview: "test-overview" } });
+  });
 
-  describe('startDate', () => {
-    it('objective with no startDate', () => {
-      testResume({ objective: {} })
-    })
+  describe("startDate", () => {
+    it("objective with no startDate", () => {
+      testResume({ objective: {} });
+    });
 
-    it('casual startDate', () => {
-      testResume({ objective: { isCasual: true, startDate: '2500-11-04' } })
-    })
+    it("casual startDate", () => {
+      testResume({ objective: { isCasual: true, startDate: "2500-11-04" } });
+    });
 
-    it('historic startDate', () => {
-      testResume({ objective: { startDate: '1905-08-17' } })
-    })
-  })
+    it("historic startDate", () => {
+      testResume({ objective: { startDate: "1905-08-17" } });
+    });
+  });
 
-  describe('roles, workModes, and employmentTypes', () => {
-    it('single', () => {
+  describe("roles, workModes, and employmentTypes", () => {
+    it("single", () => {
       testResume({
         objective: {
-          roles: ['foo'],
-          workModes: ['on-site'],
-          employmentTypes: ['full-time'],
+          roles: ["foo"],
+          workModes: ["on-site"],
+          employmentTypes: ["full-time"],
         },
-      })
-    })
+      });
+    });
 
-    it('multiple', () => {
+    it("multiple", () => {
       testResume({
         objective: {
-          roles: ['foo', 'bar'],
-          workModes: ['hybrid', 'remote'],
-          employmentTypes: ['freelance', 'internship'],
+          roles: ["foo", "bar"],
+          workModes: ["hybrid", "remote"],
+          employmentTypes: ["freelance", "internship"],
         },
-      })
-    })
-  })
-})
+      });
+    });
+  });
+});

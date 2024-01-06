@@ -1,13 +1,12 @@
-export const expectToBeVisible = (element:HTMLElement) => {
-  expect(element).toBeVisible()
-  expect(element).not.toHaveClass('hidden')
-}
+export const expectToBeVisible = (element: HTMLElement) => {
+  expect(element).toBeVisible();
+  expect(element).not.toHaveClass("hidden");
+};
 
-export const expectNotToBeVisible = (element:HTMLElement) => {
+export const expectNotToBeVisible = (element: HTMLElement) => {
   try {
-    expect(element).not.toBeVisible()
+    expect(element).not.toBeVisible();
+  } catch {
+    expect(element).toHaveClass("hidden");
   }
-  catch {
-    expect(element).toHaveClass('hidden')
-  }
-}
+};

@@ -79,7 +79,8 @@ exports[`ObjectiveSection overview 1`] = `
           <div
             class="text-zinc-300 text-sm "
           >
-            Available 
+            Available
+             
             immediately
           </div>
         </div>
@@ -126,7 +127,8 @@ exports[`ObjectiveSection roles, workModes, and employmentTypes multiple 1`] = `
           <div
             class="text-zinc-300 text-sm "
           >
-            Available 
+            Available
+             
             immediately
           </div>
         </div>
@@ -188,7 +190,8 @@ exports[`ObjectiveSection roles, workModes, and employmentTypes multiple 1`] = `
         <div
           class="pt-2 pb-2"
         >
-          With 
+          With
+           
           one of these commitments
           <div
             class="text-zinc-300 text-sm "
@@ -217,7 +220,8 @@ exports[`ObjectiveSection roles, workModes, and employmentTypes multiple 1`] = `
         <div
           class="pt-2 pb-2"
         >
-          In 
+          In
+           
           any of these capacities
           <div
             class="text-zinc-300 text-sm "
@@ -268,7 +272,8 @@ exports[`ObjectiveSection roles, workModes, and employmentTypes single 1`] = `
           <div
             class="text-zinc-300 text-sm "
           >
-            Available 
+            Available
+             
             immediately
           </div>
         </div>
@@ -327,7 +332,8 @@ exports[`ObjectiveSection roles, workModes, and employmentTypes single 1`] = `
         <div
           class="pt-2 pb-2"
         >
-          With 
+          With
+           
           this commitment
           <div
             class="text-zinc-300 text-sm "
@@ -356,7 +362,8 @@ exports[`ObjectiveSection roles, workModes, and employmentTypes single 1`] = `
         <div
           class="pt-2 pb-2"
         >
-          In 
+          In
+           
           this capacity
           <div
             class="text-zinc-300 text-sm "
@@ -407,7 +414,8 @@ exports[`ObjectiveSection startDate casual startDate 1`] = `
           <div
             class="text-zinc-300 text-sm "
           >
-            Available 
+            Available
+             
             starting on 
             November 4th, 2500
           </div>
@@ -455,7 +463,8 @@ exports[`ObjectiveSection startDate historic startDate 1`] = `
           <div
             class="text-zinc-300 text-sm "
           >
-            Available 
+            Available
+             
             immediately
           </div>
         </div>
@@ -502,7 +511,8 @@ exports[`ObjectiveSection startDate objective with no startDate 1`] = `
           <div
             class="text-zinc-300 text-sm "
           >
-            Available 
+            Available
+             
             immediately
           </div>
         </div>
