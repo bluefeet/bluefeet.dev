@@ -102,10 +102,11 @@ const ScrollDashButton = () => {
   const [isNearTop, setIsNearTop] = useState(true);
   const mainRef = useContext(mainRefContext);
 
+  const handleScroll = () =>
+    setIsNearTop(window.scrollY < window.innerHeight / 2);
+
   useEffect(() => {
-    const handleScroll = () =>
-      setIsNearTop(window.scrollY < window.innerHeight / 2);
-    handleScroll(); // Call once in case the window is scrolled down.
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -141,18 +142,40 @@ const DashButtons = () => (
 const HeaderForDisplay = () => {
   const resume = useResume();
 
+  const headerRef = useRef<HTMLElement>(null);
+  const scrollSpeed = 0.63;
+
+  const handleScroll = () => {
+    if (headerRef.current) {
+      headerRef.current.style.top = `${window.scrollY * scrollSpeed}px`;
+    }
+  };
+
+  useEffect(() => {
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="bg-bear bg-cover h-screen bg-center print:hidden">
-      <div className="absolute h-48 w-full bg-gradient-to-b from-zinc-900 opacity-50" />
-      <div className="absolute w-full text-center md:text-right p-5 md:pr-16 lg:pr-24">
-        <h1 className="text-6xl md:text-7xl lg:text-8xl md:pr-16 lg:pr-32">
-          {resume.contact?.fullName}
-        </h1>
-        <p className="pt-2 md:pt-3 lg:pt-5 lg:pr-16 text-lg md:text-2xl">
-          {resume.profile?.headline} • {resume.contact?.pronouns}
-        </p>
+    <div className="border-b-2 border-sky-600 print:hidden">
+      <div className="h-screen overflow-hidden">
+        <header
+          ref={headerRef}
+          className="bg-bear bg-cover h-screen bg-center relative"
+        >
+          <div className="absolute h-48 w-full bg-gradient-to-b from-zinc-900 opacity-50" />
+          <div className="absolute w-full text-center md:text-right p-5 md:pr-16 lg:pr-24">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl md:pr-16 lg:pr-32">
+              {resume.contact?.fullName}
+            </h1>
+            <p className="pt-2 md:pt-3 lg:pt-5 lg:pr-16 text-lg md:text-2xl">
+              {resume.profile?.headline} • {resume.contact?.pronouns}
+            </p>
+          </div>
+        </header>
       </div>
-    </header>
+    </div>
   );
 };
 
@@ -176,21 +199,59 @@ const HeaderForPrint = () => {
 
 const MainContent = () => {
   const mainRef = useContext(mainRefContext);
+  const aboutRef = useRef<HTMLDivElement>(null);
+
+  const calcAboutTop = (mainRect: DOMRect, aboutRect: DOMRect) => {
+    if (mainRect.top >= 0) return 0;
+
+    if (aboutRect.height <= window.innerHeight) {
+      const top = window.innerHeight - mainRect.bottom;
+      return top < 0 ? 0 : top;
+    }
+
+    const percentScrolled = Math.min(
+      (mainRect.top * -1) / (mainRect.height - window.innerHeight),
+      1,
+    );
+
+    const maxOffset = window.innerHeight - aboutRect.height;
+
+    return maxOffset * (percentScrolled <= 1 ? percentScrolled : 1);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (aboutRef.current && mainRef?.current) {
+        const mainRect = mainRef.current.getBoundingClientRect();
+        const aboutRect = aboutRef.current.getBoundingClientRect();
+        aboutRef.current.style.top = `${calcAboutTop(mainRect, aboutRect)}px`;
+      }
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [mainRef]);
 
   return (
     <main
       ref={mainRef}
       className="flex flex-col lg:flex-row p-4 md:p-8 pt-0 lg:pt-8 ml-auto mr-auto max-w-6xl print:p-0"
     >
-      <div className="lg:w-2/5 flex flex-wrap lg:flex-col lg:order-2 lg:pl-8 print:flex-row print:pl-0 print:pb-2">
-        <AboutSection className="print:pb-2" />
-        <Divider />
+      <div className="lg:sticky lg:top-0 lg:h-screen overflow-hidden lg:order-2 lg:w-2/5">
+        <div
+          ref={aboutRef}
+          className="lg:relative lg:h-min flex flex-wrap lg:flex-col lg:pl-8 print:flex-row print:pl-0 print:pb-2"
+        >
+          <AboutSection className="print:pb-2" />
+          <Divider />
 
-        <ObjectiveSection className="md:w-1/2 lg:w-full print:w-1/2" />
-        <Divider className="md:hidden lg:block" />
+          <ObjectiveSection className="md:w-1/2 lg:w-full print:w-1/2" />
+          <Divider className="md:hidden lg:block" />
 
-        <InfoSection className="md:w-1/2 lg:w-full print:w-1/2" />
-        <Divider className="lg:hidden" />
+          <InfoSection className="md:w-1/2 lg:w-full print:w-1/2" />
+          <Divider className="lg:hidden" />
+        </div>
       </div>
       <div className="lg:w-3/5 lg:order-1">
         <SkillsSection />
@@ -199,7 +260,7 @@ const MainContent = () => {
         <ExperienceSection className="lg:pt-4 print:pt-0" />
         <Divider className="lg:hidden mt-5 mb-5" />
 
-        <RecommendationsSection className="lg:pt-4 print:hidden" />
+        <RecommendationsSection className="lg:pt-4 lg:pb-2 print:hidden" />
       </div>
     </main>
   );
