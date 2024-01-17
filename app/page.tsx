@@ -200,31 +200,53 @@ const HeaderForPrint = () => {
 const MainContent = () => {
   const mainRef = useContext(mainRefContext);
   const aboutRef = useRef<HTMLDivElement>(null);
+  const aboutContainerRef = useRef<HTMLDivElement>(null);
 
-  const calcAboutTop = (mainRect: DOMRect, aboutRect: DOMRect) => {
+  const calcAboutTop = (
+    mainRect: DOMRect,
+    aboutRect: DOMRect,
+    aboutContainerRect: DOMRect,
+  ) => {
     if (mainRect.top >= 0) return 0;
 
-    if (aboutRect.height <= window.innerHeight) {
-      const top = window.innerHeight - mainRect.bottom;
-      return top < 0 ? 0 : top;
+    const extraSpace = window.innerHeight - aboutRect.height;
+
+    // If the about section fits in the viewport.
+    if (extraSpace >= 0) {
+      // Footer pushing up sticky container causes a negative container top.
+      const pushedTop = aboutContainerRect.top * -1;
+
+      // If being pushed up and there is not enough room for the section put it
+      // flush to the bottom of the container.
+      if (pushedTop + aboutRect.height > aboutContainerRect.height)
+        return aboutContainerRect.height - aboutRect.height;
+
+      // There is enough room to show the whole section.
+      return pushedTop;
     }
 
+    // If it doesn't fit, then we slowly scroll the about section.
     const percentScrolled = Math.min(
       (mainRect.top * -1) / (mainRect.height - window.innerHeight),
       1,
     );
 
-    const maxOffset = window.innerHeight - aboutRect.height;
-
-    return maxOffset * (percentScrolled <= 1 ? percentScrolled : 1);
+    return extraSpace * (percentScrolled <= 1 ? percentScrolled : 1);
   };
 
   useEffect(() => {
     const handleScroll = () => {
-      if (aboutRef.current && mainRef?.current) {
+      if (aboutRef.current && aboutContainerRef.current && mainRef?.current) {
         const mainRect = mainRef.current.getBoundingClientRect();
         const aboutRect = aboutRef.current.getBoundingClientRect();
-        aboutRef.current.style.top = `${calcAboutTop(mainRect, aboutRect)}px`;
+        const aboutContainerRect =
+          aboutContainerRef.current.getBoundingClientRect();
+
+        aboutRef.current.style.top = `${calcAboutTop(
+          mainRect,
+          aboutRect,
+          aboutContainerRect,
+        )}px`;
       }
     };
 
@@ -238,7 +260,10 @@ const MainContent = () => {
       ref={mainRef}
       className="flex flex-col lg:flex-row p-4 md:p-8 pt-0 lg:pt-8 ml-auto mr-auto max-w-6xl print:p-0"
     >
-      <div className="lg:sticky lg:top-0 lg:h-screen overflow-hidden lg:order-2 lg:w-2/5">
+      <div
+        ref={aboutContainerRef}
+        className="lg:sticky lg:top-0 lg:h-screen overflow-hidden lg:order-2 lg:w-2/5"
+      >
         <div
           ref={aboutRef}
           className="lg:relative lg:h-min flex flex-wrap lg:flex-col lg:pl-8 print:flex-row print:pl-0 print:pb-2"
