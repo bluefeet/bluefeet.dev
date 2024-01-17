@@ -1,5 +1,5 @@
-import formatDate from "date-fns/format";
-import parseISODate from "date-fns/parseISO";
+import { format as formatDate } from "date-fns/format";
+import { parseISO as parseISODate } from "date-fns/parseISO";
 import upperFirst from "lodash/upperFirst";
 
 import { Details } from "./Details";

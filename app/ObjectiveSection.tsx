@@ -1,6 +1,6 @@
-import formatDate from "date-fns/format";
-import isDateInPast from "date-fns/isPast";
-import parseISODate from "date-fns/parseISO";
+import { format as formatDate } from "date-fns/format";
+import { isPast as isDateInPast } from "date-fns/isPast";
+import { parseISO as parseISODate } from "date-fns/parseISO";
 import upperFirst from "lodash/upperFirst";
 
 import {
