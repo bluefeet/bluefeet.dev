@@ -11,6 +11,14 @@ npm run build
 
 # Generate public/resume.json and types/Resume.d.ts
 npm run build-resume
+
+# Other tools
+npm test
+npm run update-test-snapshots
+npm run check-coverage
+npm run lint
+npm run is-pretty
+npm run make-pretty
 ```
 
 # Notes
