@@ -200,59 +200,51 @@ const HeaderForPrint = () => {
 const MainContent = () => {
   const mainRef = useContext(mainRefContext);
   const aboutRef = useRef<HTMLDivElement>(null);
-  const aboutContainerRef = useRef<HTMLDivElement>(null);
+  const experienceRef = useRef<HTMLDivElement>(null);
 
-  const calcAboutTop = (
-    mainRect: DOMRect,
-    aboutRect: DOMRect,
-    aboutContainerRect: DOMRect,
-  ) => {
-    if (mainRect.top >= 0) return 0;
-
-    const extraSpace = window.innerHeight - aboutRect.height;
-
-    // If the about section fits in the viewport.
-    if (extraSpace >= 0) {
-      // Footer pushing up sticky container causes a negative container top.
-      const pushedTop = aboutContainerRect.top * -1;
-
-      // If being pushed up and there is not enough room for the section put it
-      // flush to the bottom of the container.
-      if (pushedTop + aboutRect.height > aboutContainerRect.height)
-        return aboutContainerRect.height - aboutRect.height;
-
-      // There is enough room to show the whole section.
-      return pushedTop;
-    }
-
-    // If it doesn't fit, then we slowly scroll the about section.
-    const percentScrolled = Math.min(
-      (mainRect.top * -1) / (mainRect.height - window.innerHeight),
-      1,
-    );
-
-    return extraSpace * (percentScrolled <= 1 ? percentScrolled : 1);
-  };
-
+  // Simulate a smart sticky where the about will be center positioned if it is
+  // larger than the viewing area. If javascript is disabled this will just fall
+  // back to regular sticky which is fine and usable.
   useEffect(() => {
-    const handleScroll = () => {
-      if (aboutRef.current && aboutContainerRef.current && mainRef?.current) {
-        const mainRect = mainRef.current.getBoundingClientRect();
-        const aboutRect = aboutRef.current.getBoundingClientRect();
-        const aboutContainerRect =
-          aboutContainerRef.current.getBoundingClientRect();
+    const positionAbout = () => {
+      if (!(mainRef?.current && aboutRef.current && experienceRef.current))
+        return;
 
-        aboutRef.current.style.top = `${calcAboutTop(
-          mainRect,
-          aboutRect,
-          aboutContainerRect,
-        )}px`;
+      // When smaller than lg, mimic `lg:sticky`
+      if (window.innerWidth < 1024) {
+        aboutRef.current.style.position = "static";
+        return;
       }
+
+      const aboutRect = aboutRef.current.getBoundingClientRect();
+
+      // No need to do anything if the about section fits in the view
+      if (window.innerHeight - aboutRect.height > 0) {
+        aboutRef.current.style.position = "sticky";
+        aboutRef.current.style.top = "0px";
+        return;
+      }
+
+      const experienceRect = experienceRef.current.getBoundingClientRect();
+      const mainRect = mainRef.current.getBoundingClientRect();
+
+      // Now slow-scroll the about section
+      const maxTop = experienceRect.height - aboutRect.height;
+      const percentScrolled =
+        (mainRect.top * -1) / (mainRect.height - window.innerHeight);
+      const top = Math.max(0, Math.min(maxTop, maxTop * percentScrolled));
+
+      aboutRef.current.style.position = "relative";
+      aboutRef.current.style.top = `${top}px`;
     };
 
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    positionAbout();
+    window.addEventListener("scroll", positionAbout);
+    window.addEventListener("resize", positionAbout);
+    return () => {
+      window.removeEventListener("scroll", positionAbout);
+      window.removeEventListener("resize", positionAbout);
+    };
   }, [mainRef]);
 
   return (
@@ -261,24 +253,19 @@ const MainContent = () => {
       className="flex flex-col lg:flex-row p-4 md:p-8 pt-0 lg:pt-8 ml-auto mr-auto max-w-6xl print:p-0"
     >
       <div
-        ref={aboutContainerRef}
-        className="lg:sticky lg:top-0 lg:h-screen overflow-hidden lg:order-2 lg:w-2/5"
+        ref={aboutRef}
+        className="lg:sticky lg:top-0 lg:order-2 lg:w-2/5 lg:h-min flex flex-wrap lg:flex-col lg:pl-8 print:flex-row print:pl-0 print:pb-2 print:!static"
       >
-        <div
-          ref={aboutRef}
-          className="lg:relative lg:h-min flex flex-wrap lg:flex-col lg:pl-8 print:flex-row print:pl-0 print:pb-2"
-        >
-          <AboutSection className="print:pb-2" />
-          <Divider />
+        <AboutSection className="print:pb-2" />
+        <Divider />
 
-          <ObjectiveSection className="md:w-1/2 lg:w-full print:w-1/2" />
-          <Divider className="md:hidden lg:block" />
+        <ObjectiveSection className="md:w-1/2 lg:w-full print:w-1/2" />
+        <Divider className="md:hidden lg:block" />
 
-          <InfoSection className="md:w-1/2 lg:w-full print:w-1/2" />
-          <Divider className="lg:hidden" />
-        </div>
+        <InfoSection className="md:w-1/2 lg:w-full print:w-1/2" />
+        <Divider className="lg:hidden" />
       </div>
-      <div className="lg:w-3/5 lg:order-1">
+      <div ref={experienceRef} className="lg:w-3/5 lg:order-1">
         <SkillsSection />
         <Divider className="lg:hidden mb-5" />
 
