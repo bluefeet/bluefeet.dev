@@ -54,8 +54,7 @@ exports[`Page 1`] = `
       class="flex flex-col lg:flex-row p-4 md:p-8 pt-0 lg:pt-8 ml-auto mr-auto max-w-6xl print:p-0"
     >
       <div
-        class="lg:sticky lg:top-0 lg:order-2 lg:w-2/5 lg:h-min flex flex-wrap lg:flex-col lg:pl-8 print:flex-row print:pl-0 print:pb-2 print:!static"
-        style="position: sticky; top: 0px;"
+        class="lg:order-2 lg:w-2/5 2xl:sticky 2xl:top-0 2xl:h-min flex flex-wrap lg:flex-col lg:pl-8 print:flex-row print:pl-0 print:pb-2 print:static"
       >
         <section
           class="md:flex lg:block pt-2 md:pt-0 print:pb-2"
