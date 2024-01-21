@@ -199,63 +199,13 @@ const HeaderForPrint = () => {
 
 const MainContent = () => {
   const mainRef = useContext(mainRefContext);
-  const aboutRef = useRef<HTMLDivElement>(null);
-  const experienceRef = useRef<HTMLDivElement>(null);
-
-  // Simulate a smart sticky where the about will be center positioned if it is
-  // larger than the viewing area. If javascript is disabled this will just fall
-  // back to regular sticky which is fine and usable.
-  useEffect(() => {
-    const positionAbout = () => {
-      if (!(mainRef?.current && aboutRef.current && experienceRef.current))
-        return;
-
-      // When smaller than lg, mimic `lg:sticky`
-      if (window.innerWidth < 1024) {
-        aboutRef.current.style.position = "static";
-        return;
-      }
-
-      const aboutRect = aboutRef.current.getBoundingClientRect();
-
-      // No need to do anything if the about section fits in the view
-      if (window.innerHeight - aboutRect.height > 0) {
-        aboutRef.current.style.position = "sticky";
-        aboutRef.current.style.top = "0px";
-        return;
-      }
-
-      const experienceRect = experienceRef.current.getBoundingClientRect();
-      const mainRect = mainRef.current.getBoundingClientRect();
-
-      // Now slow-scroll the about section
-      const maxTop = experienceRect.height - aboutRect.height;
-      const percentScrolled =
-        (mainRect.top * -1) / (mainRect.height - window.innerHeight);
-      const top = Math.max(0, Math.min(maxTop, maxTop * percentScrolled));
-
-      aboutRef.current.style.position = "relative";
-      aboutRef.current.style.top = `${top}px`;
-    };
-
-    positionAbout();
-    window.addEventListener("scroll", positionAbout);
-    window.addEventListener("resize", positionAbout);
-    return () => {
-      window.removeEventListener("scroll", positionAbout);
-      window.removeEventListener("resize", positionAbout);
-    };
-  }, [mainRef]);
 
   return (
     <main
       ref={mainRef}
       className="flex flex-col lg:flex-row p-4 md:p-8 pt-0 lg:pt-8 ml-auto mr-auto max-w-6xl print:p-0"
     >
-      <div
-        ref={aboutRef}
-        className="lg:sticky lg:top-0 lg:order-2 lg:w-2/5 lg:h-min flex flex-wrap lg:flex-col lg:pl-8 print:flex-row print:pl-0 print:pb-2 print:!static"
-      >
+      <div className="lg:order-2 lg:w-2/5 2xl:sticky 2xl:top-0 2xl:h-min flex flex-wrap lg:flex-col lg:pl-8 print:flex-row print:pl-0 print:pb-2 print:static">
         <AboutSection className="print:pb-2" />
         <Divider />
 
@@ -265,7 +215,7 @@ const MainContent = () => {
         <InfoSection className="md:w-1/2 lg:w-full print:w-1/2" />
         <Divider className="lg:hidden" />
       </div>
-      <div ref={experienceRef} className="lg:w-3/5 lg:order-1">
+      <div className="lg:w-3/5 lg:order-1">
         <SkillsSection />
         <Divider className="lg:hidden mb-5" />
 
