@@ -18,7 +18,6 @@ jobs:
           node-version: 21.x
           cache: "npm"
       - run: npm ci
-      - run: npm test
-      - run: npm run check-coverage
+      - run: npm run test-coverage
       - run: npm run lint
       - run: npm run is-pretty
