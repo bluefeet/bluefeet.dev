@@ -28,7 +28,6 @@ import { headerFont } from "./headerFont";
 import { Link } from "./Link";
 import { resume } from "./resume";
 import { ResumeProvider, useResume } from "./resumeContext";
-import { useNowDate } from "./NowDateContext";
 
 const Divider = ({ className = "" }: { className?: string }) => (
   <hr
@@ -248,11 +247,10 @@ const FooterForDisplay = () => {
 
 const FooterForPrint = () => {
   const resume = useResume();
-  const nowDate = useNowDate();
 
   return (
     <footer className="text-right pt-8 hidden print:flex justify-between">
-      <Details>Generated {formatDate(nowDate, "PPP")}</Details>
+      <Details>Generated {formatDate(Date.now(), "PPP")}</Details>
       <Details>&copy; {resume.contact?.fullName}</Details>
     </footer>
   );
