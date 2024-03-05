@@ -3,7 +3,7 @@ import { parseISO as parseISODate } from "date-fns/parseISO";
 import upperFirst from "lodash/upperFirst";
 
 import { Details } from "./Details";
-import { Experience } from "@/types/Resume";
+import { Experience } from "./resume";
 import { SectionTitle } from "./SectionTitle";
 import { SubSectionTitle } from "./SubSectionTitle";
 import { useRenderMarkdown } from "./RenderMarkdownContext";

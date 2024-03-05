@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { expectToBeVisible } from "./testing";
 
 import { emptyResume, ResumeProvider } from "./resumeContext";
-import { Resume } from "@/types/Resume";
+import { Resume } from "./resume";
 
 import { InfoSection } from "./InfoSection";
 

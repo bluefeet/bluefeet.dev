@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 
 import { emptyResume, ResumeProvider } from "./resumeContext";
-import { Resume } from "@/types/Resume";
+import { Resume } from "./resume";
 
 import { ObjectiveSection } from "./ObjectiveSection";
 
