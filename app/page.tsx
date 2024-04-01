@@ -21,7 +21,7 @@ import { ExperienceSection } from "./ExperienceSection";
 import { InfoSection } from "./InfoSection";
 import { ObjectiveSection } from "./ObjectiveSection";
 import { RecommendationsSection } from "./RecommendationsSection";
-import { SkillsSection } from "./SkillsSection";
+import { CompetenciesSection } from "./CompetenciesSection";
 
 import { Details } from "./Details";
 import { headerFont } from "./headerFont";
@@ -215,7 +215,7 @@ const MainContent = () => {
         <Divider className="lg:hidden" />
       </div>
       <div className="lg:w-3/5 lg:order-1">
-        <SkillsSection />
+        <CompetenciesSection />
         <Divider className="lg:hidden mb-5" />
 
         <ExperienceSection className="lg:pt-4 print:pt-0" />

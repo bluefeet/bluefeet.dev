@@ -2,9 +2,13 @@ import { Details } from "./Details";
 import { SectionTitle } from "./SectionTitle";
 import { useResume } from "./resumeContext";
 
-export const SkillsSection = ({ className = "" }: { className?: string }) => {
+export const CompetenciesSection = ({
+  className = "",
+}: {
+  className?: string;
+}) => {
   const resume = useResume();
-  if (!resume.profile?.skills?.length) return <></>;
+  if (!resume.profile?.competencies?.length) return <></>;
 
   return (
     <>
@@ -13,10 +17,10 @@ export const SkillsSection = ({ className = "" }: { className?: string }) => {
 
         <div className="typography">
           <ul>
-            {resume.profile.skills.map((skill) => (
-              <li key={skill.name} className="break-inside-avoid">
-                {skill.name}
-                <Details>{skill.competencies?.join(", ")}</Details>
+            {resume.profile.competencies.map((competency) => (
+              <li key={competency.name} className="break-inside-avoid">
+                {competency.name}
+                <Details>{competency.skills?.join(", ")}</Details>
               </li>
             ))}
           </ul>
