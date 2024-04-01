@@ -3,12 +3,12 @@ import { render } from "@testing-library/react";
 import { emptyResume, ResumeProvider } from "./resumeContext";
 import { Resume } from "./resume";
 
-import { SkillsSection } from "./SkillsSection";
+import { CompetenciesSection } from "./CompetenciesSection";
 
 const testResume = (resume: Partial<Resume>) => {
   render(
     <ResumeProvider value={{ ...emptyResume, ...resume }}>
-      <SkillsSection />
+      <CompetenciesSection />
     </ResumeProvider>,
   );
   expect(document.body).toMatchSnapshot();
@@ -16,15 +16,15 @@ const testResume = (resume: Partial<Resume>) => {
 
 describe("SkillsSection", () => {
   it("no skills", () => {
-    testResume({ profile: { skills: [] } });
+    testResume({ profile: { competencies: [] } });
   });
 
   it("some skills", () => {
     testResume({
       profile: {
-        skills: [
-          { name: "Skill Name One", competencies: ["foo1", "bar1"] },
-          { name: "Skill Name Two", competencies: ["foo2"] },
+        competencies: [
+          { name: "Skill Name One", skills: ["foo1", "bar1"] },
+          { name: "Skill Name Two", skills: ["foo2"] },
         ],
       },
     });

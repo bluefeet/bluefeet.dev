@@ -10,10 +10,10 @@
   "profile": {
     "headline": "Senior Full-Stack Engineer",
     "about": "I'm a seasoned full-stack software developer with over 30 years of hands-on experience. My track record includes managing data pipelines, crafting backend services, and delivering stunning UIs. I excel at leading teams and interfacing with product development.",
-    "skills": [
+    "competencies": [
       {
         "name": "Frontend Development",
-        "competencies": [
+        "skills": [
           "Typescript",
           "React",
           "Responsive Design",
@@ -26,7 +26,7 @@
       },
       {
         "name": "Backend Development",
-        "competencies": [
+        "skills": [
           "Node.js",
           "REST",
           "gRPC",
@@ -40,7 +40,7 @@
       },
       {
         "name": "Data Engineering",
-        "competencies": [
+        "skills": [
           "Memcached",
           "DynamoDB",
           "MySQL",
@@ -50,7 +50,7 @@
       },
       {
         "name": "Cloud Operations",
-        "competencies": [
+        "skills": [
           "Infrastructure as Code",
           "Kubernetes",
           "AWS",
@@ -63,7 +63,7 @@
       },
       {
         "name": "Interpersonal",
-        "competencies": [
+        "skills": [
           "Collaboration",
           "Agile Processes",
           "Mentoring",
@@ -77,7 +77,7 @@
       },
       {
         "name": "Developing Passions",
-        "competencies": [
+        "skills": [
           "Rust",
           "Serverless",
           "Lean Processes",

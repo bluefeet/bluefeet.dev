@@ -64,19 +64,6 @@
         "seasonal"
       ]
     },
-    "skill": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "competencies": {
-          "$ref": "#/$defs/uniqueStrings"
-        }
-      },
-      "required": ["name"]
-    },
     "resource": {
       "type": "object",
       "additionalProperties": false,
@@ -127,10 +114,19 @@
         "about": {
           "type": "string"
         },
-        "skills": {
+        "competencies": {
           "type": "array",
           "items": {
-            "$ref": "#/$defs/skill"
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "skills": {
+                "$ref": "#/$defs/uniqueStrings"
+              }
+            }
           }
         },
         "languages": {

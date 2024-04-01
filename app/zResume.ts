@@ -21,12 +21,12 @@ export default z
       .object({
         headline: z.string().optional(),
         about: z.string().optional(),
-        skills: z
+        competencies: z
           .array(
             z
               .object({
-                name: z.string(),
-                competencies: z.array(z.string()).optional(),
+                name: z.string().optional(),
+                skills: z.array(z.string()).optional(),
               })
               .strict(),
           )
