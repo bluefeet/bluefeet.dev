@@ -212,6 +212,9 @@
         },
         "highlights": {
           "$ref": "#/$defs/uniqueStrings"
+        },
+        "skills": {
+          "$ref": "#/$defs/uniqueStrings"
         }
       },
       "required": ["companyName"]

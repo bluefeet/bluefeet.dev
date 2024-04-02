@@ -54,12 +54,12 @@ exports[`ExperienceSection full 1`] = `
         Head Muffin Licker | Apr 2004 - Feb 2007 | Seasonal | Hybrid
       </div>
       <div
-        class="typography"
+        class="typography mb-3"
       >
         I did things.
       </div>
       <div
-        class="typography text-sm"
+        class="typography text-sm mb-3"
       >
         <ul>
           <li>
@@ -69,6 +69,16 @@ exports[`ExperienceSection full 1`] = `
             Rolled.
           </li>
         </ul>
+      </div>
+      <div
+        class="typography mb-3"
+      >
+        Skills I used during this time included
+         
+        This
+        , and 
+        That
+        .
       </div>
     </section>
   </div>
@@ -92,7 +102,7 @@ exports[`ExperienceSection highlights 1`] = `
         Foo LLC
       </h3>
       <div
-        class="typography text-sm"
+        class="typography text-sm mb-3"
       >
         <ul>
           <li>
@@ -129,6 +139,37 @@ exports[`ExperienceSection multiples with required fields only 1`] = `
       >
         Bar and Daughters
       </h3>
+    </section>
+  </div>
+</body>
+`;
+
+exports[`ExperienceSection skills 1`] = `
+<body>
+  <div>
+    <section
+      class=""
+    >
+      <h2
+        class="text-center print:text-left md:text-left text-sky-300 text-4xl print:text-3xl font-bold print:font-semibold mt-3 mb-4 className "
+      >
+        Experience
+      </h2>
+      <h3
+        class="text-sky-400 text-3xl mt-5 mb-0 className"
+      >
+        Foo LLC
+      </h3>
+      <div
+        class="typography mb-3"
+      >
+        Skills I used during this time included
+         
+        This
+        , and 
+        That
+        .
+      </div>
     </section>
   </div>
 </body>
@@ -203,7 +244,7 @@ exports[`ExperienceSection summary 1`] = `
         Foo LLC
       </h3>
       <div
-        class="typography"
+        class="typography mb-3"
       >
         I did things.
       </div>

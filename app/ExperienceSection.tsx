@@ -42,12 +42,12 @@ const SingleExperience = ({ experience }: { experience: Experience }) => {
       {detailsLine && <Details className="mb-3">{detailsLine}</Details>}
 
       {experience.summary && (
-        <RenderMarkdown>{experience.summary}</RenderMarkdown>
+        <RenderMarkdown className="mb-3">{experience.summary}</RenderMarkdown>
       )}
 
       {experience.highlights?.length && (
         <>
-          <div className="typography text-sm">
+          <div className="typography text-sm mb-3">
             <ul>
               {experience.highlights.map((highlight) => (
                 <li key={highlight}>{highlight}</li>
@@ -55,6 +55,14 @@ const SingleExperience = ({ experience }: { experience: Experience }) => {
             </ul>
           </div>
         </>
+      )}
+
+      {experience.skills && (
+        <div className="typography mb-3">
+          Skills I used during this time included{" "}
+          {experience.skills.slice(0, experience.skills.length - 1).join(", ")},
+          and {experience.skills.slice(-1)}.
+        </div>
       )}
     </>
   );

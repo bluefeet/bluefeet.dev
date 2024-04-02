@@ -5,11 +5,16 @@ import { micromark } from "micromark";
  */
 export const RenderMarkdown = ({
   children: markdown,
+  className = "",
 }: {
   children: string;
+  className?: string;
 }) => {
   const html = micromark(markdown);
   return (
-    <div className="typography" dangerouslySetInnerHTML={{ __html: html }} />
+    <div
+      className={`typography ${className}`}
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
   );
 };

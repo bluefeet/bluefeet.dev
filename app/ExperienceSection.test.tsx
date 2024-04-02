@@ -88,6 +88,17 @@ describe("ExperienceSection", () => {
     });
   });
 
+  it("skills", () => {
+    testResume({
+      experiences: [
+        {
+          companyName: "Foo LLC",
+          skills: ["This", "That"],
+        },
+      ],
+    });
+  });
+
   it("full", () => {
     testResume({
       experiences: [
@@ -100,6 +111,7 @@ describe("ExperienceSection", () => {
           workMode: "hybrid",
           summary: "I did things.",
           highlights: ["Jumped.", "Rolled."],
+          skills: ["This", "That"],
         },
       ],
     });
