@@ -111,6 +111,7 @@ export default z
               .optional(),
             summary: z.string().optional(),
             highlights: z.array(z.string()).optional(),
+            skills: z.array(z.string()).optional(),
           })
           .strict(),
       )

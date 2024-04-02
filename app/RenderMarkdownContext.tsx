@@ -3,9 +3,13 @@ import React, { createContext, useContext } from "react";
 /**
  * The default pass-through component that tests depend on.
  */
-const Placebo = ({ children: markdown }: { children: string }) => (
-  <div className="typography">{markdown}</div>
-);
+const Placebo = ({
+  children: markdown,
+  className = "",
+}: {
+  children: string;
+  className?: string;
+}) => <div className={`typography ${className}`}>{markdown}</div>;
 
 const RenderMarkdownContext = createContext<typeof Placebo>(Placebo);
 

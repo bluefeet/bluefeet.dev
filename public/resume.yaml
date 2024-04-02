@@ -100,6 +100,20 @@ experiences:
     workMode: remote
     startDate: "2023-12-06"
     endDate: "2024-03-22"
+    summary: |-
+      This was a short-term contract to assist this early education technology company with meeting a critical, and imminent, security audit. Within a day of starting I was doing impactful work and contributed greatly to the success of the audit.
+    skills:
+      - Node.js
+      - Security Auditing
+      - GCP
+      - Babel
+      - Webpack
+      - Jest
+      - Typescript
+      - Pug
+      - Flow
+      - Docker
+      - Git
   - title: Principal Software Engineer
     employmentType: full-time
     companyName: ZipRecruiter
@@ -118,6 +132,19 @@ experiences:
       - Created a development database replication system using filesystem snapshots and cross-region replication, enabling instant access to destructible production datasets.
       - Introduced Grafana, continuous integration, Slack, reusable test data fixtures, enumerable other tools.
       - Actively advocated for test coverage, documentation, and high-quality code.
+    skills:
+      - DevOps
+      - CI/CD
+      - Perl
+      - MySQL
+      - Linux
+      - AWS
+      - React
+      - Typescript
+      - K8s
+      - Docker
+      - Git
+      - Golang
   - title: Principal Architect
     employmentType: full-time
     companyName: Rent.com
@@ -135,6 +162,19 @@ experiences:
       - Created an in-depth deployment dashboard which aggregated data from JIRA and Git, providing realtime visibility into issues holding up a deployment and all changes going into a deployment.
       - Established a dedicated DevOps team.
       - Lead the effort to migrate our entire infrastructure to a new data and authorization platform when the company was acquired by a competitor.
+    skills:
+      - Team Manager
+      - Scrum Master
+      - Project Manager
+      - Release Manager
+      - Perl
+      - Git
+      - Oracle SQL
+      - JavaScript
+      - HTML
+      - CSS
+      - DevOps
+      - Technical Writing
   - title: Software Engineer
     employmentType: full-time
     companyName: ValueClick
@@ -150,6 +190,13 @@ experiences:
       - Instrumental in seamlessly integrating the software, systems, and developers of a newly-acquired company into our ecosystem.
       - Collaborated closely with the database team to scale our infrastructure, enabling seamless management of billions of daily impressions and facilitating efficient generation of aggregate data views.
       - Rewrote the monthly publisher payout process, ensuring resilience to failures and significantly reducing its runtime.
+    skills:
+      - Team Manager
+      - Perl
+      - JavaScript
+      - HTML
+      - CSS
+      - Oracle SQL
   - title: Software Engineer
     employmentType: full-time
     companyName: Thinkstock
@@ -158,6 +205,13 @@ experiences:
     startDate: "2003-04"
     endDate: "2004-12"
     summary: At this stock photography company, I served as one of two developers responsible for managing custom built servers containing terabytes of videos and images. My responsibilities included handling OS and software updates, improving the website by adding features and enhancing efficiency, and assisting the marketing and sales teams in meeting their goals.
+    skills:
+      - Perl
+      - Mason
+      - JavaScript
+      - HTML
+      - CSS
+      - MySQL
   - title: Engineering Lead
     employmentType: full-time
     companyName: IDForce
@@ -166,6 +220,12 @@ experiences:
     startDate: "2001-05"
     endDate: "2002-03"
     summary: I independently developed an online collaboration tool equipped with live whiteboards, chat, and file sharing features for a London-based startup. The development process involved multiple trips to London to collaborate and ideate with the design team. Notably, during the tool's development, I pioneered an AJAX-like technique, years before AJAX became a widely recognized term in the industry.
+    skills:
+      - Perl
+      - MySQL
+      - JavaScript
+      - HTML
+      - CSS
   - title: Software Engineer and Sysadmin
     employmentType: freelance
     companyName: Silent Forest
@@ -174,6 +234,14 @@ experiences:
     startDate: "1996-01"
     endDate: "2003-04"
     summary: Excelled in delivering end-to-end web solutions for a wide array of businesses both domestically and internationally. As a one-stop solution provider, I successfully navigated all stages of project life cycle, from conceptualization and architecture design to implementation and final delivery. I distinguished myself through the creation of high-quality software and an ability to uncover and fulfill unanticipated needs of my clients, thereby providing them a strong online presence. My comprehensive suite of services, backed by my adeptness in multiple technologies, positioned numerous small and medium sized businesses for success in the digital age.
+    skills:
+      - Perl
+      - MySQL
+      - JavaScript
+      - HTML
+      - CSS
+      - Linux
+      - GIS
   - title: Co-Founder
     employmentType: full-time
     companyName: MapCruzin
@@ -182,13 +250,15 @@ experiences:
     startDate: "1994"
     endDate: "1996"
     summary: Built software solutions primarily aimed at providing crucial mapping services for government entities and non-profit organizations. I spearheaded both backend and frontend development, delivering websites that facilitated greater transparency and engagement within the environmental activism sphere. Additionally, I played a key role in contract negotiation and drafting. While the company was heavily involved in data collection and processing, my primary focus was on creating effective software tools and ensuring a seamless user experience, thus empowering communities with accessible information.
+    skills:
+      - GIS
+      - Visual Basic
+      - Perl
+      - HTML
 recommendations:
   - author: Mike Rozek
     relationship: Mike and Aran both worked at Rent.com, ZipRecruiter, and GoGuardian in various roles
     message: It is difficult to overstate the impact that [Aran] has made at the two companies where I’ve been grateful to be his colleague. As a mentor, he has had the largest impact on my career journey of any engineer I’ve ever worked with.
-  - author: Maxwell Cabral
-    relationship: Max and Aran both worked at ZipRecruiter in various roles
-    message: He was a big asset to me in my career development and to the many companies he has worked for. If you’re looking for a strong Principle Engineer/Architect then you should see what Aran has to offer.
   - author: Alain Avakian
     relationship: Alain was the CTO of Rent.com and directly managed Aran
     message: |-

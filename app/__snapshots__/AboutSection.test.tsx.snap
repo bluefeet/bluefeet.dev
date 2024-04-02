@@ -12,7 +12,7 @@ exports[`AboutSection displays markdown 1`] = `
         About
       </h2>
       <div
-        class="typography"
+        class="typography "
       >
         Foo bar.
       </div>
