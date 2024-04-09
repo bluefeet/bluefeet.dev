@@ -383,19 +383,6 @@ exports[`Page 1`] = `
                   https://github.com/bluefeet
                 </div>
               </div>
-              <div>
-                <a
-                  class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline "
-                  href="https://metacpan.org/author/BLUEFEET"
-                >
-                  CPAN
-                </a>
-                <div
-                  class="text-zinc-300 text-sm hidden print:block"
-                >
-                  https://metacpan.org/author/BLUEFEET
-                </div>
-              </div>
               <a
                 class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline print:hidden"
                 href="/resume.pdf"
