@@ -87,6 +87,7 @@ objective:
   willingToTravel: true
   employmentTypes:
     - full-time
+    - contract
   workModes:
     - on-site
     - hybrid
