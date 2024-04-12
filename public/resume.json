@@ -113,7 +113,8 @@
     "willingToRelocate": false,
     "willingToTravel": true,
     "employmentTypes": [
-      "full-time"
+      "full-time",
+      "contract"
     ],
     "workModes": [
       "on-site",
