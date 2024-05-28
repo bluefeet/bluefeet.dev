@@ -17,6 +17,8 @@ jobs:
     environment: production
     needs: [test]
     runs-on: ubuntu-latest
+    env:
+      HUSKY: 0
 
     steps:
       - name: Checkout
