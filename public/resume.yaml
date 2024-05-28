@@ -21,6 +21,8 @@ profile:
         - Tailwind
         - HTML
         - JavaScript
+        - Next.js
+        - Vite
     - name: Backend Development
       skills:
         - Node.js
@@ -32,6 +34,8 @@ profile:
         - nginx
         - Perl
         - Bash
+        - Amazon Bedrock
+        - AWS Lambda
     - name: Data Engineering
       skills:
         - Memcached
@@ -39,6 +43,8 @@ profile:
         - MySQL
         - Redis
         - PostgreSQL
+        - MongoDB
+        - Vector search
     - name: Cloud Operations
       skills:
         - Infrastructure as Code
@@ -49,6 +55,7 @@ profile:
         - Grafana
         - Prometheus
         - OpenSearch
+        - AWS CDK
     - name: Interpersonal
       skills:
         - Collaboration
@@ -63,12 +70,8 @@ profile:
     - name: Developing Passions
       skills:
         - Rust
-        - Serverless
         - Lean Processes
-        - Generative AI
         - Game Design
-        - GCP
-        - Sociocracy
   languages:
     - English
   resources:
@@ -78,7 +81,7 @@ profile:
       uri: https://github.com/bluefeet
 objective:
   overview: Collaboration, innovation, impactful results, teamwork, work-life balance, recognition.
-  startDate: "2024-04-01"
+  startDate: "2024-08-19"
   roles:
     - Frontend Developer
     - Principal Software Engineer
@@ -93,7 +96,26 @@ objective:
     - hybrid
     - remote
 experiences:
-  - title: Engineering Contractor
+  - title: Full-Stack Engineering Contractor
+    employmentType: contract
+    companyName: ASU Learning Enterprise
+    workMode: remote
+    startDate: "2023-05-27"
+    skills:
+      - TypeScript
+      - Jest
+      - AWS
+      - CDK
+      - Bedrock
+      - Figma
+      - React
+      - Tailwind
+      - Lambda
+      - vector embeddings
+      - API Gateway
+      - SNS
+      - LLM + RAG
+  - title: Security Engineering Contractor
     employmentType: contract
     companyName: GoGuardian
     workMode: remote

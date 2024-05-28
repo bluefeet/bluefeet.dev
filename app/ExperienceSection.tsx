@@ -59,7 +59,8 @@ const SingleExperience = ({ experience }: { experience: Experience }) => {
 
       {experience.skills && (
         <div className="typography mb-3">
-          Skills I used during this time included{" "}
+          Skills I {experience.endDate ? "used" : "am using"} during this time
+          include{experience.endDate ? "d " : " "}
           {experience.skills.slice(0, experience.skills.length - 1).join(", ")},
           and {experience.skills.slice(-1)}.
         </div>

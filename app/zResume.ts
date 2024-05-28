@@ -48,6 +48,7 @@ export default z
           .optional(),
         startDate: z
           .string()
+          .date()
           .describe(
             "The date when first available for hire. A date in the past or no date is considered to mean immediately.",
           )
@@ -100,13 +101,13 @@ export default z
             startDate: z
               .union([
                 z.string().regex(new RegExp("^[0-9]{4}(-(0[1-9]|1[0-2])|)$")),
-                z.string(),
+                z.string().date(),
               ])
               .optional(),
             endDate: z
               .union([
                 z.string().regex(new RegExp("^[0-9]{4}(-(0[1-9]|1[0-2])|)$")),
-                z.string(),
+                z.string().date(),
               ])
               .optional(),
             summary: z.string().optional(),
