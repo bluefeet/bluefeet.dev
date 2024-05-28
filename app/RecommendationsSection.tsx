@@ -1,5 +1,5 @@
 import { Details } from "./Details";
-import { Recommendation } from "./resume";
+import type { Recommendation } from "./resume";
 import { SectionTitle } from "./SectionTitle";
 import { useRenderMarkdown } from "./RenderMarkdownContext";
 import { useResume } from "./resumeContext";
