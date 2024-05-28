@@ -246,11 +246,18 @@ const FooterForDisplay = () => {
 };
 
 const FooterForPrint = () => {
+  const [currentDate, setCurrentDate] = useState("");
   const resume = useResume();
+
+  // Delay setting current date until after component mounts on the client side.
+  useEffect(() => {
+    const formattedDate = formatDate(Date.now(), "PPP");
+    setCurrentDate(formattedDate);
+  }, []);
 
   return (
     <footer className="text-right pt-8 hidden print:flex justify-between">
-      <Details>Generated {formatDate(Date.now(), "PPP")}</Details>
+      <Details>Generated {currentDate}</Details>
       <Details>&copy; {resume.contact?.fullName}</Details>
     </footer>
   );
