@@ -138,7 +138,7 @@ exports[`Page 1`] = `
                 Available
                  
                 starting on 
-                April 1st, 2024
+                August 19th, 2024
               </div>
             </div>
             <div
@@ -419,7 +419,7 @@ exports[`Page 1`] = `
                 <div
                   class="text-zinc-300 text-sm "
                 >
-                  Typescript, React, Responsive Design, Jest, CSS, Tailwind, HTML, JavaScript
+                  Typescript, React, Responsive Design, Jest, CSS, Tailwind, HTML, JavaScript, Next.js, Vite
                 </div>
               </li>
               <li
@@ -429,7 +429,7 @@ exports[`Page 1`] = `
                 <div
                   class="text-zinc-300 text-sm "
                 >
-                  Node.js, REST, gRPC, Git, Linux, Docker, nginx, Perl, Bash
+                  Node.js, REST, gRPC, Git, Linux, Docker, nginx, Perl, Bash, Amazon Bedrock, AWS Lambda
                 </div>
               </li>
               <li
@@ -439,7 +439,7 @@ exports[`Page 1`] = `
                 <div
                   class="text-zinc-300 text-sm "
                 >
-                  Memcached, DynamoDB, MySQL, Redis, PostgreSQL
+                  Memcached, DynamoDB, MySQL, Redis, PostgreSQL, MongoDB, Vector search
                 </div>
               </li>
               <li
@@ -449,7 +449,7 @@ exports[`Page 1`] = `
                 <div
                   class="text-zinc-300 text-sm "
                 >
-                  Infrastructure as Code, Kubernetes, AWS, Terraform, CI/CD, Grafana, Prometheus, OpenSearch
+                  Infrastructure as Code, Kubernetes, AWS, Terraform, CI/CD, Grafana, Prometheus, OpenSearch, AWS CDK
                 </div>
               </li>
               <li
@@ -469,7 +469,7 @@ exports[`Page 1`] = `
                 <div
                   class="text-zinc-300 text-sm "
                 >
-                  Rust, Serverless, Lean Processes, Generative AI, Game Design, GCP, Sociocracy
+                  Rust, Lean Processes, Game Design
                 </div>
               </li>
             </ul>
@@ -489,12 +489,34 @@ exports[`Page 1`] = `
           <h3
             class="text-sky-400 text-3xl mt-5 mb-0 className"
           >
+            ASU Learning Enterprise
+          </h3>
+          <div
+            class="text-zinc-300 text-sm mb-3"
+          >
+            Full-Stack Engineering Contractor | May 2023 - Now | Contract | Remote
+          </div>
+          <div
+            class="typography mb-3"
+          >
+            Skills I 
+            am using
+             during this time include
+             
+            TypeScript, Jest, AWS, CDK, Bedrock, Figma, React, Tailwind, Lambda, vector embeddings, API Gateway, SNS
+            , and 
+            LLM + RAG
+            .
+          </div>
+          <h3
+            class="text-sky-400 text-3xl mt-5 mb-0 className"
+          >
             GoGuardian
           </h3>
           <div
             class="text-zinc-300 text-sm mb-3"
           >
-            Engineering Contractor | Dec 2023 - Mar 2024 | Contract | Remote
+            Security Engineering Contractor | Dec 2023 - Mar 2024 | Contract | Remote
           </div>
           <div
             class="typography mb-3"
@@ -504,8 +526,10 @@ exports[`Page 1`] = `
           <div
             class="typography mb-3"
           >
-            Skills I used during this time included
-             
+            Skills I 
+            used
+             during this time include
+            d 
             Node.js, Security Auditing, GCP, Babel, Webpack, Jest, Typescript, Pug, Flow, Docker
             , and 
             Git
@@ -551,8 +575,10 @@ In the latter half of my tenure, my role evolved to encompass active collaborati
           <div
             class="typography mb-3"
           >
-            Skills I used during this time included
-             
+            Skills I 
+            used
+             during this time include
+            d 
             DevOps, CI/CD, Perl, MySQL, Linux, AWS, React, Typescript, K8s, Docker, Git
             , and 
             Golang
@@ -599,8 +625,10 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
           <div
             class="typography mb-3"
           >
-            Skills I used during this time included
-             
+            Skills I 
+            used
+             during this time include
+            d 
             Team Manager, Scrum Master, Project Manager, Release Manager, Perl, Git, Oracle SQL, JavaScript, HTML, CSS, DevOps
             , and 
             Technical Writing
@@ -648,8 +676,10 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
           <div
             class="typography mb-3"
           >
-            Skills I used during this time included
-             
+            Skills I 
+            used
+             during this time include
+            d 
             Team Manager, Perl, JavaScript, HTML, CSS
             , and 
             Oracle SQL
@@ -673,8 +703,10 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
           <div
             class="typography mb-3"
           >
-            Skills I used during this time included
-             
+            Skills I 
+            used
+             during this time include
+            d 
             Perl, Mason, JavaScript, HTML, CSS
             , and 
             MySQL
@@ -698,8 +730,10 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
           <div
             class="typography mb-3"
           >
-            Skills I used during this time included
-             
+            Skills I 
+            used
+             during this time include
+            d 
             Perl, MySQL, JavaScript, HTML
             , and 
             CSS
@@ -723,8 +757,10 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
           <div
             class="typography mb-3"
           >
-            Skills I used during this time included
-             
+            Skills I 
+            used
+             during this time include
+            d 
             Perl, MySQL, JavaScript, HTML, CSS, Linux
             , and 
             GIS
@@ -748,8 +784,10 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
           <div
             class="typography mb-3"
           >
-            Skills I used during this time included
-             
+            Skills I 
+            used
+             during this time include
+            d 
             GIS, Visual Basic, Perl
             , and 
             HTML

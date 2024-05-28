@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build-resume-json": "yq -p yaml -o json public/resume.yaml > public/resume.json",
+    "build-resume-json": "yq . public/resume.yaml > public/resume.json",
     "build-resume-zod": "json-refs resolve public/resume.schema.json | json-schema-to-zod -d 100 | prettier --parser typescript > app/zResume.ts",
     "build-resume": "npm run build-resume-json && npm run build-resume-zod",
     "test": "jest",
