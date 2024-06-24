@@ -28,7 +28,7 @@
     ]
   },
   "dependencies": {
-    "@heroicons/react": "^2.1.3",
+    "@heroicons/react": "^2.1.4",
     "date-fns": "^3.6.0",
     "howler": "^2.2.4",
     "micromark": "^4.0.0",
