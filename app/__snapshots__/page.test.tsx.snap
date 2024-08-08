@@ -429,7 +429,7 @@ exports[`Page 1`] = `
                 <div
                   class="text-zinc-300 text-sm "
                 >
-                  Node.js, REST, gRPC, Git, Linux, Docker, nginx, Perl, Bash, Amazon Bedrock, AWS Lambda
+                  Node.js, REST, Git, Linux, Docker, nginx, Perl, Bash, Amazon Bedrock, AWS Lambda
                 </div>
               </li>
               <li
@@ -449,7 +449,7 @@ exports[`Page 1`] = `
                 <div
                   class="text-zinc-300 text-sm "
                 >
-                  Infrastructure as Code, Kubernetes, AWS, Terraform, CI/CD, Grafana, Prometheus, OpenSearch, AWS CDK
+                  Infrastructure as Code, Kubernetes, AWS CDK, Terraform, CI/CD, Grafana, ECR/ECS, Kubernetes, Cloudflare
                 </div>
               </li>
               <li
@@ -499,13 +499,18 @@ exports[`Page 1`] = `
           <div
             class="typography mb-3"
           >
+            Developed the foundation of a new AI application aimed at guiding potential learners on their educational future. Worked closely with product and engineering teams to gather requirements, created technical documentation and diagrams, implemented engineering best practices, constructed a data ingestion pipeline, developed the initial POC, and provided mentorship to junior developers.
+          </div>
+          <div
+            class="typography mb-3"
+          >
             Skills I 
             am using
              during this time include
              
-            TypeScript, Jest, AWS, CDK, Bedrock, Figma, React, Tailwind, Lambda, vector embeddings, API Gateway, SNS
+            TypeScript, AWS CDK, Bedrock, Figma, Agile, Vue/Nuxt, ECS/ECR, vector embeddings, MongoDB Atlas, ALB, Cloudfront
             , and 
-            LLM + RAG
+            RAG
             .
           </div>
           <h3

@@ -27,7 +27,6 @@ profile:
       skills:
         - Node.js
         - REST
-        - gRPC
         - Git
         - Linux
         - Docker
@@ -49,13 +48,13 @@ profile:
       skills:
         - Infrastructure as Code
         - Kubernetes
-        - AWS
+        - AWS CDK
         - Terraform
         - CI/CD
         - Grafana
-        - Prometheus
-        - OpenSearch
-        - AWS CDK
+        - ECR/ECS
+        - Kubernetes
+        - Cloudflare
     - name: Interpersonal
       skills:
         - Collaboration
@@ -101,20 +100,21 @@ experiences:
     companyName: ASU Learning Enterprise
     workMode: remote
     startDate: "2023-05-27"
+    summary: |-
+      Developed the foundation of a new AI application aimed at guiding potential learners on their educational future. Worked closely with product and engineering teams to gather requirements, created technical documentation and diagrams, implemented engineering best practices, constructed a data ingestion pipeline, developed the initial POC, and provided mentorship to junior developers.
     skills:
       - TypeScript
-      - Jest
-      - AWS
-      - CDK
+      - AWS CDK
       - Bedrock
       - Figma
-      - React
-      - Tailwind
-      - Lambda
+      - Agile
+      - Vue/Nuxt
+      - ECS/ECR
       - vector embeddings
-      - API Gateway
-      - SNS
-      - LLM + RAG
+      - MongoDB Atlas
+      - ALB
+      - Cloudfront
+      - RAG
   - title: Security Engineering Contractor
     employmentType: contract
     companyName: GoGuardian
