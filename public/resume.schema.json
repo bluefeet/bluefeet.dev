@@ -153,9 +153,9 @@
           "format": "date",
           "description": "The date when first available for hire. A date in the past or no date is considered to mean immediately."
         },
-        "isCasual": {
-          "description": "Taking extended time to find the best fit.",
-          "type": "boolean"
+        "intention": {
+          "type": "string",
+          "enum": ["active", "casual", "passive"]
         },
         "willingToRelocate": {
           "type": "boolean"

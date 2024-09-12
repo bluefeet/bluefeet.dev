@@ -36,6 +36,8 @@ const StartDate = () => {
   const resume = useResume();
   if (!resume.objective) return <></>;
 
+  if ((resume.objective.intention || "passive") === "passive") return <></>;
+
   let startDate = resume.objective.startDate
     ? parseISODate(resume.objective.startDate)
     : null;
@@ -46,7 +48,7 @@ const StartDate = () => {
   return (
     <>
       <ListItem Icon={RocketLaunchIcon}>
-        {resume.objective.isCasual
+        {resume.objective.intention === "casual"
           ? "Open to new opportunities"
           : "Actively searching for an opportunity"}
         {

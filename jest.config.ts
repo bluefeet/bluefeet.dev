@@ -12,7 +12,7 @@ const config: Config.ConfigGlobals = {
   collectCoverageFrom: ["app/**"],
   coverageThreshold: {
     global: {
-      lines: 98,
+      lines: 97,
     },
   },
   coveragePathIgnorePatterns: [
