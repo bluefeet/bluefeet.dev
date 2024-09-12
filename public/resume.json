@@ -106,7 +106,7 @@
   },
   "objective": {
     "overview": "Collaboration, innovation, impactful results, teamwork, work-life balance, recognition.",
-    "startDate": "2024-08-19",
+    "intention": "passive",
     "roles": [
       "Frontend Developer",
       "Principal Software Engineer",
@@ -126,11 +126,19 @@
   },
   "experiences": [
     {
+      "title": "Senior Software Engineer",
+      "employmentType": "full-time",
+      "companyName": "GoGuardian",
+      "workMode": "remote",
+      "startDate": "2024-09-11"
+    },
+    {
       "title": "Full-Stack Engineering Contractor",
       "employmentType": "contract",
       "companyName": "ASU Learning Enterprise",
       "workMode": "remote",
       "startDate": "2023-05-27",
+      "endDate": "2024-09-10",
       "summary": "Developed the foundation of a new AI application aimed at guiding potential learners on their educational future. Worked closely with product and engineering teams to gather requirements, created technical documentation and diagrams, implemented engineering best practices, constructed a data ingestion pipeline, developed the initial POC, and provided mentorship to junior developers.",
       "skills": [
         "TypeScript",

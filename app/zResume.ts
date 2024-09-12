@@ -53,10 +53,7 @@ export default z
             "The date when first available for hire. A date in the past or no date is considered to mean immediately.",
           )
           .optional(),
-        isCasual: z
-          .boolean()
-          .describe("Taking extended time to find the best fit.")
-          .optional(),
+        intention: z.enum(["active", "casual", "passive"]).optional(),
         willingToRelocate: z.boolean().optional(),
         willingToTravel: z.boolean().optional(),
         roles: z.array(z.string()).optional(),
