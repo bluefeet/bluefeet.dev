@@ -9,8 +9,10 @@ export const resume = zResume.parse(rawResume);
 
 export type Resume = z.infer<typeof zResume>;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const zExperience = zResume.shape.experiences.unwrap().element;
 export type Experience = z.infer<typeof zExperience>;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const zRecommendation = zResume.shape.recommendations.unwrap().element;
 export type Recommendation = z.infer<typeof zRecommendation>;
