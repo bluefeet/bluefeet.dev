@@ -1,3 +1,4 @@
 npx lint-staged
+npm run check-types
 npm run test-coverage
 npx next build

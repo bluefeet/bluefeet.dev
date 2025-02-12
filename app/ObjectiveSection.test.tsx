@@ -27,7 +27,9 @@ describe("ObjectiveSection", () => {
     });
 
     it("casual startDate", () => {
-      testResume({ objective: { isCasual: true, startDate: "2500-11-04" } });
+      testResume({
+        objective: { intention: "casual", startDate: "2500-11-04" },
+      });
     });
 
     it("historic startDate", () => {

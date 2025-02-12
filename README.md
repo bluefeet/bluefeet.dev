@@ -17,8 +17,9 @@ npm test
 npm run update-test-snapshots
 npm run check-coverage
 npm run lint
-npm run is-pretty
-npm run make-pretty
+npm run check-format
+npm run format
+npm run check-types
 ```
 
 # Notes
