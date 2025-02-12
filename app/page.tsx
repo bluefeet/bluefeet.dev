@@ -36,7 +36,8 @@ const Divider = ({ className = "" }: { className?: string }) => (
 );
 
 // Used by Page to store a ref used by both MainContent and ScrollDashButton.
-const mainRefContext = createContext<React.RefObject<HTMLElement> | null>(null);
+const mainRefContext =
+  createContext<React.RefObject<HTMLElement | null> | null>(null);
 
 const DashButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = (
   props,
