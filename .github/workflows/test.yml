@@ -16,9 +16,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 21.x
+          node-version: 22.14.0
           cache: "npm"
       - run: npm ci
       - run: npm run test-coverage
       - run: npm run lint
-      - run: npm run is-pretty
+      - run: npm run check-format
+      - run: npm run check-types
