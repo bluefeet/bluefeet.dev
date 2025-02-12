@@ -1,3 +1,4 @@
+import { clsx } from "clsx/lite";
 import React, { createContext, useContext } from "react";
 
 /**
@@ -9,7 +10,7 @@ const Placebo = ({
 }: {
   children: string;
   className?: string;
-}) => <div className={`typography ${className}`}>{markdown}</div>;
+}) => <div className={clsx("typography", className)}>{markdown}</div>;
 
 const RenderMarkdownContext = createContext<typeof Placebo>(Placebo);
 

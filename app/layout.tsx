@@ -1,8 +1,9 @@
+import { UnjestableProviders } from "./UnjestableProviders";
 import "./globals.css";
+import { resume } from "./resume";
+import { clsx } from "clsx/lite";
 import { Open_Sans } from "next/font/google";
 import { ReactNode } from "react";
-import { resume } from "./resume";
-import { UnjestableProviders } from "./UnjestableProviders";
 
 const mainFont = Open_Sans({ subsets: ["latin"] });
 
@@ -14,7 +15,10 @@ export const metadata = {
 const Layout = ({ children }: { children: ReactNode }) => (
   <html lang="en">
     <body
-      className={`text-white bg-zinc-900 print:text-black print:bg-white ${mainFont.className}`}
+      className={clsx(
+        "bg-zinc-900 text-white print:bg-white print:text-black",
+        mainFont.className,
+      )}
     >
       <UnjestableProviders>{children}</UnjestableProviders>
     </body>

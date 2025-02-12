@@ -1,3 +1,4 @@
+import { clsx } from "clsx/lite";
 import { ReactNode } from "react";
 
 export const Details = ({
@@ -6,4 +7,6 @@ export const Details = ({
 }: {
   children: ReactNode;
   className?: string;
-}) => <div className={`text-zinc-300 text-sm ${className}`}>{children}</div>;
+}) => (
+  <div className={clsx("text-sm text-zinc-300", className)}>{children}</div>
+);

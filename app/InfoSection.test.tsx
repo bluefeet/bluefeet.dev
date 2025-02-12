@@ -1,10 +1,8 @@
-import { render, screen } from "@testing-library/react";
-import { expectToBeVisible } from "./testing";
-
-import { emptyResume, ResumeProvider } from "./resumeContext";
-import { Resume } from "./resume";
-
 import { InfoSection } from "./InfoSection";
+import { Resume } from "./resume";
+import { emptyResume, ResumeProvider } from "./resumeContext";
+import { expectToBeVisible } from "./testing";
+import { render, screen } from "@testing-library/react";
 
 const testResume = (resume: Partial<Resume>) => {
   render(

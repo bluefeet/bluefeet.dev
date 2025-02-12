@@ -1,8 +1,7 @@
-import { format as formatDate } from "date-fns/format";
-import { isPast as isDateInPast } from "date-fns/isPast";
-import { parseISO as parseISODate } from "date-fns/parseISO";
-import upperFirst from "lodash/upperFirst";
-
+import { Details } from "./Details";
+import { List } from "./List";
+import { ListItem } from "./ListItem";
+import { useResume } from "./resumeContext";
 import {
   BuildingOffice2Icon,
   CalendarDaysIcon,
@@ -10,11 +9,10 @@ import {
   PhotoIcon,
   RocketLaunchIcon,
 } from "@heroicons/react/24/solid";
-
-import { Details } from "./Details";
-import { List } from "./List";
-import { ListItem } from "./ListItem";
-import { useResume } from "./resumeContext";
+import { format as formatDate } from "date-fns/format";
+import { isPast as isDateInPast } from "date-fns/isPast";
+import { parseISO as parseISODate } from "date-fns/parseISO";
+import upperFirst from "lodash/upperFirst";
 
 const startDateFormat = "PPP";
 

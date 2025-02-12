@@ -10,22 +10,22 @@ exports[`Page 1`] = `
         class="h-screen overflow-hidden"
       >
         <header
-          class="bg-bear bg-cover h-screen bg-center relative"
+          class="relative h-screen bg-[url(./bear.jpg)] bg-cover bg-center"
           style="top: 0px;"
         >
           <div
-            class="absolute h-48 w-full bg-gradient-to-b from-zinc-900 opacity-50"
+            class="absolute h-48 w-full bg-linear-to-b from-zinc-900 opacity-50"
           />
           <div
-            class="absolute w-full text-center md:text-right p-5 md:pr-16 lg:pr-24"
+            class="absolute w-full p-5 text-center md:pr-16 md:text-right lg:pr-24"
           >
             <h1
-              class="text-6xl md:text-7xl lg:text-8xl md:pr-16 lg:pr-32"
+              class="text-6xl md:pr-16 md:text-7xl lg:pr-32 lg:text-8xl"
             >
               Aran Clary
             </h1>
             <p
-              class="pt-2 md:pt-3 lg:pt-5 lg:pr-16 text-lg md:text-2xl"
+              class="pt-2 text-lg md:pt-3 md:text-2xl lg:pt-5 lg:pr-16"
             >
               Senior Full-Stack Engineer
                • 
@@ -36,7 +36,7 @@ exports[`Page 1`] = `
       </div>
     </div>
     <header
-      class="pb-4 className hidden print:flex justify-between items-end"
+      class="hidden items-end justify-between pb-4 print:flex className"
     >
       <h1
         class="text-5xl font-semibold text-sky-800"
@@ -51,27 +51,27 @@ exports[`Page 1`] = `
       </p>
     </header>
     <main
-      class="flex flex-col lg:flex-row p-4 md:p-8 pt-0 lg:pt-8 ml-auto mr-auto max-w-6xl print:p-0"
+      class="mr-auto ml-auto flex max-w-6xl flex-col p-4 pt-0 md:p-8 lg:flex-row lg:pt-8 print:p-0"
     >
       <div
-        class="lg:order-2 lg:w-2/5 2xl:sticky 2xl:top-0 2xl:h-min flex flex-wrap lg:flex-col lg:pl-8 print:flex-row print:pl-0 print:pb-2 print:static"
+        class="flex flex-wrap lg:order-2 lg:w-2/5 lg:flex-col lg:pl-8 2xl:sticky 2xl:top-0 2xl:h-min print:static print:flex-row print:pb-2 print:pl-0"
       >
         <section
-          class="md:flex lg:block pt-2 md:pt-0 print:pb-2"
+          class="pt-2 md:flex md:pt-0 lg:block print:pb-2"
         >
           <h2
-            class="text-center print:text-left md:text-left text-sky-300 text-4xl print:text-3xl font-bold print:font-semibold mt-3 mb-4 className md:pr-8 lg:pr-0 print:hidden mt-3 md:mt-0 lg:mt-3"
+            class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold className mt-3 md:mt-0 md:pr-8 lg:mt-3 lg:pr-0 print:hidden"
           >
             About
           </h2>
           <div
-            class="typography "
+            class="typography"
           >
             I'm a seasoned full-stack software developer with over 30 years of hands-on experience. My track record includes managing data pipelines, crafting backend services, and delivering stunning UIs. I excel at leading teams and interfacing with product development.
           </div>
         </section>
         <hr
-          class="w-full border-sky-600 border-solid border-1 mt-2 mb-2 print:hidden "
+          class="mt-2 mb-2 w-full border-1 border-solid border-sky-600 print:hidden"
         />
         <section
           class="md:w-1/2 lg:w-full print:w-1/2"
@@ -80,7 +80,7 @@ exports[`Page 1`] = `
             class="grid grid-cols-[min-content_auto]"
           >
             <div
-              class="p-1 pl-8 pr-8 flex place-items-center"
+              class="flex place-items-center p-1 pr-8 pl-8"
             >
               <svg
                 aria-hidden="true"
@@ -102,13 +102,13 @@ exports[`Page 1`] = `
             >
               Dream Job Traits
               <div
-                class="text-zinc-300 text-sm "
+                class="text-sm text-zinc-300"
               >
                 Collaboration, innovation, impactful results, teamwork, work-life balance, recognition.
               </div>
             </div>
             <div
-              class="p-1 pl-8 pr-8 flex place-items-center"
+              class="flex place-items-center p-1 pr-8 pl-8"
             >
               <svg
                 aria-hidden="true"
@@ -131,7 +131,7 @@ exports[`Page 1`] = `
               These roles
                would be a great match
               <div
-                class="text-zinc-300 text-sm "
+                class="text-sm text-zinc-300"
               >
                 <div>
                   Frontend Developer
@@ -145,7 +145,7 @@ exports[`Page 1`] = `
               </div>
             </div>
             <div
-              class="p-1 pl-8 pr-8 flex place-items-center"
+              class="flex place-items-center p-1 pr-8 pl-8"
             >
               <svg
                 aria-hidden="true"
@@ -172,13 +172,13 @@ exports[`Page 1`] = `
                
               one of these commitments
               <div
-                class="text-zinc-300 text-sm "
+                class="text-sm text-zinc-300"
               >
                 Full-time, Contract
               </div>
             </div>
             <div
-              class="p-1 pl-8 pr-8 flex place-items-center"
+              class="flex place-items-center p-1 pr-8 pl-8"
             >
               <svg
                 aria-hidden="true"
@@ -202,7 +202,7 @@ exports[`Page 1`] = `
                
               any of these capacities
               <div
-                class="text-zinc-300 text-sm "
+                class="text-sm text-zinc-300"
               >
                 On-site, Hybrid, Remote
               </div>
@@ -210,7 +210,7 @@ exports[`Page 1`] = `
           </div>
         </section>
         <hr
-          class="w-full border-sky-600 border-solid border-1 mt-2 mb-2 print:hidden md:hidden lg:block"
+          class="mt-2 mb-2 w-full border-1 border-solid border-sky-600 print:hidden md:hidden lg:block"
         />
         <section
           class="md:w-1/2 lg:w-full print:w-1/2"
@@ -219,7 +219,7 @@ exports[`Page 1`] = `
             class="grid grid-cols-[min-content_auto]"
           >
             <div
-              class="p-1 pl-8 pr-8 flex place-items-center"
+              class="flex place-items-center p-1 pr-8 pl-8"
             >
               <svg
                 aria-hidden="true"
@@ -241,18 +241,18 @@ exports[`Page 1`] = `
             >
               Portland, OR, US
               <div
-                class="text-zinc-300 text-sm "
+                class="text-sm text-zinc-300"
               >
                 Not available to relocate
               </div>
               <div
-                class="text-zinc-300 text-sm "
+                class="text-sm text-zinc-300"
               >
                 Willing to travel
               </div>
             </div>
             <div
-              class="p-1 pl-8 pr-8 flex place-items-center"
+              class="flex place-items-center p-1 pr-8 pl-8"
             >
               <svg
                 aria-hidden="true"
@@ -273,14 +273,14 @@ exports[`Page 1`] = `
               class="pt-2 pb-2"
             >
               <a
-                class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline "
+                class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline"
                 href="mailto:bluefeet@gmail.com"
               >
                 bluefeet@gmail.com
               </a>
             </div>
             <div
-              class="p-1 pl-8 pr-8 flex place-items-center"
+              class="flex place-items-center p-1 pr-8 pl-8"
             >
               <svg
                 aria-hidden="true"
@@ -303,7 +303,7 @@ exports[`Page 1`] = `
               English
             </div>
             <div
-              class="p-1 pl-8 pr-8 flex place-items-center"
+              class="flex place-items-center p-1 pr-8 pl-8"
             >
               <svg
                 aria-hidden="true"
@@ -325,26 +325,26 @@ exports[`Page 1`] = `
             >
               <div>
                 <a
-                  class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline "
+                  class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline"
                   href="https://www.linkedin.com/in/bluefeet/"
                 >
                   LinkedIn
                 </a>
                 <div
-                  class="text-zinc-300 text-sm hidden print:block"
+                  class="text-sm text-zinc-300 hidden print:block"
                 >
                   https://www.linkedin.com/in/bluefeet/
                 </div>
               </div>
               <div>
                 <a
-                  class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline "
+                  class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline"
                   href="https://github.com/bluefeet"
                 >
                   GitHub
                 </a>
                 <div
-                  class="text-zinc-300 text-sm hidden print:block"
+                  class="text-sm text-zinc-300 hidden print:block"
                 >
                   https://github.com/bluefeet
                 </div>
@@ -360,17 +360,17 @@ exports[`Page 1`] = `
           </div>
         </section>
         <hr
-          class="w-full border-sky-600 border-solid border-1 mt-2 mb-2 print:hidden lg:hidden"
+          class="mt-2 mb-2 w-full border-1 border-solid border-sky-600 print:hidden lg:hidden"
         />
       </div>
       <div
-        class="lg:w-3/5 lg:order-1"
+        class="lg:order-1 lg:w-3/5"
       >
         <section
-          class="mb-4 "
+          class="mb-4"
         >
           <h2
-            class="text-center print:text-left md:text-left text-sky-300 text-4xl print:text-3xl font-bold print:font-semibold mt-3 mb-4 className "
+            class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold className"
           >
             Skills
           </h2>
@@ -383,7 +383,7 @@ exports[`Page 1`] = `
               >
                 Frontend Development
                 <div
-                  class="text-zinc-300 text-sm "
+                  class="text-sm text-zinc-300"
                 >
                   Typescript, React, Responsive Design, Jest, CSS, Tailwind, HTML, JavaScript, Next.js, Vite
                 </div>
@@ -393,7 +393,7 @@ exports[`Page 1`] = `
               >
                 Backend Development
                 <div
-                  class="text-zinc-300 text-sm "
+                  class="text-sm text-zinc-300"
                 >
                   Node.js, REST, Git, Linux, Docker, nginx, Perl, Bash, Amazon Bedrock, AWS Lambda
                 </div>
@@ -403,7 +403,7 @@ exports[`Page 1`] = `
               >
                 Data Engineering
                 <div
-                  class="text-zinc-300 text-sm "
+                  class="text-sm text-zinc-300"
                 >
                   Memcached, DynamoDB, MySQL, Redis, PostgreSQL, MongoDB, Vector search
                 </div>
@@ -413,7 +413,7 @@ exports[`Page 1`] = `
               >
                 Cloud Operations
                 <div
-                  class="text-zinc-300 text-sm "
+                  class="text-sm text-zinc-300"
                 >
                   Infrastructure as Code, Kubernetes, AWS CDK, Terraform, CI/CD, Grafana, ECR/ECS, Kubernetes, Cloudflare
                 </div>
@@ -423,7 +423,7 @@ exports[`Page 1`] = `
               >
                 Interpersonal
                 <div
-                  class="text-zinc-300 text-sm "
+                  class="text-sm text-zinc-300"
                 >
                   Collaboration, Agile Processes, Mentoring, Release Management, Stakeholder Management, Requirements Gathering, Technical Writing, Emotional Intelligence, Active Listening
                 </div>
@@ -433,7 +433,7 @@ exports[`Page 1`] = `
               >
                 Developing Passions
                 <div
-                  class="text-zinc-300 text-sm "
+                  class="text-sm text-zinc-300"
                 >
                   Rust, Lean Processes, Game Design
                 </div>
@@ -442,33 +442,33 @@ exports[`Page 1`] = `
           </div>
         </section>
         <hr
-          class="w-full border-sky-600 border-solid border-1 mt-2 mb-2 print:hidden lg:hidden mb-5"
+          class="mt-2 mb-2 w-full border-1 border-solid border-sky-600 print:hidden mb-5 lg:hidden"
         />
         <section
           class="lg:pt-4 print:pt-0"
         >
           <h2
-            class="text-center print:text-left md:text-left text-sky-300 text-4xl print:text-3xl font-bold print:font-semibold mt-3 mb-4 className "
+            class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold className"
           >
             Experience
           </h2>
           <h3
-            class="text-sky-400 text-3xl mt-5 mb-0 className"
+            class="mt-5 mb-0 text-3xl text-sky-400 className"
           >
             GoGuardian
           </h3>
           <div
-            class="text-zinc-300 text-sm mb-3"
+            class="text-sm text-zinc-300 mb-3"
           >
             Senior Software Engineer | Sep 2024 - Now | Full-time | Remote
           </div>
           <h3
-            class="text-sky-400 text-3xl mt-5 mb-0 className"
+            class="mt-5 mb-0 text-3xl text-sky-400 className"
           >
             ASU Learning Enterprise
           </h3>
           <div
-            class="text-zinc-300 text-sm mb-3"
+            class="text-sm text-zinc-300 mb-3"
           >
             Full-Stack Engineering Contractor | May 2023 - Sep 2024 | Contract | Remote
           </div>
@@ -490,12 +490,12 @@ exports[`Page 1`] = `
             .
           </div>
           <h3
-            class="text-sky-400 text-3xl mt-5 mb-0 className"
+            class="mt-5 mb-0 text-3xl text-sky-400 className"
           >
             GoGuardian
           </h3>
           <div
-            class="text-zinc-300 text-sm mb-3"
+            class="text-sm text-zinc-300 mb-3"
           >
             Security Engineering Contractor | Dec 2023 - Mar 2024 | Contract | Remote
           </div>
@@ -517,12 +517,12 @@ exports[`Page 1`] = `
             .
           </div>
           <h3
-            class="text-sky-400 text-3xl mt-5 mb-0 className"
+            class="mt-5 mb-0 text-3xl text-sky-400 className"
           >
             ZipRecruiter
           </h3>
           <div
-            class="text-zinc-300 text-sm mb-3"
+            class="text-sm text-zinc-300 mb-3"
           >
             Principal Software Engineer | Feb 2014 - May 2023 | Full-time | Remote | Santa Monica, CA, US
           </div>
@@ -536,7 +536,7 @@ When I first joined ZipRecruiter, which was then a small startup, I promptly opt
 In the latter half of my tenure, my role evolved to encompass active collaboration with product teams, engaging in an agile workflow that included sprints, retrospectives, and daily stand-up meetings. I worked closely with product managers and stakeholders to complete high-impact projects on strict deadlines.
           </div>
           <div
-            class="typography text-sm mb-3"
+            class="typography mb-3 text-sm"
           >
             <ul>
               <li>
@@ -566,12 +566,12 @@ In the latter half of my tenure, my role evolved to encompass active collaborati
             .
           </div>
           <h3
-            class="text-sky-400 text-3xl mt-5 mb-0 className"
+            class="mt-5 mb-0 text-3xl text-sky-400 className"
           >
             Rent.com
           </h3>
           <div
-            class="text-zinc-300 text-sm mb-3"
+            class="text-sm text-zinc-300 mb-3"
           >
             Principal Architect | Apr 2011 - Mar 2014 | Full-time | On-site | Santa Monica, CA, US
           </div>
@@ -583,7 +583,7 @@ In the latter half of my tenure, my role evolved to encompass active collaborati
 My responsibilities at Rent.com were both diverse and dynamic. I actively engaged in the research and integration of new technologies, the construction of software infrastructure to facilitate efficient coding practices, and mentoring colleagues. I was adept at multitasking and dedicated to documentation, writing unit tests, crafting essential tools, and meticulously profiling and optimizing the site. Additionally, my contributions extended to writing a substantial amount of code.
           </div>
           <div
-            class="typography text-sm mb-3"
+            class="typography mb-3 text-sm"
           >
             <ul>
               <li>
@@ -616,12 +616,12 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
             .
           </div>
           <h3
-            class="text-sky-400 text-3xl mt-5 mb-0 className"
+            class="mt-5 mb-0 text-3xl text-sky-400 className"
           >
             ValueClick
           </h3>
           <div
-            class="text-zinc-300 text-sm mb-3"
+            class="text-sm text-zinc-300 mb-3"
           >
             Software Engineer | Jan 2005 - Apr 2011 | Full-time | On-site | Thousand Oaks, CA, US
           </div>
@@ -631,7 +631,7 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
             At this ad network I embarked on a journey in an unfamiliar corporate environment. Fortunately, I had the guidance of a visionary engineering director who recognized my untapped potential. This invaluable mentorship paved the way for rapid growth as I seamlessly adapted my extensive coding expertise and freelancing background to this new setting. As time progressed, I emerged as one of the most impactful developers and effective managers within the organization.
           </div>
           <div
-            class="typography text-sm mb-3"
+            class="typography mb-3 text-sm"
           >
             <ul>
               <li>
@@ -667,12 +667,12 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
             .
           </div>
           <h3
-            class="text-sky-400 text-3xl mt-5 mb-0 className"
+            class="mt-5 mb-0 text-3xl text-sky-400 className"
           >
             Thinkstock
           </h3>
           <div
-            class="text-zinc-300 text-sm mb-3"
+            class="text-sm text-zinc-300 mb-3"
           >
             Software Engineer | Apr 2003 - Dec 2004 | Full-time | On-site | Charlotte, NC, US
           </div>
@@ -694,12 +694,12 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
             .
           </div>
           <h3
-            class="text-sky-400 text-3xl mt-5 mb-0 className"
+            class="mt-5 mb-0 text-3xl text-sky-400 className"
           >
             IDForce
           </h3>
           <div
-            class="text-zinc-300 text-sm mb-3"
+            class="text-sm text-zinc-300 mb-3"
           >
             Engineering Lead | May 2001 - Mar 2002 | Full-time | Hybrid | Charlotte, NC, US
           </div>
@@ -721,12 +721,12 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
             .
           </div>
           <h3
-            class="text-sky-400 text-3xl mt-5 mb-0 className"
+            class="mt-5 mb-0 text-3xl text-sky-400 className"
           >
             Silent Forest
           </h3>
           <div
-            class="text-zinc-300 text-sm mb-3"
+            class="text-sm text-zinc-300 mb-3"
           >
             Software Engineer and Sysadmin | Jan 1996 - Apr 2003 | Freelance | Hybrid | CA & NC, US
           </div>
@@ -748,12 +748,12 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
             .
           </div>
           <h3
-            class="text-sky-400 text-3xl mt-5 mb-0 className"
+            class="mt-5 mb-0 text-3xl text-sky-400 className"
           >
             MapCruzin
           </h3>
           <div
-            class="text-zinc-300 text-sm mb-3"
+            class="text-sm text-zinc-300 mb-3"
           >
             Co-Founder | Jan 1994 - Jan 1996 | Full-time | On-site | Santa Cruz, CA, US
           </div>
@@ -776,13 +776,13 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
           </div>
         </section>
         <hr
-          class="w-full border-sky-600 border-solid border-1 mt-2 mb-2 print:hidden lg:hidden mt-5 mb-5"
+          class="mt-2 mb-2 w-full border-1 border-solid border-sky-600 print:hidden mt-5 mb-5 lg:hidden"
         />
         <section
           class="lg:pt-4 lg:pb-2 print:hidden"
         >
           <h2
-            class="text-center print:text-left md:text-left text-sky-300 text-4xl print:text-3xl font-bold print:font-semibold mt-3 mb-4 className "
+            class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold className"
           >
             Recommendations
           </h2>
@@ -793,7 +793,7 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
               class="flex"
             >
               <div
-                class="text-6xl pr-4 text-sky-400"
+                class="pr-4 text-6xl text-sky-400"
               >
                 “
               </div>
@@ -801,7 +801,7 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
                 class="typography"
               >
                 <div
-                  class="typography "
+                  class="typography"
                 >
                   It is difficult to overstate the impact that [Aran] has made at the two companies where I’ve been grateful to be his colleague. As a mentor, he has had the largest impact on my career journey of any engineer I’ve ever worked with.
                 </div>
@@ -816,7 +816,7 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
                 Mike Rozek
               </p>
               <div
-                class="text-zinc-300 text-sm "
+                class="text-sm text-zinc-300"
               >
                 Mike and Aran both worked at Rent.com, ZipRecruiter, and GoGuardian in various roles
               </div>
@@ -829,7 +829,7 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
               class="flex"
             >
               <div
-                class="text-6xl pr-4 text-sky-400"
+                class="pr-4 text-6xl text-sky-400"
               >
                 “
               </div>
@@ -837,7 +837,7 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
                 class="typography"
               >
                 <div
-                  class="typography "
+                  class="typography"
                 >
                   I have worked with countless engineers, usually of very high caliber, but engineers of Aran's talents are far and few in between. I have had the privilege of working with Aran for almost three years now, and grew to rely on his instincts, and technical depth.
 
@@ -860,7 +860,7 @@ Aran will always be on my short-list of top engineers I would not hesitate to wo
                 Alain Avakian
               </p>
               <div
-                class="text-zinc-300 text-sm "
+                class="text-sm text-zinc-300"
               >
                 Alain was the CTO of Rent.com and directly managed Aran
               </div>
@@ -873,7 +873,7 @@ Aran will always be on my short-list of top engineers I would not hesitate to wo
               class="flex"
             >
               <div
-                class="text-6xl pr-4 text-sky-400"
+                class="pr-4 text-6xl text-sky-400"
               >
                 “
               </div>
@@ -881,7 +881,7 @@ Aran will always be on my short-list of top engineers I would not hesitate to wo
                 class="typography"
               >
                 <div
-                  class="typography "
+                  class="typography"
                 >
                   Aran succeeded in making me feel welcome and productive as a new developer in his organization nearly instantly. He provided the perfect amount of guidance, support, and mentoring I needed to come up to speed quickly on a large codebase. He's a spectacular programmer, a thoughtful manager, a kind person, and an unbeatable addition to any team.
                 </div>
@@ -896,7 +896,7 @@ Aran will always be on my short-list of top engineers I would not hesitate to wo
                 Eduardo Ariño de la Rubia
               </p>
               <div
-                class="text-zinc-300 text-sm "
+                class="text-sm text-zinc-300"
               >
                 Ed was a senior software engineer at Rent.com and directly reported to Aran
               </div>
@@ -909,7 +909,7 @@ Aran will always be on my short-list of top engineers I would not hesitate to wo
               class="flex"
             >
               <div
-                class="text-6xl pr-4 text-sky-400"
+                class="pr-4 text-6xl text-sky-400"
               >
                 “
               </div>
@@ -917,7 +917,7 @@ Aran will always be on my short-list of top engineers I would not hesitate to wo
                 class="typography"
               >
                 <div
-                  class="typography "
+                  class="typography"
                 >
                   Working with Aran was a complete joy. He maintained a high level of focus on both the quality of his code and the overall quality of the product he was delivering to our customers. I served as the product manager for Aran’s teams over numerous projects spanning almost four years. I was always amazed by his empathy and kindness on a personal level and the dedication to awesome work on a professional level. His heart and mind are always in the right place.
 
@@ -934,7 +934,7 @@ If there was a Perl Coders Hall of Fame, this man would get in on the first ball
                 Eric Feay
               </p>
               <div
-                class="text-zinc-300 text-sm "
+                class="text-sm text-zinc-300"
               >
                 Eric was the product manager for Aran's team at ValueClick
               </div>
@@ -947,7 +947,7 @@ If there was a Perl Coders Hall of Fame, this man would get in on the first ball
               class="flex"
             >
               <div
-                class="text-6xl pr-4 text-sky-400"
+                class="pr-4 text-6xl text-sky-400"
               >
                 “
               </div>
@@ -955,7 +955,7 @@ If there was a Perl Coders Hall of Fame, this man would get in on the first ball
                 class="typography"
               >
                 <div
-                  class="typography "
+                  class="typography"
                 >
                   In the five years that Aran and I worked together, he has consistently proven himself as an awesome resource for complex issues. His ability to get to the heart of an issue quickly and offer valuable insight and opinions has helped reduce development time on many projects. This combined with his willingness and patience to educate and grow with his peers makes him a valuable addition on any project he joins.
                 </div>
@@ -970,7 +970,7 @@ If there was a Perl Coders Hall of Fame, this man would get in on the first ball
                 Demian L'Ecuyer
               </p>
               <div
-                class="text-zinc-300 text-sm "
+                class="text-sm text-zinc-300"
               >
                 Demian was a senior software engineer at ValueClick and worked directly with Aran
               </div>
@@ -983,7 +983,7 @@ If there was a Perl Coders Hall of Fame, this man would get in on the first ball
               class="flex"
             >
               <div
-                class="text-6xl pr-4 text-sky-400"
+                class="pr-4 text-6xl text-sky-400"
               >
                 “
               </div>
@@ -991,7 +991,7 @@ If there was a Perl Coders Hall of Fame, this man would get in on the first ball
                 class="typography"
               >
                 <div
-                  class="typography "
+                  class="typography"
                 >
                   Aran is a rare breed in the world of technical managers. He is extremely technically competent, and could easily do the work of any of his reports. His highly commendable development/architecture skills are nicely complemented by his patient, affable, and approachable demeanor. This combination of technical adeptness and people-oriented personality is what is difficult to find in this profession, and what makes working for Aran a true pleasure.
 
@@ -1008,7 +1008,7 @@ I consider myself fortunate to have worked for Aran. He taught me much about Per
                 Eric Schultz
               </p>
               <div
-                class="text-zinc-300 text-sm "
+                class="text-sm text-zinc-300"
               >
                 Eric was a senior software engineer at ValueClick and reported directly to Aran
               </div>
@@ -1021,7 +1021,7 @@ I consider myself fortunate to have worked for Aran. He taught me much about Per
               class="flex"
             >
               <div
-                class="text-6xl pr-4 text-sky-400"
+                class="pr-4 text-6xl text-sky-400"
               >
                 “
               </div>
@@ -1029,7 +1029,7 @@ I consider myself fortunate to have worked for Aran. He taught me much about Per
                 class="typography"
               >
                 <div
-                  class="typography "
+                  class="typography"
                 >
                   Aran is a very knowledgeable technical manager. He keeps track of where everyone on the team is at and offers help when needed. He has a varied background which comes in handy when developing solutions.
                 </div>
@@ -1044,7 +1044,7 @@ I consider myself fortunate to have worked for Aran. He taught me much about Per
                 Paul Vining
               </p>
               <div
-                class="text-zinc-300 text-sm "
+                class="text-sm text-zinc-300"
               >
                 Paul was a software engineer at ValueClick and reported directly to Aran
               </div>
@@ -1057,7 +1057,7 @@ I consider myself fortunate to have worked for Aran. He taught me much about Per
               class="flex"
             >
               <div
-                class="text-6xl pr-4 text-sky-400"
+                class="pr-4 text-6xl text-sky-400"
               >
                 “
               </div>
@@ -1065,7 +1065,7 @@ I consider myself fortunate to have worked for Aran. He taught me much about Per
                 class="typography"
               >
                 <div
-                  class="typography "
+                  class="typography"
                 >
                   Aran is smart, considerate, productive and a quick study. He was a pleasure to work with. He was very supportive of both his department members, marketing, distributions and other departments while employed at Thinkstock. Highly recommended.
                 </div>
@@ -1080,7 +1080,7 @@ I consider myself fortunate to have worked for Aran. He taught me much about Per
                 Diona Kidd
               </p>
               <div
-                class="text-zinc-300 text-sm "
+                class="text-sm text-zinc-300"
               >
                 Diona was a lead developer at Thinkstock and was Aran's manager
               </div>
@@ -1093,7 +1093,7 @@ I consider myself fortunate to have worked for Aran. He taught me much about Per
               class="flex"
             >
               <div
-                class="text-6xl pr-4 text-sky-400"
+                class="pr-4 text-6xl text-sky-400"
               >
                 “
               </div>
@@ -1101,7 +1101,7 @@ I consider myself fortunate to have worked for Aran. He taught me much about Per
                 class="typography"
               >
                 <div
-                  class="typography "
+                  class="typography"
                 >
                   I have never met an individual as talented as [Aran]. Working with him professionally over the years I have to say I admire his natural ability combined with his work ethic. Aran knows what he is talking about and knows how to communicate it. He possesses over ten years of experience as a web developer and is one of the best in the world.
                 </div>
@@ -1116,7 +1116,7 @@ I consider myself fortunate to have worked for Aran. He taught me much about Per
                 Shawn Faison
               </p>
               <div
-                class="text-zinc-300 text-sm "
+                class="text-sm text-zinc-300"
               >
                 Shawn worked for a client of Aran's
               </div>
@@ -1126,15 +1126,15 @@ I consider myself fortunate to have worked for Aran. He taught me much about Per
       </div>
     </main>
     <div
-      class="sticky flex justify-end gap-x-4 bottom-0 p-4 print:hidden float-right"
+      class="sticky bottom-0 float-right flex justify-end gap-x-4 p-4 print:hidden"
     >
       <button
         aria-label="Play Nature Sounds"
-        class="p-[4px] border-[2px] border-solid border-amber-500 bg-zinc-800/50 focus:outline-none focus:p-[2px] focus:border-[4px]"
+        class="border-[2px] border-solid border-amber-500 bg-zinc-800/50 p-[4px] focus:border-[4px] focus:p-[2px] focus:outline-hidden"
       >
         <svg
           aria-hidden="true"
-          class="w-10 h-10"
+          class="h-10 w-10"
           data-slot="icon"
           fill="none"
           stroke="currentColor"
@@ -1151,11 +1151,11 @@ I consider myself fortunate to have worked for Aran. He taught me much about Per
       </button>
       <button
         aria-label="Scroll to Content"
-        class="p-[4px] border-[2px] border-solid border-amber-500 bg-zinc-800/50 focus:outline-none focus:p-[2px] focus:border-[4px]"
+        class="border-[2px] border-solid border-amber-500 bg-zinc-800/50 p-[4px] focus:border-[4px] focus:p-[2px] focus:outline-hidden"
       >
         <svg
           aria-hidden="true"
-          class="w-10 h-10 transition ease-in-out duration-300 "
+          class="h-10 w-10 transition duration-300 ease-in-out rotate-180"
           data-slot="icon"
           fill="none"
           stroke="currentColor"
@@ -1172,14 +1172,14 @@ I consider myself fortunate to have worked for Aran. He taught me much about Per
       </button>
     </div>
     <footer
-      class="border-zinc-800 border-solid border-t-2 text-center p-4 print:hidden"
+      class="border-t-2 border-solid border-zinc-800 p-4 text-center print:hidden"
     >
       <div
-        class="text-zinc-300 text-sm "
+        class="text-sm text-zinc-300"
       >
         Site built with 
         <a
-          class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline "
+          class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline"
           href="https://nextjs.org/"
         >
           Next.js
@@ -1187,14 +1187,14 @@ I consider myself fortunate to have worked for Aran. He taught me much about Per
          and
          
         <a
-          class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline "
+          class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline"
           href="https://tailwindcss.com/"
         >
           Tailwind CSS
         </a>
         , hosted for free by 
         <a
-          class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline "
+          class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline"
           href="https://pages.cloudflare.com/"
         >
           Cloudflare
@@ -1202,7 +1202,7 @@ I consider myself fortunate to have worked for Aran. He taught me much about Per
         , source on
          
         <a
-          class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline "
+          class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline"
           href="https://github.com/bluefeet/bluefeet.dev"
         >
           GitHub
@@ -1214,16 +1214,16 @@ I consider myself fortunate to have worked for Aran. He taught me much about Per
       </div>
     </footer>
     <footer
-      class="text-right pt-8 hidden print:flex justify-between"
+      class="hidden justify-between pt-8 text-right print:flex"
     >
       <div
-        class="text-zinc-300 text-sm "
+        class="text-sm text-zinc-300"
       >
         Generated 
         January 6th, 2024
       </div>
       <div
-        class="text-zinc-300 text-sm "
+        class="text-sm text-zinc-300"
       >
         © 
         Aran Clary

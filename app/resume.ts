@@ -1,5 +1,5 @@
-import rawResume from "@/public/resume.json";
 import zResume from "./zResume";
+import rawResume from "@/public/resume.json";
 import { z } from "zod";
 
 /**

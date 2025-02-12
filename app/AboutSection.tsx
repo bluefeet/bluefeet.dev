@@ -1,6 +1,7 @@
-import { SectionTitle } from "./SectionTitle";
 import { useRenderMarkdown } from "./RenderMarkdownContext";
+import { SectionTitle } from "./SectionTitle";
 import { useResume } from "./resumeContext";
+import { clsx } from "clsx/lite";
 
 export const AboutSection = ({ className = "" }: { className?: string }) => {
   const RenderMarkdown = useRenderMarkdown();
@@ -9,8 +10,8 @@ export const AboutSection = ({ className = "" }: { className?: string }) => {
 
   return (
     <>
-      <section className={`md:flex lg:block pt-2 md:pt-0 ${className}`}>
-        <SectionTitle className="md:pr-8 lg:pr-0 print:hidden mt-3 md:mt-0 lg:mt-3">
+      <section className={clsx("pt-2 md:flex md:pt-0 lg:block", className)}>
+        <SectionTitle className="mt-3 md:mt-0 md:pr-8 lg:mt-3 lg:pr-0 print:hidden">
           About
         </SectionTitle>
 

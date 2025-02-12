@@ -1,5 +1,5 @@
-import { createContext, useContext } from "react";
 import { Resume } from "./resume";
+import { createContext, useContext } from "react";
 
 /**
  * The default resume if none is set in the context. Exported so that tests can

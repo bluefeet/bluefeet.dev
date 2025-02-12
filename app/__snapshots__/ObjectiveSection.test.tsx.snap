@@ -24,7 +24,7 @@ exports[`ObjectiveSection overview 1`] = `
         class="grid grid-cols-[min-content_auto]"
       >
         <div
-          class="p-1 pl-8 pr-8 flex place-items-center"
+          class="flex place-items-center p-1 pr-8 pl-8"
         >
           <svg
             aria-hidden="true"
@@ -46,7 +46,7 @@ exports[`ObjectiveSection overview 1`] = `
         >
           Dream Job Traits
           <div
-            class="text-zinc-300 text-sm "
+            class="text-sm text-zinc-300"
           >
             test-overview
           </div>
@@ -67,7 +67,7 @@ exports[`ObjectiveSection roles, workModes, and employmentTypes multiple 1`] = `
         class="grid grid-cols-[min-content_auto]"
       >
         <div
-          class="p-1 pl-8 pr-8 flex place-items-center"
+          class="flex place-items-center p-1 pr-8 pl-8"
         >
           <svg
             aria-hidden="true"
@@ -90,7 +90,7 @@ exports[`ObjectiveSection roles, workModes, and employmentTypes multiple 1`] = `
           These roles
            would be a great match
           <div
-            class="text-zinc-300 text-sm "
+            class="text-sm text-zinc-300"
           >
             <div>
               foo
@@ -101,7 +101,7 @@ exports[`ObjectiveSection roles, workModes, and employmentTypes multiple 1`] = `
           </div>
         </div>
         <div
-          class="p-1 pl-8 pr-8 flex place-items-center"
+          class="flex place-items-center p-1 pr-8 pl-8"
         >
           <svg
             aria-hidden="true"
@@ -128,13 +128,13 @@ exports[`ObjectiveSection roles, workModes, and employmentTypes multiple 1`] = `
            
           one of these commitments
           <div
-            class="text-zinc-300 text-sm "
+            class="text-sm text-zinc-300"
           >
             Freelance, Internship
           </div>
         </div>
         <div
-          class="p-1 pl-8 pr-8 flex place-items-center"
+          class="flex place-items-center p-1 pr-8 pl-8"
         >
           <svg
             aria-hidden="true"
@@ -158,7 +158,7 @@ exports[`ObjectiveSection roles, workModes, and employmentTypes multiple 1`] = `
            
           any of these capacities
           <div
-            class="text-zinc-300 text-sm "
+            class="text-sm text-zinc-300"
           >
             Hybrid, Remote
           </div>
@@ -179,7 +179,7 @@ exports[`ObjectiveSection roles, workModes, and employmentTypes single 1`] = `
         class="grid grid-cols-[min-content_auto]"
       >
         <div
-          class="p-1 pl-8 pr-8 flex place-items-center"
+          class="flex place-items-center p-1 pr-8 pl-8"
         >
           <svg
             aria-hidden="true"
@@ -202,7 +202,7 @@ exports[`ObjectiveSection roles, workModes, and employmentTypes single 1`] = `
           This role
            would be a great match
           <div
-            class="text-zinc-300 text-sm "
+            class="text-sm text-zinc-300"
           >
             <div>
               foo
@@ -210,7 +210,7 @@ exports[`ObjectiveSection roles, workModes, and employmentTypes single 1`] = `
           </div>
         </div>
         <div
-          class="p-1 pl-8 pr-8 flex place-items-center"
+          class="flex place-items-center p-1 pr-8 pl-8"
         >
           <svg
             aria-hidden="true"
@@ -237,13 +237,13 @@ exports[`ObjectiveSection roles, workModes, and employmentTypes single 1`] = `
            
           this commitment
           <div
-            class="text-zinc-300 text-sm "
+            class="text-sm text-zinc-300"
           >
             Full-time
           </div>
         </div>
         <div
-          class="p-1 pl-8 pr-8 flex place-items-center"
+          class="flex place-items-center p-1 pr-8 pl-8"
         >
           <svg
             aria-hidden="true"
@@ -267,7 +267,7 @@ exports[`ObjectiveSection roles, workModes, and employmentTypes single 1`] = `
            
           this capacity
           <div
-            class="text-zinc-300 text-sm "
+            class="text-sm text-zinc-300"
           >
             On-site
           </div>
