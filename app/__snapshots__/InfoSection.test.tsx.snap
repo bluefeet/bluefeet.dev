@@ -24,7 +24,7 @@ exports[`InfoSection everything else 1`] = `
         class="grid grid-cols-[min-content_auto]"
       >
         <div
-          class="p-1 pl-8 pr-8 flex place-items-center"
+          class="flex place-items-center p-1 pr-8 pl-8"
         >
           <svg
             aria-hidden="true"
@@ -45,14 +45,14 @@ exports[`InfoSection everything else 1`] = `
           class="pt-2 pb-2"
         >
           <a
-            class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline "
+            class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline"
             href="mailto:foo@example.com"
           >
             foo@example.com
           </a>
         </div>
         <div
-          class="p-1 pl-8 pr-8 flex place-items-center"
+          class="flex place-items-center p-1 pr-8 pl-8"
         >
           <svg
             aria-hidden="true"
@@ -76,14 +76,14 @@ exports[`InfoSection everything else 1`] = `
           class="pt-2 pb-2"
         >
           <a
-            class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline "
+            class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline"
             href="tel:867-5309"
           >
             867-5309
           </a>
         </div>
         <div
-          class="p-1 pl-8 pr-8 flex place-items-center"
+          class="flex place-items-center p-1 pr-8 pl-8"
         >
           <svg
             aria-hidden="true"
@@ -106,7 +106,7 @@ exports[`InfoSection everything else 1`] = `
           This, That
         </div>
         <div
-          class="p-1 pl-8 pr-8 flex place-items-center"
+          class="flex place-items-center p-1 pr-8 pl-8"
         >
           <svg
             aria-hidden="true"
@@ -128,13 +128,13 @@ exports[`InfoSection everything else 1`] = `
         >
           <div>
             <a
-              class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline "
+              class="text-sky-400 underline decoration-sky-800 hover:decoration-sky-400 print:text-black print:no-underline"
               href="http://example.com"
             >
               Example
             </a>
             <div
-              class="text-zinc-300 text-sm hidden print:block"
+              class="text-sm text-zinc-300 hidden print:block"
             >
               http://example.com
             </div>
@@ -163,7 +163,7 @@ exports[`InfoSection location displays location 1`] = `
         class="grid grid-cols-[min-content_auto]"
       >
         <div
-          class="p-1 pl-8 pr-8 flex place-items-center"
+          class="flex place-items-center p-1 pr-8 pl-8"
         >
           <svg
             aria-hidden="true"
@@ -215,7 +215,7 @@ exports[`InfoSection location unwilling 1`] = `
         class="grid grid-cols-[min-content_auto]"
       >
         <div
-          class="p-1 pl-8 pr-8 flex place-items-center"
+          class="flex place-items-center p-1 pr-8 pl-8"
         >
           <svg
             aria-hidden="true"
@@ -237,12 +237,12 @@ exports[`InfoSection location unwilling 1`] = `
         >
           Foo, Bar
           <div
-            class="text-zinc-300 text-sm "
+            class="text-sm text-zinc-300"
           >
             Not available to relocate
           </div>
           <div
-            class="text-zinc-300 text-sm "
+            class="text-sm text-zinc-300"
           >
             Not willing to travel
           </div>
@@ -263,7 +263,7 @@ exports[`InfoSection location willing 1`] = `
         class="grid grid-cols-[min-content_auto]"
       >
         <div
-          class="p-1 pl-8 pr-8 flex place-items-center"
+          class="flex place-items-center p-1 pr-8 pl-8"
         >
           <svg
             aria-hidden="true"
@@ -285,12 +285,12 @@ exports[`InfoSection location willing 1`] = `
         >
           Foo, Bar
           <div
-            class="text-zinc-300 text-sm "
+            class="text-sm text-zinc-300"
           >
             Willing to relocate
           </div>
           <div
-            class="text-zinc-300 text-sm "
+            class="text-sm text-zinc-300"
           >
             Willing to travel
           </div>

@@ -1,9 +1,7 @@
-import { render } from "@testing-library/react";
-
-import { emptyResume, ResumeProvider } from "./resumeContext";
-import { Resume } from "./resume";
-
 import { ObjectiveSection } from "./ObjectiveSection";
+import { Resume } from "./resume";
+import { emptyResume, ResumeProvider } from "./resumeContext";
+import { render } from "@testing-library/react";
 
 const testResume = (resume: Partial<Resume>) => {
   render(

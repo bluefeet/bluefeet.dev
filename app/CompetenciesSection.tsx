@@ -1,6 +1,7 @@
 import { Details } from "./Details";
 import { SectionTitle } from "./SectionTitle";
 import { useResume } from "./resumeContext";
+import { clsx } from "clsx/lite";
 
 export const CompetenciesSection = ({
   className = "",
@@ -12,7 +13,7 @@ export const CompetenciesSection = ({
 
   return (
     <>
-      <section className={`mb-4 ${className}`}>
+      <section className={clsx("mb-4", className)}>
         <SectionTitle>Skills</SectionTitle>
 
         <div className="typography">

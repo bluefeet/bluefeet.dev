@@ -1,5 +1,22 @@
 "use client";
 
+import { AboutSection } from "./AboutSection";
+import { CompetenciesSection } from "./CompetenciesSection";
+import { Details } from "./Details";
+import { ExperienceSection } from "./ExperienceSection";
+import { InfoSection } from "./InfoSection";
+import { Link } from "./Link";
+import { ObjectiveSection } from "./ObjectiveSection";
+import { RecommendationsSection } from "./RecommendationsSection";
+import { headerFont } from "./headerFont";
+import { resume } from "./resume";
+import { ResumeProvider, useResume } from "./resumeContext";
+import {
+  ArrowDownIcon,
+  PauseIcon,
+  PlayIcon,
+} from "@heroicons/react/24/outline";
+import { clsx } from "clsx/lite";
 import { format as formatDate } from "date-fns/format";
 import { Howl } from "howler";
 import React, {
@@ -10,28 +27,12 @@ import React, {
   useState,
 } from "react";
 
-import {
-  ArrowDownIcon,
-  PauseIcon,
-  PlayIcon,
-} from "@heroicons/react/24/outline";
-
-import { AboutSection } from "./AboutSection";
-import { ExperienceSection } from "./ExperienceSection";
-import { InfoSection } from "./InfoSection";
-import { ObjectiveSection } from "./ObjectiveSection";
-import { RecommendationsSection } from "./RecommendationsSection";
-import { CompetenciesSection } from "./CompetenciesSection";
-
-import { Details } from "./Details";
-import { headerFont } from "./headerFont";
-import { Link } from "./Link";
-import { resume } from "./resume";
-import { ResumeProvider, useResume } from "./resumeContext";
-
 const Divider = ({ className = "" }: { className?: string }) => (
   <hr
-    className={`w-full border-sky-600 border-solid border-1 mt-2 mb-2 print:hidden ${className}`}
+    className={clsx(
+      "mt-2 mb-2 w-full border-1 border-solid border-sky-600 print:hidden",
+      className,
+    )}
   />
 );
 
@@ -44,7 +45,7 @@ const DashButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = (
 ) => (
   <button
     {...props}
-    className="p-[4px] border-[2px] border-solid border-amber-500 bg-zinc-800/50 focus:outline-none focus:p-[2px] focus:border-[4px]"
+    className="border-[2px] border-solid border-amber-500 bg-zinc-800/50 p-[4px] focus:border-[4px] focus:p-[2px] focus:outline-hidden"
   >
     {props.children}
   </button>
@@ -93,7 +94,7 @@ const AudioDashButton = () => {
       onClick={isPlaying ? pausePlaying : startPlaying}
       aria-label={isPlaying ? "Pause Nature Sounds" : "Play Nature Sounds"}
     >
-      <PlayPauseIcon className="w-10 h-10" />
+      <PlayPauseIcon className="h-10 w-10" />
     </DashButton>
   );
 };
@@ -124,16 +125,17 @@ const ScrollDashButton = () => {
       aria-label={isNearTop ? "Scroll to Content" : "Scroll to Top"}
     >
       <ArrowDownIcon
-        className={`w-10 h-10 transition ease-in-out duration-300 ${
-          isNearTop ? "" : "rotate-180"
-        }`}
+        className={clsx(
+          "h-10 w-10 transition duration-300 ease-in-out",
+          isNearTop && "rotate-180",
+        )}
       />
     </DashButton>
   );
 };
 
 const DashButtons = () => (
-  <div className="sticky flex justify-end gap-x-4 bottom-0 p-4 print:hidden float-right">
+  <div className="sticky bottom-0 float-right flex justify-end gap-x-4 p-4 print:hidden">
     <AudioDashButton />
     <ScrollDashButton />
   </div>
@@ -162,14 +164,14 @@ const HeaderForDisplay = () => {
       <div className="h-screen overflow-hidden">
         <header
           ref={headerRef}
-          className="bg-bear bg-cover h-screen bg-center relative"
+          className="relative h-screen bg-[url(./bear.jpg)] bg-cover bg-center"
         >
-          <div className="absolute h-48 w-full bg-gradient-to-b from-zinc-900 opacity-50" />
-          <div className="absolute w-full text-center md:text-right p-5 md:pr-16 lg:pr-24">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl md:pr-16 lg:pr-32">
+          <div className="absolute h-48 w-full bg-linear-to-b from-zinc-900 opacity-50" />
+          <div className="absolute w-full p-5 text-center md:pr-16 md:text-right lg:pr-24">
+            <h1 className="text-6xl md:pr-16 md:text-7xl lg:pr-32 lg:text-8xl">
               {resume.contact?.fullName}
             </h1>
-            <p className="pt-2 md:pt-3 lg:pt-5 lg:pr-16 text-lg md:text-2xl">
+            <p className="pt-2 text-lg md:pt-3 md:text-2xl lg:pt-5 lg:pr-16">
               {resume.profile?.headline} • {resume.contact?.pronouns}
             </p>
           </div>
@@ -184,7 +186,10 @@ const HeaderForPrint = () => {
 
   return (
     <header
-      className={`pb-4 ${headerFont.className} hidden print:flex justify-between items-end`}
+      className={clsx(
+        "hidden items-end justify-between pb-4 print:flex",
+        headerFont.className,
+      )}
     >
       <h1 className="text-5xl font-semibold text-sky-800">
         {resume.contact?.fullName}
@@ -203,9 +208,9 @@ const MainContent = () => {
   return (
     <main
       ref={mainRef}
-      className="flex flex-col lg:flex-row p-4 md:p-8 pt-0 lg:pt-8 ml-auto mr-auto max-w-6xl print:p-0"
+      className="mr-auto ml-auto flex max-w-6xl flex-col p-4 pt-0 md:p-8 lg:flex-row lg:pt-8 print:p-0"
     >
-      <div className="lg:order-2 lg:w-2/5 2xl:sticky 2xl:top-0 2xl:h-min flex flex-wrap lg:flex-col lg:pl-8 print:flex-row print:pl-0 print:pb-2 print:static">
+      <div className="flex flex-wrap lg:order-2 lg:w-2/5 lg:flex-col lg:pl-8 2xl:sticky 2xl:top-0 2xl:h-min print:static print:flex-row print:pb-2 print:pl-0">
         <AboutSection className="print:pb-2" />
         <Divider />
 
@@ -215,12 +220,12 @@ const MainContent = () => {
         <InfoSection className="md:w-1/2 lg:w-full print:w-1/2" />
         <Divider className="lg:hidden" />
       </div>
-      <div className="lg:w-3/5 lg:order-1">
+      <div className="lg:order-1 lg:w-3/5">
         <CompetenciesSection />
-        <Divider className="lg:hidden mb-5" />
+        <Divider className="mb-5 lg:hidden" />
 
         <ExperienceSection className="lg:pt-4 print:pt-0" />
-        <Divider className="lg:hidden mt-5 mb-5" />
+        <Divider className="mt-5 mb-5 lg:hidden" />
 
         <RecommendationsSection className="lg:pt-4 lg:pb-2 print:hidden" />
       </div>
@@ -232,7 +237,7 @@ const FooterForDisplay = () => {
   const resume = useResume();
 
   return (
-    <footer className="border-zinc-800 border-solid border-t-2 text-center p-4 print:hidden">
+    <footer className="border-t-2 border-solid border-zinc-800 p-4 text-center print:hidden">
       <Details>
         Site built with <Link href="https://nextjs.org/">Next.js</Link> and{" "}
         <Link href="https://tailwindcss.com/">Tailwind CSS</Link>, hosted for
@@ -257,7 +262,7 @@ const FooterForPrint = () => {
   }, []);
 
   return (
-    <footer className="text-right pt-8 hidden print:flex justify-between">
+    <footer className="hidden justify-between pt-8 text-right print:flex">
       <Details>Generated {currentDate}</Details>
       <Details>&copy; {resume.contact?.fullName}</Details>
     </footer>

@@ -1,3 +1,4 @@
+import { clsx } from "clsx/lite";
 import { micromark } from "micromark";
 
 /**
@@ -13,7 +14,7 @@ export const RenderMarkdown = ({
   const html = micromark(markdown);
   return (
     <div
-      className={`typography ${className}`}
+      className={clsx("typography", className)}
       dangerouslySetInnerHTML={{ __html: html }}
     />
   );

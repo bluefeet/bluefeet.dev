@@ -1,5 +1,8 @@
-import { ReactNode } from "react";
-
+import { Details } from "./Details";
+import { Link } from "./Link";
+import { List } from "./List";
+import { ListItem } from "./ListItem";
+import { useResume } from "./resumeContext";
 import {
   AtSymbolIcon,
   ChatBubbleBottomCenterTextIcon,
@@ -7,12 +10,7 @@ import {
   LinkIcon,
   MapPinIcon,
 } from "@heroicons/react/24/solid";
-
-import { Details } from "./Details";
-import { Link } from "./Link";
-import { List } from "./List";
-import { ListItem } from "./ListItem";
-import { useResume } from "./resumeContext";
+import { ReactNode } from "react";
 
 const Location = () => {
   const resume = useResume();

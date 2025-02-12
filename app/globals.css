@@ -1,25 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer utilities {
-  .typography {
-    line-height: 1.55;
-  }
+@utility typography {
+  line-height: 1.55;
 
-  .typography p {
+  & p {
     @apply mb-3;
   }
 
-  .typography ul {
-    @apply list-outside list-square pl-8;
+  & ul {
+    @apply list-outside list-[square] pl-8;
   }
 
-  .typography li {
+  & li {
     @apply mb-3;
   }
 
-  .typography li::marker {
+  & li::marker {
     @apply text-amber-400 print:text-sky-600;
   }
 }

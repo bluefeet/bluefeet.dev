@@ -1,9 +1,8 @@
 "use client";
 
-import { ReactNode } from "react";
-
 import { RenderMarkdown } from "./RenderMarkdown";
 import { RenderMarkdownProvider } from "./RenderMarkdownContext";
+import { ReactNode } from "react";
 
 /**
  * This component loads NPM packages which Jest does not currently transform

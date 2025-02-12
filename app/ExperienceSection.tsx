@@ -1,13 +1,12 @@
+import { Details } from "./Details";
+import { useRenderMarkdown } from "./RenderMarkdownContext";
+import { SectionTitle } from "./SectionTitle";
+import { SubSectionTitle } from "./SubSectionTitle";
+import { Experience } from "./resume";
+import { useResume } from "./resumeContext";
 import { format as formatDate } from "date-fns/format";
 import { parseISO as parseISODate } from "date-fns/parseISO";
 import upperFirst from "lodash/upperFirst";
-
-import { Details } from "./Details";
-import { Experience } from "./resume";
-import { SectionTitle } from "./SectionTitle";
-import { SubSectionTitle } from "./SubSectionTitle";
-import { useRenderMarkdown } from "./RenderMarkdownContext";
-import { useResume } from "./resumeContext";
 
 const dateFormat = "MMM yyyy";
 
@@ -47,7 +46,7 @@ const SingleExperience = ({ experience }: { experience: Experience }) => {
 
       {experience.highlights?.length && (
         <>
-          <div className="typography text-sm mb-3">
+          <div className="typography mb-3 text-sm">
             <ul>
               {experience.highlights.map((highlight) => (
                 <li key={highlight}>{highlight}</li>

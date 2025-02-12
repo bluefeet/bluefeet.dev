@@ -1,7 +1,6 @@
-import { render, screen } from "@testing-library/react";
-import { expectToBeVisible } from "./testing";
-
 import { Link } from "./Link";
+import { expectToBeVisible } from "./testing";
+import { render, screen } from "@testing-library/react";
 
 describe("Link", () => {
   it("renders", () => {
