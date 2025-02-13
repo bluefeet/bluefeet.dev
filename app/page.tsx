@@ -12,7 +12,7 @@ import { headerFont } from "./headerFont";
 import { resume } from "./resume";
 import { ResumeProvider, useResume } from "./resumeContext";
 import {
-  ArrowDown as ArrowDownIcon,
+  ArrowUp as ArrowUpIcon,
   Pause as PauseIcon,
   Play as PlayIcon,
 } from "@phosphor-icons/react";
@@ -124,7 +124,7 @@ const ScrollDashButton = () => {
       onClick={isNearTop ? scrollToMain : scrollToTop}
       aria-label={isNearTop ? "Scroll to Content" : "Scroll to Top"}
     >
-      <ArrowDownIcon
+      <ArrowUpIcon
         className={clsx(
           "h-10 w-10 transition duration-300 ease-in-out",
           isNearTop && "rotate-180",
