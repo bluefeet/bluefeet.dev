@@ -12,14 +12,15 @@ import { headerFont } from "./headerFont";
 import { resume } from "./resume";
 import { ResumeProvider, useResume } from "./resumeContext";
 import {
-  ArrowDownIcon,
-  PauseIcon,
-  PlayIcon,
-} from "@heroicons/react/24/outline";
+  ArrowDown as ArrowDownIcon,
+  Pause as PauseIcon,
+  Play as PlayIcon,
+} from "@phosphor-icons/react";
 import { clsx } from "clsx/lite";
 import { format as formatDate } from "date-fns/format";
 import { Howl } from "howler";
 import React, {
+  ButtonHTMLAttributes,
   createContext,
   useContext,
   useEffect,
@@ -40,9 +41,8 @@ const Divider = ({ className = "" }: { className?: string }) => (
 const mainRefContext =
   createContext<React.RefObject<HTMLElement | null> | null>(null);
 
-const DashButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = (
-  props,
-) => (
+type DashButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+const DashButton = (props: DashButtonProps) => (
   <button
     {...props}
     className="border-[2px] border-solid border-amber-500 bg-zinc-800/50 p-[4px] focus:border-[4px] focus:p-[2px] focus:outline-hidden"
