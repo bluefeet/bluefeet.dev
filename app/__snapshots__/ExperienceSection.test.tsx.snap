@@ -1,62 +1,64 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ExperienceSection all details 1`] = `
+exports[`ExperienceSection > all details 1`] = `
 <body>
   <div>
     <section
       class=""
     >
       <h2
-        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold className"
+        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold"
       >
         Experience
       </h2>
       <h3
-        class="mt-5 mb-0 text-3xl text-sky-400 className"
+        class="mt-5 mb-0 text-3xl text-sky-400"
       >
         Foo LLC
       </h3>
       <div
         class="text-sm text-zinc-300 mb-3"
       >
-        Head Muffin Licker | Apr 2004 - Feb 2007 | Seasonal | Hybrid
+        Head Muffin Licker | Apr 2004  - Feb 2007 | Seasonal | Hybrid
       </div>
     </section>
   </div>
 </body>
 `;
 
-exports[`ExperienceSection empty resume 1`] = `
+exports[`ExperienceSection > empty resume 1`] = `
 <body>
   <div />
 </body>
 `;
 
-exports[`ExperienceSection full 1`] = `
+exports[`ExperienceSection > full 1`] = `
 <body>
   <div>
     <section
       class=""
     >
       <h2
-        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold className"
+        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold"
       >
         Experience
       </h2>
       <h3
-        class="mt-5 mb-0 text-3xl text-sky-400 className"
+        class="mt-5 mb-0 text-3xl text-sky-400"
       >
         Foo LLC
       </h3>
       <div
         class="text-sm text-zinc-300 mb-3"
       >
-        Head Muffin Licker | Apr 2004 - Feb 2007 | Seasonal | Hybrid
+        Head Muffin Licker | Apr 2004  - Feb 2007 | Seasonal | Hybrid
       </div>
       <div
         class="typography mb-3"
       >
-        I did things.
+        <p>
+          I did things.
+        </p>
       </div>
       <div
         class="typography mb-3 text-sm"
@@ -87,19 +89,19 @@ exports[`ExperienceSection full 1`] = `
 </body>
 `;
 
-exports[`ExperienceSection highlights 1`] = `
+exports[`ExperienceSection > highlights 1`] = `
 <body>
   <div>
     <section
       class=""
     >
       <h2
-        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold className"
+        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold"
       >
         Experience
       </h2>
       <h3
-        class="mt-5 mb-0 text-3xl text-sky-400 className"
+        class="mt-5 mb-0 text-3xl text-sky-400"
       >
         Foo LLC
       </h3>
@@ -120,24 +122,24 @@ exports[`ExperienceSection highlights 1`] = `
 </body>
 `;
 
-exports[`ExperienceSection multiples with required fields only 1`] = `
+exports[`ExperienceSection > multiples with required fields only 1`] = `
 <body>
   <div>
     <section
       class=""
     >
       <h2
-        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold className"
+        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold"
       >
         Experience
       </h2>
       <h3
-        class="mt-5 mb-0 text-3xl text-sky-400 className"
+        class="mt-5 mb-0 text-3xl text-sky-400"
       >
         Foo LLC
       </h3>
       <h3
-        class="mt-5 mb-0 text-3xl text-sky-400 className"
+        class="mt-5 mb-0 text-3xl text-sky-400"
       >
         Bar and Daughters
       </h3>
@@ -146,19 +148,19 @@ exports[`ExperienceSection multiples with required fields only 1`] = `
 </body>
 `;
 
-exports[`ExperienceSection skills 1`] = `
+exports[`ExperienceSection > skills 1`] = `
 <body>
   <div>
     <section
       class=""
     >
       <h2
-        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold className"
+        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold"
       >
         Experience
       </h2>
       <h3
-        class="mt-5 mb-0 text-3xl text-sky-400 className"
+        class="mt-5 mb-0 text-3xl text-sky-400"
       >
         Foo LLC
       </h3>
@@ -179,78 +181,80 @@ exports[`ExperienceSection skills 1`] = `
 </body>
 `;
 
-exports[`ExperienceSection startDate 1`] = `
+exports[`ExperienceSection > startDate 1`] = `
 <body>
   <div>
     <section
       class=""
     >
       <h2
-        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold className"
+        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold"
       >
         Experience
       </h2>
       <h3
-        class="mt-5 mb-0 text-3xl text-sky-400 className"
+        class="mt-5 mb-0 text-3xl text-sky-400"
       >
         Foo LLC
       </h3>
       <div
         class="text-sm text-zinc-300 mb-3"
       >
-        Oct 1978 - Now
+        Oct 1978  - Now
       </div>
     </section>
   </div>
 </body>
 `;
 
-exports[`ExperienceSection startDate and endDate 1`] = `
+exports[`ExperienceSection > startDate and endDate 1`] = `
 <body>
   <div>
     <section
       class=""
     >
       <h2
-        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold className"
+        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold"
       >
         Experience
       </h2>
       <h3
-        class="mt-5 mb-0 text-3xl text-sky-400 className"
+        class="mt-5 mb-0 text-3xl text-sky-400"
       >
         Foo LLC
       </h3>
       <div
         class="text-sm text-zinc-300 mb-3"
       >
-        Apr 2004 - Feb 2007
+        Apr 2004  - Feb 2007
       </div>
     </section>
   </div>
 </body>
 `;
 
-exports[`ExperienceSection summary 1`] = `
+exports[`ExperienceSection > summary 1`] = `
 <body>
   <div>
     <section
       class=""
     >
       <h2
-        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold className"
+        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold"
       >
         Experience
       </h2>
       <h3
-        class="mt-5 mb-0 text-3xl text-sky-400 className"
+        class="mt-5 mb-0 text-3xl text-sky-400"
       >
         Foo LLC
       </h3>
       <div
         class="typography mb-3"
       >
-        I did things.
+        <p>
+          I did things.
+        </p>
       </div>
     </section>
   </div>

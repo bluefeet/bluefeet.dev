@@ -1,5 +1,5 @@
 import { Details } from "./Details";
-import { useRenderMarkdown } from "./RenderMarkdownContext";
+import { RenderMarkdown } from "./RenderMarkdown";
 import { SectionTitle } from "./SectionTitle";
 import { SubSectionTitle } from "./SubSectionTitle";
 import { Experience } from "./resume";
@@ -11,8 +11,6 @@ import upperFirst from "lodash/upperFirst";
 const dateFormat = "MMM yyyy";
 
 const SingleExperience = ({ experience }: { experience: Experience }) => {
-  const RenderMarkdown = useRenderMarkdown();
-
   const detailsParts: string[] = [];
 
   if (experience.title) detailsParts.push(experience.title);
@@ -24,7 +22,7 @@ const SingleExperience = ({ experience }: { experience: Experience }) => {
       ? parseISODate(experience.endDate)
       : null;
     const end = endDate ? formatDate(endDate, dateFormat) : "Now";
-    detailsParts.push(start + (end !== start ? ` - ${end}` : ""));
+    detailsParts.push(`${start}  - ${end}`);
   }
 
   if (experience.employmentType)

@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Page 1`] = `
 <body>
@@ -36,7 +36,7 @@ exports[`Page 1`] = `
       </div>
     </div>
     <header
-      class="hidden items-end justify-between pb-4 print:flex className"
+      class="hidden items-end justify-between pb-4 print:flex"
     >
       <h1
         class="text-5xl font-semibold text-sky-800"
@@ -60,14 +60,16 @@ exports[`Page 1`] = `
           class="pt-2 md:flex md:pt-0 lg:block print:pb-2"
         >
           <h2
-            class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold className mt-3 md:mt-0 md:pr-8 lg:mt-3 lg:pr-0 print:hidden"
+            class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold mt-3 md:mt-0 md:pr-8 lg:mt-3 lg:pr-0 print:hidden"
           >
             About
           </h2>
           <div
             class="typography"
           >
-            I'm a seasoned full-stack software developer with over 30 years of hands-on experience. My track record includes managing data pipelines, crafting backend services, and delivering stunning UIs. I excel at leading teams and interfacing with product development.
+            <p>
+              I'm a seasoned full-stack software developer with over 30 years of hands-on experience. My track record includes managing data pipelines, crafting backend services, and delivering stunning UIs. I excel at leading teams and interfacing with product development.
+            </p>
           </div>
         </section>
         <hr
@@ -370,7 +372,7 @@ exports[`Page 1`] = `
           class="mb-4"
         >
           <h2
-            class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold className"
+            class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold"
           >
             Skills
           </h2>
@@ -415,7 +417,7 @@ exports[`Page 1`] = `
                 <div
                   class="text-sm text-zinc-300"
                 >
-                  Infrastructure as Code, Kubernetes, AWS CDK, Terraform, CI/CD, Grafana, ECR/ECS, Kubernetes, Cloudflare
+                  Infrastructure as Code, AWS CDK, Terraform, CI/CD, Grafana, ECR/ECS, Kubernetes, Cloudflare
                 </div>
               </li>
               <li
@@ -448,34 +450,36 @@ exports[`Page 1`] = `
           class="lg:pt-4 print:pt-0"
         >
           <h2
-            class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold className"
+            class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold"
           >
             Experience
           </h2>
           <h3
-            class="mt-5 mb-0 text-3xl text-sky-400 className"
+            class="mt-5 mb-0 text-3xl text-sky-400"
           >
             GoGuardian
           </h3>
           <div
             class="text-sm text-zinc-300 mb-3"
           >
-            Senior Software Engineer | Sep 2024 - Now | Full-time | Remote
+            Senior Software Engineer | Sep 2024  - Now | Full-time | Remote
           </div>
           <h3
-            class="mt-5 mb-0 text-3xl text-sky-400 className"
+            class="mt-5 mb-0 text-3xl text-sky-400"
           >
             ASU Learning Enterprise
           </h3>
           <div
             class="text-sm text-zinc-300 mb-3"
           >
-            Full-Stack Engineering Contractor | May 2023 - Sep 2024 | Contract | Remote
+            Full-Stack Engineering Contractor | May 2023  - Sep 2024 | Contract | Remote
           </div>
           <div
             class="typography mb-3"
           >
-            Developed the foundation of a new AI application aimed at guiding potential learners on their educational future. Worked closely with product and engineering teams to gather requirements, created technical documentation and diagrams, implemented engineering best practices, constructed a data ingestion pipeline, developed the initial POC, and provided mentorship to junior developers.
+            <p>
+              Developed the foundation of a new AI application aimed at guiding potential learners on their educational future. Worked closely with product and engineering teams to gather requirements, created technical documentation and diagrams, implemented engineering best practices, constructed a data ingestion pipeline, developed the initial POC, and provided mentorship to junior developers.
+            </p>
           </div>
           <div
             class="typography mb-3"
@@ -490,19 +494,21 @@ exports[`Page 1`] = `
             .
           </div>
           <h3
-            class="mt-5 mb-0 text-3xl text-sky-400 className"
+            class="mt-5 mb-0 text-3xl text-sky-400"
           >
             GoGuardian
           </h3>
           <div
             class="text-sm text-zinc-300 mb-3"
           >
-            Security Engineering Contractor | Dec 2023 - Mar 2024 | Contract | Remote
+            Security Engineering Contractor | Dec 2023  - Mar 2024 | Contract | Remote
           </div>
           <div
             class="typography mb-3"
           >
-            This was a short-term contract to assist this early education technology company with meeting a critical, and imminent, security audit. Within a day of starting I was doing impactful work and contributed greatly to the success of the audit.
+            <p>
+              This was a short-term contract to assist this early education technology company with meeting a critical, and imminent, security audit. Within a day of starting I was doing impactful work and contributed greatly to the success of the audit.
+            </p>
           </div>
           <div
             class="typography mb-3"
@@ -517,23 +523,31 @@ exports[`Page 1`] = `
             .
           </div>
           <h3
-            class="mt-5 mb-0 text-3xl text-sky-400 className"
+            class="mt-5 mb-0 text-3xl text-sky-400"
           >
             ZipRecruiter
           </h3>
           <div
             class="text-sm text-zinc-300 mb-3"
           >
-            Principal Software Engineer | Feb 2014 - May 2023 | Full-time | Remote | Santa Monica, CA, US
+            Principal Software Engineer | Feb 2014  - May 2023 | Full-time | Remote | Santa Monica, CA, US
           </div>
           <div
             class="typography mb-3"
           >
-            I had a long and broad ranging career at ZipRecruiter, from DevOps and cloud infrastructure engineering to product development. Over the years I mentored junior engineers, was a release manager, wrote documentation and functional specifications, gathered requirements and communicated changes. I introduced automated builds, tooling to increase visibility into our systems, and helped the company migrate away from a monolithic code base to microservices.
+            <p>
+              I had a long and broad ranging career at ZipRecruiter, from DevOps and cloud infrastructure engineering to product development. Over the years I mentored junior engineers, was a release manager, wrote documentation and functional specifications, gathered requirements and communicated changes. I introduced automated builds, tooling to increase visibility into our systems, and helped the company migrate away from a monolithic code base to microservices.
+            </p>
+            
 
-When I first joined ZipRecruiter, which was then a small startup, I promptly optimized the codebase and revamped processes to improve release reliability and production environment stability. In the first half of my tenure, my focus was on boosting developer productivity by introducing essential processes and tools that facilitated company growth.
+            <p>
+              When I first joined ZipRecruiter, which was then a small startup, I promptly optimized the codebase and revamped processes to improve release reliability and production environment stability. In the first half of my tenure, my focus was on boosting developer productivity by introducing essential processes and tools that facilitated company growth.
+            </p>
+            
 
-In the latter half of my tenure, my role evolved to encompass active collaboration with product teams, engaging in an agile workflow that included sprints, retrospectives, and daily stand-up meetings. I worked closely with product managers and stakeholders to complete high-impact projects on strict deadlines.
+            <p>
+              In the latter half of my tenure, my role evolved to encompass active collaboration with product teams, engaging in an agile workflow that included sprints, retrospectives, and daily stand-up meetings. I worked closely with product managers and stakeholders to complete high-impact projects on strict deadlines.
+            </p>
           </div>
           <div
             class="typography mb-3 text-sm"
@@ -566,21 +580,26 @@ In the latter half of my tenure, my role evolved to encompass active collaborati
             .
           </div>
           <h3
-            class="mt-5 mb-0 text-3xl text-sky-400 className"
+            class="mt-5 mb-0 text-3xl text-sky-400"
           >
             Rent.com
           </h3>
           <div
             class="text-sm text-zinc-300 mb-3"
           >
-            Principal Architect | Apr 2011 - Mar 2014 | Full-time | On-site | Santa Monica, CA, US
+            Principal Architect | Apr 2011  - Mar 2014 | Full-time | On-site | Santa Monica, CA, US
           </div>
           <div
             class="typography mb-3"
           >
-            At Rent.com I embraced a multitude of roles including Backend Developer, Architect, Manager, Scrum Master, DevOps Product Owner, Hiring Manager, Release Manager, and Frontend Developer.
+            <p>
+              At Rent.com I embraced a multitude of roles including Backend Developer, Architect, Manager, Scrum Master, DevOps Product Owner, Hiring Manager, Release Manager, and Frontend Developer.
+            </p>
+            
 
-My responsibilities at Rent.com were both diverse and dynamic. I actively engaged in the research and integration of new technologies, the construction of software infrastructure to facilitate efficient coding practices, and mentoring colleagues. I was adept at multitasking and dedicated to documentation, writing unit tests, crafting essential tools, and meticulously profiling and optimizing the site. Additionally, my contributions extended to writing a substantial amount of code.
+            <p>
+              My responsibilities at Rent.com were both diverse and dynamic. I actively engaged in the research and integration of new technologies, the construction of software infrastructure to facilitate efficient coding practices, and mentoring colleagues. I was adept at multitasking and dedicated to documentation, writing unit tests, crafting essential tools, and meticulously profiling and optimizing the site. Additionally, my contributions extended to writing a substantial amount of code.
+            </p>
           </div>
           <div
             class="typography mb-3 text-sm"
@@ -616,19 +635,21 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
             .
           </div>
           <h3
-            class="mt-5 mb-0 text-3xl text-sky-400 className"
+            class="mt-5 mb-0 text-3xl text-sky-400"
           >
             ValueClick
           </h3>
           <div
             class="text-sm text-zinc-300 mb-3"
           >
-            Software Engineer | Jan 2005 - Apr 2011 | Full-time | On-site | Thousand Oaks, CA, US
+            Software Engineer | Jan 2005  - Apr 2011 | Full-time | On-site | Thousand Oaks, CA, US
           </div>
           <div
             class="typography mb-3"
           >
-            At this ad network I embarked on a journey in an unfamiliar corporate environment. Fortunately, I had the guidance of a visionary engineering director who recognized my untapped potential. This invaluable mentorship paved the way for rapid growth as I seamlessly adapted my extensive coding expertise and freelancing background to this new setting. As time progressed, I emerged as one of the most impactful developers and effective managers within the organization.
+            <p>
+              At this ad network I embarked on a journey in an unfamiliar corporate environment. Fortunately, I had the guidance of a visionary engineering director who recognized my untapped potential. This invaluable mentorship paved the way for rapid growth as I seamlessly adapted my extensive coding expertise and freelancing background to this new setting. As time progressed, I emerged as one of the most impactful developers and effective managers within the organization.
+            </p>
           </div>
           <div
             class="typography mb-3 text-sm"
@@ -667,19 +688,21 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
             .
           </div>
           <h3
-            class="mt-5 mb-0 text-3xl text-sky-400 className"
+            class="mt-5 mb-0 text-3xl text-sky-400"
           >
             Thinkstock
           </h3>
           <div
             class="text-sm text-zinc-300 mb-3"
           >
-            Software Engineer | Apr 2003 - Dec 2004 | Full-time | On-site | Charlotte, NC, US
+            Software Engineer | Apr 2003  - Dec 2004 | Full-time | On-site | Charlotte, NC, US
           </div>
           <div
             class="typography mb-3"
           >
-            At this stock photography company, I served as one of two developers responsible for managing custom built servers containing terabytes of videos and images. My responsibilities included handling OS and software updates, improving the website by adding features and enhancing efficiency, and assisting the marketing and sales teams in meeting their goals.
+            <p>
+              At this stock photography company, I served as one of two developers responsible for managing custom built servers containing terabytes of videos and images. My responsibilities included handling OS and software updates, improving the website by adding features and enhancing efficiency, and assisting the marketing and sales teams in meeting their goals.
+            </p>
           </div>
           <div
             class="typography mb-3"
@@ -694,19 +717,21 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
             .
           </div>
           <h3
-            class="mt-5 mb-0 text-3xl text-sky-400 className"
+            class="mt-5 mb-0 text-3xl text-sky-400"
           >
             IDForce
           </h3>
           <div
             class="text-sm text-zinc-300 mb-3"
           >
-            Engineering Lead | May 2001 - Mar 2002 | Full-time | Hybrid | Charlotte, NC, US
+            Engineering Lead | May 2001  - Mar 2002 | Full-time | Hybrid | Charlotte, NC, US
           </div>
           <div
             class="typography mb-3"
           >
-            I independently developed an online collaboration tool equipped with live whiteboards, chat, and file sharing features for a London-based startup. The development process involved multiple trips to London to collaborate and ideate with the design team. Notably, during the tool's development, I pioneered an AJAX-like technique, years before AJAX became a widely recognized term in the industry.
+            <p>
+              I independently developed an online collaboration tool equipped with live whiteboards, chat, and file sharing features for a London-based startup. The development process involved multiple trips to London to collaborate and ideate with the design team. Notably, during the tool's development, I pioneered an AJAX-like technique, years before AJAX became a widely recognized term in the industry.
+            </p>
           </div>
           <div
             class="typography mb-3"
@@ -721,19 +746,21 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
             .
           </div>
           <h3
-            class="mt-5 mb-0 text-3xl text-sky-400 className"
+            class="mt-5 mb-0 text-3xl text-sky-400"
           >
             Silent Forest
           </h3>
           <div
             class="text-sm text-zinc-300 mb-3"
           >
-            Software Engineer and Sysadmin | Jan 1996 - Apr 2003 | Freelance | Hybrid | CA & NC, US
+            Software Engineer and Sysadmin | Jan 1996  - Apr 2003 | Freelance | Hybrid | CA & NC, US
           </div>
           <div
             class="typography mb-3"
           >
-            Excelled in delivering end-to-end web solutions for a wide array of businesses both domestically and internationally. As a one-stop solution provider, I successfully navigated all stages of project life cycle, from conceptualization and architecture design to implementation and final delivery. I distinguished myself through the creation of high-quality software and an ability to uncover and fulfill unanticipated needs of my clients, thereby providing them a strong online presence. My comprehensive suite of services, backed by my adeptness in multiple technologies, positioned numerous small and medium sized businesses for success in the digital age.
+            <p>
+              Excelled in delivering end-to-end web solutions for a wide array of businesses both domestically and internationally. As a one-stop solution provider, I successfully navigated all stages of project life cycle, from conceptualization and architecture design to implementation and final delivery. I distinguished myself through the creation of high-quality software and an ability to uncover and fulfill unanticipated needs of my clients, thereby providing them a strong online presence. My comprehensive suite of services, backed by my adeptness in multiple technologies, positioned numerous small and medium sized businesses for success in the digital age.
+            </p>
           </div>
           <div
             class="typography mb-3"
@@ -748,19 +775,21 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
             .
           </div>
           <h3
-            class="mt-5 mb-0 text-3xl text-sky-400 className"
+            class="mt-5 mb-0 text-3xl text-sky-400"
           >
             MapCruzin
           </h3>
           <div
             class="text-sm text-zinc-300 mb-3"
           >
-            Co-Founder | Jan 1994 - Jan 1996 | Full-time | On-site | Santa Cruz, CA, US
+            Co-Founder | Jan 1994  - Jan 1996 | Full-time | On-site | Santa Cruz, CA, US
           </div>
           <div
             class="typography mb-3"
           >
-            Built software solutions primarily aimed at providing crucial mapping services for government entities and non-profit organizations. I spearheaded both backend and frontend development, delivering websites that facilitated greater transparency and engagement within the environmental activism sphere. Additionally, I played a key role in contract negotiation and drafting. While the company was heavily involved in data collection and processing, my primary focus was on creating effective software tools and ensuring a seamless user experience, thus empowering communities with accessible information.
+            <p>
+              Built software solutions primarily aimed at providing crucial mapping services for government entities and non-profit organizations. I spearheaded both backend and frontend development, delivering websites that facilitated greater transparency and engagement within the environmental activism sphere. Additionally, I played a key role in contract negotiation and drafting. While the company was heavily involved in data collection and processing, my primary focus was on creating effective software tools and ensuring a seamless user experience, thus empowering communities with accessible information.
+            </p>
           </div>
           <div
             class="typography mb-3"
@@ -782,7 +811,7 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
           class="lg:pt-4 lg:pb-2 print:hidden"
         >
           <h2
-            class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold className"
+            class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold"
           >
             Recommendations
           </h2>
@@ -803,7 +832,9 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
                 <div
                   class="typography"
                 >
-                  It is difficult to overstate the impact that [Aran] has made at the two companies where I’ve been grateful to be his colleague. As a mentor, he has had the largest impact on my career journey of any engineer I’ve ever worked with.
+                  <p>
+                    It is difficult to overstate the impact that [Aran] has made at the two companies where I’ve been grateful to be his colleague. As a mentor, he has had the largest impact on my career journey of any engineer I’ve ever worked with.
+                  </p>
                 </div>
               </div>
             </div>
@@ -839,15 +870,29 @@ My responsibilities at Rent.com were both diverse and dynamic. I actively engage
                 <div
                   class="typography"
                 >
-                  I have worked with countless engineers, usually of very high caliber, but engineers of Aran's talents are far and few in between. I have had the privilege of working with Aran for almost three years now, and grew to rely on his instincts, and technical depth.
+                  <p>
+                    I have worked with countless engineers, usually of very high caliber, but engineers of Aran's talents are far and few in between. I have had the privilege of working with Aran for almost three years now, and grew to rely on his instincts, and technical depth.
+                  </p>
+                  
 
-Aran is the kind of engineer who can build a startup from the ground up, efficiently, fast, with a good solid architecture and a keen sense of the big picture, and yet he is also able to deep dive and solve very elusive technical issues, or find good opportunities for optimization, often while reviewing others' code.
+                  <p>
+                    Aran is the kind of engineer who can build a startup from the ground up, efficiently, fast, with a good solid architecture and a keen sense of the big picture, and yet he is also able to deep dive and solve very elusive technical issues, or find good opportunities for optimization, often while reviewing others' code.
+                  </p>
+                  
 
-Aran has a very positive attitude, one that is calming and infectious, and a strong sense that he can accomplish anything. That, in turn, builds confidence in the team he is leading, motivating them while getting them excited about whatever project he is leading.
+                  <p>
+                    Aran has a very positive attitude, one that is calming and infectious, and a strong sense that he can accomplish anything. That, in turn, builds confidence in the team he is leading, motivating them while getting them excited about whatever project he is leading.
+                  </p>
+                  
 
-It has been a true pleasure watching Aran mentor other engineers, and come up with tools / ideas, completely of his own initiative to drive efficiency and better collaboration.
+                  <p>
+                    It has been a true pleasure watching Aran mentor other engineers, and come up with tools / ideas, completely of his own initiative to drive efficiency and better collaboration.
+                  </p>
+                  
 
-Aran will always be on my short-list of top engineers I would not hesitate to work with again.
+                  <p>
+                    Aran will always be on my short-list of top engineers I would not hesitate to work with again.
+                  </p>
                 </div>
               </div>
             </div>
@@ -883,7 +928,9 @@ Aran will always be on my short-list of top engineers I would not hesitate to wo
                 <div
                   class="typography"
                 >
-                  Aran succeeded in making me feel welcome and productive as a new developer in his organization nearly instantly. He provided the perfect amount of guidance, support, and mentoring I needed to come up to speed quickly on a large codebase. He's a spectacular programmer, a thoughtful manager, a kind person, and an unbeatable addition to any team.
+                  <p>
+                    Aran succeeded in making me feel welcome and productive as a new developer in his organization nearly instantly. He provided the perfect amount of guidance, support, and mentoring I needed to come up to speed quickly on a large codebase. He's a spectacular programmer, a thoughtful manager, a kind person, and an unbeatable addition to any team.
+                  </p>
                 </div>
               </div>
             </div>
@@ -919,9 +966,14 @@ Aran will always be on my short-list of top engineers I would not hesitate to wo
                 <div
                   class="typography"
                 >
-                  Working with Aran was a complete joy. He maintained a high level of focus on both the quality of his code and the overall quality of the product he was delivering to our customers. I served as the product manager for Aran’s teams over numerous projects spanning almost four years. I was always amazed by his empathy and kindness on a personal level and the dedication to awesome work on a professional level. His heart and mind are always in the right place.
+                  <p>
+                    Working with Aran was a complete joy. He maintained a high level of focus on both the quality of his code and the overall quality of the product he was delivering to our customers. I served as the product manager for Aran’s teams over numerous projects spanning almost four years. I was always amazed by his empathy and kindness on a personal level and the dedication to awesome work on a professional level. His heart and mind are always in the right place.
+                  </p>
+                  
 
-If there was a Perl Coders Hall of Fame, this man would get in on the first ballot. I would love the opportunity to work with Aran again. Any team that can count [Aran] as one of its members is truly made better for it.
+                  <p>
+                    If there was a Perl Coders Hall of Fame, this man would get in on the first ballot. I would love the opportunity to work with Aran again. Any team that can count [Aran] as one of its members is truly made better for it.
+                  </p>
                 </div>
               </div>
             </div>
@@ -957,7 +1009,9 @@ If there was a Perl Coders Hall of Fame, this man would get in on the first ball
                 <div
                   class="typography"
                 >
-                  In the five years that Aran and I worked together, he has consistently proven himself as an awesome resource for complex issues. His ability to get to the heart of an issue quickly and offer valuable insight and opinions has helped reduce development time on many projects. This combined with his willingness and patience to educate and grow with his peers makes him a valuable addition on any project he joins.
+                  <p>
+                    In the five years that Aran and I worked together, he has consistently proven himself as an awesome resource for complex issues. His ability to get to the heart of an issue quickly and offer valuable insight and opinions has helped reduce development time on many projects. This combined with his willingness and patience to educate and grow with his peers makes him a valuable addition on any project he joins.
+                  </p>
                 </div>
               </div>
             </div>
@@ -993,9 +1047,14 @@ If there was a Perl Coders Hall of Fame, this man would get in on the first ball
                 <div
                   class="typography"
                 >
-                  Aran is a rare breed in the world of technical managers. He is extremely technically competent, and could easily do the work of any of his reports. His highly commendable development/architecture skills are nicely complemented by his patient, affable, and approachable demeanor. This combination of technical adeptness and people-oriented personality is what is difficult to find in this profession, and what makes working for Aran a true pleasure.
+                  <p>
+                    Aran is a rare breed in the world of technical managers. He is extremely technically competent, and could easily do the work of any of his reports. His highly commendable development/architecture skills are nicely complemented by his patient, affable, and approachable demeanor. This combination of technical adeptness and people-oriented personality is what is difficult to find in this profession, and what makes working for Aran a true pleasure.
+                  </p>
+                  
 
-I consider myself fortunate to have worked for Aran. He taught me much about Perl specifically and Software Development in general. More importantly, though, the example of his leadership helped me to better do my job as an applicaton developer, and later as a project lead. I would not hesitate to recommend Aran for any position having to do with Perl - manager, architect or otherwise; and I would gladly welcome the opportunity to work with him in the future.
+                  <p>
+                    I consider myself fortunate to have worked for Aran. He taught me much about Perl specifically and Software Development in general. More importantly, though, the example of his leadership helped me to better do my job as an applicaton developer, and later as a project lead. I would not hesitate to recommend Aran for any position having to do with Perl - manager, architect or otherwise; and I would gladly welcome the opportunity to work with him in the future.
+                  </p>
                 </div>
               </div>
             </div>
@@ -1031,7 +1090,9 @@ I consider myself fortunate to have worked for Aran. He taught me much about Per
                 <div
                   class="typography"
                 >
-                  Aran is a very knowledgeable technical manager. He keeps track of where everyone on the team is at and offers help when needed. He has a varied background which comes in handy when developing solutions.
+                  <p>
+                    Aran is a very knowledgeable technical manager. He keeps track of where everyone on the team is at and offers help when needed. He has a varied background which comes in handy when developing solutions.
+                  </p>
                 </div>
               </div>
             </div>
@@ -1067,7 +1128,9 @@ I consider myself fortunate to have worked for Aran. He taught me much about Per
                 <div
                   class="typography"
                 >
-                  Aran is smart, considerate, productive and a quick study. He was a pleasure to work with. He was very supportive of both his department members, marketing, distributions and other departments while employed at Thinkstock. Highly recommended.
+                  <p>
+                    Aran is smart, considerate, productive and a quick study. He was a pleasure to work with. He was very supportive of both his department members, marketing, distributions and other departments while employed at Thinkstock. Highly recommended.
+                  </p>
                 </div>
               </div>
             </div>
@@ -1103,7 +1166,9 @@ I consider myself fortunate to have worked for Aran. He taught me much about Per
                 <div
                   class="typography"
                 >
-                  I have never met an individual as talented as [Aran]. Working with him professionally over the years I have to say I admire his natural ability combined with his work ethic. Aran knows what he is talking about and knows how to communicate it. He possesses over ten years of experience as a web developer and is one of the best in the world.
+                  <p>
+                    I have never met an individual as talented as [Aran]. Working with him professionally over the years I have to say I admire his natural ability combined with his work ethic. Aran knows what he is talking about and knows how to communicate it. He possesses over ten years of experience as a web developer and is one of the best in the world.
+                  </p>
                 </div>
               </div>
             </div>

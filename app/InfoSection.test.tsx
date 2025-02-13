@@ -3,6 +3,7 @@ import { Resume } from "./resume";
 import { emptyResume, ResumeProvider } from "./resumeContext";
 import { expectToBeVisible } from "./testing";
 import { render, screen } from "@testing-library/react";
+import { describe, expect, it } from "vitest";
 
 const testResume = (resume: Partial<Resume>) => {
   render(

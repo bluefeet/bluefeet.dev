@@ -1,19 +1,19 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`SkillsSection no skills 1`] = `
+exports[`SkillsSection > no skills 1`] = `
 <body>
   <div />
 </body>
 `;
 
-exports[`SkillsSection some skills 1`] = `
+exports[`SkillsSection > some skills 1`] = `
 <body>
   <div>
     <section
       class="mb-4"
     >
       <h2
-        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold className"
+        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold"
       >
         Skills
       </h2>

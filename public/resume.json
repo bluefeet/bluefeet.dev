@@ -57,7 +57,6 @@
         "name": "Cloud Operations",
         "skills": [
           "Infrastructure as Code",
-          "Kubernetes",
           "AWS CDK",
           "Terraform",
           "CI/CD",

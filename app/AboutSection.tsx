@@ -1,10 +1,9 @@
-import { useRenderMarkdown } from "./RenderMarkdownContext";
+import { RenderMarkdown } from "./RenderMarkdown";
 import { SectionTitle } from "./SectionTitle";
 import { useResume } from "./resumeContext";
 import { clsx } from "clsx/lite";
 
 export const AboutSection = ({ className = "" }: { className?: string }) => {
-  const RenderMarkdown = useRenderMarkdown();
   const resume = useResume();
   if (!resume.profile?.about) return <></>;
 

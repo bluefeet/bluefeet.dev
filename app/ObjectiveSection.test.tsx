@@ -2,6 +2,7 @@ import { ObjectiveSection } from "./ObjectiveSection";
 import { Resume } from "./resume";
 import { emptyResume, ResumeProvider } from "./resumeContext";
 import { render } from "@testing-library/react";
+import { describe, expect, it } from "vitest";
 
 const testResume = (resume: Partial<Resume>) => {
   render(
@@ -23,7 +24,7 @@ describe("ObjectiveSection", () => {
 
   describe("startDate", () => {
     it("objective with no startDate", () => {
-      testResume({ objective: {} });
+      testResume({ objective: { intention: "casual" } });
     });
 
     it("casual startDate", () => {
@@ -32,8 +33,16 @@ describe("ObjectiveSection", () => {
       });
     });
 
+    it("active startDate", () => {
+      testResume({
+        objective: { intention: "active", startDate: "2500-11-04" },
+      });
+    });
+
     it("historic startDate", () => {
-      testResume({ objective: { startDate: "1905-08-17" } });
+      testResume({
+        objective: { intention: "casual", startDate: "1905-08-17" },
+      });
     });
   });
 

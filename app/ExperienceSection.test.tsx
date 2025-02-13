@@ -2,6 +2,7 @@ import { ExperienceSection } from "./ExperienceSection";
 import { Resume } from "./resume";
 import { emptyResume, ResumeProvider } from "./resumeContext";
 import { render } from "@testing-library/react";
+import { describe, expect, it } from "vitest";
 
 const testResume = (resume: Partial<Resume>) => {
   render(
