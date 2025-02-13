@@ -3,12 +3,12 @@ import { List } from "./List";
 import { ListItem } from "./ListItem";
 import { useResume } from "./resumeContext";
 import {
-  BuildingOffice2Icon,
-  CalendarDaysIcon,
-  Cog6ToothIcon,
-  PhotoIcon,
-  RocketLaunchIcon,
-} from "@heroicons/react/24/solid";
+  BuildingOffice as BuildingOfficeIcon,
+  CalendarDots as CalendarDotsIcon,
+  GearSix as GearSixIcon,
+  Image as ImageIcon,
+  Rocket as RocketIcon,
+} from "@phosphor-icons/react";
 import { format as formatDate } from "date-fns/format";
 import { isPast as isDateInPast } from "date-fns/isPast";
 import { parseISO as parseISODate } from "date-fns/parseISO";
@@ -22,7 +22,7 @@ const Overview = () => {
 
   return (
     <>
-      <ListItem Icon={PhotoIcon}>
+      <ListItem Icon={ImageIcon}>
         Dream Job Traits
         <Details>{resume.objective.overview}</Details>
       </ListItem>
@@ -45,7 +45,7 @@ const StartDate = () => {
 
   return (
     <>
-      <ListItem Icon={RocketLaunchIcon}>
+      <ListItem Icon={RocketIcon}>
         {resume.objective.intention === "casual"
           ? "Open to new opportunities"
           : "Actively searching for an opportunity"}
@@ -70,7 +70,7 @@ const Roles = () => {
 
   return (
     <>
-      <ListItem Icon={Cog6ToothIcon}>
+      <ListItem Icon={GearSixIcon}>
         {resume.objective.roles.length > 1 ? "These roles" : "This role"} would
         be a great match
         <Details>
@@ -89,7 +89,7 @@ const WorkModes = () => {
 
   return (
     <>
-      <ListItem Icon={BuildingOffice2Icon}>
+      <ListItem Icon={BuildingOfficeIcon}>
         In{" "}
         {resume.objective.workModes.length > 1
           ? "any of these capacities"
@@ -110,7 +110,7 @@ const EmploymentTypes = () => {
 
   return (
     <>
-      <ListItem Icon={CalendarDaysIcon}>
+      <ListItem Icon={CalendarDotsIcon}>
         With{" "}
         {resume.objective.employmentTypes.length > 1
           ? "one of these commitments"

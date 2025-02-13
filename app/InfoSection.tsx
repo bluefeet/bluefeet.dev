@@ -4,12 +4,12 @@ import { List } from "./List";
 import { ListItem } from "./ListItem";
 import { useResume } from "./resumeContext";
 import {
-  AtSymbolIcon,
-  ChatBubbleBottomCenterTextIcon,
-  DevicePhoneMobileIcon,
-  LinkIcon,
-  MapPinIcon,
-} from "@heroicons/react/24/solid";
+  At as AtIcon,
+  DeviceMobile as DeviceMobileIcon,
+  MapPin as MapPinIcon,
+  Link as LinkIcon,
+  ChatText as ChatTextIcon,
+} from "@phosphor-icons/react";
 import { ReactNode } from "react";
 
 const Location = () => {
@@ -54,7 +54,7 @@ const EmailAddress = () => {
 
   return (
     <>
-      <ListItem Icon={AtSymbolIcon}>
+      <ListItem Icon={AtIcon} iconProps={{ weight: "regular" }}>
         <Link href={`mailto:${resume.contact?.emailAddress}`}>
           {resume.contact.emailAddress}
         </Link>
@@ -69,7 +69,7 @@ const PhoneNumber = () => {
 
   return (
     <>
-      <ListItem Icon={DevicePhoneMobileIcon}>
+      <ListItem Icon={DeviceMobileIcon}>
         <Link href={`tel:${resume.contact.phoneNumber}`}>
           {resume.contact.phoneNumber}
         </Link>
@@ -84,7 +84,7 @@ const Languages = () => {
 
   return (
     <>
-      <ListItem Icon={ChatBubbleBottomCenterTextIcon}>
+      <ListItem Icon={ChatTextIcon}>
         {resume.profile.languages.join(", ")}
       </ListItem>
     </>
@@ -97,7 +97,7 @@ const Resources = () => {
 
   return (
     <>
-      <ListItem Icon={LinkIcon}>
+      <ListItem Icon={LinkIcon} iconProps={{ weight: "regular" }}>
         {resume.profile.resources.map((resource) => (
           <div key={resource.uri}>
             <Link href={resource.uri}>{resource.title}</Link>
