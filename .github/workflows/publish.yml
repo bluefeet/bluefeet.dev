@@ -30,11 +30,9 @@ jobs:
           cache: "npm"
       - run: npm ci
       - run: npm run build
-      - name: Publish to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
+      - name: Publish to Cloudflare
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: b7d95cae6499601b672f726cae81dee2
-          projectName: bluefeet-dev
-          directory: out
-          wranglerVersion: "3"
+          command: pages deploy out --project-name=bluefeet-dev
