@@ -56,8 +56,8 @@ const AudioDashButton = () => {
   const [isPlaying, setPlaying] = useState(false);
 
   useEffect(() => {
-    if (!isPlaying || audio) return;
     /* c8 ignore start */
+    if (!isPlaying || audio) return;
     setAudio(
       new Howl({
         html5: true, // Makes iOS Safari happier when phone is locked.

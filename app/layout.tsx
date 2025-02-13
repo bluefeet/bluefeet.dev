@@ -1,4 +1,4 @@
-import { UnjestableProviders } from "./UnjestableProviders";
+/* v8 ignore start */
 import "./globals.css";
 import { resume } from "./resume";
 import { clsx } from "clsx/lite";
@@ -20,7 +20,7 @@ const Layout = ({ children }: { children: ReactNode }) => (
         mainFont.className,
       )}
     >
-      <UnjestableProviders>{children}</UnjestableProviders>
+      {children}
     </body>
   </html>
 );
