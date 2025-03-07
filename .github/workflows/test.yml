@@ -4,8 +4,6 @@ on:
   workflow_call:
   pull_request:
     branches: ["main"]
-  push:
-    branches: ["main"]
 
 jobs:
   test:
@@ -13,8 +11,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Fetch prod branch for lint-commits
-        run: git fetch origin prod:refs/remotes/origin/prod
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
