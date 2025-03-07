@@ -1,15 +1,7 @@
 import { Resume } from "./resume";
 import { createContext, useContext } from "react";
 
-/**
- * The default resume if none is set in the context. Exported so that tests can
- * use this as a foundation for building test resumes.
- */
-export const emptyResume: Resume = {
-  $schema: "resume.schema.json",
-};
-
-const resumeContext = createContext<Resume>(emptyResume);
+const resumeContext = createContext<Resume>({});
 
 /**
  * Used to avoid prop drilling since the resume is accessed everywhere.

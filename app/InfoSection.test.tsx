@@ -1,13 +1,13 @@
 import { InfoSection } from "./InfoSection";
 import { Resume } from "./resume";
-import { emptyResume, ResumeProvider } from "./resumeContext";
+import { ResumeProvider } from "./resumeContext";
 import { expectToBeVisible } from "./testing";
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 
 const testResume = (resume: Partial<Resume>) => {
   render(
-    <ResumeProvider value={{ ...emptyResume, ...resume }}>
+    <ResumeProvider value={resume}>
       <InfoSection />
     </ResumeProvider>,
   );
