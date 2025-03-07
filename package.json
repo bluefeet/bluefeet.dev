@@ -46,6 +46,7 @@
     "eslint": "^9.20.1",
     "eslint-config-next": "^15.1.7",
     "eslint-config-prettier": "^10.0.1",
+    "happy-dom": "^17.3.0",
     "json-refs": "^3.0.15",
     "json-schema-to-zod": "^2.0.14",
     "postcss": "^8.4.33",
