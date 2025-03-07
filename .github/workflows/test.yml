@@ -4,6 +4,8 @@ on:
   workflow_call:
   pull_request:
     branches: ["main"]
+  push:
+    branches: ["main"]
 
 jobs:
   test:
@@ -11,12 +13,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Fetch prod branch for lint-commits
+        run: git fetch origin prod:refs/remotes/origin/prod
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 22.14.0
           cache: "npm"
       - run: npm ci
+      - run: npm run lint-commits
       - run: npm run test-coverage
       - run: npm run lint
       - run: npm run check-format
