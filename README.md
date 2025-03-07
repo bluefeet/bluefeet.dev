@@ -9,6 +9,9 @@ npm run dev
 # Generate a static build in the out/ folder
 npm run build
 
+# Run all the checks and lints in one go.
+npm run preflight
+
 # Other tools
 npm test
 npm run update-test-snapshots
