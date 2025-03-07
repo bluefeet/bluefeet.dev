@@ -15,7 +15,8 @@
     "check-format": "prettier --check .",
     "format": "prettier --write .",
     "check-types": "tsc",
-    "lint-commits": "commitlint --from $(git merge-base origin/prod HEAD)"
+    "lint-commits": "commitlint --from $(git merge-base origin/prod HEAD)",
+    "preflight": "npm run lint-commits && npm run lint && npm run check-format && npm run check-types && npm run test-coverage"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.7",

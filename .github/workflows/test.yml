@@ -21,8 +21,4 @@ jobs:
           node-version: 22.14.0
           cache: "npm"
       - run: npm ci
-      - run: npm run lint-commits
-      - run: npm run test-coverage
-      - run: npm run lint
-      - run: npm run check-format
-      - run: npm run check-types
+      - run: npm run preflight
