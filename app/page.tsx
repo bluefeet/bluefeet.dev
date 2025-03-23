@@ -2,10 +2,9 @@
 
 import { AboutSection } from "./AboutSection";
 import { CompetenciesSection } from "./CompetenciesSection";
-import { Details } from "./Details";
 import { ExperienceSection } from "./ExperienceSection";
+import { Footer } from "./Footer";
 import { InfoSection } from "./InfoSection";
-import { Link } from "./Link";
 import { ObjectiveSection } from "./ObjectiveSection";
 import { RecommendationsSection } from "./RecommendationsSection";
 import { headerFont } from "./headerFont";
@@ -17,7 +16,6 @@ import {
   Play as PlayIcon,
 } from "@phosphor-icons/react";
 import { clsx } from "clsx/lite";
-import { format as formatDate } from "date-fns/format";
 import { Howl } from "howler";
 import React, {
   ButtonHTMLAttributes,
@@ -233,42 +231,6 @@ const MainContent = () => {
   );
 };
 
-const FooterForDisplay = () => {
-  const resume = useResume();
-
-  return (
-    <footer className="border-t-2 border-solid border-zinc-800 p-4 text-center print:hidden">
-      <Details>
-        Site built with <Link href="https://nextjs.org/">Next.js</Link> and{" "}
-        <Link href="https://tailwindcss.com/">Tailwind CSS</Link>, hosted for
-        free by <Link href="https://pages.cloudflare.com/">Cloudflare</Link>,
-        source on{" "}
-        <Link href="https://github.com/bluefeet/bluefeet.dev">GitHub</Link>.
-        <br />
-        &copy; {resume.contact?.fullName}
-      </Details>
-    </footer>
-  );
-};
-
-const FooterForPrint = () => {
-  const [currentDate, setCurrentDate] = useState("");
-  const resume = useResume();
-
-  // Delay setting current date until after component mounts on the client side.
-  useEffect(() => {
-    const formattedDate = formatDate(Date.now(), "PPP");
-    setCurrentDate(formattedDate);
-  }, []);
-
-  return (
-    <footer className="hidden justify-between pt-8 text-right print:flex">
-      <Details>Generated {currentDate}</Details>
-      <Details>&copy; {resume.contact?.fullName}</Details>
-    </footer>
-  );
-};
-
 const Page = () => {
   const mainRef = useRef<HTMLElement>(null);
 
@@ -279,8 +241,7 @@ const Page = () => {
         <HeaderForPrint />
         <MainContent />
         <DashButtons />
-        <FooterForDisplay />
-        <FooterForPrint />
+        <Footer />
       </ResumeProvider>
     </mainRefContext.Provider>
   );
