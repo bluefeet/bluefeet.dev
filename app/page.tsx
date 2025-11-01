@@ -10,11 +10,7 @@ import { RecommendationsSection } from "./RecommendationsSection";
 import { headerFont } from "./headerFont";
 import { resume } from "./resume";
 import { ResumeProvider, useResume } from "./resumeContext";
-import {
-  ArrowUpIcon,
-  PauseIcon,
-  PlayIcon,
-} from "@phosphor-icons/react";
+import { ArrowUpIcon, PauseIcon, PlayIcon } from "@phosphor-icons/react";
 import { clsx } from "clsx/lite";
 import { Howl } from "howler";
 import React, {
@@ -56,6 +52,7 @@ const AudioDashButton = () => {
   useEffect(() => {
     /* c8 ignore start */
     if (!isPlaying || audio) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setAudio(
       new Howl({
         html5: true, // Makes iOS Safari happier when phone is locked.
@@ -105,6 +102,7 @@ const ScrollDashButton = () => {
     setIsNearTop(window.scrollY < window.innerHeight / 2);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);

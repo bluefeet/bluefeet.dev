@@ -368,7 +368,7 @@ exports[`Page 1`] = `
                 <div
                   class="text-sm text-zinc-300"
                 >
-                  Typescript, React, Responsive Design, Jest, CSS, Tailwind, HTML, JavaScript, Next.js, Vite
+                  Typescript, React, Responsive Design, Jest / Vitest, CSS, Tailwind, Chakra UI, HTML, JavaScript, Next.js, Vite
                 </div>
               </li>
               <li
@@ -388,7 +388,7 @@ exports[`Page 1`] = `
                 <div
                   class="text-sm text-zinc-300"
                 >
-                  Memcached, DynamoDB, MySQL, Redis, PostgreSQL, MongoDB, Vector search
+                  MongoDB, Memcached, DynamoDB, MySQL, Redis, PostgreSQL, Vector embeddings
                 </div>
               </li>
               <li
@@ -431,7 +431,7 @@ exports[`Page 1`] = `
           class="lg:pt-4 print:pt-0"
         >
           <h2
-            class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold"
+            class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold print:break-before-page"
           >
             Experience
           </h2>
@@ -444,6 +444,25 @@ exports[`Page 1`] = `
             class="text-sm text-zinc-300 mb-3"
           >
             Senior Software Engineer | Sep 2024  - Now | Full-time | Remote
+          </div>
+          <div
+            class="typography mb-3"
+          >
+            <p>
+              Optimize LLM performance and cost, fix security issues, and develop frontend features. Making teachers happy one commit at a time.
+            </p>
+          </div>
+          <div
+            class="typography mb-3"
+          >
+            Skills I 
+            am using
+             during this time include
+             
+            TypeScript, MongoDB, React, OpenAI Structured Output, Figma
+            , and 
+            GCP
+            .
           </div>
           <h3
             class="mt-5 mb-0 text-3xl text-sky-400"
