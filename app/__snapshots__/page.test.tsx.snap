@@ -1247,8 +1247,7 @@ exports[`Page 1`] = `
         </a>
         .
         <br />
-        © 
-        Aran Clary
+        © Aran Clary
       </div>
     </footer>
     <footer
@@ -1263,8 +1262,7 @@ exports[`Page 1`] = `
       <div
         class="text-sm text-zinc-300"
       >
-        © 
-        Aran Clary
+        © Aran Clary
       </div>
     </footer>
   </div>

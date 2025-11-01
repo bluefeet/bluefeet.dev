@@ -11,9 +11,9 @@ import { headerFont } from "./headerFont";
 import { resume } from "./resume";
 import { ResumeProvider, useResume } from "./resumeContext";
 import {
-  ArrowUp as ArrowUpIcon,
-  Pause as PauseIcon,
-  Play as PlayIcon,
+  ArrowUpIcon,
+  PauseIcon,
+  PlayIcon,
 } from "@phosphor-icons/react";
 import { clsx } from "clsx/lite";
 import { Howl } from "howler";

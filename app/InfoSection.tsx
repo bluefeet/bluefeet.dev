@@ -4,11 +4,11 @@ import { List } from "./List";
 import { ListItem } from "./ListItem";
 import { useResume } from "./resumeContext";
 import {
-  At as AtIcon,
-  DeviceMobile as DeviceMobileIcon,
-  MapPin as MapPinIcon,
-  Link as LinkIcon,
-  ChatText as ChatTextIcon,
+  AtIcon,
+  DeviceMobileIcon,
+  MapPinIcon,
+  LinkIcon,
+  ChatTextIcon,
 } from "@phosphor-icons/react";
 import { ReactNode } from "react";
 
