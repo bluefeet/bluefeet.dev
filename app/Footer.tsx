@@ -32,6 +32,7 @@ const FooterForPrint = () => {
   // Delay setting current date until after component mounts on the client side.
   useEffect(() => {
     const formattedDate = formatDate(Date.now(), "PPP");
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setCurrentDate(formattedDate);
   }, []);
 

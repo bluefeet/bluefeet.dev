@@ -186,7 +186,8 @@ export const resume: Resume = {
       companyName: "GoGuardian",
       workMode: "remote",
       startDate: "2024-09-11",
-      summary: "Optimize LLM performance and cost, fix security issues, and develop frontend features. Making teachers happy one commit at a time.",
+      summary:
+        "Optimize LLM performance and cost, fix security issues, and develop frontend features. Making teachers happy one commit at a time.",
       skills: [
         "TypeScript",
         "MongoDB",
@@ -194,7 +195,7 @@ export const resume: Resume = {
         "OpenAI Structured Output",
         "Figma",
         "GCP",
-      ]
+      ],
     },
     {
       title: "Full-Stack Engineering Contractor",

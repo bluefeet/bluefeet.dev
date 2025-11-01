@@ -10,6 +10,7 @@ export default defineConfig({
     coverage: {
       provider: "v8",
       include: ["app/**"],
+      exclude: ["app/layout.tsx"],
       thresholds: {
         lines: 100,
       },

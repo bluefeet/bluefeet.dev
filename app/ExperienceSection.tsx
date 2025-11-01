@@ -1,4 +1,3 @@
-import { capitalize } from "remeda";
 import { Details } from "./Details";
 import { RenderMarkdown } from "./RenderMarkdown";
 import { SectionTitle } from "./SectionTitle";
@@ -7,6 +6,7 @@ import { Experience } from "./resume";
 import { useResume } from "./resumeContext";
 import { format as formatDate } from "date-fns/format";
 import { parseISO as parseISODate } from "date-fns/parseISO";
+import { capitalize } from "remeda";
 
 const dateFormat = "MMM yyyy";
 
@@ -77,7 +77,9 @@ export const ExperienceSection = ({
   return (
     <>
       <section className={className}>
-        <SectionTitle className="print:break-before-page">Experience</SectionTitle>
+        <SectionTitle className="print:break-before-page">
+          Experience
+        </SectionTitle>
 
         {resume.experiences.map((experience) => (
           <SingleExperience

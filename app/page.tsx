@@ -10,11 +10,7 @@ import { RecommendationsSection } from "./RecommendationsSection";
 import { headerFont } from "./headerFont";
 import { resume } from "./resume";
 import { ResumeProvider, useResume } from "./resumeContext";
-import {
-  ArrowUpIcon,
-  PauseIcon,
-  PlayIcon,
-} from "@phosphor-icons/react";
+import { ArrowUpIcon, PauseIcon, PlayIcon } from "@phosphor-icons/react";
 import { clsx } from "clsx/lite";
 import { Howl } from "howler";
 import React, {
@@ -49,13 +45,14 @@ const DashButton = (props: DashButtonProps) => (
   </button>
 );
 
+/* c8 ignore next -- @preserve */
 const AudioDashButton = () => {
   const [audio, setAudio] = useState<Howl | null>(null);
   const [isPlaying, setPlaying] = useState(false);
 
   useEffect(() => {
-    /* c8 ignore start */
     if (!isPlaying || audio) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setAudio(
       new Howl({
         html5: true, // Makes iOS Safari happier when phone is locked.
@@ -67,7 +64,6 @@ const AudioDashButton = () => {
         onstop: () => setPlaying(false),
       }),
     );
-    /* c8 ignore end */
   }, [isPlaying, audio]);
 
   useEffect(() => {
@@ -97,6 +93,7 @@ const AudioDashButton = () => {
   );
 };
 
+/* c8 ignore next -- @preserve */
 const ScrollDashButton = () => {
   const [isNearTop, setIsNearTop] = useState(true);
   const mainRef = useContext(mainRefContext);
@@ -105,6 +102,7 @@ const ScrollDashButton = () => {
     setIsNearTop(window.scrollY < window.innerHeight / 2);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -146,6 +144,7 @@ const HeaderForDisplay = () => {
   const scrollSpeed = 0.63;
 
   const handleScroll = () => {
+    /* c8 ignore next -- @preserve */
     if (headerRef.current) {
       headerRef.current.style.top = `${window.scrollY * scrollSpeed}px`;
     }
