@@ -1,4 +1,4 @@
-import { Square as SquareIcon } from "@phosphor-icons/react";
+import { SquareIcon } from "@phosphor-icons/react";
 import { ReactNode } from "react";
 
 export const ListItem = ({

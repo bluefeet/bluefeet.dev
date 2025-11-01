@@ -1,18 +1,18 @@
+import { capitalize } from "remeda";
 import { Details } from "./Details";
 import { List } from "./List";
 import { ListItem } from "./ListItem";
 import { useResume } from "./resumeContext";
 import {
-  BuildingOffice as BuildingOfficeIcon,
-  CalendarDots as CalendarDotsIcon,
-  GearSix as GearSixIcon,
-  Image as ImageIcon,
-  Rocket as RocketIcon,
+  BuildingOfficeIcon,
+  CalendarDotsIcon,
+  GearSixIcon,
+  ImageIcon,
+  RocketIcon,
 } from "@phosphor-icons/react";
 import { format as formatDate } from "date-fns/format";
 import { isPast as isDateInPast } from "date-fns/isPast";
 import { parseISO as parseISODate } from "date-fns/parseISO";
-import upperFirst from "lodash/upperFirst";
 
 const startDateFormat = "PPP";
 
@@ -96,7 +96,7 @@ const WorkModes = () => {
           : "this capacity"}
         <Details>
           {resume.objective.workModes
-            .map((workMode) => upperFirst(workMode))
+            .map((workMode) => capitalize(workMode))
             .join(", ")}
         </Details>
       </ListItem>
@@ -117,7 +117,7 @@ const EmploymentTypes = () => {
           : "this commitment"}
         <Details>
           {resume.objective.employmentTypes
-            .map((employmentType) => upperFirst(employmentType))
+            .map((employmentType) => capitalize(employmentType))
             .join(", ")}
         </Details>
       </ListItem>

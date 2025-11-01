@@ -1,3 +1,4 @@
+import { capitalize } from "remeda";
 import { Details } from "./Details";
 import { RenderMarkdown } from "./RenderMarkdown";
 import { SectionTitle } from "./SectionTitle";
@@ -6,7 +7,6 @@ import { Experience } from "./resume";
 import { useResume } from "./resumeContext";
 import { format as formatDate } from "date-fns/format";
 import { parseISO as parseISODate } from "date-fns/parseISO";
-import upperFirst from "lodash/upperFirst";
 
 const dateFormat = "MMM yyyy";
 
@@ -26,8 +26,8 @@ const SingleExperience = ({ experience }: { experience: Experience }) => {
   }
 
   if (experience.employmentType)
-    detailsParts.push(upperFirst(experience.employmentType));
-  if (experience.workMode) detailsParts.push(upperFirst(experience.workMode));
+    detailsParts.push(capitalize(experience.employmentType));
+  if (experience.workMode) detailsParts.push(capitalize(experience.workMode));
   if (experience.location) detailsParts.push(experience.location);
 
   const detailsLine = detailsParts.join(" | ");
