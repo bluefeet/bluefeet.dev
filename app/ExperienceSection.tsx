@@ -77,7 +77,7 @@ export const ExperienceSection = ({
   return (
     <>
       <section className={className}>
-        <SectionTitle>Experience</SectionTitle>
+        <SectionTitle className="print:break-before-page">Experience</SectionTitle>
 
         {resume.experiences.map((experience) => (
           <SingleExperience

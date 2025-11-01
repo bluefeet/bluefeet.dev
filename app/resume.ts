@@ -84,9 +84,10 @@ export const resume: Resume = {
           "Typescript",
           "React",
           "Responsive Design",
-          "Jest",
+          "Jest / Vitest",
           "CSS",
           "Tailwind",
+          "Chakra UI",
           "HTML",
           "JavaScript",
           "Next.js",
@@ -111,13 +112,13 @@ export const resume: Resume = {
       {
         name: "Data Engineering",
         skills: [
+          "MongoDB",
           "Memcached",
           "DynamoDB",
           "MySQL",
           "Redis",
           "PostgreSQL",
-          "MongoDB",
-          "Vector search",
+          "Vector embeddings",
         ],
       },
       {
@@ -185,6 +186,15 @@ export const resume: Resume = {
       companyName: "GoGuardian",
       workMode: "remote",
       startDate: "2024-09-11",
+      summary: "Optimize LLM performance and cost, fix security issues, and develop frontend features. Making teachers happy one commit at a time.",
+      skills: [
+        "TypeScript",
+        "MongoDB",
+        "React",
+        "OpenAI Structured Output",
+        "Figma",
+        "GCP",
+      ]
     },
     {
       title: "Full-Stack Engineering Contractor",
