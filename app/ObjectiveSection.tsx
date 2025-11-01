@@ -1,4 +1,3 @@
-import { capitalize } from "remeda";
 import { Details } from "./Details";
 import { List } from "./List";
 import { ListItem } from "./ListItem";
@@ -13,6 +12,7 @@ import {
 import { format as formatDate } from "date-fns/format";
 import { isPast as isDateInPast } from "date-fns/isPast";
 import { parseISO as parseISODate } from "date-fns/parseISO";
+import { capitalize } from "remeda";
 
 const startDateFormat = "PPP";
 

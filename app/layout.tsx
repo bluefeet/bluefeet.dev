@@ -1,4 +1,3 @@
-/* v8 ignore start */
 import "./globals.css";
 import { resume } from "./resume";
 import { clsx } from "clsx/lite";

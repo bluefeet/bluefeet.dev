@@ -7,7 +7,7 @@ exports[`ExperienceSection > all details 1`] = `
       class=""
     >
       <h2
-        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold"
+        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold print:break-before-page"
       >
         Experience
       </h2>
@@ -39,7 +39,7 @@ exports[`ExperienceSection > full 1`] = `
       class=""
     >
       <h2
-        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold"
+        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold print:break-before-page"
       >
         Experience
       </h2>
@@ -96,7 +96,7 @@ exports[`ExperienceSection > highlights 1`] = `
       class=""
     >
       <h2
-        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold"
+        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold print:break-before-page"
       >
         Experience
       </h2>
@@ -129,7 +129,7 @@ exports[`ExperienceSection > multiples with required fields only 1`] = `
       class=""
     >
       <h2
-        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold"
+        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold print:break-before-page"
       >
         Experience
       </h2>
@@ -155,7 +155,7 @@ exports[`ExperienceSection > skills 1`] = `
       class=""
     >
       <h2
-        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold"
+        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold print:break-before-page"
       >
         Experience
       </h2>
@@ -188,7 +188,7 @@ exports[`ExperienceSection > startDate 1`] = `
       class=""
     >
       <h2
-        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold"
+        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold print:break-before-page"
       >
         Experience
       </h2>
@@ -214,7 +214,7 @@ exports[`ExperienceSection > startDate and endDate 1`] = `
       class=""
     >
       <h2
-        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold"
+        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold print:break-before-page"
       >
         Experience
       </h2>
@@ -240,7 +240,7 @@ exports[`ExperienceSection > summary 1`] = `
       class=""
     >
       <h2
-        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold"
+        class="mt-3 mb-4 text-center text-4xl font-bold text-sky-300 md:text-left print:text-left print:text-3xl print:font-semibold print:break-before-page"
       >
         Experience
       </h2>
