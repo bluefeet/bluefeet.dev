@@ -36,6 +36,15 @@ broader work, prefer `npm run preflight`.
 The test suite uses Vitest with snapshot-heavy component tests. Content changes,
 especially in `app/resume.ts`, often require `npm run test-update-snapshots`.
 
+When making a change that is expected to alter rendered output, first determine
+whether the change should affect snapshots. If it should, run
+`npm run test-update-snapshots` before `npm test` so the normal test run is a
+validation pass rather than a discovery pass.
+
+Do not accept snapshot updates blindly. After updating snapshots, inspect the
+snapshot diff and verify that the changed output matches the intended behavior
+and contains no accidental regressions before considering the update valid.
+
 Coverage expectations are strict. New rendering branches or logic should
 usually come with test updates in the corresponding `app/*.test.tsx` files.
 
