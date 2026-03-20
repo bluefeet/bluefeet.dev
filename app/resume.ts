@@ -74,19 +74,20 @@ export const resume: Resume = {
     emailAddress: "bluefeet@gmail.com",
   },
   profile: {
-    headline: "Senior Full-Stack Engineer",
+    headline: "Principal Full-Stack Engineer",
     about:
-      "I'm a seasoned full-stack software developer with over 30 years of hands-on experience. My track record includes managing data pipelines, crafting backend services, and delivering stunning UIs. I excel at leading teams and interfacing with product development.",
+      "Principal full-stack engineer with deep experience spanning product development, backend services, cloud infrastructure, and applied AI systems. Builds and improves software across the stack, leads complex technical initiatives, and partners closely with product and engineering teams to deliver reliable, high-impact products.",
     competencies: [
       {
         name: "Frontend Development",
         skills: [
-          "Typescript",
+          "TypeScript",
           "React",
           "Responsive Design",
-          "Jest / Vitest",
+          "Jest",
+          "Vitest",
           "CSS",
-          "Tailwind",
+          "Tailwind CSS",
           "Chakra UI",
           "HTML",
           "JavaScript",
@@ -98,13 +99,14 @@ export const resume: Resume = {
         name: "Backend Development",
         skills: [
           "Node.js",
-          "REST",
+          "REST APIs",
           "Git",
           "Linux",
           "Docker",
-          "nginx",
+          "Nginx",
           "Perl",
           "Bash",
+          "OpenAI Agents SDK",
           "Amazon Bedrock",
           "AWS Lambda",
         ],
@@ -118,11 +120,11 @@ export const resume: Resume = {
           "MySQL",
           "Redis",
           "PostgreSQL",
-          "Vector embeddings",
+          "Embeddings",
         ],
       },
       {
-        name: "Cloud Operations",
+        name: "Cloud and Platform",
         skills: [
           "Infrastructure as Code",
           "AWS CDK",
@@ -131,14 +133,16 @@ export const resume: Resume = {
           "Grafana",
           "ECR/ECS",
           "Kubernetes",
+          "CloudFront",
           "Cloudflare",
+          "GCP",
         ],
       },
       {
-        name: "Interpersonal",
+        name: "Leadership and Collaboration",
         skills: [
           "Collaboration",
-          "Agile Processes",
+          "Agile Delivery",
           "Mentoring",
           "Release Management",
           "Stakeholder Management",
@@ -147,10 +151,6 @@ export const resume: Resume = {
           "Emotional Intelligence",
           "Active Listening",
         ],
-      },
-      {
-        name: "Developing Passions",
-        skills: ["Rust", "Lean Processes", "Game Design"],
       },
     ],
     languages: ["English"],
@@ -170,8 +170,9 @@ export const resume: Resume = {
       "Collaboration, innovation, impactful results, teamwork, work-life balance, recognition.",
     intention: "passive",
     roles: [
-      "Frontend Developer",
-      "Principal Software Engineer",
+      "Principal Full-Stack Engineer",
+      "Staff Software Engineer",
+      "Full-Stack Contractor",
       "Engineering Team Lead",
     ],
     willingToRelocate: false,
@@ -187,14 +188,27 @@ export const resume: Resume = {
       workMode: "remote",
       startDate: "2024-09-11",
       summary:
-        "Optimize LLM performance and cost, fix security issues, and develop frontend features. Making teachers happy one commit at a time.",
+        "Work as a full-stack engineer on teacher-facing products and internal AI systems, building frontend and backend functionality while contributing to applied AI initiatives around agent-based workflows, developer tooling, and model quality.",
+      highlights: [
+        "Developed features and improvements for a Google Slides add-on and PowerPoint add-in that enabled teachers to deliver interactive presentations to students.",
+        "Regularly resolved accessibility issues identified through third-party audits, improving teacher-facing products and reinforcing familiarity with WCAG and accessibility best practices.",
+        "Led a team of engineers building internal AI developer tools for agent workflows and output quality, improving reliability, reducing token usage and cost, and speeding up development time.",
+        "Developed with the OpenAI Agents SDK and built custom agent skills for internal AI workflows and automation.",
+        "Built a hackathon proof of concept for school districts that used Databricks to provide insights into student outcomes.",
+      ],
       skills: [
         "TypeScript",
-        "MongoDB",
         "React",
-        "OpenAI Structured Output",
-        "Figma",
+        "Node.js",
+        "OpenAI Agents SDK",
+        "Agent Skills",
+        "Agent-Based Systems",
+        "Accessibility",
+        "WCAG",
+        "MongoDB",
         "GCP",
+        "Google Workspace Add-ons",
+        "Office Add-ins",
       ],
     },
     {
@@ -205,19 +219,19 @@ export const resume: Resume = {
       startDate: "2023-05-27",
       endDate: "2024-09-10",
       summary:
-        "Developed the foundation of a new AI application aimed at guiding potential learners on their educational future. Worked closely with product and engineering teams to gather requirements, created technical documentation and diagrams, implemented engineering best practices, constructed a data ingestion pipeline, developed the initial POC, and provided mentorship to junior developers.",
+        "Built the foundation of a new AI application designed to help prospective learners navigate education options. Worked closely with product and engineering teams to gather requirements, write technical documentation, establish engineering practices, build a data ingestion pipeline, develop the initial proof of concept, and mentor junior engineers.",
       skills: [
         "TypeScript",
         "AWS CDK",
-        "Bedrock",
+        "Amazon Bedrock",
         "Figma",
         "Agile",
         "Vue/Nuxt",
         "ECS/ECR",
-        "vector embeddings",
+        "Embeddings",
         "MongoDB Atlas",
         "ALB",
-        "Cloudfront",
+        "CloudFront",
         "RAG",
       ],
     },
@@ -229,7 +243,7 @@ export const resume: Resume = {
       startDate: "2023-12-06",
       endDate: "2024-03-22",
       summary:
-        "This was a short-term contract to assist this early education technology company with meeting a critical, and imminent, security audit. Within a day of starting I was doing impactful work and contributed greatly to the success of the audit.",
+        "Joined GoGuardian on a short-term contract to help the company prepare for a critical security audit. Contributed immediately to high-priority work that helped the team meet audit requirements on a tight timeline.",
       skills: [
         "Node.js",
         "Security Auditing",
@@ -237,7 +251,7 @@ export const resume: Resume = {
         "Babel",
         "Webpack",
         "Jest",
-        "Typescript",
+        "TypeScript",
         "Pug",
         "Flow",
         "Docker",
@@ -253,12 +267,12 @@ export const resume: Resume = {
       startDate: "2014-02-24",
       endDate: "2023-05-31",
       summary:
-        "I had a long and broad ranging career at ZipRecruiter, from DevOps and cloud infrastructure engineering to product development. Over the years I mentored junior engineers, was a release manager, wrote documentation and functional specifications, gathered requirements and communicated changes. I introduced automated builds, tooling to increase visibility into our systems, and helped the company migrate away from a monolithic code base to microservices.\n\nWhen I first joined ZipRecruiter, which was then a small startup, I promptly optimized the codebase and revamped processes to improve release reliability and production environment stability. In the first half of my tenure, my focus was on boosting developer productivity by introducing essential processes and tools that facilitated company growth.\n\nIn the latter half of my tenure, my role evolved to encompass active collaboration with product teams, engaging in an agile workflow that included sprints, retrospectives, and daily stand-up meetings. I worked closely with product managers and stakeholders to complete high-impact projects on strict deadlines.",
+        "Held a broad principal-level role spanning DevOps, cloud infrastructure, developer productivity, and product engineering. Improved release reliability, expanded engineering visibility, mentored junior engineers, wrote technical documentation and specifications, and helped drive the company's evolution from a monolithic codebase toward microservices while partnering closely with product teams on high-impact work.",
       highlights: [
-        "Improved the codebase by replacing complicated sections of code with simpler, more straightforward solutions which were easier to maintain, more flexible, well documented, and had increased test coverage.",
+        "Improved the codebase by replacing complex sections with simpler, more maintainable solutions that were better documented and had stronger test coverage.",
         "Created a development database replication system using filesystem snapshots and cross-region replication, enabling instant access to destructible production datasets.",
-        "Introduced Grafana, continuous integration, Slack, reusable test data fixtures, enumerable other tools.",
-        "Actively advocated for test coverage, documentation, and high-quality code.",
+        "Introduced Grafana, continuous integration, Slack, reusable test data fixtures, and other tools that improved engineering visibility and productivity.",
+        "Championed test coverage, documentation, and maintainable engineering practices across the organization.",
       ],
       skills: [
         "DevOps",
@@ -268,8 +282,8 @@ export const resume: Resume = {
         "Linux",
         "AWS",
         "React",
-        "Typescript",
-        "K8s",
+        "TypeScript",
+        "Kubernetes",
         "Docker",
         "Git",
         "Golang",
@@ -284,13 +298,13 @@ export const resume: Resume = {
       startDate: "2011-04-18",
       endDate: "2014-03-27",
       summary:
-        "At Rent.com I embraced a multitude of roles including Backend Developer, Architect, Manager, Scrum Master, DevOps Product Owner, Hiring Manager, Release Manager, and Frontend Developer.\n\nMy responsibilities at Rent.com were both diverse and dynamic. I actively engaged in the research and integration of new technologies, the construction of software infrastructure to facilitate efficient coding practices, and mentoring colleagues. I was adept at multitasking and dedicated to documentation, writing unit tests, crafting essential tools, and meticulously profiling and optimizing the site. Additionally, my contributions extended to writing a substantial amount of code.",
+        "Worked across architecture, backend and frontend development, engineering management, hiring, release management, and DevOps ownership. Researched and integrated new technologies, built internal engineering infrastructure, mentored teammates, wrote documentation and tests, and contributed heavily to product and platform code.",
       highlights: [
-        "Instrumental in the overhaul of the renter-facing website, ensuring a modern aesthetic and seamless performance on both desktop and mobile platforms through responsive design.",
+        "Helped overhaul the renter-facing website, delivering a more modern experience with strong desktop and mobile performance through responsive design.",
         "Spearheaded the migration from Subversion to Git.",
-        "Created an in-depth deployment dashboard which aggregated data from JIRA and Git, providing realtime visibility into issues holding up a deployment and all changes going into a deployment.",
+        "Created a deployment dashboard that aggregated data from JIRA and Git, providing real-time visibility into blocked releases and pending changes.",
         "Established a dedicated DevOps team.",
-        "Lead the effort to migrate our entire infrastructure to a new data and authorization platform when the company was acquired by a competitor.",
+        "Led the migration of the company's infrastructure to a new data and authorization platform after the company was acquired by a competitor.",
       ],
       skills: [
         "Team Manager",
@@ -316,12 +330,12 @@ export const resume: Resume = {
       startDate: "2005-01",
       endDate: "2011-04-08",
       summary:
-        "At this ad network I embarked on a journey in an unfamiliar corporate environment. Fortunately, I had the guidance of a visionary engineering director who recognized my untapped potential. This invaluable mentorship paved the way for rapid growth as I seamlessly adapted my extensive coding expertise and freelancing background to this new setting. As time progressed, I emerged as one of the most impactful developers and effective managers within the organization.",
+        "Grew into a highly impactful engineering role at a large ad network, contributing across application development, reporting infrastructure, team management, onboarding, and platform scale. Led important delivery efforts, partnered closely with the database team, and helped integrate newly acquired technology and engineering teams.",
       highlights: [
-        "Successfully spearheaded a year-long initiative, leading a compact team of two, including myself, focused on the comprehensive overhaul of our publisher administration portal.",
-        "Developed a library for the retrieval of data for reporting, which decoupled the retrieval process from the data requirements, allowing for seamless modification of data sources without altering the code.",
+        "Led a year-long effort with a two-person team to overhaul the publisher administration portal.",
+        "Developed a reporting data retrieval library that decoupled retrieval logic from data requirements, making data source changes easier to support.",
         "Managed a team of developers, conducted interviews, streamlined onboarding, and trained new hires.",
-        "Instrumental in seamlessly integrating the software, systems, and developers of a newly-acquired company into our ecosystem.",
+        "Helped integrate the software, systems, and developers of a newly acquired company into the organization.",
         "Collaborated closely with the database team to scale our infrastructure, enabling seamless management of billions of daily impressions and facilitating efficient generation of aggregate data views.",
         "Rewrote the monthly publisher payout process, ensuring resilience to failures and significantly reducing its runtime.",
       ],
@@ -343,7 +357,7 @@ export const resume: Resume = {
       startDate: "2003-04",
       endDate: "2004-12",
       summary:
-        "At this stock photography company, I served as one of two developers responsible for managing custom built servers containing terabytes of videos and images. My responsibilities included handling OS and software updates, improving the website by adding features and enhancing efficiency, and assisting the marketing and sales teams in meeting their goals.",
+        "Served as one of two developers responsible for custom-built servers storing terabytes of image and video assets. Managed OS and software updates, shipped website improvements, improved efficiency, and supported marketing and sales needs through product and operational work.",
       skills: ["Perl", "Mason", "JavaScript", "HTML", "CSS", "MySQL"],
     },
     {
@@ -355,7 +369,7 @@ export const resume: Resume = {
       startDate: "2001-05",
       endDate: "2002-03",
       summary:
-        "I independently developed an online collaboration tool equipped with live whiteboards, chat, and file sharing features for a London-based startup. The development process involved multiple trips to London to collaborate and ideate with the design team. Notably, during the tool's development, I pioneered an AJAX-like technique, years before AJAX became a widely recognized term in the industry.",
+        "Independently developed an online collaboration tool for a London-based startup with live whiteboards, chat, and file sharing. Worked directly with the design team in London and developed an AJAX-like interaction pattern before the term became common in the industry.",
       skills: ["Perl", "MySQL", "JavaScript", "HTML", "CSS"],
     },
     {
@@ -367,7 +381,7 @@ export const resume: Resume = {
       startDate: "1996-01",
       endDate: "2003-04",
       summary:
-        "Excelled in delivering end-to-end web solutions for a wide array of businesses both domestically and internationally. As a one-stop solution provider, I successfully navigated all stages of project life cycle, from conceptualization and architecture design to implementation and final delivery. I distinguished myself through the creation of high-quality software and an ability to uncover and fulfill unanticipated needs of my clients, thereby providing them a strong online presence. My comprehensive suite of services, backed by my adeptness in multiple technologies, positioned numerous small and medium sized businesses for success in the digital age.",
+        "Delivered end-to-end web solutions for a wide range of domestic and international clients, owning projects from discovery and architecture through implementation and launch. Built software, managed systems, and translated client needs into practical technical solutions for small and mid-sized businesses.",
       skills: ["Perl", "MySQL", "JavaScript", "HTML", "CSS", "Linux", "GIS"],
     },
     {
@@ -379,7 +393,7 @@ export const resume: Resume = {
       startDate: "1994",
       endDate: "1996",
       summary:
-        "Built software solutions primarily aimed at providing crucial mapping services for government entities and non-profit organizations. I spearheaded both backend and frontend development, delivering websites that facilitated greater transparency and engagement within the environmental activism sphere. Additionally, I played a key role in contract negotiation and drafting. While the company was heavily involved in data collection and processing, my primary focus was on creating effective software tools and ensuring a seamless user experience, thus empowering communities with accessible information.",
+        "Co-founded a company that built mapping software and web tools for government agencies and non-profit organizations. Led both backend and frontend development, supported contract work, and helped deliver software that improved transparency and public access to environmental information.",
       skills: ["GIS", "Visual Basic", "Perl", "HTML"],
     },
   ],
@@ -410,40 +424,6 @@ export const resume: Resume = {
         "Eric was the product manager for Aran's team at ValueClick",
       message:
         "Working with Aran was a complete joy. He maintained a high level of focus on both the quality of his code and the overall quality of the product he was delivering to our customers. I served as the product manager for Aran’s teams over numerous projects spanning almost four years. I was always amazed by his empathy and kindness on a personal level and the dedication to awesome work on a professional level. His heart and mind are always in the right place.\n\nIf there was a Perl Coders Hall of Fame, this man would get in on the first ballot. I would love the opportunity to work with Aran again. Any team that can count [Aran] as one of its members is truly made better for it.",
-    },
-    {
-      author: "Demian L'Ecuyer",
-      relationship:
-        "Demian was a senior software engineer at ValueClick and worked directly with Aran",
-      message:
-        "In the five years that Aran and I worked together, he has consistently proven himself as an awesome resource for complex issues. His ability to get to the heart of an issue quickly and offer valuable insight and opinions has helped reduce development time on many projects. This combined with his willingness and patience to educate and grow with his peers makes him a valuable addition on any project he joins.",
-    },
-    {
-      author: "Eric Schultz",
-      relationship:
-        "Eric was a senior software engineer at ValueClick and reported directly to Aran",
-      message:
-        "Aran is a rare breed in the world of technical managers. He is extremely technically competent, and could easily do the work of any of his reports. His highly commendable development/architecture skills are nicely complemented by his patient, affable, and approachable demeanor. This combination of technical adeptness and people-oriented personality is what is difficult to find in this profession, and what makes working for Aran a true pleasure.\n\nI consider myself fortunate to have worked for Aran. He taught me much about Perl specifically and Software Development in general. More importantly, though, the example of his leadership helped me to better do my job as an applicaton developer, and later as a project lead. I would not hesitate to recommend Aran for any position having to do with Perl - manager, architect or otherwise; and I would gladly welcome the opportunity to work with him in the future.",
-    },
-    {
-      author: "Paul Vining",
-      relationship:
-        "Paul was a software engineer at ValueClick and reported directly to Aran",
-      message:
-        "Aran is a very knowledgeable technical manager. He keeps track of where everyone on the team is at and offers help when needed. He has a varied background which comes in handy when developing solutions.",
-    },
-    {
-      author: "Diona Kidd",
-      relationship:
-        "Diona was a lead developer at Thinkstock and was Aran's manager",
-      message:
-        "Aran is smart, considerate, productive and a quick study. He was a pleasure to work with. He was very supportive of both his department members, marketing, distributions and other departments while employed at Thinkstock. Highly recommended.",
-    },
-    {
-      author: "Shawn Faison",
-      relationship: "Shawn worked for a client of Aran's",
-      message:
-        "I have never met an individual as talented as [Aran]. Working with him professionally over the years I have to say I admire his natural ability combined with his work ethic. Aran knows what he is talking about and knows how to communicate it. He possesses over ten years of experience as a web developer and is one of the best in the world.",
     },
   ],
 };
