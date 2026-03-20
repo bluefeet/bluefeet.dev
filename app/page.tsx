@@ -111,7 +111,6 @@ const ScrollDashButton = () => {
   const scrollToMain = () =>
     mainRef?.current?.scrollIntoView({ behavior: "smooth" });
   const scrollToTop = () => {
-    console.log("SCROLL TOP");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 

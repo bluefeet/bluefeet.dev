@@ -14,8 +14,8 @@ npm run preflight
 
 # Other tools
 npm test
-npm run update-test-snapshots
-npm run check-coverage
+npm run test-update-snapshots
+npm run test-coverage
 npm run lint
 npm run check-format
 npm run format
