@@ -2,7 +2,7 @@ import { Details } from "./Details";
 import { Link } from "./Link";
 import { List } from "./List";
 import { ListItem } from "./ListItem";
-import { useResume } from "./resumeContext";
+import type { Resume } from "./resume";
 import {
   AtIcon,
   DeviceMobileIcon,
@@ -12,26 +12,35 @@ import {
 } from "@phosphor-icons/react";
 import { ReactNode } from "react";
 
-const Location = () => {
-  const resume = useResume();
-  if (!resume.contact?.location) return <></>;
+type InfoSectionProps = {
+  contact?: Resume["contact"];
+  objective?: Resume["objective"];
+  profile?: Resume["profile"];
+  className?: string;
+};
+
+const Location = ({
+  contact,
+  objective,
+}: Pick<InfoSectionProps, "contact" | "objective">) => {
+  if (!contact?.location) return <></>;
 
   const details: ReactNode[] = [];
 
-  if (typeof resume.objective?.willingToRelocate === "boolean") {
+  if (typeof objective?.willingToRelocate === "boolean") {
     details.push(
       <Details key="willingToRelocate">
-        {resume.objective?.willingToRelocate
+        {objective.willingToRelocate
           ? "Willing to relocate"
           : "Not available to relocate"}
       </Details>,
     );
   }
 
-  if (typeof resume.objective?.willingToTravel === "boolean") {
+  if (typeof objective?.willingToTravel === "boolean") {
     details.push(
       <Details key="willingToTravel">
-        {resume.objective?.willingToTravel
+        {objective.willingToTravel
           ? "Willing to travel"
           : "Not willing to travel"}
       </Details>,
@@ -41,64 +50,54 @@ const Location = () => {
   return (
     <>
       <ListItem Icon={MapPinIcon}>
-        {resume.contact.location}
+        {contact.location}
         {details}
       </ListItem>
     </>
   );
 };
 
-const EmailAddress = () => {
-  const resume = useResume();
-  if (!resume.contact?.emailAddress) return <></>;
+const EmailAddress = ({ contact }: Pick<InfoSectionProps, "contact">) => {
+  if (!contact?.emailAddress) return <></>;
 
   return (
     <>
       <ListItem Icon={AtIcon} iconProps={{ weight: "regular" }}>
-        <Link href={`mailto:${resume.contact?.emailAddress}`}>
-          {resume.contact.emailAddress}
-        </Link>
+        <Link href={`mailto:${contact.emailAddress}`}>{contact.emailAddress}</Link>
       </ListItem>
     </>
   );
 };
 
-const PhoneNumber = () => {
-  const resume = useResume();
-  if (!resume.contact?.phoneNumber) return <></>;
+const PhoneNumber = ({ contact }: Pick<InfoSectionProps, "contact">) => {
+  if (!contact?.phoneNumber) return <></>;
 
   return (
     <>
       <ListItem Icon={DeviceMobileIcon}>
-        <Link href={`tel:${resume.contact.phoneNumber}`}>
-          {resume.contact.phoneNumber}
-        </Link>
+        <Link href={`tel:${contact.phoneNumber}`}>{contact.phoneNumber}</Link>
       </ListItem>
     </>
   );
 };
 
-const Languages = () => {
-  const resume = useResume();
-  if (!resume.profile?.languages?.length) return <></>;
+const Languages = ({ profile }: Pick<InfoSectionProps, "profile">) => {
+  if (!profile?.languages?.length) return <></>;
 
   return (
     <>
-      <ListItem Icon={ChatTextIcon}>
-        {resume.profile.languages.join(", ")}
-      </ListItem>
+      <ListItem Icon={ChatTextIcon}>{profile.languages.join(", ")}</ListItem>
     </>
   );
 };
 
-const Resources = () => {
-  const resume = useResume();
-  if (!resume.profile?.resources?.length) return <></>;
+const Resources = ({ profile }: Pick<InfoSectionProps, "profile">) => {
+  if (!profile?.resources?.length) return <></>;
 
   return (
     <>
       <ListItem Icon={LinkIcon} iconProps={{ weight: "regular" }}>
-        {resume.profile.resources.map((resource) => (
+        {profile.resources.map((resource) => (
           <div key={resource.uri}>
             <Link href={resource.uri}>{resource.title}</Link>
             <Details className="hidden print:block">{resource.uri}</Details>
@@ -113,16 +112,21 @@ const Resources = () => {
   );
 };
 
-export const InfoSection = ({ className = "" }: { className?: string }) => {
+export const InfoSection = ({
+  contact,
+  objective,
+  profile,
+  className = "",
+}: InfoSectionProps) => {
   return (
     <>
       <section className={className}>
         <List>
-          <Location />
-          <EmailAddress />
-          <PhoneNumber />
-          <Languages />
-          <Resources />
+          <Location contact={contact} objective={objective} />
+          <EmailAddress contact={contact} />
+          <PhoneNumber contact={contact} />
+          <Languages profile={profile} />
+          <Resources profile={profile} />
         </List>
       </section>
     </>

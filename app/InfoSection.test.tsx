@@ -1,30 +1,31 @@
 import { InfoSection } from "./InfoSection";
-import { Resume } from "./resume";
-import { ResumeProvider } from "./resumeContext";
+import type { Resume } from "./resume";
 import { expectToBeVisible } from "./testing";
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 
-const testResume = (resume: Partial<Resume>) => {
+const testSection = ({
+  contact,
+  objective,
+  profile,
+}: Partial<Resume>) => {
   render(
-    <ResumeProvider value={resume}>
-      <InfoSection />
-    </ResumeProvider>,
+    <InfoSection contact={contact} objective={objective} profile={profile} />,
   );
   expect(document.body).toMatchSnapshot();
 };
 
 describe("InfoSection", () => {
   it("empty resume produces no text content", () => {
-    testResume({});
+    testSection({});
   });
 
   describe("location", () => {
     it("displays location", () => {
-      testResume({ contact: { location: "Foo, Bar" } });
+      testSection({ contact: { location: "Foo, Bar" } });
     });
     it("willing", () => {
-      testResume({
+      testSection({
         contact: { location: "Foo, Bar" },
         objective: { willingToRelocate: true, willingToTravel: true },
       });
@@ -32,7 +33,7 @@ describe("InfoSection", () => {
       expectToBeVisible(screen.getByText(/Willing to travel/));
     });
     it("unwilling", () => {
-      testResume({
+      testSection({
         contact: { location: "Foo, Bar" },
         objective: { willingToRelocate: false, willingToTravel: false },
       });
@@ -40,7 +41,7 @@ describe("InfoSection", () => {
       expectToBeVisible(screen.getByText(/Not willing to travel/));
     });
     it("no location precludes rendering of willing", () => {
-      testResume({
+      testSection({
         objective: { willingToRelocate: true, willingToTravel: true },
       });
       expect(screen.queryByText(/Willing to relocate/)).toBeNull();
@@ -49,7 +50,7 @@ describe("InfoSection", () => {
   });
 
   it("everything else", () => {
-    testResume({
+    testSection({
       contact: {
         emailAddress: "foo@example.com",
         phoneNumber: "867-5309",

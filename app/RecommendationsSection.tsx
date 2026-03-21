@@ -2,7 +2,6 @@ import { Details } from "./Details";
 import { RenderMarkdown } from "./RenderMarkdown";
 import { SectionTitle } from "./SectionTitle";
 import type { Recommendation } from "./resume";
-import { useResume } from "./resumeContext";
 
 const Recommendation = ({
   recommendation,
@@ -24,19 +23,20 @@ const Recommendation = ({
 );
 
 export const RecommendationsSection = ({
+  recommendations,
   className = "",
 }: {
+  recommendations?: Recommendation[];
   className?: string;
 }) => {
-  const resume = useResume();
-  if (!resume.recommendations?.length) return <></>;
+  if (!recommendations?.length) return <></>;
 
   return (
     <>
       <section className={className}>
         <SectionTitle>Recommendations</SectionTitle>
 
-        {resume.recommendations.map((recommendation) => (
+        {recommendations.map((recommendation) => (
           <Recommendation
             recommendation={recommendation}
             key={`${recommendation.author}`}

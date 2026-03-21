@@ -1,7 +1,7 @@
-"use client";
-
 import { AboutSection } from "./AboutSection";
 import { CompetenciesSection } from "./CompetenciesSection";
+import { DashButtons } from "./DashButtons";
+import { DisplayHeader } from "./DisplayHeader";
 import { ExperienceSection } from "./ExperienceSection";
 import { Footer } from "./Footer";
 import { InfoSection } from "./InfoSection";
@@ -9,18 +9,8 @@ import { ObjectiveSection } from "./ObjectiveSection";
 import { RecommendationsSection } from "./RecommendationsSection";
 import { headerFont } from "./headerFont";
 import { resume } from "./resume";
-import { ResumeProvider, useResume } from "./resumeContext";
-import { ArrowUpIcon, PauseIcon, PlayIcon } from "@phosphor-icons/react";
 import { clsx } from "clsx/lite";
-import { Howl } from "howler";
-import React, {
-  ButtonHTMLAttributes,
-  createContext,
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import type { Resume } from "./resume";
 
 const Divider = ({ className = "" }: { className?: string }) => (
   <hr
@@ -31,181 +21,15 @@ const Divider = ({ className = "" }: { className?: string }) => (
   />
 );
 
-// Used by Page to store a ref used by both MainContent and ScrollDashButton.
-const mainRefContext =
-  createContext<React.RefObject<HTMLElement | null> | null>(null);
+const mainContentId = "main-content";
 
-type DashButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
-const DashButton = (props: DashButtonProps) => (
-  <button
-    {...props}
-    className="border-[2px] border-solid border-amber-500 bg-zinc-800/50 p-[4px] focus:border-[4px] focus:p-[2px] focus:outline-hidden"
-  >
-    {props.children}
-  </button>
-);
-
-const AudioDashButton = () => {
-  const [audio, setAudio] = useState<Howl | null>(null);
-  const [isPlaying, setPlaying] = useState(false);
-
-  useEffect(() => {
-    if (!isPlaying || audio) return;
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setAudio(
-      new Howl({
-        html5: true, // Makes iOS Safari happier when phone is locked.
-        src: ["/nature.mp3"],
-        loop: true,
-        // Catch when external processes (the browser or OS) affect playing.
-        onplay: () => setPlaying(true),
-        onpause: () => setPlaying(false),
-        onstop: () => setPlaying(false),
-      }),
-    );
-  }, [isPlaying, audio]);
-
-  useEffect(() => {
-    if (!isPlaying) audio?.pause();
-    else audio?.play();
-  }, [isPlaying, audio]);
-
-  useEffect(() => {
-    if (!audio) return;
-
-    if (navigator.mediaSession) {
-      navigator.mediaSession.setActionHandler("play", () => audio.play());
-      navigator.mediaSession.setActionHandler("pause", () => audio.pause());
-    }
-
-    return () => {
-      if (navigator.mediaSession) {
-        navigator.mediaSession.setActionHandler("play", null);
-        navigator.mediaSession.setActionHandler("pause", null);
-      }
-    };
-  }, [audio]);
-
-  useEffect(
-    () => () => {
-      audio?.stop();
-      audio?.unload();
-    },
-    [audio],
-  );
-
-  const startPlaying = () => setPlaying(true);
-  const pausePlaying = () => setPlaying(false);
-
-  const PlayPauseIcon = isPlaying ? PauseIcon : PlayIcon;
-
-  return (
-    <DashButton
-      onClick={isPlaying ? pausePlaying : startPlaying}
-      aria-label={isPlaying ? "Pause Nature Sounds" : "Play Nature Sounds"}
-    >
-      <PlayPauseIcon className="h-10 w-10" />
-    </DashButton>
-  );
-};
-
-/* c8 ignore next -- @preserve */
-const ScrollDashButton = () => {
-  const [isNearTop, setIsNearTop] = useState(true);
-  const mainRef = useContext(mainRefContext);
-
-  const handleScroll = () =>
-    setIsNearTop(window.scrollY < window.innerHeight / 2);
-
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const scrollToMain = () =>
-    mainRef?.current?.scrollIntoView({ behavior: "smooth" });
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  return (
-    <DashButton
-      onClick={isNearTop ? scrollToMain : scrollToTop}
-      aria-label={isNearTop ? "Scroll to Content" : "Scroll to Top"}
-    >
-      <ArrowUpIcon
-        className={clsx(
-          "h-10 w-10 transition duration-300 ease-in-out",
-          isNearTop && "rotate-180",
-        )}
-      />
-    </DashButton>
-  );
-};
-
-const DashButtons = () => (
-  <div className="sticky bottom-0 float-right flex justify-end gap-x-4 p-4 print:hidden">
-    <AudioDashButton />
-    <ScrollDashButton />
-  </div>
-);
-
-const HeaderForDisplay = () => {
-  const resume = useResume();
-
-  const headerRef = useRef<HTMLElement>(null);
-  const scrollSpeed = 0.63;
-
-  useEffect(() => {
-    let animationFrameId = 0;
-
-    const updatePosition = () => {
-      animationFrameId = 0;
-      if (headerRef.current) {
-        headerRef.current.style.transform = `translateY(${window.scrollY * scrollSpeed}px)`;
-      }
-    };
-
-    const handleScroll = () => {
-      if (animationFrameId) return;
-      animationFrameId = window.requestAnimationFrame(updatePosition);
-    };
-
-    updatePosition();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      if (animationFrameId) window.cancelAnimationFrame(animationFrameId);
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  return (
-    <div className="border-b-2 border-sky-600 print:hidden">
-      <div className="h-screen overflow-hidden">
-        <header
-          ref={headerRef}
-          className="relative h-screen bg-[url(./bear.jpg)] bg-cover bg-[position:38%_center] will-change-transform"
-        >
-          <div className="absolute h-48 w-full bg-linear-to-b from-zinc-900 opacity-50" />
-          <div className="absolute w-full p-5 text-center md:pr-16 md:text-right lg:pr-24">
-            <h1 className="text-6xl md:pr-16 md:text-7xl lg:pr-32 lg:text-8xl">
-              {resume.contact?.fullName}
-            </h1>
-            <p className="pt-2 text-lg md:pt-3 md:text-2xl lg:pt-5 lg:pr-16">
-              {resume.profile?.headline} • {resume.contact?.pronouns}
-            </p>
-          </div>
-        </header>
-      </div>
-    </div>
-  );
-};
-
-const HeaderForPrint = () => {
-  const resume = useResume();
-
+const HeaderForPrint = ({
+  contact,
+  profile,
+}: {
+  contact?: Resume["contact"];
+  profile?: Resume["profile"];
+}) => {
   return (
     <header
       className={clsx(
@@ -213,62 +37,65 @@ const HeaderForPrint = () => {
         headerFont.className,
       )}
     >
-      <h1 className="text-5xl font-semibold text-sky-800">
-        {resume.contact?.fullName}
-      </h1>
+      <h1 className="text-5xl font-semibold text-sky-800">{contact?.fullName}</h1>
       <p>
-        {resume.profile?.headline} • {resume.contact?.pronouns} •
-        https://bluefeet.dev
+        {profile?.headline} • {contact?.pronouns} • https://bluefeet.dev
       </p>
     </header>
   );
 };
 
-const MainContent = () => {
-  const mainRef = useContext(mainRefContext);
-
+const MainContent = ({ resume }: { resume: Resume }) => {
   return (
     <main
-      ref={mainRef}
+      id={mainContentId}
       className="mr-auto ml-auto flex max-w-6xl flex-col p-4 pt-0 md:p-8 lg:flex-row lg:pt-8 print:p-0"
     >
       <div className="flex flex-wrap lg:order-2 lg:w-2/5 lg:flex-col lg:pl-8 2xl:sticky 2xl:top-0 2xl:h-min print:static print:flex-row print:pb-2 print:pl-0">
-        <AboutSection className="print:pb-2" />
+        <AboutSection about={resume.profile?.about} className="print:pb-2" />
         <Divider />
 
-        <ObjectiveSection className="md:w-1/2 lg:w-full print:w-1/2" />
+        <ObjectiveSection
+          objective={resume.objective}
+          className="md:w-1/2 lg:w-full print:w-1/2"
+        />
         <Divider className="md:hidden lg:block" />
 
-        <InfoSection className="md:w-1/2 lg:w-full print:w-1/2" />
+        <InfoSection
+          contact={resume.contact}
+          objective={resume.objective}
+          profile={resume.profile}
+          className="md:w-1/2 lg:w-full print:w-1/2"
+        />
         <Divider className="lg:hidden" />
       </div>
       <div className="lg:order-1 lg:w-3/5">
-        <CompetenciesSection />
+        <CompetenciesSection competencies={resume.profile?.competencies} />
         <Divider className="mb-5 lg:hidden" />
 
-        <ExperienceSection className="lg:pt-4 print:pt-0" />
+        <ExperienceSection
+          experiences={resume.experiences}
+          className="lg:pt-4 print:pt-0"
+        />
         <Divider className="mt-5 mb-5 lg:hidden" />
 
-        <RecommendationsSection className="lg:pt-4 lg:pb-2 print:hidden" />
+        <RecommendationsSection
+          recommendations={resume.recommendations}
+          className="lg:pt-4 lg:pb-2 print:hidden"
+        />
       </div>
     </main>
   );
 };
 
-const Page = () => {
-  const mainRef = useRef<HTMLElement>(null);
-
-  return (
-    <mainRefContext.Provider value={mainRef}>
-      <ResumeProvider value={resume}>
-        <HeaderForDisplay />
-        <HeaderForPrint />
-        <MainContent />
-        <DashButtons />
-        <Footer />
-      </ResumeProvider>
-    </mainRefContext.Provider>
-  );
-};
+const Page = () => (
+  <>
+    <DisplayHeader contact={resume.contact} profile={resume.profile} />
+    <HeaderForPrint contact={resume.contact} profile={resume.profile} />
+    <MainContent resume={resume} />
+    <DashButtons mainContentId={mainContentId} />
+    <Footer />
+  </>
+);
 
 export default Page;

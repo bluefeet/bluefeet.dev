@@ -1,15 +1,20 @@
 import { Details } from "./Details";
 import { SectionTitle } from "./SectionTitle";
-import { useResume } from "./resumeContext";
+import type { Resume } from "./resume";
 import { clsx } from "clsx/lite";
 
-export const CompetenciesSection = ({
-  className = "",
-}: {
+type Competencies = NonNullable<Resume["profile"]>["competencies"];
+
+type CompetenciesSectionProps = {
+  competencies?: Competencies;
   className?: string;
-}) => {
-  const resume = useResume();
-  if (!resume.profile?.competencies?.length) return <></>;
+};
+
+export const CompetenciesSection = ({
+  competencies,
+  className = "",
+}: CompetenciesSectionProps) => {
+  if (!competencies?.length) return <></>;
 
   return (
     <>
@@ -18,7 +23,7 @@ export const CompetenciesSection = ({
 
         <div className="typography">
           <ul>
-            {resume.profile.competencies.map((competency) => (
+            {competencies.map((competency) => (
               <li key={competency.name} className="break-inside-avoid">
                 {competency.name}
                 <Details>{competency.skills?.join(", ")}</Details>

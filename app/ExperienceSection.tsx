@@ -2,8 +2,7 @@ import { Details } from "./Details";
 import { RenderMarkdown } from "./RenderMarkdown";
 import { SectionTitle } from "./SectionTitle";
 import { SubSectionTitle } from "./SubSectionTitle";
-import { Experience } from "./resume";
-import { useResume } from "./resumeContext";
+import type { Experience } from "./resume";
 import { format as formatDate } from "date-fns/format";
 import { parseISO as parseISODate } from "date-fns/parseISO";
 import { capitalize } from "remeda";
@@ -67,12 +66,13 @@ const SingleExperience = ({ experience }: { experience: Experience }) => {
 };
 
 export const ExperienceSection = ({
+  experiences,
   className = "",
 }: {
+  experiences?: Experience[];
   className?: string;
 }) => {
-  const resume = useResume();
-  if (!resume.experiences?.length) return <></>;
+  if (!experiences?.length) return <></>;
 
   return (
     <>
@@ -81,7 +81,7 @@ export const ExperienceSection = ({
           Experience
         </SectionTitle>
 
-        {resume.experiences.map((experience) => (
+        {experiences.map((experience) => (
           <SingleExperience
             experience={experience}
             key={`${experience.companyName}:${experience.startDate}`}

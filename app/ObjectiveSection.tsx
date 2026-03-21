@@ -1,7 +1,7 @@
 import { Details } from "./Details";
 import { List } from "./List";
 import { ListItem } from "./ListItem";
-import { useResume } from "./resumeContext";
+import type { Resume } from "./resume";
 import {
   BuildingOfficeIcon,
   CalendarDotsIcon,
@@ -16,29 +16,27 @@ import { capitalize } from "remeda";
 
 const startDateFormat = "PPP";
 
-const Overview = () => {
-  const resume = useResume();
-  if (!resume.objective?.overview) return <></>;
+type Objective = Resume["objective"];
+
+const Overview = ({ objective }: { objective?: Objective }) => {
+  if (!objective?.overview) return <></>;
 
   return (
     <>
       <ListItem Icon={ImageIcon}>
         Dream Job Traits
-        <Details>{resume.objective.overview}</Details>
+        <Details>{objective.overview}</Details>
       </ListItem>
     </>
   );
 };
 
-const StartDate = () => {
-  const resume = useResume();
-  if (!resume.objective) return <></>;
+const StartDate = ({ objective }: { objective?: Objective }) => {
+  if (!objective) return <></>;
 
-  if ((resume.objective.intention || "passive") === "passive") return <></>;
+  if ((objective.intention || "passive") === "passive") return <></>;
 
-  let startDate = resume.objective.startDate
-    ? parseISODate(resume.objective.startDate)
-    : null;
+  let startDate = objective.startDate ? parseISODate(objective.startDate) : null;
 
   // Don't display if in the past.
   if (startDate && isDateInPast(startDate)) startDate = null;
@@ -46,7 +44,7 @@ const StartDate = () => {
   return (
     <>
       <ListItem Icon={RocketIcon}>
-        {resume.objective.intention === "casual"
+        {objective.intention === "casual"
           ? "Open to new opportunities"
           : "Actively searching for an opportunity"}
         {
@@ -64,17 +62,16 @@ const StartDate = () => {
   );
 };
 
-const Roles = () => {
-  const resume = useResume();
-  if (!resume.objective?.roles?.length) return <></>;
+const Roles = ({ objective }: { objective?: Objective }) => {
+  if (!objective?.roles?.length) return <></>;
 
   return (
     <>
       <ListItem Icon={GearSixIcon}>
-        {resume.objective.roles.length > 1 ? "These roles" : "This role"} would
-        be a great match
+        {objective.roles.length > 1 ? "These roles" : "This role"} would be a
+        great match
         <Details>
-          {resume.objective.roles.map((role) => (
+          {objective.roles.map((role) => (
             <div key={role}>{role}</div>
           ))}
         </Details>
@@ -83,40 +80,36 @@ const Roles = () => {
   );
 };
 
-const WorkModes = () => {
-  const resume = useResume();
-  if (!resume.objective?.workModes?.length) return <></>;
+const WorkModes = ({ objective }: { objective?: Objective }) => {
+  if (!objective?.workModes?.length) return <></>;
 
   return (
     <>
       <ListItem Icon={BuildingOfficeIcon}>
         In{" "}
-        {resume.objective.workModes.length > 1
+        {objective.workModes.length > 1
           ? "any of these capacities"
           : "this capacity"}
         <Details>
-          {resume.objective.workModes
-            .map((workMode) => capitalize(workMode))
-            .join(", ")}
+          {objective.workModes.map((workMode) => capitalize(workMode)).join(", ")}
         </Details>
       </ListItem>
     </>
   );
 };
 
-const EmploymentTypes = () => {
-  const resume = useResume();
-  if (!resume.objective?.employmentTypes?.length) return <></>;
+const EmploymentTypes = ({ objective }: { objective?: Objective }) => {
+  if (!objective?.employmentTypes?.length) return <></>;
 
   return (
     <>
       <ListItem Icon={CalendarDotsIcon}>
         With{" "}
-        {resume.objective.employmentTypes.length > 1
+        {objective.employmentTypes.length > 1
           ? "one of these commitments"
           : "this commitment"}
         <Details>
-          {resume.objective.employmentTypes
+          {objective.employmentTypes
             .map((employmentType) => capitalize(employmentType))
             .join(", ")}
         </Details>
@@ -126,18 +119,20 @@ const EmploymentTypes = () => {
 };
 
 export const ObjectiveSection = ({
+  objective,
   className = "",
 }: {
+  objective?: Resume["objective"];
   className?: string;
 }) => (
   <>
     <section className={className}>
       <List>
-        <Overview />
-        <StartDate />
-        <Roles />
-        <EmploymentTypes />
-        <WorkModes />
+        <Overview objective={objective} />
+        <StartDate objective={objective} />
+        <Roles objective={objective} />
+        <EmploymentTypes objective={objective} />
+        <WorkModes objective={objective} />
       </List>
     </section>
   </>

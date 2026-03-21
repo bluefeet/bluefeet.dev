@@ -1,32 +1,25 @@
 import { RecommendationsSection } from "./RecommendationsSection";
-import { Resume } from "./resume";
-import { ResumeProvider } from "./resumeContext";
+import type { Resume } from "./resume";
 import { render } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 
-const testResume = (resume: Partial<Resume>) => {
-  render(
-    <ResumeProvider value={resume}>
-      <RecommendationsSection />
-    </ResumeProvider>,
-  );
+const testSection = (recommendations?: Resume["recommendations"]) => {
+  render(<RecommendationsSection recommendations={recommendations} />);
   expect(document.body).toMatchSnapshot();
 };
 
 describe("RecommendationsSection", () => {
   it("empty resume", () => {
-    testResume({});
+    testSection();
   });
 
   it("multiples with required fields only", () => {
-    testResume({
-      recommendations: [
-        {
-          message: "Foo Message",
-          author: "Foo Author",
-          relationship: "Foo Foo",
-        },
-      ],
-    });
+    testSection([
+      {
+        message: "Foo Message",
+        author: "Foo Author",
+        relationship: "Foo Foo",
+      },
+    ]);
   });
 });

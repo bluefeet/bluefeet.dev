@@ -1,11 +1,17 @@
 import { RenderMarkdown } from "./RenderMarkdown";
 import { SectionTitle } from "./SectionTitle";
-import { useResume } from "./resumeContext";
 import { clsx } from "clsx/lite";
 
-export const AboutSection = ({ className = "" }: { className?: string }) => {
-  const resume = useResume();
-  if (!resume.profile?.about) return <></>;
+type AboutSectionProps = {
+  about?: string;
+  className?: string;
+};
+
+export const AboutSection = ({
+  about,
+  className = "",
+}: AboutSectionProps) => {
+  if (!about) return <></>;
 
   return (
     <>
@@ -14,7 +20,7 @@ export const AboutSection = ({ className = "" }: { className?: string }) => {
           About
         </SectionTitle>
 
-        <RenderMarkdown>{resume.profile.about}</RenderMarkdown>
+        <RenderMarkdown>{about}</RenderMarkdown>
       </section>
     </>
   );

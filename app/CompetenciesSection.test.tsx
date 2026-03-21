@@ -1,31 +1,24 @@
 import { CompetenciesSection } from "./CompetenciesSection";
-import { Resume } from "./resume";
-import { ResumeProvider } from "./resumeContext";
+import type { Resume } from "./resume";
 import { render } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 
-const testResume = (resume: Resume) => {
-  render(
-    <ResumeProvider value={resume}>
-      <CompetenciesSection />
-    </ResumeProvider>,
-  );
+type Competencies = NonNullable<Resume["profile"]>["competencies"];
+
+const testSection = (competencies?: Competencies) => {
+  render(<CompetenciesSection competencies={competencies} />);
   expect(document.body).toMatchSnapshot();
 };
 
 describe("SkillsSection", () => {
   it("no skills", () => {
-    testResume({ profile: { competencies: [] } });
+    testSection([]);
   });
 
   it("some skills", () => {
-    testResume({
-      profile: {
-        competencies: [
-          { name: "Skill Name One", skills: ["foo1", "bar1"] },
-          { name: "Skill Name Two", skills: ["foo2"] },
-        ],
-      },
-    });
+    testSection([
+      { name: "Skill Name One", skills: ["foo1", "bar1"] },
+      { name: "Skill Name Two", skills: ["foo2"] },
+    ]);
   });
 });
