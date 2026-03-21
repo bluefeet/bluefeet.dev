@@ -160,7 +160,7 @@ const HeaderForDisplay = () => {
       <div className="h-screen overflow-hidden">
         <header
           ref={headerRef}
-          className="relative h-screen bg-[url(./bear.jpg)] bg-cover bg-center"
+          className="relative h-screen bg-[url(./bear.jpg)] bg-cover bg-[position:38%_center]"
         >
           <div className="absolute h-48 w-full bg-linear-to-b from-zinc-900 opacity-50" />
           <div className="absolute w-full p-5 text-center md:pr-16 md:text-right lg:pr-24">

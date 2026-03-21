@@ -10,7 +10,7 @@ exports[`Page 1`] = `
         class="h-screen overflow-hidden"
       >
         <header
-          class="relative h-screen bg-[url(./bear.jpg)] bg-cover bg-center"
+          class="relative h-screen bg-[url(./bear.jpg)] bg-cover bg-[position:38%_center]"
           style="top: 0px;"
         >
           <div
