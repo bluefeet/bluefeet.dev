@@ -1,6 +1,14 @@
 import { Details } from "./Details";
 import { List } from "./List";
 import { ListItem } from "./ListItem";
+import {
+  formatObjectiveAvailability,
+  formatObjectiveEmploymentTypesDetails,
+  formatObjectiveEmploymentTypesHeading,
+  formatObjectiveRolesHeading,
+  formatObjectiveWorkModesDetails,
+  formatObjectiveWorkModesHeading,
+} from "./resumeFormatting";
 import type { Resume } from "./resume";
 import {
   BuildingOfficeIcon,
@@ -9,12 +17,6 @@ import {
   ImageIcon,
   RocketIcon,
 } from "@phosphor-icons/react";
-import { format as formatDate } from "date-fns/format";
-import { isPast as isDateInPast } from "date-fns/isPast";
-import { parseISO as parseISODate } from "date-fns/parseISO";
-import { capitalize } from "remeda";
-
-const startDateFormat = "PPP";
 
 type Objective = Resume["objective"];
 
@@ -32,46 +34,30 @@ const Overview = ({ objective }: { objective?: Objective }) => {
 };
 
 const StartDate = ({ objective }: { objective?: Objective }) => {
-  if (!objective) return <></>;
-
-  if ((objective.intention || "passive") === "passive") return <></>;
-
-  let startDate = objective.startDate ? parseISODate(objective.startDate) : null;
-
-  // Don't display if in the past.
-  if (startDate && isDateInPast(startDate)) startDate = null;
+  const availability = formatObjectiveAvailability(objective);
+  if (!availability) return <></>;
 
   return (
     <>
       <ListItem Icon={RocketIcon}>
-        {objective.intention === "casual"
-          ? "Open to new opportunities"
-          : "Actively searching for an opportunity"}
-        {
-          <Details>
-            Available{" "}
-            {startDate ? (
-              <>starting on {formatDate(startDate, startDateFormat)}</>
-            ) : (
-              <>immediately</>
-            )}
-          </Details>
-        }
+        {availability.title}
+        <Details>{availability.details}</Details>
       </ListItem>
     </>
   );
 };
 
 const Roles = ({ objective }: { objective?: Objective }) => {
-  if (!objective?.roles?.length) return <></>;
+  const heading = formatObjectiveRolesHeading(objective);
+  const roles = objective?.roles;
+  if (!heading || !roles?.length) return <></>;
 
   return (
     <>
       <ListItem Icon={GearSixIcon}>
-        {objective.roles.length > 1 ? "These roles" : "This role"} would be a
-        great match
+        {heading}
         <Details>
-          {objective.roles.map((role) => (
+          {roles.map((role) => (
             <div key={role}>{role}</div>
           ))}
         </Details>
@@ -81,38 +67,30 @@ const Roles = ({ objective }: { objective?: Objective }) => {
 };
 
 const WorkModes = ({ objective }: { objective?: Objective }) => {
-  if (!objective?.workModes?.length) return <></>;
+  const heading = formatObjectiveWorkModesHeading(objective);
+  const details = formatObjectiveWorkModesDetails(objective);
+  if (!heading || !details) return <></>;
 
   return (
     <>
       <ListItem Icon={BuildingOfficeIcon}>
-        In{" "}
-        {objective.workModes.length > 1
-          ? "any of these capacities"
-          : "this capacity"}
-        <Details>
-          {objective.workModes.map((workMode) => capitalize(workMode)).join(", ")}
-        </Details>
+        {heading}
+        <Details>{details}</Details>
       </ListItem>
     </>
   );
 };
 
 const EmploymentTypes = ({ objective }: { objective?: Objective }) => {
-  if (!objective?.employmentTypes?.length) return <></>;
+  const heading = formatObjectiveEmploymentTypesHeading(objective);
+  const details = formatObjectiveEmploymentTypesDetails(objective);
+  if (!heading || !details) return <></>;
 
   return (
     <>
       <ListItem Icon={CalendarDotsIcon}>
-        With{" "}
-        {objective.employmentTypes.length > 1
-          ? "one of these commitments"
-          : "this commitment"}
-        <Details>
-          {objective.employmentTypes
-            .map((employmentType) => capitalize(employmentType))
-            .join(", ")}
-        </Details>
+        {heading}
+        <Details>{details}</Details>
       </ListItem>
     </>
   );

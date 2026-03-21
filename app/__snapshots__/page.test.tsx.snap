@@ -127,8 +127,7 @@ exports[`Page 1`] = `
             <div
               class="pt-2 pb-2"
             >
-              These roles
-               would be a great match
+              These roles would be a great match
               <div
                 class="text-sm text-zinc-300"
               >
@@ -165,9 +164,7 @@ exports[`Page 1`] = `
             <div
               class="pt-2 pb-2"
             >
-              With
-               
-              one of these commitments
+              With one of these commitments
               <div
                 class="text-sm text-zinc-300"
               >
@@ -193,9 +190,7 @@ exports[`Page 1`] = `
             <div
               class="pt-2 pb-2"
             >
-              In
-               
-              any of these capacities
+              In any of these capacities
               <div
                 class="text-sm text-zinc-300"
               >
@@ -449,14 +444,7 @@ exports[`Page 1`] = `
           <div
             class="typography mb-3"
           >
-            Skills I 
-            am using
-             during this time include
-             
-            TypeScript, React, Node.js, OpenAI Agents SDK, Agent Tooling, Agent Workflows, Accessibility, WCAG, MongoDB, GCP, Google Workspace Add-ons
-            , and 
-            Office Add-ins
-            .
+            Skills I am using during this time include TypeScript, React, Node.js, OpenAI Agents SDK, Agent Tooling, Agent Workflows, Accessibility, WCAG, MongoDB, GCP, Google Workspace Add-ons, and Office Add-ins.
           </div>
           <h3
             class="mt-5 mb-0 text-3xl text-sky-400"
@@ -496,14 +484,7 @@ exports[`Page 1`] = `
           <div
             class="typography mb-3"
           >
-            Skills I 
-            used
-             during this time include
-            d 
-            TypeScript, AWS CDK, Amazon Bedrock, Figma, Agile, Vue/Nuxt, ECS/ECR, Embeddings, MongoDB Atlas, ALB, CloudFront
-            , and 
-            RAG
-            .
+            Skills I used during this time included TypeScript, AWS CDK, Amazon Bedrock, Figma, Agile, Vue/Nuxt, ECS/ECR, Embeddings, MongoDB Atlas, ALB, CloudFront, and RAG.
           </div>
           <h3
             class="mt-5 mb-0 text-3xl text-sky-400"
@@ -525,14 +506,7 @@ exports[`Page 1`] = `
           <div
             class="typography mb-3"
           >
-            Skills I 
-            used
-             during this time include
-            d 
-            Node.js, Security Auditing, GCP, Babel, Webpack, Jest, TypeScript, Pug, Flow, Docker
-            , and 
-            Git
-            .
+            Skills I used during this time included Node.js, Security Auditing, GCP, Babel, Webpack, Jest, TypeScript, Pug, Flow, Docker, and Git.
           </div>
           <h3
             class="mt-5 mb-0 text-3xl text-sky-400"
@@ -572,14 +546,7 @@ exports[`Page 1`] = `
           <div
             class="typography mb-3"
           >
-            Skills I 
-            used
-             during this time include
-            d 
-            DevOps, CI/CD, Perl, MySQL, Linux, AWS, React, TypeScript, Kubernetes, Docker, Git
-            , and 
-            Golang
-            .
+            Skills I used during this time included DevOps, CI/CD, Perl, MySQL, Linux, AWS, React, TypeScript, Kubernetes, Docker, Git, and Golang.
           </div>
           <h3
             class="mt-5 mb-0 text-3xl text-sky-400"
@@ -619,14 +586,7 @@ exports[`Page 1`] = `
           <div
             class="typography mb-3"
           >
-            Skills I 
-            used
-             during this time include
-            d 
-            Team Manager, Scrum Master, Project Manager, Release Manager, Perl, Git, Oracle SQL, JavaScript, HTML, CSS, DevOps
-            , and 
-            Technical Writing
-            .
+            Skills I used during this time included Team Manager, Scrum Master, Project Manager, Release Manager, Perl, Git, Oracle SQL, JavaScript, HTML, CSS, DevOps, and Technical Writing.
           </div>
           <h3
             class="mt-5 mb-0 text-3xl text-sky-400"

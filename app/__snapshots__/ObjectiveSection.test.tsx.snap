@@ -83,8 +83,7 @@ exports[`ObjectiveSection > roles, workModes, and employmentTypes > multiple 1`]
         <div
           class="pt-2 pb-2"
         >
-          These roles
-           would be a great match
+          These roles would be a great match
           <div
             class="text-sm text-zinc-300"
           >
@@ -115,9 +114,7 @@ exports[`ObjectiveSection > roles, workModes, and employmentTypes > multiple 1`]
         <div
           class="pt-2 pb-2"
         >
-          With
-           
-          one of these commitments
+          With one of these commitments
           <div
             class="text-sm text-zinc-300"
           >
@@ -143,9 +140,7 @@ exports[`ObjectiveSection > roles, workModes, and employmentTypes > multiple 1`]
         <div
           class="pt-2 pb-2"
         >
-          In
-           
-          any of these capacities
+          In any of these capacities
           <div
             class="text-sm text-zinc-300"
           >
@@ -186,8 +181,7 @@ exports[`ObjectiveSection > roles, workModes, and employmentTypes > single 1`] =
         <div
           class="pt-2 pb-2"
         >
-          This role
-           would be a great match
+          This role would be a great match
           <div
             class="text-sm text-zinc-300"
           >
@@ -215,9 +209,7 @@ exports[`ObjectiveSection > roles, workModes, and employmentTypes > single 1`] =
         <div
           class="pt-2 pb-2"
         >
-          With
-           
-          this commitment
+          With this commitment
           <div
             class="text-sm text-zinc-300"
           >
@@ -243,9 +235,7 @@ exports[`ObjectiveSection > roles, workModes, and employmentTypes > single 1`] =
         <div
           class="pt-2 pb-2"
         >
-          In
-           
-          this capacity
+          In this capacity
           <div
             class="text-sm text-zinc-300"
           >
@@ -290,10 +280,7 @@ exports[`ObjectiveSection > startDate > active startDate 1`] = `
           <div
             class="text-sm text-zinc-300"
           >
-            Available
-             
-            starting on 
-            November 4th, 2500
+            Available starting on November 4th, 2500
           </div>
         </div>
       </div>
@@ -334,10 +321,7 @@ exports[`ObjectiveSection > startDate > casual startDate 1`] = `
           <div
             class="text-sm text-zinc-300"
           >
-            Available
-             
-            starting on 
-            November 4th, 2500
+            Available starting on November 4th, 2500
           </div>
         </div>
       </div>
@@ -378,9 +362,7 @@ exports[`ObjectiveSection > startDate > historic startDate 1`] = `
           <div
             class="text-sm text-zinc-300"
           >
-            Available
-             
-            immediately
+            Available immediately
           </div>
         </div>
       </div>
@@ -421,9 +403,7 @@ exports[`ObjectiveSection > startDate > objective with no startDate 1`] = `
           <div
             class="text-sm text-zinc-300"
           >
-            Available
-             
-            immediately
+            Available immediately
           </div>
         </div>
       </div>

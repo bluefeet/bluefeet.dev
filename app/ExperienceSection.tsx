@@ -2,34 +2,15 @@ import { Details } from "./Details";
 import { RenderMarkdown } from "./RenderMarkdown";
 import { SectionTitle } from "./SectionTitle";
 import { SubSectionTitle } from "./SubSectionTitle";
+import {
+  formatExperienceDetails,
+  formatExperienceSkillsText,
+} from "./resumeFormatting";
 import type { Experience } from "./resume";
-import { format as formatDate } from "date-fns/format";
-import { parseISO as parseISODate } from "date-fns/parseISO";
-import { capitalize } from "remeda";
-
-const dateFormat = "MMM yyyy";
 
 const SingleExperience = ({ experience }: { experience: Experience }) => {
-  const detailsParts: string[] = [];
-
-  if (experience.title) detailsParts.push(experience.title);
-
-  if (experience.startDate) {
-    const startDate = parseISODate(experience.startDate);
-    const start = formatDate(startDate, dateFormat);
-    const endDate = experience.endDate
-      ? parseISODate(experience.endDate)
-      : null;
-    const end = endDate ? formatDate(endDate, dateFormat) : "Now";
-    detailsParts.push(`${start}  - ${end}`);
-  }
-
-  if (experience.employmentType)
-    detailsParts.push(capitalize(experience.employmentType));
-  if (experience.workMode) detailsParts.push(capitalize(experience.workMode));
-  if (experience.location) detailsParts.push(experience.location);
-
-  const detailsLine = detailsParts.join(" | ");
+  const detailsLine = formatExperienceDetails(experience);
+  const skillsText = formatExperienceSkillsText(experience);
 
   return (
     <>
@@ -53,14 +34,7 @@ const SingleExperience = ({ experience }: { experience: Experience }) => {
         </>
       )}
 
-      {experience.skills && (
-        <div className="typography mb-3">
-          Skills I {experience.endDate ? "used" : "am using"} during this time
-          include{experience.endDate ? "d " : " "}
-          {experience.skills.slice(0, experience.skills.length - 1).join(", ")},
-          and {experience.skills.slice(-1)}.
-        </div>
-      )}
+      {skillsText && <div className="typography mb-3">{skillsText}</div>}
     </>
   );
 };

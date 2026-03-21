@@ -75,14 +75,7 @@ exports[`ExperienceSection > full 1`] = `
       <div
         class="typography mb-3"
       >
-        Skills I 
-        used
-         during this time include
-        d 
-        This
-        , and 
-        That
-        .
+        Skills I used during this time included This, and That.
       </div>
     </section>
   </div>
@@ -167,14 +160,7 @@ exports[`ExperienceSection > skills 1`] = `
       <div
         class="typography mb-3"
       >
-        Skills I 
-        am using
-         during this time include
-         
-        This
-        , and 
-        That
-        .
+        Skills I am using during this time include This, and That.
       </div>
     </section>
   </div>
