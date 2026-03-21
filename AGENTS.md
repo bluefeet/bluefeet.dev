@@ -1,3 +1,43 @@
+## Task-Specific Prompts
+
+This repository includes two task-specific prompt files that should be treated
+as active instructions when their task category applies:
+
+- `RESUME_WRITER_PROMPT.md`
+- `SOFTWARE_ENGINEER_PROMPT.md`
+
+Use them as follows:
+
+1. For resume-writing work, first read `RESUME_WRITER_PROMPT.md` and follow it
+   as the primary task-specific instruction. This includes:
+   - editing or reviewing `app/resume.ts`
+   - rewriting resume copy, summaries, bullets, skills, or testimonials
+   - improving resume positioning, tone, or targeting
+   - other work where the main goal is resume quality rather than application
+     engineering
+
+2. For software-engineering work, first read `SOFTWARE_ENGINEER_PROMPT.md` and
+   follow it as the primary task-specific instruction. This includes:
+   - implementing features or fixes
+   - refactoring
+   - debugging
+   - code review
+   - tests, validation, and maintenance
+   - UI, component, data-flow, and architectural changes
+   - any repository work whose main goal is improving the application or codebase
+
+3. If a task spans both categories, apply both prompts, but let the primary goal
+   determine precedence:
+   - if the main task is improving resume content, prioritize
+     `RESUME_WRITER_PROMPT.md`
+   - otherwise prioritize `SOFTWARE_ENGINEER_PROMPT.md`
+
+4. Unless the task is clearly resume-specific, default to
+   `SOFTWARE_ENGINEER_PROMPT.md`.
+
+Read the relevant prompt file before making substantive recommendations, edits,
+or reviews.
+
 ## Project Overview
 
 This repository is a single-package Next.js 16 app using the App Router.
