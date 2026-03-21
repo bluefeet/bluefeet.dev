@@ -45,7 +45,6 @@ const DashButton = (props: DashButtonProps) => (
   </button>
 );
 
-/* c8 ignore next -- @preserve */
 const AudioDashButton = () => {
   const [audio, setAudio] = useState<Howl | null>(null);
   const [isPlaying, setPlaying] = useState(false);
@@ -72,11 +71,28 @@ const AudioDashButton = () => {
   }, [isPlaying, audio]);
 
   useEffect(() => {
-    if (audio && navigator && navigator.mediaSession) {
+    if (!audio) return;
+
+    if (navigator.mediaSession) {
       navigator.mediaSession.setActionHandler("play", () => audio.play());
       navigator.mediaSession.setActionHandler("pause", () => audio.pause());
     }
+
+    return () => {
+      if (navigator.mediaSession) {
+        navigator.mediaSession.setActionHandler("play", null);
+        navigator.mediaSession.setActionHandler("pause", null);
+      }
+    };
   }, [audio]);
+
+  useEffect(
+    () => () => {
+      audio?.stop();
+      audio?.unload();
+    },
+    [audio],
+  );
 
   const startPlaying = () => setPlaying(true);
   const pausePlaying = () => setPlaying(false);
