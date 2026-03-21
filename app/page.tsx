@@ -142,17 +142,27 @@ const HeaderForDisplay = () => {
   const headerRef = useRef<HTMLElement>(null);
   const scrollSpeed = 0.63;
 
-  const handleScroll = () => {
-    /* c8 ignore next -- @preserve */
-    if (headerRef.current) {
-      headerRef.current.style.top = `${window.scrollY * scrollSpeed}px`;
-    }
-  };
-
   useEffect(() => {
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    let animationFrameId = 0;
+
+    const updatePosition = () => {
+      animationFrameId = 0;
+      if (headerRef.current) {
+        headerRef.current.style.transform = `translateY(${window.scrollY * scrollSpeed}px)`;
+      }
+    };
+
+    const handleScroll = () => {
+      if (animationFrameId) return;
+      animationFrameId = window.requestAnimationFrame(updatePosition);
+    };
+
+    updatePosition();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      if (animationFrameId) window.cancelAnimationFrame(animationFrameId);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
@@ -160,7 +170,7 @@ const HeaderForDisplay = () => {
       <div className="h-screen overflow-hidden">
         <header
           ref={headerRef}
-          className="relative h-screen bg-[url(./bear.jpg)] bg-cover bg-[position:38%_center]"
+          className="relative h-screen bg-[url(./bear.jpg)] bg-cover bg-[position:38%_center] will-change-transform"
         >
           <div className="absolute h-48 w-full bg-linear-to-b from-zinc-900 opacity-50" />
           <div className="absolute w-full p-5 text-center md:pr-16 md:text-right lg:pr-24">
