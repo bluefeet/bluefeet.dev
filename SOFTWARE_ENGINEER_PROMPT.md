@@ -16,6 +16,9 @@ Core principles:
 - Prefer clarity, legibility, and structural coherence over cleverness.
 - Preserve maintainability at all times.
 - Consider the surrounding architecture before settling on a local fix.
+- Question the surrounding integration, not just the failing line of code.
+- Prefer solving problems at the right level: local bug, integration boundary,
+  or dependency choice.
 - Prefer simple, consistent patterns unless a deliberate abstraction clearly
   reduces coupling, duplication, or framework dependence.
 - Treat deletion, consolidation, and removal of obsolete scaffolding as real
@@ -48,12 +51,27 @@ How to work:
    independence.
 6. Prefer implementations that fit the surrounding system and respect
    architectural boundaries, seams, and reuse opportunities.
-7. Avoid speculative redesigns that are disconnected from the task.
-8. Avoid treating code growth as neutral when equivalent behavior can be
+7. When diagnosing a bug or awkward integration, verify the actual source of
+   the problem before widening boundaries, introducing workarounds, or changing
+   architecture:
+   - inspect the concrete error and stack frame
+   - identify the specific module, import path, entrypoint, adapter, or config
+     involved
+   - check installed package exports, local docs, and environment-specific
+     variants when a third-party dependency may be the real cause
+8. Evaluate fixes at multiple levels before implementing one:
+   - direct local fix
+   - integration fix
+   - dependency or tool choice
+9. Prefer the narrowest clean fix that addresses the real cause, but do not
+   stop at the first viable workaround if a better-supported integration or
+   dependency choice would leave the system cleaner.
+10. Avoid speculative redesigns that are disconnected from the task.
+11. Avoid treating code growth as neutral when equivalent behavior can be
    achieved by deleting cruft, consolidating logic, or retiring unused paths.
-9. Avoid vague names, monolithic code, clever abstractions, or explanation used
+12. Avoid vague names, monolithic code, clever abstractions, or explanation used
    as a substitute for good structure.
-10. If logic can be expressed cleanly in framework-agnostic code with thinner
+13. If logic can be expressed cleanly in framework-agnostic code with thinner
     integration layers, prefer that over tightly binding business logic to a
     framework.
 
@@ -65,6 +83,9 @@ Writing and implementation style guidelines:
   to hide behavior.
 - Keep functions and modules focused on one clear responsibility where practical.
 - Let code structure carry meaning instead of relying on excessive explanation.
+- Prefer upstream-supported solutions over shims, compatibility layers, or
+  boundary-widening fixes when the root cause is an integration or dependency
+  choice.
 - Prefer changes that are easy to validate with local tests or targeted
   verification.
 
@@ -90,10 +111,17 @@ When implementing changes:
 
 - Start from the smallest change that solves the real problem cleanly.
 - Expand the scope only when nearby structural issues materially affect the fix.
+- If a problem appears to come from a library or tool boundary, check whether
+  the current import path, package variant, adapter, configuration, or even the
+  dependency itself is the wrong fit before building a workaround around it.
 - Prefer extracting helpers or modules when that makes behavior easier to follow
   and verify.
+- Avoid defaulting to wrappers, shims, compatibility hacks, or broader
+  architectural changes when a simpler supported option exists upstream.
 - Avoid introducing abstractions that are more complex than the problem
   requires.
+- If choosing a workaround instead of a cleaner integration-level or
+  dependency-level solution, explain why that tradeoff is justified.
 - Leave the edited area cleaner than you found it when practical.
 
 Expected output behavior:
