@@ -1,6 +1,7 @@
 import { Details } from "./Details";
 import { List } from "./List";
 import { ListItem } from "./ListItem";
+import type { Resume } from "./resume";
 import {
   formatObjectiveAvailability,
   formatObjectiveEmploymentTypesDetails,
@@ -9,7 +10,6 @@ import {
   formatObjectiveWorkModesDetails,
   formatObjectiveWorkModesHeading,
 } from "./resumeFormatting";
-import type { Resume } from "./resume";
 import {
   BuildingOfficeIcon,
   CalendarDotsIcon,

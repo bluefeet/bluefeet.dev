@@ -4,11 +4,7 @@ import { expectToBeVisible } from "./testing";
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 
-const testSection = ({
-  contact,
-  objective,
-  profile,
-}: Partial<Resume>) => {
+const testSection = ({ contact, objective, profile }: Partial<Resume>) => {
   render(
     <InfoSection contact={contact} objective={objective} profile={profile} />,
   );

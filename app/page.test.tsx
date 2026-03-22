@@ -101,7 +101,9 @@ it("slow-scrolls the display header", () => {
 
 it("plays, pauses, and cleans up ambient audio", () => {
   const { unmount } = render(<Page />);
-  const setActionHandlerSpy = vi.mocked(navigator.mediaSession.setActionHandler);
+  const setActionHandlerSpy = vi.mocked(
+    navigator.mediaSession.setActionHandler,
+  );
 
   const audioButton = screen.getByRole("button", {
     name: "Play Nature Sounds",

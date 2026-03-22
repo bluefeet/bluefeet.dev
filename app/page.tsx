@@ -9,8 +9,8 @@ import { ObjectiveSection } from "./ObjectiveSection";
 import { RecommendationsSection } from "./RecommendationsSection";
 import { headerFont } from "./headerFont";
 import { resume } from "./resume";
-import { clsx } from "clsx/lite";
 import type { Resume } from "./resume";
+import { clsx } from "clsx/lite";
 
 const Divider = ({ className = "" }: { className?: string }) => (
   <hr
@@ -37,7 +37,9 @@ const HeaderForPrint = ({
         headerFont.className,
       )}
     >
-      <h1 className="text-5xl font-semibold text-sky-800">{contact?.fullName}</h1>
+      <h1 className="text-5xl font-semibold text-sky-800">
+        {contact?.fullName}
+      </h1>
       <p>
         {profile?.headline} • {contact?.pronouns} • https://bluefeet.dev
       </p>

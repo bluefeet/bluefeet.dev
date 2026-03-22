@@ -2,11 +2,11 @@ import { Details } from "./Details";
 import { RenderMarkdown } from "./RenderMarkdown";
 import { SectionTitle } from "./SectionTitle";
 import { SubSectionTitle } from "./SubSectionTitle";
+import type { Experience } from "./resume";
 import {
   formatExperienceDetails,
   formatExperienceSkillsText,
 } from "./resumeFormatting";
-import type { Experience } from "./resume";
 
 const SingleExperience = ({ experience }: { experience: Experience }) => {
   const detailsLine = formatExperienceDetails(experience);

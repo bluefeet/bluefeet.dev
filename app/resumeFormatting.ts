@@ -57,7 +57,9 @@ export const formatObjectiveAvailability = (objective?: Objective) => {
     return null;
   }
 
-  let startDate = objective.startDate ? parseISODate(objective.startDate) : null;
+  let startDate = objective.startDate
+    ? parseISODate(objective.startDate)
+    : null;
 
   if (startDate && isDateInPast(startDate)) startDate = null;
 
@@ -92,7 +94,9 @@ export const formatObjectiveWorkModesDetails = (objective?: Objective) => {
   return objective.workModes.map((workMode) => capitalize(workMode)).join(", ");
 };
 
-export const formatObjectiveEmploymentTypesHeading = (objective?: Objective) => {
+export const formatObjectiveEmploymentTypesHeading = (
+  objective?: Objective,
+) => {
   if (!objective?.employmentTypes?.length) return null;
 
   return `With ${
@@ -102,7 +106,9 @@ export const formatObjectiveEmploymentTypesHeading = (objective?: Objective) => 
   }`;
 };
 
-export const formatObjectiveEmploymentTypesDetails = (objective?: Objective) => {
+export const formatObjectiveEmploymentTypesDetails = (
+  objective?: Objective,
+) => {
   if (!objective?.employmentTypes?.length) return null;
 
   return objective.employmentTypes

@@ -14,7 +14,10 @@ describe("ExperienceSection", () => {
   });
 
   it("multiples with required fields only", () => {
-    testSection([{ companyName: "Foo LLC" }, { companyName: "Bar and Daughters" }]);
+    testSection([
+      { companyName: "Foo LLC" },
+      { companyName: "Bar and Daughters" },
+    ]);
   });
 
   it("startDate", () => {
@@ -49,7 +52,9 @@ describe("ExperienceSection", () => {
   });
 
   it("highlights", () => {
-    testSection([{ companyName: "Foo LLC", highlights: ["Jumped.", "Rolled."] }]);
+    testSection([
+      { companyName: "Foo LLC", highlights: ["Jumped.", "Rolled."] },
+    ]);
   });
 
   it("skills", () => {

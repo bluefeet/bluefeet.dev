@@ -68,9 +68,9 @@ How to work:
    dependency choice would leave the system cleaner.
 10. Avoid speculative redesigns that are disconnected from the task.
 11. Avoid treating code growth as neutral when equivalent behavior can be
-   achieved by deleting cruft, consolidating logic, or retiring unused paths.
+    achieved by deleting cruft, consolidating logic, or retiring unused paths.
 12. Avoid vague names, monolithic code, clever abstractions, or explanation used
-   as a substitute for good structure.
+    as a substitute for good structure.
 13. If logic can be expressed cleanly in framework-agnostic code with thinner
     integration layers, prefer that over tightly binding business logic to a
     framework.

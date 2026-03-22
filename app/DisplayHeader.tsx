@@ -9,10 +9,7 @@ type DisplayHeaderProps = {
   profile: Resume["profile"];
 };
 
-export const DisplayHeader = ({
-  contact,
-  profile,
-}: DisplayHeaderProps) => {
+export const DisplayHeader = ({ contact, profile }: DisplayHeaderProps) => {
   const headerRef = useRef<HTMLElement>(null);
   const scrollSpeed = 0.63;
 

@@ -62,11 +62,15 @@ an explicit sanitization step.
 
 Use the project scripts in `package.json` as the source of truth for checks:
 
+- `npm run format`
 - `npm run lint`
 - `npm run check-types`
 - `npm test`
 - `npm run test-update-snapshots`
 - `npm run preflight`
+
+Run `npm run format` before committing code changes so formatting drift is
+fixed locally instead of surfacing later in `preflight` or CI.
 
 For focused changes, run `lint`, `check-types`, and `test`. Before finishing
 broader work, prefer `npm run preflight`.
@@ -119,6 +123,9 @@ match the actual change.
 
 Write the header as `<type>(<scope>): <summary>` in imperative mood. Validate
 with shell commands that the header is 50 characters or fewer before committing.
+
+Before creating the commit, run `npm run format` if the diff includes files
+that Prettier manages.
 
 Add a body only when context is useful. Use it to explain why the change was
 made, not to restate implementation details already obvious from the diff. Treat

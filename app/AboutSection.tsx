@@ -7,10 +7,7 @@ type AboutSectionProps = {
   className?: string;
 };
 
-export const AboutSection = ({
-  about,
-  className = "",
-}: AboutSectionProps) => {
+export const AboutSection = ({ about, className = "" }: AboutSectionProps) => {
   if (!about) return <></>;
 
   return (

@@ -63,7 +63,9 @@ const EmailAddress = ({ contact }: Pick<InfoSectionProps, "contact">) => {
   return (
     <>
       <ListItem Icon={AtIcon} iconProps={{ weight: "regular" }}>
-        <Link href={`mailto:${contact.emailAddress}`}>{contact.emailAddress}</Link>
+        <Link href={`mailto:${contact.emailAddress}`}>
+          {contact.emailAddress}
+        </Link>
       </ListItem>
     </>
   );

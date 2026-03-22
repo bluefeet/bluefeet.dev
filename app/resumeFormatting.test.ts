@@ -1,3 +1,4 @@
+import type { Resume } from "./resume";
 import {
   formatExperienceDateRange,
   formatExperienceDetails,
@@ -9,7 +10,6 @@ import {
   formatObjectiveWorkModesDetails,
   formatObjectiveWorkModesHeading,
 } from "./resumeFormatting";
-import type { Resume } from "./resume";
 import { describe, expect, it } from "vitest";
 
 describe("resumeFormatting", () => {
