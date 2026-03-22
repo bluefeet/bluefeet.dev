@@ -1,8 +1,5 @@
-"use client";
-
 import type { Resume } from "./resume";
 import { clsx } from "clsx/lite";
-import { useEffect, useRef } from "react";
 
 type DisplayHeaderProps = {
   contact: Resume["contact"];
@@ -10,40 +7,13 @@ type DisplayHeaderProps = {
 };
 
 export const DisplayHeader = ({ contact, profile }: DisplayHeaderProps) => {
-  const headerRef = useRef<HTMLElement>(null);
-  const scrollSpeed = 0.63;
-
-  useEffect(() => {
-    let animationFrameId = 0;
-
-    const updatePosition = () => {
-      animationFrameId = 0;
-      if (headerRef.current) {
-        headerRef.current.style.transform = `translateY(${window.scrollY * scrollSpeed}px)`;
-      }
-    };
-
-    const handleScroll = () => {
-      if (animationFrameId) return;
-      animationFrameId = window.requestAnimationFrame(updatePosition);
-    };
-
-    updatePosition();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      if (animationFrameId) window.cancelAnimationFrame(animationFrameId);
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <div className="border-b-2 border-sky-600 print:hidden">
-      <div className="h-screen overflow-hidden">
+      <div className="display-header-frame h-svh overflow-hidden">
         <header
-          ref={headerRef}
           className={clsx(
-            "relative h-screen bg-[url(./bear.jpg)] bg-cover",
-            "bg-[position:38%_center] will-change-transform",
+            "display-header relative h-svh bg-[url(./bear.jpg)] bg-cover",
+            "bg-[position:38%_center]",
           )}
         >
           <div className="absolute h-48 w-full bg-linear-to-b from-zinc-900 opacity-50" />

@@ -68,35 +68,11 @@ it("Page", () => {
   expect(document.body).toMatchSnapshot();
 });
 
-it("slow-scrolls the display header", () => {
-  const requestAnimationFrameSpy = vi
-    .spyOn(window, "requestAnimationFrame")
-    .mockImplementation((callback) => {
-      callback(0);
-      return 1;
-    });
-  const cancelAnimationFrameSpy = vi.spyOn(window, "cancelAnimationFrame");
-
-  const { container, unmount } = render(<Page />);
+it("renders the display header with CSS-driven parallax styling", () => {
+  const { container } = render(<Page />);
   const [displayHeader] = container.querySelectorAll("header");
 
-  Object.defineProperty(window, "scrollY", {
-    configurable: true,
-    value: 120,
-    writable: true,
-  });
-  fireEvent.scroll(window);
-
-  expect(displayHeader).toHaveStyle({
-    transform: "translateY(75.6px)",
-  });
-
-  unmount();
-
-  expect(cancelAnimationFrameSpy).toHaveBeenCalledWith(1);
-
-  requestAnimationFrameSpy.mockRestore();
-  cancelAnimationFrameSpy.mockRestore();
+  expect(displayHeader).toHaveClass("display-header");
 });
 
 it("plays, pauses, and cleans up ambient audio", () => {

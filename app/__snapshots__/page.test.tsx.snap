@@ -7,11 +7,10 @@ exports[`Page 1`] = `
       class="border-b-2 border-sky-600 print:hidden"
     >
       <div
-        class="h-screen overflow-hidden"
+        class="display-header-frame h-svh overflow-hidden"
       >
         <header
-          class="relative h-screen bg-[url(./bear.jpg)] bg-cover bg-[position:38%_center] will-change-transform"
-          style="transform: translateY(0px);"
+          class="display-header relative h-svh bg-[url(./bear.jpg)] bg-cover bg-[position:38%_center]"
         >
           <div
             class="absolute h-48 w-full bg-linear-to-b from-zinc-900 opacity-50"
