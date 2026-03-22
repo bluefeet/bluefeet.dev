@@ -16,7 +16,7 @@ import {
   GearSixIcon,
   ImageIcon,
   RocketIcon,
-} from "@phosphor-icons/react";
+} from "@phosphor-icons/react/ssr";
 
 type Objective = Resume["objective"];
 

@@ -9,7 +9,7 @@ import {
   MapPinIcon,
   LinkIcon,
   ChatTextIcon,
-} from "@phosphor-icons/react";
+} from "@phosphor-icons/react/ssr";
 import { ReactNode } from "react";
 
 type InfoSectionProps = {
