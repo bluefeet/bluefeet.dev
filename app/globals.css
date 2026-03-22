@@ -26,18 +26,11 @@
 
 @media (prefers-reduced-motion: no-preference) and (pointer: fine) {
   @supports (animation-timeline: view(block)) {
-    .display-header-frame {
-      view-timeline-name: --display-header;
-      view-timeline-axis: block;
-    }
-
     .display-header {
-      animation-duration: 1s;
-      animation-fill-mode: both;
       animation-name: display-header-parallax;
-      animation-range: contain 0% exit 100%;
+      animation-duration: 1s;
       animation-timing-function: linear;
-      animation-timeline: --display-header;
+      animation-fill-mode: both;
       will-change: transform;
     }
   }
